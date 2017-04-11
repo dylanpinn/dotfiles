@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DOTFILES=$HOME/.dotfiles_new
+DOTFILES=$HOME/.dotfiles
 
 echo -e "\n\nCreating vim symlinks"
 echo "=============================="
