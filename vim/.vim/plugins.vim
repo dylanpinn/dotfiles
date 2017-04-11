@@ -10,4 +10,6 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
 call plug#end()

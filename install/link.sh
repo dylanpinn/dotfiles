@@ -17,4 +17,3 @@ for file in "${VIMFILES[@]}"; do
         ln -s ${VALUE} ${KEY}
     fi
 done
-
