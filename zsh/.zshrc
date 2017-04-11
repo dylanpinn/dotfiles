@@ -1,3 +1,10 @@
+#!/bin/zsh
+# shortcut to this dotfiels path is $DOTFILES
+export DOTFILES="$HOME/.dotfiles"
+
+# default editor vim
+export EDITOR='vim'
+
 # Set up the prompt
 
 autoload -Uz promptinit
