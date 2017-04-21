@@ -24,3 +24,7 @@ bind m last-window
 
 # Select panes with mouse click
 setw -g mouse on
+
+# copy & paste
+bind -t vi-copy y copy-pipe "xclip -sel clip -i"
+
