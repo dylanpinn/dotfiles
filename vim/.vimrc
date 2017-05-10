@@ -24,6 +24,9 @@ let mapleader = ","
 set exrc
 set secure
 
-" linting settings
-" """"""""""""""""
+" statusline
+""""""""""""
+
+" display current git branch
+set statusline+=%{fugitive#statusline()}
 

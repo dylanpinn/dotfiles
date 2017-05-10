@@ -13,4 +13,5 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-fugitive'
 call plug#end()
