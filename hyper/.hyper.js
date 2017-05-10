@@ -8,7 +8,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: 'Menlo, "Droid Sans Mono", "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
@@ -105,8 +105,10 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-  	'hyper-one-dark',
-	'hyper-font-smoothing'
+//  	'hyper-one-dark',
+  	'hyper-snazzy',
+	  'hyper-font-smoothing',
+    'hyperlinks'
   ],
 
   // in development, you can create a directory under

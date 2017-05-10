@@ -1,0 +1,30 @@
+# display 256color mode
+set -g default-terminal "tmux-256color"
+
+# remap prefix to Control + a
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+# force a reload of the config file
+unbind r
+bind r source-file ~/.tmux.conf
+
+# Key binding for spliting
+unbind %
+bind H split-window -h
+unbind '"'
+bind V split-window -v
+bind k select-pane -U
+bind j select-pane -D
+bind h select-pane -L
+unbind l
+bind l select-pane -R
+bind m last-window
+
+# Select panes with mouse click
+setw -g mouse on
+
+# copy & paste
+bind -t vi-copy y copy-pipe "xclip -sel clip -i"
+

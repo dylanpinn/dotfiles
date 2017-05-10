@@ -1,15 +1,17 @@
 #!/bin/zsh
 # shortcut to this dotfiels path is $DOTFILES
 export DOTFILES="$HOME/.dotfiles"
+export ZSH=$DOTFILES/zsh
 
 # default editor vim
 export EDITOR='vim'
 
-# Set up the prompt
+# source all .zsh files inside of the zsh/ directory
+for config ($ZSH/**/*.zsh) source $config
 
-autoload -Uz promptinit
-promptinit
-prompt adam1
+# initialize autocomplete
+autoload -U compinit add-zsh-hook
+compinit
 
 setopt histignorealldups sharehistory
 
@@ -20,10 +22,6 @@ bindkey -e
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -47,6 +45,17 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+# direnv
+eval "$(direnv hook zsh)"
+
+# pyenv
+export PATH="/home/dylan/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# Android SDK
+export ANDROID_HOME=${HOME}/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/emulator
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
