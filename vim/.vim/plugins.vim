@@ -12,4 +12,5 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
