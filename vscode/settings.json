@@ -1,0 +1,9 @@
+{
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "on",
+  "editor.wrappingIndent": "indent",
+  "flow.enabled": false,
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "vs-seti",
+  "workbench.colorTheme": "Nord"
+}
