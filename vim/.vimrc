@@ -40,3 +40,11 @@ set splitright
 " display current git branch
 set statusline+=%{fugitive#statusline()}
 
+" ctrlp
+" """"""
+
+" change default mapping
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+"
