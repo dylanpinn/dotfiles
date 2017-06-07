@@ -23,6 +23,7 @@ Plug 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
 Plug 'ajh17/VimCompletesMe' " auto-complete
 Plug 'chriskempson/base16-vim' " theme
 Plug 'aklt/plantuml-syntax' " plant-uml syntax
+Plug 'dhruvasagar/vim-table-mode' " markdown tables
 call plug#end()
 
 "" Colour
@@ -138,9 +139,13 @@ endif
 
 
 " markdown syntax
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby']
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'java']
 set conceallevel=2
 set concealcursor=nc
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 set nu " show line numbers
+
+" markdown compatible tables
+let g:table_mode_corner='|'
+
