@@ -139,7 +139,7 @@ endif
 
 
 " markdown syntax
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'java']
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'java', 'lisp']
 set conceallevel=2
 set concealcursor=nc
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
