@@ -269,6 +269,12 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>DB0E2790-9842-403E-9A02-E67AAFFE3842</string>
+	<key>DimBackgroundWindows</key>
+	<false/>
+	<key>DimInactiveSplitPanes</key>
+	<false/>
+	<key>DimOnlyText</key>
+	<false/>
 	<key>HideScrollbar</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -314,7 +320,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>589 694 796 473 0 0 3440 1418 </string>
+	<string>589 786 796 473 0 0 3440 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>2 4 1673 1414 0 0 3440 1418 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
