@@ -1,7 +1,25 @@
-# display 256color mode
+# Some tweaks to the status line
+set -g status-right "%H:%M"
+set -g window-status-current-attr "underscore"
+
+# If running inside tmux ($TMUX is set), then change the status line to red
+%if #{TMUX}
+set -g status-bg red
+%endif
+
+# Enable RGB colour if running in xterm(1)
+set-option -sa terminal-overrides ",xterm*:Tc"
+
+# Change the default $TERM to tmux-256color
 set -g default-terminal "tmux-256color"
 
-# remap prefix to Control + a
+# No bells at all
+set -g bell-action none
+
+# Keep windows around after they exit
+set -g remain-on-exit on
+
+# Change the prefix key to C-a
 set -g prefix C-a
 unbind C-b
 bind C-a send-prefix
@@ -22,8 +40,10 @@ unbind l
 bind l select-pane -R
 bind m last-window
 
-# Select panes with mouse click
-setw -g mouse on
+# Turn the mouse on, but without copy mode dragging
+set -g mouse on
+unbind -n MouseDrag1Pane
+unbind -Tcopy-mode MouseDrag1Pane
 
 # copy & paste
 bind -t vi-copy y copy-pipe "xclip -sel clip -i"
