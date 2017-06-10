@@ -65,3 +65,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# tmux MacOS hack
+alias tmux="tmux -f/dev/null"
