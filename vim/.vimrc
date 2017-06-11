@@ -53,6 +53,7 @@ let mapleader = ","
 
 " toggle nerdtree with ,e
 :nmap ,e :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " show hidden files by default
 
 " enable project .vimrc
 set exrc
