@@ -10,14 +10,11 @@ set -g status-bg red
 # Enable RGB colour if running in xterm(1)
 set-option -sa terminal-overrides ",xterm*:Tc"
 
-# Change the default $TERM to tmux-256color
-set -g default-terminal "tmux-256color"
+# set default terminal mode to 256 colors
+# set -g default-terminal "screen-255color"
 
 # No bells at all
 set -g bell-action none
-
-# Keep windows around after they exit
-set -g remain-on-exit on
 
 # Change the prefix key to C-a
 set -g prefix C-a
