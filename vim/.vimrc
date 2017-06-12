@@ -24,6 +24,7 @@ Plug 'ajh17/VimCompletesMe' " auto-complete
 Plug 'chriskempson/base16-vim' " theme
 Plug 'aklt/plantuml-syntax' " plant-uml syntax
 Plug 'dhruvasagar/vim-table-mode' " markdown tables
+Plug 'jlanzarotta/bufexplorer' " buffer exploring
 call plug#end()
 
 "" Colour
@@ -54,6 +55,7 @@ let mapleader = ","
 
 " toggle nerdtree with ,e
 :nmap ,e :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " show hidden files by default
 
 " enable project .vimrc
 set exrc
@@ -140,7 +142,7 @@ endif
 
 
 " markdown syntax
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'java']
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'java', 'lisp']
 set conceallevel=2
 set concealcursor=nc
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown

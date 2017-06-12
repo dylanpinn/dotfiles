@@ -2,7 +2,7 @@ root = true
 
 [*]
 indent_style = space
-indent_size = 4
+indent_size = 2
 
 [{*.rb,Rakefile}]
 indent_style = space
