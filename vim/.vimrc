@@ -29,7 +29,6 @@ call plug#end()
 "" Colour
 colorscheme base16-flat
 
-
 " syntastic recommended settings
 " """"""""""""""""""""""""""""""
 "set statusline+=%#warningmsg#
@@ -40,6 +39,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" ignore erb error
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {"regex": "possibly useless use of a variable in void context"}
 
 " auto-complete
 autocmd FileType text,markdown let b:vcm_tab_complete = 'dict' " markdown & text
@@ -115,7 +117,6 @@ if has("autocmd") && exists("+omnifunc")
                     \           setlocal omnifunc=syntaxcomplete#Complete |
                     \   endif
     endif
-
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
