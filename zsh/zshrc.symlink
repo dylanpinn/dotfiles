@@ -66,3 +66,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# Tmuxinator auto-completions
+source ~/.bin/tmuxinator.zsh
+
