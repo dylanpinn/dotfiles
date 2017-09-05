@@ -21,7 +21,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'ajh17/VimCompletesMe' " auto-complete
 Plug 'chriskempson/base16-vim' " theme
 Plug 'aklt/plantuml-syntax' " plant-uml syntax
-" Plug 'dhruvasagar/vim-table-mode' " markdown tables
+Plug 'dhruvasagar/vim-table-mode' " markdown tables
 " Plug 'jlanzarotta/bufexplorer' " buffer exploring
 Plug 'wakatime/vim-wakatime' " wakatime
 " Plug 'ludovicchabant/vim-gutentags' " tag indexing
@@ -100,13 +100,6 @@ let g:rubycomplete_rails = 1
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
-" " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-" if executable('ag')
-"   " Use Ag over Grep
-"   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
-"   set grepformat=%f:%l:%c:%m,%f:%l:%m
-" endif
-
 " markdown syntax
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'java', 'lisp']
 set conceallevel=2
@@ -116,7 +109,7 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 set nu " show line numbers
 
 " markdown compatible tables
-" let g:table_mode_corner='|'
+let g:table_mode_corner='|'
 
 " Allow JSX in JS files
 let g:jsx_ext_required = 0
