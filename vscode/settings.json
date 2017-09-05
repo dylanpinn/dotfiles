@@ -6,11 +6,11 @@
   "search.useIgnoreFilesByDefault": false,
   "window.zoomLevel": 0,
   "workbench.iconTheme": "vs-seti",
-  "workbench.colorTheme": "Nord",
   "files.associations": {
     ".simplecov": "ruby",
     ".stylelintrc": "json",
     "Capfile": "ruby",
-    ".dockerignore": "gitignore"
+    ".dockerignore": "gitignore",
+    ".pug-lintrc": "json"
   }
 }
