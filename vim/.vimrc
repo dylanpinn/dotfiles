@@ -26,7 +26,7 @@ Plug 'wakatime/vim-wakatime' " wakatime
 " Plug 'tomtom/ttags_vim' " tag management
 Plug 'pangloss/vim-javascript' " enhanced js syntax
 Plug 'mxw/vim-jsx' " jsx syntax
-Plug 'kien/ctrlp.vim'		" fuzzy file finder
+Plug 'ctrlpvim/ctrlp.vim'	" fuzzy file finder
 Plug 'majutsushi/tagbar'	" class outline viewer
 call plug#end()
 
