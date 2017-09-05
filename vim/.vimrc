@@ -10,56 +10,37 @@ endif
 call plug#begin()
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'editorconfig/editorconfig-vim'      " editor config support
-" TODO: Look at removing this.
-Plug 'scrooloose/nerdtree'                " file tree
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-Plug 'vim-syntastic/syntastic' " TODO: Look at removing this.
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
-" TODO: Look at removing this.
-Plug 'ctrlpvim/ctrlp.vim'                 " Fuzzy file search
-Plug 'ajh17/VimCompletesMe' " auto-complete
+" Plug 'ajh17/VimCompletesMe' " auto-complete
 Plug 'chriskempson/base16-vim' " theme
-Plug 'aklt/plantuml-syntax' " plant-uml syntax
-Plug 'dhruvasagar/vim-table-mode' " markdown tables
-Plug 'jlanzarotta/bufexplorer' " buffer exploring
+" Plug 'aklt/plantuml-syntax' " plant-uml syntax
+" Plug 'dhruvasagar/vim-table-mode' " markdown tables
+" Plug 'jlanzarotta/bufexplorer' " buffer exploring
 Plug 'wakatime/vim-wakatime' " wakatime
-Plug 'ludovicchabant/vim-gutentags' " tag indexing
-Plug 'tomtom/tlib_vim' " required for ttags_vim
-Plug 'tomtom/ttags_vim' " tag management
+" Plug 'ludovicchabant/vim-gutentags' " tag indexing
+" Plug 'tomtom/tlib_vim' " required for ttags_vim
+" Plug 'tomtom/ttags_vim' " tag management
+Plug 'pangloss/vim-javascript' " enhanced js syntax
+Plug 'mxw/vim-jsx' " jsx syntax
+Plug 'kien/ctrlp.vim'		" fuzzy file finder
+Plug 'majutsushi/tagbar'	" class outline viewer
 call plug#end()
 
 "" Colour
 colorscheme base16-flat
 
-" syntastic recommended settings
-" """"""""""""""""""""""""""""""
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" ignore erb error
-let g:syntastic_eruby_ruby_quiet_messages =
-    \ {"regex": "possibly useless use of a variable in void context"}
-
 " auto-complete
-autocmd FileType text,markdown let b:vcm_tab_complete = 'dict' " markdown & text
+" autocmd FileType text,markdown let b:vcm_tab_complete = 'dict' " markdown & text
 
 " custom settings
 " """""""""""""""
 
 " lead with ,
 let mapleader = ","
-
-" toggle nerdtree with ,e
-:nmap ,e :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1 " show hidden files by default
 
 " enable project .vimrc
 set exrc
@@ -102,27 +83,10 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | +-- rodified flag in square brackets
 "              +-- full path to file in the buffer
 
-" ctrlp
-" """"""
-
-" change default mapping
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-" tags
-nnoremap <leader>. :CtrlPTag<cr>
-
 " ruby completions
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
-
-if has("autocmd") && exists("+omnifunc")
-  autocmd Filetype *
-     \   if &omnifunc == "" |
-                    \           setlocal omnifunc=syntaxcomplete#Complete |
-                    \   endif
-    endif
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
@@ -130,20 +94,9 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  if !exists(":Ag")
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-    nnoremap \ :Ag<SPACE>
-  endif
+  set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
-
 
 " markdown syntax
 let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'java', 'lisp']
@@ -154,26 +107,32 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 set nu " show line numbers
 
 " markdown compatible tables
-let g:table_mode_corner='|'
+" let g:table_mode_corner='|'
 
-" ttags mappings
-" Show available tags
-noremap <Leader>g. :TTags<cr>
+" Allow JSX in JS files
+let g:jsx_ext_required = 0
 
-" Show current buffer's tags
-noremap <Leader>g% :call ttags#List(0, "*", "", ".")<cr>
+" CTRL-P
+""""""""""""
 
-" Show tags matching the word under cursor
-noremap <Leader>g# :call ttags#List(0, "*", tlib#rx#Escape(expand("<cword>")))<cr>
+" Change key mappings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
-" Show tags with a prefix matching the word under cursor
-noremap <Leader>g* :call ttags#List(0, "*", tlib#rx#Escape(expand("<cword>")) .".*")<cr>
+" define starting directory
+let g:ctrlp_working_path_mode = 'ra'
 
-" Show tags matching the word under cursor (search also in |g:tlib_tags_extra|)
-noremap <Leader>g? :call ttags#List(1, "*", tlib#rx#Escape(expand("<cword>")))<cr>
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
 
-" Show tags of a certain category
-for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\zs')
-exec 'noremap <Leader>g'. c .' :TTags '. c .'<cr>'
-endfor
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
+" Tagbar
+"""""""""
+
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
