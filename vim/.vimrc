@@ -15,6 +15,7 @@ Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-surround'                 " surrounding tags
 Plug 'scrooloose/nerdtree'                " file tree
+Plug 'Townk/vim-autoclose'                " autoclose tags
 " Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 " Plug 'ajh17/VimCompletesMe' " auto-complete
