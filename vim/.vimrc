@@ -66,6 +66,9 @@ set autoread
 set textwidth=80
 set colorcolumn=+1
 
+" use system register for yanking
+set clipboard=unnamedplus
+
 " NERDTREE
 """"""""""
 
