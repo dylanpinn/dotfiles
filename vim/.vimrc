@@ -18,7 +18,7 @@ Plug 'scrooloose/nerdtree'                " file tree
 Plug 'Townk/vim-autoclose'                " autoclose tags
 " Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
-" Plug 'ajh17/VimCompletesMe' " auto-complete
+Plug 'ajh17/VimCompletesMe' " auto-complete
 Plug 'chriskempson/base16-vim' " theme
 " Plug 'aklt/plantuml-syntax' " plant-uml syntax
 " Plug 'dhruvasagar/vim-table-mode' " markdown tables
@@ -37,7 +37,7 @@ call plug#end()
 colorscheme base16-flat
 
 " auto-complete
-" autocmd FileType text,markdown let b:vcm_tab_complete = 'dict' " markdown & text
+autocmd FileType text,markdown let b:vcm_tab_complete = 'dict' " markdown & text
 
 " custom settings
 " """""""""""""""
