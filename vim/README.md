@@ -7,4 +7,5 @@
 - `,b` tagbar
 - `gcc` toggles current line comment
 - `gc` toggles visual selection comment lines
+- `<c-y>,` emmet completion
 
