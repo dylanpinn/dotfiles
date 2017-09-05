@@ -13,6 +13,7 @@ Plug 'editorconfig/editorconfig-vim'      " editor config support
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-surround'                 " surrounding tags
 Plug 'scrooloose/nerdtree'                " file tree
 " Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
