@@ -13,6 +13,7 @@ Plug 'editorconfig/editorconfig-vim'      " editor config support
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
+Plug 'scrooloose/nerdtree'                " file tree
 " Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 " Plug 'ajh17/VimCompletesMe' " auto-complete
@@ -63,6 +64,12 @@ set autoread
 set textwidth=80
 set colorcolumn=+1
 
+" NERDTREE
+""""""""""
+
+" toggle nerdtree with ,e
+:nmap ,e :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1 " show hidden files by default
 
 " statusline
 """"""""""""
