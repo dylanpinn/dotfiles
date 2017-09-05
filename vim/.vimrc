@@ -20,7 +20,7 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ajh17/VimCompletesMe' " auto-complete
 Plug 'chriskempson/base16-vim' " theme
-" Plug 'aklt/plantuml-syntax' " plant-uml syntax
+Plug 'aklt/plantuml-syntax' " plant-uml syntax
 " Plug 'dhruvasagar/vim-table-mode' " markdown tables
 " Plug 'jlanzarotta/bufexplorer' " buffer exploring
 Plug 'wakatime/vim-wakatime' " wakatime
