@@ -69,6 +69,9 @@ set colorcolumn=+1
 " use system register for yanking
 set clipboard=unnamedplus
 
+" don't store swap files in current directory
+set directory=~/.vim/swapfiles//
+
 " NERDTREE
 """"""""""
 
