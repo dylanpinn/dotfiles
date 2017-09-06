@@ -84,6 +84,15 @@ set directory=~/.vim/swapfiles//
 :nmap ,e :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1 " show hidden files by default
 
+" Open NERDTree on start up if no files in buffer
+function! StartUp()
+	if 0 == argc()
+		NERDTree
+	end
+endfunction
+
+autocmd VimEnter * call StartUp()
+
 " statusline
 """"""""""""
 
