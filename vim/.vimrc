@@ -117,6 +117,9 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 set nu " show line numbers
 
+" F2 is pastetoggle
+set pastetoggle=<F2>
+
 " markdown compatible tables
 let g:table_mode_corner='|'
 
