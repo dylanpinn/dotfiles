@@ -31,6 +31,7 @@ Plug 'pangloss/vim-javascript' " enhanced js syntax
 Plug 'mxw/vim-jsx' " jsx syntax
 Plug 'ctrlpvim/ctrlp.vim'	" fuzzy file finder
 Plug 'majutsushi/tagbar'	" class outline viewer
+Plug 'w0rp/ale'           " async linting
 call plug#end()
 
 "" Colour
