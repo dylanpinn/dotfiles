@@ -24,9 +24,9 @@ Plug 'aklt/plantuml-syntax' " plant-uml syntax
 Plug 'dhruvasagar/vim-table-mode' " markdown tables
 " Plug 'jlanzarotta/bufexplorer' " buffer exploring
 Plug 'wakatime/vim-wakatime' " wakatime
-" Plug 'ludovicchabant/vim-gutentags' " tag indexing
-" Plug 'tomtom/tlib_vim' " required for ttags_vim
-" Plug 'tomtom/ttags_vim' " tag management
+Plug 'ludovicchabant/vim-gutentags' " tag indexing
+Plug 'tomtom/tlib_vim' " required for ttags_vim
+Plug 'tomtom/ttags_vim' " tag management
 Plug 'pangloss/vim-javascript' " enhanced js syntax
 Plug 'mxw/vim-jsx' " jsx syntax
 Plug 'ctrlpvim/ctrlp.vim'	" fuzzy file finder
@@ -98,6 +98,9 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | +-- rodified flag in square brackets
 "              +-- full path to file in the buffer
 
+" add gutentags to statusline
+set statusline+=%{gutentags#statusline()}
+
 " ruby completions
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
@@ -147,3 +150,26 @@ nnoremap <leader>f :NERDTreeFind<CR>
 
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
+
+" tags
+"""""""""""
+
+" Show available tags
+noremap <Leader>g. :TTags<cr>
+
+" Show current buffer's tags
+noremap <Leader>g% :call ttags#List(0, "*", "", ".")<cr>
+
+" Show tags matching the word under cursor
+noremap <Leader>g# :call ttags#List(0, "*", tlib#rx#Escape(expand("<cword>")))<cr>
+
+" Show tags with a prefix matching the word under cursor
+noremap <Leader>g* :call ttags#List(0, "*", tlib#rx#Escape(expand("<cword>")) .".*")<cr>
+
+" Show tags matching the word under cursor (search also in |g:tlib_tags_extra|)
+noremap <Leader>g? :call ttags#List(1, "*", tlib#rx#Escape(expand("<cword>")))<cr>
+
+" Show tags of a certain category
+for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\zs')
+  exec 'noremap <Leader>g'. c .' :TTags '. c .'<cr>'
+endfor
