@@ -36,6 +36,7 @@ Plug 'othree/html5.vim'     " html5 syntax support
 Plug 'pangloss/vim-javascript'    " better js support
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } " ternjs support
 Plug 'airblade/vim-gitgutter' " git gutter support
+Plug 'flowtype/vim-flow' " flow type support
 call plug#end()
 
 "" Colour
