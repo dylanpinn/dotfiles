@@ -33,6 +33,8 @@ Plug 'ctrlpvim/ctrlp.vim'	" fuzzy file finder
 Plug 'majutsushi/tagbar'	" class outline viewer
 Plug 'w0rp/ale'           " async linting
 Plug 'othree/html5.vim'     " html5 syntax support
+Plug 'pangloss/vim-javascript'    " better js support
+Plug 'ternjs/tern_for_vim' " ternjs support
 call plug#end()
 
 "" Colour
@@ -178,3 +180,11 @@ noremap <Leader>g? :call ttags#List(1, "*", tlib#rx#Escape(expand("<cword>")))<c
 for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\zs')
   exec 'noremap <Leader>g'. c .' :TTags '. c .'<cr>'
 endfor
+
+" javascript
+""""""""""""
+
+let g:javascript_plugin_jsdoc = 1 " enable syntax for JSDoc
+let g:javascript_plugin_ngdoc = 1 " enable syntax for NGDoc
+let g:javascript_plugin_flow = 1 " enable syntax for flow
+
