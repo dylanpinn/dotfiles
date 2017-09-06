@@ -34,7 +34,8 @@ Plug 'majutsushi/tagbar'	" class outline viewer
 Plug 'w0rp/ale'           " async linting
 Plug 'othree/html5.vim'     " html5 syntax support
 Plug 'pangloss/vim-javascript'    " better js support
-Plug 'ternjs/tern_for_vim' " ternjs support
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' } " ternjs support
+Plug 'airblade/vim-gitgutter' " git gutter support
 call plug#end()
 
 "" Colour
