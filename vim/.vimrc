@@ -189,3 +189,9 @@ let g:javascript_plugin_jsdoc = 1 " enable syntax for JSDoc
 let g:javascript_plugin_ngdoc = 1 " enable syntax for NGDoc
 let g:javascript_plugin_flow = 1 " enable syntax for flow
 
+" Editorconfig
+""""""""""""""
+
+" Ignore fugitive files
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
