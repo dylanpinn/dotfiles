@@ -9,3 +9,6 @@
 - `gc` toggles visual selection comment lines
 - `<c-y>,` emmet completion
 
+'be' (normal open) or 'bt' (toggle open / close) or 'bs' (force horizontal split
+open) or 'bv' (force vertical split open)
+

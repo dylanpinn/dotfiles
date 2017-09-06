@@ -22,7 +22,7 @@ Plug 'ajh17/VimCompletesMe' " auto-complete
 Plug 'chriskempson/base16-vim' " theme
 Plug 'aklt/plantuml-syntax' " plant-uml syntax
 Plug 'dhruvasagar/vim-table-mode' " markdown tables
-" Plug 'jlanzarotta/bufexplorer' " buffer exploring
+Plug 'jlanzarotta/bufexplorer' " buffer exploring
 Plug 'wakatime/vim-wakatime' " wakatime
 Plug 'ludovicchabant/vim-gutentags' " tag indexing
 Plug 'tomtom/tlib_vim' " required for ttags_vim
@@ -32,6 +32,7 @@ Plug 'mxw/vim-jsx' " jsx syntax
 Plug 'ctrlpvim/ctrlp.vim'	" fuzzy file finder
 Plug 'majutsushi/tagbar'	" class outline viewer
 Plug 'w0rp/ale'           " async linting
+Plug 'othree/html5.vim'     " html5 syntax support
 call plug#end()
 
 "" Colour
