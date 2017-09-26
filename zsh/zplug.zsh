@@ -15,6 +15,7 @@ if [ -z ${RELOAD} ]; then
     export NVM_LAZY_LOAD=true
     export NVM_AUTO_USE=true
     zplug "lukechilds/zsh-nvm"
+    zplug "lukechilds/zsh-better-npm-completion", defer:2
 
     # Install plugins if there are plugins that have not been installed
     if ! zplug check; then
