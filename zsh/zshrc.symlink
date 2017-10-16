@@ -1,5 +1,6 @@
 #!/bin/zsh
-# shortcut to this dotfiels path is $DOTFILES
+
+# shortcut to this dotfiles path is $DOTFILES
 export DOTFILES="$HOME/.dotfiles"
 export ZSH=$DOTFILES/zsh
 

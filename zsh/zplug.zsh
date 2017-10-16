@@ -12,7 +12,7 @@ if [ -z ${RELOAD} ]; then
     zplug "mafredri/zsh-async", from:github
     zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
-    export NVM_LAZY_LOAD=true
+    # export NVM_LAZY_LOAD=true
     export NVM_AUTO_USE=true
     zplug "lukechilds/zsh-nvm"
     zplug "lukechilds/zsh-better-npm-completion", defer:2
