@@ -74,7 +74,7 @@ set textwidth=80
 set colorcolumn=+1
 
 " use system register for yanking
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " don't store swap files in current directory
 set directory=~/.vim/swapfiles//
@@ -131,7 +131,7 @@ set conceallevel=2
 set concealcursor=nc
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-set nu " show line numbers
+set number " show line numbers
 
 " F2 is pastetoggle
 set pastetoggle=<F2>
@@ -205,4 +205,12 @@ let g:javascript_plugin_flow = 1 " enable syntax for flow
 
 " Ignore fugitive files
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
+" Yank text to the OS X clipboard
+noremap <leader>y "*y
+noremap <leader>yy "*Y
+
+" Preserve indentation while pasting text from the OS X clipboard
+noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
+noremap <leader>yy "*Y
 
