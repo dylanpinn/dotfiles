@@ -41,7 +41,7 @@ Plug 'mustache/vim-mustache-handlebars' " handlbars and moustache support
 call plug#end()
 
 "" Colour
-colorscheme base16-flat
+colorscheme base16-eighties
 
 " auto-complete
 autocmd FileType text,markdown let b:vcm_tab_complete = 'dict' " markdown & text
