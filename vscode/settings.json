@@ -1,4 +1,5 @@
 {
+  "diffEditor.renderSideBySide": false,
   "editor.renderWhitespace": "boundary",
   "editor.wordWrap": "bounded",
   "editor.wrappingIndent": "indent",
