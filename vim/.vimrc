@@ -66,6 +66,10 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" up & down based on content not lines
+nmap j gj
+nmap k gk
+
 " make vim read file changes automatically
 set autoread
 
