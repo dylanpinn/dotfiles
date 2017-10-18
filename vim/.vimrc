@@ -218,3 +218,10 @@ noremap <leader>yy "*Y
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 noremap <leader>yy "*Y
 
+" Ale Linting
+"""""""""""""
+
+let g:ale_linters = {
+\  'eruby': []
+\}
+
