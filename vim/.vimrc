@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-surround'                 " surrounding tags
+Plug 'tpope/vim-repeat' 		  " more repeating
 Plug 'scrooloose/nerdtree'                " file tree
 Plug 'Townk/vim-autoclose'                " autoclose tags
 Plug 'mattn/emmet-vim'
