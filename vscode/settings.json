@@ -15,6 +15,5 @@
     "Capfile": "ruby",
     ".dockerignore": "gitignore",
     ".pug-lintrc": "json"
-  },
-  "workbench.colorTheme": "Dracula"
+  }
 }
