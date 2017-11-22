@@ -20,7 +20,7 @@ Plug 'Townk/vim-autoclose'                " autoclose tags
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ajh17/VimCompletesMe' " auto-complete
-Plug 'dracula/vim'
+Plug 'chriskempson/base16-vim'
 Plug 'aklt/plantuml-syntax' " plant-uml syntax
 Plug 'dhruvasagar/vim-table-mode' " markdown tables
 Plug 'jlanzarotta/bufexplorer' " buffer exploring
@@ -42,7 +42,7 @@ Plug 'mustache/vim-mustache-handlebars' " handlbars and moustache support
 call plug#end()
 
 "" Colour
-colorscheme dracula
+colorscheme base16-eighties
 
 " auto-complete
 autocmd FileType text,markdown let b:vcm_tab_complete = 'dict' " markdown & text
