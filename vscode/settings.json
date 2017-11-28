@@ -13,7 +13,7 @@
     ".stylelintrc": "json",
     "Capfile": "ruby",
     ".dockerignore": "gitignore",
-    ".pug-lintrc": "json"
-  },
-  "workbench.colorTheme": "Dracula"
+    ".pug-lintrc": "json",
+    "*.template": "json"
+  }
 }
