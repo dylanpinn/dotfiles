@@ -20,6 +20,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
   Plug 'junegunn/fzf.vim'                 " fuzzy file search
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'wakatime/vim-wakatime'              " wakatime
+Plug 'tpope/vim-fugitive'                 " git
 call plug#end()
 " }}}
 
