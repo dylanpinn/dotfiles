@@ -3,5 +3,5 @@
 ## Install
 
 ```bash
-env RCRC=$HOME/dotfiles/rcrc rcup
+env RCRC=$HOME/.dotfiles/rcrc rcup
 ```
