@@ -59,34 +59,34 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Android SDK
-export ANDROID_HOME=${HOME}/Android/Sdk
-export PATH=${PATH}:${ANDROID_HOME}/emulator
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+# export ANDROID_HOME=${HOME}/Android/Sdk
+# export PATH=${PATH}:${ANDROID_HOME}/emulator
+# export PATH=${PATH}:${ANDROID_HOME}/tools
+# export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Tmuxinator auto-completions
-source ~/.bin/tmuxinator.zsh
+# source ~/.bin/tmuxinator.zsh
 
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+# # tabtab source for serverless package
+# # uninstall by removing these lines or running `tabtab uninstall serverless`
+# [[ -f /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# # tabtab source for sls package
+# # uninstall by removing these lines or running `tabtab uninstall sls`
+# [[ -f /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/dylan/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Tiny Care Terminal
-export TTC_REPOS='~/dev/'
-export TTC_REPOS_DEPTH=5
-export TTC_WEATHER='Melbourne, Australia'
-export TTC_CONSUMER_KEY='REDACTED'
-export TTC_CONSUMER_SECRET='REDACTED'
-export TTC_ACCESS_TOKEN='REDACTED'
-export TTC_ACCESS_TOKEN_SECRET='REDACTED'
+# export TTC_REPOS='~/dev/'
+# export TTC_REPOS_DEPTH=5
+# export TTC_WEATHER='Melbourne, Australia'
+# export TTC_CONSUMER_KEY='REDACTED'
+# export TTC_CONSUMER_SECRET='REDACTED'
+# export TTC_ACCESS_TOKEN='REDACTED'
+# export TTC_ACCESS_TOKEN_SECRET='REDACTED'
 
