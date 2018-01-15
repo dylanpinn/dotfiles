@@ -16,6 +16,10 @@ Plug 'mileszs/ack.vim'                    " searching
 Plug 'scrooloose/nerdtree'                " file tree
 Plug 'Aldlevine/nerdtree-git-plugin'      " highlight git changes
 Plug 'unkiwii/vim-nerdtree-sync'          " show current file
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+  Plug 'junegunn/fzf.vim'                 " fuzzy file search
+Plug 'tpope/vim-commentary'               " Comment stuff out
+Plug 'wakatime/vim-wakatime'              " wakatime
 call plug#end()
 " }}}
 
@@ -41,6 +45,9 @@ set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
 " }}}
 
 "" Search {{{
@@ -53,6 +60,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+" Search with fzf
+nmap <C-p> :Files<CR>
 " }}}
 
 "" {{{ Splits
