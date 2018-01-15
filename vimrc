@@ -11,7 +11,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'editorconfig/editorconfig-vim'      " editor config support
 Plug 'chriskempson/base16-vim'            " themes
-Plug 'sjl/gundo.vim'                      " undo tree
+Plug 'mbbill/undotree'                    " undo tree
 Plug 'mileszs/ack.vim'                    " searching
 Plug 'scrooloose/nerdtree'                " file tree
 Plug 'Aldlevine/nerdtree-git-plugin'      " highlight git changes
@@ -104,8 +104,8 @@ nnoremap gV `[v`]
 
 "" Leader Shortcut {{{
 let mapleader=","       " leader is comma
-" toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
+" toggle Undotree
+nnoremap <leader>u :UndotreeToggle<CR>
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
@@ -140,6 +140,13 @@ autocmd VimEnter * call StartUp()
 
 " nerd-tree-sync
 let g:nerdtree_sync_cursorline=1 " Enable syncing of active file to nerdtree
+" }}}
+
+"" Undotree {{{
+if has("persistent_undo")
+  set undodir=~/.vim/undodir/
+  set undofile
+endif
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
