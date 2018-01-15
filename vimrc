@@ -22,6 +22,7 @@ Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
 Plug 'ajh17/VimCompletesMe'               " auto-completion
+Plug 'vim-ruby/vim-ruby'                  " improve ruby config
 call plug#end()
 " }}}
 
