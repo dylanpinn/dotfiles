@@ -1,6 +1,6 @@
 .netrwhist
-vim/.vim/autoload
-vim/.vim/plugged
-vim/.vim/spell
-vim/.vim/swapfiles
+.vim/autoload
+.vim/plugged
+.vim/spell
+.vim/swapfiles
 
