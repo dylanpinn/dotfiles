@@ -23,6 +23,7 @@ Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
 Plug 'ajh17/VimCompletesMe'               " auto-completion
 Plug 'vim-ruby/vim-ruby'                  " improve ruby config
+Plug 'w0rp/ale'                           " async linting
 call plug#end()
 " }}}
 
