@@ -16,7 +16,7 @@ Plug 'mileszs/ack.vim'                    " searching
 Plug 'scrooloose/nerdtree'                " file tree
 Plug 'Aldlevine/nerdtree-git-plugin'      " highlight git changes
 Plug 'unkiwii/vim-nerdtree-sync'          " show current file
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'                 " fuzzy file search
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'wakatime/vim-wakatime'              " wakatime
