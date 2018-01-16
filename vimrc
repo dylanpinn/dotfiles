@@ -21,6 +21,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
+Plug 'airblade/vim-gitgutter'             " git gutter
 Plug 'ajh17/VimCompletesMe'               " auto-completion
 Plug 'vim-ruby/vim-ruby'                  " improve ruby config
 Plug 'w0rp/ale'                           " async linting
@@ -101,6 +102,9 @@ nnoremap $ <nop>
 nnoremap ^ <nop>
 " highlight last inserted text
 nnoremap gV `[v`]
+" nav between git hunks
+nnoremap <silent> <cr> :GitGutterNextHunk<cr>
+nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
 " }}}
 
 "" Leader Shortcut {{{
