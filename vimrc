@@ -25,6 +25,7 @@ Plug 'airblade/vim-gitgutter'             " git gutter
 Plug 'ajh17/VimCompletesMe'               " auto-completion
 Plug 'vim-ruby/vim-ruby'                  " improve ruby config
 Plug 'w0rp/ale'                           " async linting
+Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 call plug#end()
 " }}}
 
