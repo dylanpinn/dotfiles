@@ -7,6 +7,7 @@ if [ -z ${RELOAD} ]; then
   fi
 
   zplug "zplug/zplug", hook-build:"zplug --self-manage"
+  zplug "zsh-users/zsh-history-substring-search", from:github, as:plugin
   zplug "zsh-users/zsh-syntax-highlighting", defer:2
   zplug "zsh-users/zsh-autosuggestions"
   # Prompt
