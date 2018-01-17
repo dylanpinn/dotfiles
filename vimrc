@@ -26,6 +26,7 @@ Plug 'ajh17/VimCompletesMe'               " auto-completion
 Plug 'vim-ruby/vim-ruby'                  " improve ruby config
 Plug 'w0rp/ale'                           " async linting
 Plug 'jlanzarotta/bufexplorer'            " buffer explorer
+Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 call plug#end()
 " }}}
 
