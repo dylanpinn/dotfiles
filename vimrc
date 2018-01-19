@@ -71,7 +71,7 @@ endif
 nmap <C-p> :Files<CR>
 " }}}
 
-"" {{{ Splits
+"" Splits {{{
 set splitbelow "New splits below, not above
 set splitright "New splits on the right, not left
 
@@ -81,7 +81,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 "}}}
-
 
 "" Folding {{{
 set foldenable          " enable folding
