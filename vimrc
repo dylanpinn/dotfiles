@@ -22,6 +22,7 @@ Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
 Plug 'airblade/vim-gitgutter'             " git gutter
+Plug 'itchyny/vim-gitbranch'              " provide gitbranch for lightline
 Plug 'ajh17/VimCompletesMe'               " auto-completion
 Plug 'vim-ruby/vim-ruby'                  " improve Ruby language
 Plug 'pangloss/vim-javascript'            " improve Javascript language
@@ -138,7 +139,6 @@ if v:version > 703 || v:version == 703 && has('patch541')
 endif
 " don't store swap files in current directory
 set directory=~/.vim/swapfiles//
-set noshowmode                      " don't show mode
 " }}}
 
 "" NERDTree {{{
@@ -168,6 +168,21 @@ endif
 """ Javascript {{{
 let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
 let g:javascript_plugin_flow = 1    " syntax for flow
+" }}}
+
+""" Lightline {{{
+set noshowmode                      " don't show mode
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
