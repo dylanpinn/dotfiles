@@ -38,6 +38,7 @@ Plug 'tpope/vim-unimpaired'               " more pair mappings
 Plug 'tpope/vim-eunuch'                   " helpers for UNIX
 Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
+Plug 'tpope/vim-repeat'                   " enable more repeating
 call plug#end()
 " }}}
 
