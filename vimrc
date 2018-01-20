@@ -29,6 +29,7 @@ Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
+Plug 'ap/vim-css-color'                   " highlight css colours
 call plug#end()
 " }}}
 
