@@ -73,7 +73,9 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 " Search with fzf
-nmap <C-p> :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>r :Tags<CR>
 " }}}
 
 "" Splits {{{
