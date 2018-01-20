@@ -36,6 +36,7 @@ Plug 'ap/vim-css-color'                   " highlight css colours
 Plug 'itchyny/lightline.vim'              " statusline
 Plug 'tpope/vim-unimpaired'               " more pair mappings
 Plug 'tpope/vim-eunuch'                   " helpers for UNIX
+Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
 call plug#end()
 " }}}
 
