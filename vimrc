@@ -23,7 +23,8 @@ Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
 Plug 'airblade/vim-gitgutter'             " git gutter
 Plug 'ajh17/VimCompletesMe'               " auto-completion
-Plug 'vim-ruby/vim-ruby'                  " improve ruby config
+Plug 'vim-ruby/vim-ruby'                  " improve Ruby language
+Plug 'pangloss/vim-javascript'            " improve Javascript language
 Plug 'w0rp/ale'                           " async linting
 Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
@@ -158,6 +159,11 @@ if has("persistent_undo")
   set undodir=~/.vim/undodir/
   set undofile
 endif
+" }}}
+
+""" Javascript {{{
+let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
+let g:javascript_plugin_flow = 1    " syntax for flow
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
