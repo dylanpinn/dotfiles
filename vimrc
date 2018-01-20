@@ -25,8 +25,7 @@ Plug 'airblade/vim-gitgutter'             " git gutter
 Plug 'itchyny/vim-gitbranch'              " provide gitbranch for lightline
 Plug 'tpope/vim-rhubarb'                  " GitHub support for fugitive
 Plug 'ajh17/VimCompletesMe'               " auto-completion
-Plug 'vim-ruby/vim-ruby'                  " improve Ruby language
-Plug 'pangloss/vim-javascript'            " improve Javascript language
+Plug 'sheerun/vim-polyglot'               " language pack
 Plug 'w0rp/ale'                           " async linting
 Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
