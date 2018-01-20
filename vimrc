@@ -28,6 +28,7 @@ Plug 'w0rp/ale'                           " async linting
 Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
+Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
 call plug#end()
 " }}}
 
