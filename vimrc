@@ -34,6 +34,8 @@ Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
 Plug 'ap/vim-css-color'                   " highlight css colours
 Plug 'itchyny/lightline.vim'              " statusline
+Plug 'tpope/vim-unimpaired'               " more pair mappings
+Plug 'tpope/vim-eunuch'                   " helpers for UNIX
 call plug#end()
 " }}}
 
