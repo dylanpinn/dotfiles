@@ -82,7 +82,7 @@ endif
 " Search with fzf
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :Files<CR>
-nmap <Leader>r :Tags<CR>
+nmap <Leader>t :Tags<CR>
 " }}}
 
 "" Splits {{{
