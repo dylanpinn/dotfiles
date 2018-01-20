@@ -91,6 +91,7 @@ set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
 " space open/closes folds
 nnoremap <space> za
+vnoremap <space> zf
 set foldmethod=indent   " fold based on indent level
 " }}}
 
