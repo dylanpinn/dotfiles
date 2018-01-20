@@ -62,9 +62,10 @@ set colorcolumn=+1
 "" Search {{{
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
+set smartcase           " ignore case unless CAPS
 set hlsearch            " highlight matches
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+nmap \q :nohlsearch<CR>
 " Use ag with ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
