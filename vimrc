@@ -23,6 +23,7 @@ Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
 Plug 'airblade/vim-gitgutter'             " git gutter
 Plug 'itchyny/vim-gitbranch'              " provide gitbranch for lightline
+Plug 'tpope/vim-rhubarb'                  " GitHub support for fugitive
 Plug 'ajh17/VimCompletesMe'               " auto-completion
 Plug 'vim-ruby/vim-ruby'                  " improve Ruby language
 Plug 'pangloss/vim-javascript'            " improve Javascript language
