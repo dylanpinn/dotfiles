@@ -31,6 +31,7 @@ Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
 Plug 'ap/vim-css-color'                   " highlight css colours
+Plug 'itchyny/lightline.vim'              " statusline
 call plug#end()
 " }}}
 
@@ -137,6 +138,7 @@ if v:version > 703 || v:version == 703 && has('patch541')
 endif
 " don't store swap files in current directory
 set directory=~/.vim/swapfiles//
+set noshowmode                      " don't show mode
 " }}}
 
 "" NERDTree {{{
