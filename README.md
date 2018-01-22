@@ -1,15 +1,24 @@
-# dotfiles
+# Dotfiles
 
-My personal dotfiles for Linux and macOS.
-Includes:
+## Includes
 
 - ag
 - ctags
-- git
-- hyper
 - iterm2
 - ruby
-- terminator
 - tmux
 - vscode
 - zsh
+
+## Requirements
+
+```bash
+fd
+```
+
+## Install
+
+```bash
+env RCRC=$HOME/.dotfiles/rcrc rcup
+```
+
