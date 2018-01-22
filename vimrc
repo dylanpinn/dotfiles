@@ -68,6 +68,20 @@ set textwidth=80
 set colorcolumn=+1
 " }}}
 
+"" Leader Shortcut {{{
+let mapleader=","       " leader is comma
+" toggle Undotree
+nnoremap <leader>u :UndotreeToggle<CR>
+" edit vimrc/zshrc and load vimrc bindings
+nnoremap <leader>ev :vsp $MYVIMRC<CR>
+nnoremap <leader>ez :vsp ~/.zshrc<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+" save session
+nnoremap <leader>s :mksession<CR>
+" open ag.vim
+nnoremap <leader>a :Ag
+" }}}
+
 "" Search {{{
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
@@ -121,20 +135,6 @@ nnoremap gV `[v`]
 " nav between git hunks
 nnoremap <silent> <cr> :GitGutterNextHunk<cr>
 nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
-" }}}
-
-"" Leader Shortcut {{{
-let mapleader=","       " leader is comma
-" toggle Undotree
-nnoremap <leader>u :UndotreeToggle<CR>
-" edit vimrc/zshrc and load vimrc bindings
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
-nnoremap <leader>ez :vsp ~/.zshrc<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
-" save session
-nnoremap <leader>s :mksession<CR>
-" open ag.vim
-nnoremap <leader>a :Ag
 " }}}
 
 "" Misc {{{
