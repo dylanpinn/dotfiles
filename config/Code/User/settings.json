@@ -4,11 +4,6 @@
   "editor.renderWhitespace": "boundary",
   "editor.wordWrap": "bounded",
   "editor.wrappingIndent": "indent",
-  "flow.enabled": false,
-  "search.useIgnoreFilesByDefault": true,
-  "phpformatter.composer": true,
-  "window.zoomLevel": 0,
-  "workbench.iconTheme": "vs-seti",
   "files.associations": {
     ".simplecov": "ruby",
     ".stylelintrc": "json",
@@ -16,5 +11,10 @@
     ".dockerignore": "gitignore",
     ".pug-lintrc": "json",
     "*.template": "json"
-  }
+  },
+  "flow.enabled": false,
+  "git.autofetch": true,
+  "phpformatter.composer": true,
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "vs-seti"
 }
