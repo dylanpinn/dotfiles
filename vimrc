@@ -38,6 +38,7 @@ Plug 'tpope/vim-eunuch'                   " helpers for UNIX
 Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
 Plug 'tpope/vim-repeat'                   " enable more repeating
+Plug 'mattn/emmet-vim'                    " emmet
 call plug#end()
 " }}}
 
