@@ -16,5 +16,9 @@
   "git.autofetch": true,
   "phpformatter.composer": true,
   "window.zoomLevel": 0,
-  "workbench.iconTheme": "vs-seti"
+  "workbench.iconTheme": "vs-seti",
+  "stylelint.enable": true,
+  "css.validate": false,
+  "scss.validate": false,
+  "diffEditor.ignoreTrimWhitespace": false
 }
