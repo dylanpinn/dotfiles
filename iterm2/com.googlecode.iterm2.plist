@@ -558,7 +558,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dev/src/base16-iterm2</string>
+	<string>~/dev/src/dracular-iterm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{823, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -598,13 +598,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1410 784 620 392 0 0 3440 1418 </string>
+	<string>1410 782 620 392 0 0 3440 1418 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1781 563 1018 447 0 0 3440 1418 </string>
+	<string>434 324 918 512 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1723 58 1714 1360 0 0 3440 1418 </string>
+	<string>0 51 1440 827 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 58 1434 820 0 0 1440 878 </string>
+	<string>0 390 682 488 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -877,7 +877,7 @@
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
-			<string>No</string>
+			<string>Recycle</string>
 			<key>Default Bookmark</key>
 			<string>No</string>
 			<key>Description</key>
@@ -1293,7 +1293,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>39F52332-F5CD-4DC6-ACEF-B6B1175C26B8</string>
 	<key>NoSyncLastTipTime</key>
-	<real>528116865.91295499</real>
+	<real>530098451.15225798</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1367,11 +1367,23 @@
 		<string>0059</string>
 		<string>0060</string>
 		<string>0061</string>
+		<string>0062</string>
+		<string>0063</string>
+		<string>0064</string>
+		<string>0065</string>
+		<string>0066</string>
+		<string>0067</string>
+		<string>0068</string>
+		<string>0069</string>
+		<string>0070</string>
+		<string>0071</string>
 	</array>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>2</integer>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1418,7 +1430,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-09-26T13:57:28Z</date>
+	<date>2018-02-04T23:10:19Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1446,6 +1458,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.2</string>
+	<string>3.1.5.beta.2</string>
 </dict>
 </plist>
