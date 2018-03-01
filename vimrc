@@ -46,7 +46,7 @@ call plug#end()
 " }}}
 
 "" Colours {{{
-colorscheme base16-eighties
+colorscheme base16-tomorrow-night
 syntax enable           " enable syntax processing
 " }}}
 
