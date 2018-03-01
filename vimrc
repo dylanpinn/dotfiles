@@ -39,6 +39,7 @@ Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
 Plug 'tpope/vim-repeat'                   " enable more repeating
 Plug 'mattn/emmet-vim'                    " emmet
+Plug 'junegunn/goyo.vim'                  " distraction free writing
 Plug 'godlygeek/tabular'                  " markdown tables
 Plug 'plasticboy/vim-markdown'            " enhanced markdown
 call plug#end()
