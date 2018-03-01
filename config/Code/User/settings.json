@@ -1,7 +1,9 @@
 {
+  "css.validate": false,
+  "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
-  "editor.tabSize": 2,
   "editor.renderWhitespace": "boundary",
+  "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
   "editor.wrappingIndent": "indent",
   "files.associations": {
@@ -15,10 +17,8 @@
   "flow.enabled": false,
   "git.autofetch": true,
   "phpformatter.composer": true,
-  "window.zoomLevel": 0,
-  "workbench.iconTheme": "vs-seti",
-  "stylelint.enable": true,
-  "css.validate": false,
   "scss.validate": false,
-  "diffEditor.ignoreTrimWhitespace": false
+  "stylelint.enable": true,
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "vs-seti"
 }
