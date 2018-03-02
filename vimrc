@@ -194,5 +194,9 @@ let g:lightline = {
       \ }
 " }}}
 
+" ALE {{{
+let g:ale_fixers = {}
+" }}}
+
 " vim:foldmethod=marker:foldlevel=0
 
