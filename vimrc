@@ -44,6 +44,7 @@ Plug 'godlygeek/tabular'                  " markdown tables
 Plug 'plasticboy/vim-markdown'            " enhanced markdown
 Plug 'thoughtbot/vim-rspec'               " rspec runner
 Plug 'tpope/vim-bundler'                  " bundler integration
+Plug 'tpope/vim-rails'                    " rails integration
 call plug#end()
 " }}}
 
