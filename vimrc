@@ -42,6 +42,7 @@ Plug 'mattn/emmet-vim'                    " emmet
 Plug 'junegunn/goyo.vim'                  " distraction free writing
 Plug 'godlygeek/tabular'                  " markdown tables
 Plug 'plasticboy/vim-markdown'            " enhanced markdown
+Plug 'thoughtbot/vim-rspec'               " rspec runner
 call plug#end()
 " }}}
 
@@ -198,5 +199,11 @@ let g:lightline = {
 let g:ale_fixers = {}
 " }}}
 
+" {{{ Rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+" }}}
 " vim:foldmethod=marker:foldlevel=0
 
