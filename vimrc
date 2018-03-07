@@ -46,6 +46,7 @@ Plug 'thoughtbot/vim-rspec'               " rspec runner
 Plug 'tpope/vim-bundler'                  " bundler integration
 Plug 'tpope/vim-rails'                    " rails integration
 Plug 'vim-ruby/vim-ruby'                  " latest ruby
+Plug 'fatih/vim-go'                       " golang support
 call plug#end()
 " }}}
 
