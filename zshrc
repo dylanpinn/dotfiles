@@ -78,3 +78,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 ## follow symbolic links, include hidden files and respect ignore
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
+# golang
+export GOPATH="$HOME/dev/go"
+export PATH="$PATH:$GOPATH/bin"
