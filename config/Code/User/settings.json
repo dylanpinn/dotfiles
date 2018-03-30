@@ -2,6 +2,8 @@
   "css.validate": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
+  "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
