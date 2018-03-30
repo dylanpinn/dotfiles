@@ -10,7 +10,8 @@ endif
 call plug#begin()
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'editorconfig/editorconfig-vim'      " editor config support
-Plug 'chriskempson/base16-vim'            " themes
+Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'chriskempson/base16-vim'            " themes
 Plug 'mbbill/undotree'                    " undo tree
 Plug 'mileszs/ack.vim'                    " searching
 Plug 'scrooloose/nerdtree'                " file tree
@@ -47,11 +48,14 @@ Plug 'tpope/vim-bundler'                  " bundler integration
 Plug 'tpope/vim-rails'                    " rails integration
 Plug 'vim-ruby/vim-ruby'                  " latest ruby
 Plug 'fatih/vim-go'                       " golang support
+Plug 'pangloss/vim-javascript'            " improved javascript
+Plug 'mxw/vim-jsx'                        " improved JSX
 call plug#end()
 " }}}
 
 "" Colours {{{
-colorscheme base16-tomorrow-night
+" colorscheme base16-tomorrow-night
+colorscheme dracula
 syntax enable           " enable syntax processing
 " }}}
 
