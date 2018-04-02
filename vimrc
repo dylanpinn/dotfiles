@@ -32,6 +32,7 @@ Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
+Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
 Plug 'ap/vim-css-color'                   " highlight css colours
 Plug 'itchyny/lightline.vim'              " statusline
 Plug 'tpope/vim-unimpaired'               " more pair mappings
