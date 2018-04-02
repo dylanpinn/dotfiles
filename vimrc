@@ -10,7 +10,8 @@ endif
 call plug#begin()
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'editorconfig/editorconfig-vim'      " editor config support
-Plug 'chriskempson/base16-vim'            " themes
+Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'chriskempson/base16-vim'            " themes
 Plug 'mbbill/undotree'                    " undo tree
 Plug 'mileszs/ack.vim'                    " searching
 Plug 'scrooloose/nerdtree'                " file tree
@@ -31,6 +32,8 @@ Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
+Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
+Plug 'wincent/terminus'                   " better vim and terminal support
 Plug 'ap/vim-css-color'                   " highlight css colours
 Plug 'itchyny/lightline.vim'              " statusline
 Plug 'tpope/vim-unimpaired'               " more pair mappings
@@ -47,11 +50,15 @@ Plug 'tpope/vim-bundler'                  " bundler integration
 Plug 'tpope/vim-rails'                    " rails integration
 Plug 'vim-ruby/vim-ruby'                  " latest ruby
 Plug 'fatih/vim-go'                       " golang support
+Plug 'pangloss/vim-javascript'            " improved javascript
+Plug 'mxw/vim-jsx'                        " improved JSX
+Plug 'octref/RootIgnore'                  " wildmenu ignore gitignore
 call plug#end()
 " }}}
 
 "" Colours {{{
-colorscheme base16-tomorrow-night
+" colorscheme base16-tomorrow-night
+colorscheme dracula
 syntax enable           " enable syntax processing
 " }}}
 
@@ -153,6 +160,9 @@ if v:version > 703 || v:version == 703 && has('patch541')
 endif
 " don't store swap files in current directory
 set directory=~/.vim/swapfiles//
+
+" autoread file changes
+set autoread
 " }}}
 
 "" NERDTree {{{
@@ -182,6 +192,7 @@ endif
 """ Javascript {{{
 let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
 let g:javascript_plugin_flow = 1    " syntax for flow
+let g:jsx_ext_required=0            " Highlight JSX in .js files
 " }}}
 
 """ Lightline {{{
