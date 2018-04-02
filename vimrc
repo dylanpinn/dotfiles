@@ -33,6 +33,7 @@ Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
 Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
+Plug 'wincent/terminus'                   " better vim and terminal support
 Plug 'ap/vim-css-color'                   " highlight css colours
 Plug 'itchyny/lightline.vim'              " statusline
 Plug 'tpope/vim-unimpaired'               " more pair mappings
@@ -51,6 +52,7 @@ Plug 'vim-ruby/vim-ruby'                  " latest ruby
 Plug 'fatih/vim-go'                       " golang support
 Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
+Plug 'octref/RootIgnore'                  " wildmenu ignore gitignore
 call plug#end()
 " }}}
 
