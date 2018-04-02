@@ -192,6 +192,7 @@ endif
 """ Javascript {{{
 let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
 let g:javascript_plugin_flow = 1    " syntax for flow
+let g:jsx_ext_required=0            " Highlight JSX in .js files
 " }}}
 
 """ Lightline {{{
