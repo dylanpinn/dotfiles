@@ -158,6 +158,9 @@ if v:version > 703 || v:version == 703 && has('patch541')
 endif
 " don't store swap files in current directory
 set directory=~/.vim/swapfiles//
+
+" autoread file changes
+set autoread
 " }}}
 
 "" NERDTree {{{
