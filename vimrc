@@ -60,6 +60,7 @@ call plug#end()
 " colorscheme base16-tomorrow-night
 colorscheme dracula
 syntax enable           " enable syntax processing
+let g:dracula_colorterm = 0
 " }}}
 
 "" Spaces & Tabs {{{
