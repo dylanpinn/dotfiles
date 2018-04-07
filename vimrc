@@ -95,6 +95,8 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 " nnoremap <leader>s :mksession<CR>
 " " open ag.vim
 " nnoremap <leader>a :Ag
+"Quickly switch between last used buffers
+nnoremap <leader><leader> <c-^>
 " " }}}
 
 " "" Search {{{
