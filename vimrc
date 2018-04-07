@@ -10,7 +10,8 @@ endif
 call plug#begin()
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'editorconfig/editorconfig-vim'      " editor config support
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dracula/vim', { 'as': 'dracula' }   " theme
+Plug 'tpope/vim-endwise'                  " auto end functions
 " Plug 'mbbill/undotree'                    " undo tree
 " Plug 'mileszs/ack.vim'                    " searching
 " Plug 'scrooloose/nerdtree'                " file tree
@@ -19,12 +20,12 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'                 " fuzzy file search
 Plug 'tpope/vim-commentary'               " Comment stuff out
-" Plug 'wakatime/vim-wakatime'              " wakatime
+Plug 'wakatime/vim-wakatime'              " wakatime
 " Plug 'tpope/vim-fugitive'                 " git manager
 " Plug 'airblade/vim-gitgutter'             " git gutter
 " Plug 'itchyny/vim-gitbranch'              " provide gitbranch for lightline
 " Plug 'tpope/vim-rhubarb'                  " GitHub support for fugitive
-" Plug 'ajh17/VimCompletesMe'               " auto-completion
+Plug 'ajh17/VimCompletesMe'               " auto-completion
 " Plug 'sheerun/vim-polyglot'               " language pack
 " Plug 'w0rp/ale'                           " async linting
 " Plug 'jlanzarotta/bufexplorer'            " buffer explorer
