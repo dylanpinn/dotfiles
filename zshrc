@@ -18,7 +18,6 @@ setopt HIST_IGNORE_ALL_DUPS SHARE_HISTORY
 bindkey -e
 
 # Search through history with up & down
-# # TODO: Get working in Ubuntu 17.10
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # Back and forward through words with alt <- & alt ->
