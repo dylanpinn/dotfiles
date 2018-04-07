@@ -62,11 +62,5 @@ bindkey '\C-x\C-e' edit-command-line
 # zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 # zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-# # Android SDK
-# # export ANDROID_HOME=${HOME}/Android/Sdk
-# # export PATH=${PATH}:${ANDROID_HOME}/emulator
-# # export PATH=${PATH}:${ANDROID_HOME}/tools
-# # export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
 # # iTerm2 integration
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

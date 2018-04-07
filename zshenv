@@ -25,3 +25,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 # fzf
 ## follow symbolic links, include hidden files and respect ignore
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
+# Android SDK
+export ANDROID_HOME=${HOME}/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/emulator
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
