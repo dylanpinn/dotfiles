@@ -1,0 +1,9 @@
+[alias]
+  st = status
+  ci = commit --verbose
+  co = checkout
+  di = diff
+  dc = diff --cached
+  amend = commit --ammend
+  aa = add --all
+
