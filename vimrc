@@ -16,6 +16,7 @@ Plug 'tpope/vim-vinegar'                  " netrw additions
 Plug 'tpope/vim-abolish'                  " text manipulation
 Plug 'tpope/vim-projectionist'            " help manage vim settings in projects
 Plug 'tpope/vim-characterize'             " character encoding
+Plug 'tpope/vim-dispatch'                 " dispatch tasks
 Plug 'mbbill/undotree'                    " undo tree
 " Plug 'mileszs/ack.vim'                    " searching
 " Plug 'scrooloose/nerdtree'                " file tree
