@@ -13,7 +13,10 @@ Plug 'editorconfig/editorconfig-vim'      " editor config support
 Plug 'dracula/vim', { 'as': 'dracula' }   " theme
 Plug 'tpope/vim-endwise'                  " auto end functions
 Plug 'tpope/vim-vinegar'                  " netrw additions
-" Plug 'mbbill/undotree'                    " undo tree
+Plug 'tpope/vim-abolish'                  " text manipulation
+Plug 'tpope/vim-projectionist'            " help manage vim settings in projects
+Plug 'tpope/vim-characterize'             " character encoding
+Plug 'mbbill/undotree'                    " undo tree
 " Plug 'mileszs/ack.vim'                    " searching
 " Plug 'scrooloose/nerdtree'                " file tree
 " Plug 'Aldlevine/nerdtree-git-plugin'      " highlight git changes
@@ -22,33 +25,35 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'                 " fuzzy file search
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'wakatime/vim-wakatime'              " wakatime
-" Plug 'tpope/vim-fugitive'                 " git manager
+Plug 'tpope/vim-fugitive'                 " git manager
 " Plug 'airblade/vim-gitgutter'             " git gutter
 " Plug 'itchyny/vim-gitbranch'              " provide gitbranch for lightline
-" Plug 'tpope/vim-rhubarb'                  " GitHub support for fugitive
+Plug 'tpope/vim-rhubarb'                  " GitHub support for fugitive
 Plug 'ajh17/VimCompletesMe'               " auto-completion
 " Plug 'sheerun/vim-polyglot'               " language pack
 " Plug 'w0rp/ale'                           " async linting
 " Plug 'jlanzarotta/bufexplorer'            " buffer explorer
-" Plug 'ludovicchabant/vim-gutentags'       " tag indexing
+Plug 'ludovicchabant/vim-gutentags'       " tag indexing
+Plug 'tomtom/tlib_vim'
+  Plug 'tomtom/ttags_vim'                   " searching tags
 " Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 " Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
 " Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
 " Plug 'wincent/terminus'                   " better vim and terminal support
 " Plug 'ap/vim-css-color'                   " highlight css colours
 " Plug 'itchyny/lightline.vim'              " statusline
-" Plug 'tpope/vim-unimpaired'               " more pair mappings
-" Plug 'tpope/vim-eunuch'                   " helpers for UNIX
+Plug 'tpope/vim-unimpaired'               " more pair mappings
+Plug 'tpope/vim-eunuch'                   " helpers for UNIX
 " Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
-" Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
-" Plug 'tpope/vim-repeat'                   " enable more repeating
+Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
+Plug 'tpope/vim-repeat'                   " enable more repeating
 " Plug 'mattn/emmet-vim'                    " emmet
 " Plug 'junegunn/goyo.vim'                  " distraction free writing
 " Plug 'godlygeek/tabular'                  " markdown tables
 " Plug 'plasticboy/vim-markdown'            " enhanced markdown
 " Plug 'thoughtbot/vim-rspec'               " rspec runner
-" Plug 'tpope/vim-bundler'                  " bundler integration
-" Plug 'tpope/vim-rails'                    " rails integration
+Plug 'tpope/vim-bundler'                  " bundler integration
+Plug 'tpope/vim-rails'                    " rails integration
 Plug 'vim-ruby/vim-ruby'                  " latest ruby
 " Plug 'fatih/vim-go'                       " golang support
 Plug 'pangloss/vim-javascript'            " improved javascript
@@ -88,7 +93,7 @@ set colorcolumn=+1
 " "" Leader Shortcut {{{
 let mapleader=","       " leader is comma
 " " toggle Undotree
-" nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>u :UndotreeToggle<CR>
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
@@ -185,12 +190,12 @@ set autoread
 " let g:nerdtree_sync_cursorline=1 " Enable syncing of active file to nerdtree
 " " }}}
 
-" "" Undotree {{{
-" if has("persistent_undo")
-"   set undodir=~/.vim/undodir/
-"   set undofile
-" endif
-" " }}}
+"" Undotree {{{
+if has("persistent_undo")
+  set undodir=~/.vim/undodir/
+  set undofile
+endif
+" }}}
 
 """ Javascript {{{
 let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
@@ -223,5 +228,26 @@ let g:jsx_ext_required=0            " Highlight JSX in .js files
 " map <Leader>l :call RunLastSpec()<CR>
 " map <Leader>a :call RunAllSpecs()<CR>
 " " }}}
+" Tags {{{
+" Show available tags
+noremap <Leader>g. :TTags<cr>
+
+" Show current buffer's tags
+noremap <Leader>g% :call ttags#List(0, "*", "", ".")<cr>
+
+" Show tags matching the word under cursor
+noremap <Leader>g# :call ttags#List(0, "*", tlib#rx#Escape(expand("<cword>")))<cr>
+
+" Show tags with a prefix matching the word under cursor
+noremap <Leader>g* :call ttags#List(0, "*", tlib#rx#Escape(expand("<cword>")) .".*")<cr>
+
+" Show tags matching the word under cursor (search also in |g:tlib_tags_extra|)
+noremap <Leader>g? :call ttags#List(1, "*", tlib#rx#Escape(expand("<cword>")))<cr>
+
+" Show tags of a certain category
+for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\zs')
+    exec 'noremap <Leader>g'. c .' :TTags '. c .'<cr>'
+endfor
+" }}}
 " " vim:foldmethod=marker:foldlevel=0
 
