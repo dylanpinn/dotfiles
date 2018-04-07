@@ -6,7 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" " install plugins
+" install plugins
 call plug#begin()
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'editorconfig/editorconfig-vim'      " editor config support
@@ -44,14 +44,14 @@ Plug 'tomtom/tlib_vim'
 " Plug 'itchyny/lightline.vim'              " statusline
 Plug 'tpope/vim-unimpaired'               " more pair mappings
 Plug 'tpope/vim-eunuch'                   " helpers for UNIX
-" Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
+Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
 Plug 'tpope/vim-repeat'                   " enable more repeating
 " Plug 'mattn/emmet-vim'                    " emmet
 " Plug 'junegunn/goyo.vim'                  " distraction free writing
 " Plug 'godlygeek/tabular'                  " markdown tables
 " Plug 'plasticboy/vim-markdown'            " enhanced markdown
-" Plug 'thoughtbot/vim-rspec'               " rspec runner
+Plug 'thoughtbot/vim-rspec'               " rspec runner
 Plug 'tpope/vim-bundler'                  " bundler integration
 Plug 'tpope/vim-rails'                    " rails integration
 Plug 'vim-ruby/vim-ruby'                  " latest ruby
@@ -68,14 +68,14 @@ syntax enable           " enable syntax processing
 let g:dracula_colorterm = 0
 " }}}
 
-" "" Spaces & Tabs {{{
+"" Spaces & Tabs {{{
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set shiftwidth=2    " number of spaces when visual indenting
-" " }}}
+" }}}
 
-" "" UI Config {{{
+"" UI Config {{{
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set nocursorline        " don't highlight current line
@@ -88,25 +88,25 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
-" " }}}
+" }}}
 
-" "" Leader Shortcut {{{
+"" Leader Shortcut {{{
 let mapleader=","       " leader is comma
-" " toggle Undotree
+" toggle Undotree
 nnoremap <leader>u :UndotreeToggle<CR>
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-" " save session
-" nnoremap <leader>s :mksession<CR>
+" save session
+nnoremap <leader>s :mksession<CR>
 " " open ag.vim
 " nnoremap <leader>a :Ag
 "Quickly switch between last used buffers
 nnoremap <leader><leader> <c-^>
-" " }}}
+" }}}
 
-" "" Search {{{
+"" Search {{{
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
 set smartcase           " ignore case unless CAPS
@@ -120,7 +120,6 @@ endif
 " Search with fzf
 nmap <Leader>b :Buffers<CR>
 nmap <Leader>f :Files<CR>
-nmap <Leader>t :Tags<CR>
 " }}}
 
 "" Splits {{{
@@ -222,12 +221,12 @@ let g:jsx_ext_required=0            " Highlight JSX in .js files
 " let g:ale_fixers = {}
 " " }}}
 
-" " {{{ Rspec
-" " map <Leader>t :call RunCurrentSpecFile()<CR>
-" map <Leader>s :call RunNearestSpec()<CR>
-" map <Leader>l :call RunLastSpec()<CR>
-" map <Leader>a :call RunAllSpecs()<CR>
-" " }}}
+" {{{ Rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+" }}}
 
 " Tags {{{
 " Show available tags
