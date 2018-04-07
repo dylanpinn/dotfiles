@@ -38,3 +38,6 @@ alias wget='wget --no-hsts'
 # Colorize terminal
 alias ls='ls -G'
 alias ll='ls -lG'
+
+# Load completion menu styles last
+source $HOME/.zsh/styles.zsh
