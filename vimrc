@@ -228,6 +228,7 @@ let g:jsx_ext_required=0            " Highlight JSX in .js files
 " map <Leader>l :call RunLastSpec()<CR>
 " map <Leader>a :call RunAllSpecs()<CR>
 " " }}}
+
 " Tags {{{
 " Show available tags
 noremap <Leader>g. :TTags<cr>
@@ -248,6 +249,10 @@ noremap <Leader>g? :call ttags#List(1, "*", tlib#rx#Escape(expand("<cword>")))<c
 for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\zs')
     exec 'noremap <Leader>g'. c .' :TTags '. c .'<cr>'
 endfor
+" }}}
+
+" Statusline {{{
+set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 " }}}
 " " vim:foldmethod=marker:foldlevel=0
 
