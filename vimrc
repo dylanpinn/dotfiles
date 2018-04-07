@@ -16,8 +16,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'scrooloose/nerdtree'                " file tree
 " Plug 'Aldlevine/nerdtree-git-plugin'      " highlight git changes
 " Plug 'unkiwii/vim-nerdtree-sync'          " show current file
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-"   Plug 'junegunn/fzf.vim'                 " fuzzy file search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+  Plug 'junegunn/fzf.vim'                 " fuzzy file search
 Plug 'tpope/vim-commentary'               " Comment stuff out
 " Plug 'wakatime/vim-wakatime'              " wakatime
 " Plug 'tpope/vim-fugitive'                 " git manager
@@ -104,15 +104,15 @@ set smartcase           " ignore case unless CAPS
 set hlsearch            " highlight matches
 " turn off search highlight
 nmap \q :nohlsearch<CR>
-" " Use ag with ack.vim
-" if executable('ag')
-"   let g:ackprg = 'ag --vimgrep'
-" endif
-" " Search with fzf
-" nmap <Leader>b :Buffers<CR>
-" nmap <Leader>f :Files<CR>
-" nmap <Leader>t :Tags<CR>
-" " }}}
+" Use ag with ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+" Search with fzf
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>t :Tags<CR>
+" }}}
 
 "" Splits {{{
 set splitbelow "New splits below, not above
