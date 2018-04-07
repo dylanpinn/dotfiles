@@ -12,6 +12,7 @@ Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'editorconfig/editorconfig-vim'      " editor config support
 Plug 'dracula/vim', { 'as': 'dracula' }   " theme
 Plug 'tpope/vim-endwise'                  " auto end functions
+Plug 'tpope/vim-vinegar'                  " netrw additions
 " Plug 'mbbill/undotree'                    " undo tree
 " Plug 'mileszs/ack.vim'                    " searching
 " Plug 'scrooloose/nerdtree'                " file tree
