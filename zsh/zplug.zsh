@@ -7,17 +7,25 @@ if [ -z ${RELOAD} ]; then
   fi
 
   zplug "zplug/zplug", hook-build:"zplug --self-manage"
-  zplug "zsh-users/zsh-history-substring-search", from:github, as:plugin
+
+  # Extra functionality
   zplug "zsh-users/zsh-syntax-highlighting", defer:2
+  zplug "zsh-users/zsh-history-substring-search", defer:3
   zplug "zsh-users/zsh-autosuggestions"
+
   # Prompt
   zplug "mafredri/zsh-async", from:github
   zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
-  # export NVM_LAZY_LOAD=true
+  # nvm and npm
+  export NVM_LAZY_LOAD=true
   export NVM_AUTO_USE=true
   zplug "lukechilds/zsh-nvm"
   zplug "lukechilds/zsh-better-npm-completion", defer:2
+
+  zplug "erikced/zsh-pyenv-lazy-load"
+
+  zplug "plugins/colored-man-pages", from:oh-my-zsh
 
   # Install plugins if there are plugins that have not been installed
   if ! zplug check; then
