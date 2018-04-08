@@ -21,8 +21,14 @@ bindkey -e
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 # Back and forward through words with alt <- & alt ->
-bindkey "^[^[[C" forward-word
-bindkey "^[^[[D" backward-word
+if [[ `uname` == 'Darwin' ]]; then
+  bindkey "^[^[[C" forward-word
+  bindkey "^[^[[D" backward-word
+fi
+if [[ `uname` == 'Linux' ]]; then
+  bindkey "^[[1;3C" forward-word
+  bindkey "^[[1;3D" backward-word
+fi
 
 # Use C-x C-e to edit the current command line
 autoload -U edit-command-line
