@@ -50,8 +50,8 @@ Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
 Plug 'tpope/vim-repeat'                   " enable more repeating
 " Plug 'mattn/emmet-vim'                    " emmet
 " Plug 'junegunn/goyo.vim'                  " distraction free writing
-" Plug 'godlygeek/tabular'                  " markdown tables
-" Plug 'plasticboy/vim-markdown'            " enhanced markdown
+Plug 'godlygeek/tabular'                  " markdown tables
+Plug 'plasticboy/vim-markdown'            " enhanced markdown
 Plug 'thoughtbot/vim-rspec'               " rspec runner
 Plug 'tpope/vim-bundler'                  " bundler integration
 Plug 'tpope/vim-rails'                    " rails integration
@@ -218,9 +218,9 @@ let g:jsx_ext_required=0            " Highlight JSX in .js files
 "       \ }
 " " }}}
 
-" " ALE {{{
-" let g:ale_fixers = {}
-" " }}}
+" ALE {{{
+let g:ale_fixers = {}
+" }}}
 
 " {{{ Rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -268,5 +268,6 @@ endfunction
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 set statusline+=%{LinterStatus()}
 " }}}
+
 " " vim:foldmethod=marker:foldlevel=0
 
