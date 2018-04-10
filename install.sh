@@ -4,11 +4,12 @@ echo "Setting up dotfiles...."
 
 echo "Symlinking dotfiles..."
 # TODO: Check if rcup is installed
-env RCRC=$HOME/.dotfiles/rcrc rcup -v
+env RCRC="$HOME/.dotfiles/rcrc" rcup -v
 
 # Setup iterm2 config
-# TODO: Check if using MacOS
-. iterm2/install.sh
+if [[ "$OSTYPE" == darwin* ]]; then
+  . iterm2/install.sh
+fi
 
 # Setup VSCode config
 . vscode/install.sh
