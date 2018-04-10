@@ -1,2 +1,2 @@
-EXCLUDES="README*.md LICENSE install.sh tags"
+EXCLUDES="README*.md LICENSE install.sh **/*.sh tags package.json yarn.lock node_modules"
 
