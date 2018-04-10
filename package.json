@@ -18,6 +18,10 @@
     "**/*.sh": [
       "shfmt -i 2 -ci -w",
       "git add"
+    ],
+    "bin/*": [
+      "shfmt -i 2 -ci -w",
+      "git add"
     ]
   }
 }
