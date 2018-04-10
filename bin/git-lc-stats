@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Print number of lines for each commit
+
 set -e
 
 file_pattern=$1
