@@ -4,6 +4,7 @@
 
 - ag
 - ctags
+- git
 - iterm2
 - ruby
 - tmux
