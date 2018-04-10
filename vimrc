@@ -270,4 +270,3 @@ set statusline+=%{LinterStatus()}
 " }}}
 
 " " vim:foldmethod=marker:foldlevel=0
-
