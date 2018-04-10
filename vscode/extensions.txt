@@ -2,11 +2,14 @@ DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 James-Yu.latex-workshop
 PeterJausovec.vscode-docker
+WakaTime.vscode-wakatime
+WallabyJs.wallaby-vscode
 castwide.solargraph
 christian-kohler.npm-intellisense
 codezombiech.gitignore
 dbaeumer.vscode-eslint
 dbankier.vscode-instant-markdown
+donjayamanne.githistory
 dracula-theme.theme-dracula
 ecmel.vscode-html-css
 eg2.vscode-npm-script
@@ -17,6 +20,7 @@ felixfbecker.php-intellisense
 flowtype.flow-for-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
+jock.svg
 leizongmin.node-module-intellisense
 lukehoban.Go
 mauve.terraform
@@ -26,6 +30,7 @@ msjsdiag.debugger-for-chrome
 rebornix.Ruby
 shinnn.stylelint
 streetsidesoftware.code-spell-checker
+sysoev.language-stylus
 vscodevim.vim
 vtfn.stylint
 waderyan.gitblame
