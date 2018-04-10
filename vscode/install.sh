@@ -13,9 +13,8 @@ if test "$(which code)"; then
   echo "Installing extensions..."
   # Generate this list with `code --list-extensions`
   filename="$DOTFILES/vscode/extensions.txt"
-  while read -r line
-  do
-      module="$line"
-      code --install-extension "$module" || true
-  done < "$filename"
+  while read -r line; do
+    module="$line"
+    code --install-extension "$module" || true
+  done <"$filename"
 fi
