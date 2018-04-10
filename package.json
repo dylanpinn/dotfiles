@@ -18,6 +18,6 @@
   "lint-staged": {
     "**/*.sh": ["shfmt -i 2 -ci -w", "git add"],
     "bin/*": ["shfmt -i 2 -ci -w", "git add"],
-    "*.{json,js}": ["prettier --single-quotes --write", "git add"]
+    "*.{json,js}": ["prettier --write", "git add"]
   }
 }
