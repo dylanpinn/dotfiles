@@ -1,0 +1,23 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "My Dotfiles",
+  "main": "index.js",
+  "repository": "git@github.com:dylanpinn/dotfiles.git",
+  "author": "Dylan Pinn <dylan@dylanpinn.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4"
+  },
+  "lint-staged": {
+    "**/*.sh": [
+      "shfmt -i 2 -ci -w",
+      "git add"
+    ]
+  }
+}
