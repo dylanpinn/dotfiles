@@ -3,4 +3,4 @@
 echo -e "\\n\\nGenerating VSCode extensions"
 echo "======================="
 
-code --list-extensions > "$HOME/.dotfiles/vscode/extensions.txt"
+code --list-extensions > "$DOTFILES/.dotfiles/vscode/extensions.txt"
