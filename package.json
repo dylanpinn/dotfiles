@@ -12,16 +12,12 @@
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "lint-staged": "^7.0.4"
+    "lint-staged": "^7.0.4",
+    "prettier": "^1.11.1"
   },
   "lint-staged": {
-    "**/*.sh": [
-      "shfmt -i 2 -ci -w",
-      "git add"
-    ],
-    "bin/*": [
-      "shfmt -i 2 -ci -w",
-      "git add"
-    ]
+    "**/*.sh": ["shfmt -i 2 -ci -w", "git add"],
+    "bin/*": ["shfmt -i 2 -ci -w", "git add"],
+    "*.{json,js}": ["prettier --single-quotes --write", "git add"]
   }
 }
