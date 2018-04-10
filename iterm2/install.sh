@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo -e "\n\nSetting up iTerm"
+echo -e "\\n\\nSetting up iTerm"
 echo "======================="
 
 # Specify the preferences directory

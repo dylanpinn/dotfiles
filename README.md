@@ -13,12 +13,13 @@
 ## Requirements
 
 ```bash
+rcup
 fd
 ```
 
 ## Install
 
 ```bash
-env RCRC=$HOME/.dotfiles/rcrc rcup
+./install.sh
 ```
 
