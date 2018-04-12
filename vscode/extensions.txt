@@ -1,6 +1,7 @@
 DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 James-Yu.latex-workshop
+Orta.vscode-jest
 PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
 WallabyJs.wallaby-vscode
