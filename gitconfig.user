@@ -37,4 +37,7 @@
 [color]
   ui = auto
 
+[mergetool]
+  keepBackup = false
+
 # vi:syntax=gitconfig
