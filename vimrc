@@ -56,10 +56,11 @@ Plug 'thoughtbot/vim-rspec'               " rspec runner
 Plug 'tpope/vim-bundler'                  " bundler integration
 Plug 'tpope/vim-rails'                    " rails integration
 Plug 'vim-ruby/vim-ruby'                  " latest ruby
-" Plug 'fatih/vim-go'                       " golang support
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
 " Plug 'octref/RootIgnore'                  " wildmenu ignore gitignore
+Plug 'AndrewRadev/splitjoin.vim'          " improved split & joins
 call plug#end()
 " " }}}
 
@@ -105,6 +106,13 @@ nnoremap <leader>s :mksession<CR>
 " nnoremap <leader>a :Ag
 "Quickly switch between last used buffers
 nnoremap <leader><leader> <c-^>
+" }}}
+
+" Navigate lists {{{
+" jump between quicklist items
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
 " }}}
 
 "" Search {{{
@@ -310,5 +318,24 @@ endfunction
 " Autoread files and autosave {{{
 au FocusGained,BufEnter * :silent! !
 au FocusLost,WinLeave * :silent! noautocmd w
+" }}}
+
+" GoLang {{{
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <Leader>c  <Plug>(go-coverage-toggle)
+let g:go_fmt_command = "goimports" " use goimports instead of gofmt
+let g:go_metalinter_autosave = 1 " use gometalinter on save
 " }}}
 " " vim:foldmethod=marker:foldlevel=0
