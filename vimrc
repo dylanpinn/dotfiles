@@ -307,4 +307,8 @@ endfunction
 :map <leader>p :PromoteToLet<cr>
 " }}}
 
+" Autoread files and autosave {{{
+au FocusGained,BufEnter * :silent! !
+au FocusLost,WinLeave * :silent! noautocmd w
+" }}}
 " " vim:foldmethod=marker:foldlevel=0
