@@ -18,22 +18,14 @@ Plug 'tpope/vim-projectionist'            " help manage vim settings in projects
 Plug 'tpope/vim-characterize'             " character encoding
 Plug 'tpope/vim-dispatch'                 " dispatch tasks
 Plug 'mbbill/undotree'                    " undo tree
-" Plug 'mileszs/ack.vim'                    " searching
-" Plug 'scrooloose/nerdtree'                " file tree
-" Plug 'Aldlevine/nerdtree-git-plugin'      " highlight git changes
-" Plug 'unkiwii/vim-nerdtree-sync'          " show current file
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'                 " fuzzy file search
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
-" Plug 'airblade/vim-gitgutter'             " git gutter
-" Plug 'itchyny/vim-gitbranch'              " provide gitbranch for lightline
 Plug 'tpope/vim-rhubarb'                  " GitHub support for fugitive
 Plug 'ajh17/VimCompletesMe'               " auto-completion
-" Plug 'sheerun/vim-polyglot'               " language pack
 Plug 'w0rp/ale'                           " async linting
-" Plug 'jlanzarotta/bufexplorer'            " buffer explorer
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tomtom/tlib_vim'
   Plug 'tomtom/ttags_vim'                   " searching tags
@@ -41,15 +33,11 @@ Plug 'tomtom/tlib_vim'
 " Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
 " Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
 " Plug 'wincent/terminus'                   " better vim and terminal support
-" Plug 'ap/vim-css-color'                   " highlight css colours
-" Plug 'itchyny/lightline.vim'              " statusline
 Plug 'tpope/vim-unimpaired'               " more pair mappings
 Plug 'tpope/vim-eunuch'                   " helpers for UNIX
 Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
 Plug 'tpope/vim-repeat'                   " enable more repeating
-" Plug 'mattn/emmet-vim'                    " emmet
-" Plug 'junegunn/goyo.vim'                  " distraction free writing
 Plug 'godlygeek/tabular'                  " markdown tables
 Plug 'plasticboy/vim-markdown'            " enhanced markdown
 Plug 'thoughtbot/vim-rspec'               " rspec runner
@@ -59,7 +47,6 @@ Plug 'vim-ruby/vim-ruby'                  " latest ruby
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
-" Plug 'octref/RootIgnore'                  " wildmenu ignore gitignore
 Plug 'AndrewRadev/splitjoin.vim'          " improved split & joins
 call plug#end()
 
