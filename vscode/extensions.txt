@@ -1,10 +1,10 @@
 DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
+GrapeCity.gc-excelviewer
 James-Yu.latex-workshop
 Orta.vscode-jest
 PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
-WallabyJs.wallaby-vscode
 castwide.solargraph
 christian-kohler.npm-intellisense
 codezombiech.gitignore
@@ -30,9 +30,7 @@ mrmlnc.vscode-stylefmt
 msjsdiag.debugger-for-chrome
 rebornix.Ruby
 shinnn.stylelint
-streetsidesoftware.code-spell-checker
 sysoev.language-stylus
-vscodevim.vim
 vtfn.stylint
 waderyan.gitblame
 wayou.vscode-todo-highlight
