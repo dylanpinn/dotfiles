@@ -4,6 +4,8 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -298,11 +300,11 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1209 387 1099 302 0 0 3440 1418 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>1410 782 620 392 0 0 3440 1418 </string>
+	<string>410 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>20 392 918 401 0 0 1440 878 </string>
+	<string>20 353 937 512 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>332 834 592 584 0 0 3440 1418 </string>
+	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1440 878 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -921,7 +923,7 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -1076,7 +1078,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>~/.dotfiles/iterm2</string>
+	<string>/Users/dylan/.dotfiles/iterm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SGTRecentFileSearches</key>
@@ -1111,7 +1113,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-20T11:36:48Z</date>
+	<date>2018-04-30T01:01:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1131,7 +1133,7 @@
 	<key>TerminalVMargin</key>
 	<integer>20</integer>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1523760256</real>
+	<real>1524799104</real>
 	<key>UseBorder</key>
 	<true/>
 	<key>WordCharacters</key>
@@ -1143,6 +1145,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5.beta.2</string>
+	<string>3.1.6</string>
 </dict>
 </plist>
