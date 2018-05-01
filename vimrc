@@ -1,11 +1,8 @@
-" Load Plugins
+" Plugins
 source ~/.vim/plugins.vim
 
-"" Colours {{{
-let g:dracula_colorterm = 0
-colorscheme dracula
-syntax enable           " enable syntax processing
-" }}}
+" Colours
+source ~/.vim/colours.vim
 
 "" Spaces & Tabs {{{
 set tabstop=2       " number of visual spaces per TAB
@@ -118,23 +115,6 @@ set directory=~/.vim/swapfiles//
 set autoread
 " }}}
 
-" "" NERDTree {{{
-" " toggle with ctrl-/
-" nnoremap <C-\> :NERDTreeToggle<CR>
-" let NERDTreeShowHidden=1 " show hidden files by default
-" " Open NERDTree on start up if no files in buffer
-" function! StartUp()
-"   if 0 == argc()
-"     NERDTree
-"   end
-" endfunction
-
-" autocmd VimEnter * call StartUp()
-
-" " nerd-tree-sync
-" let g:nerdtree_sync_cursorline=1 " Enable syncing of active file to nerdtree
-" " }}}
-
 "" Undotree {{{
 if has("persistent_undo")
   set undodir=~/.vim/undodir/
@@ -147,21 +127,6 @@ let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
 let g:javascript_plugin_flow = 1    " syntax for flow
 let g:jsx_ext_required=0            " Highlight JSX in .js files
 " }}}
-
-" """ Lightline {{{
-" set noshowmode                      " don't show mode
-" " Lightline
-" let g:lightline = {
-"       \ 'colorscheme': 'wombat',
-"       \ 'active': {
-"       \   'left': [ [ 'mode', 'paste' ],
-"       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-"       \ },
-"       \ 'component_function': {
-"       \   'gitbranch': 'fugitive#head'
-"       \ },
-"       \ }
-" " }}}
 
 " ALE {{{
 let g:ale_fixers = {}
@@ -196,23 +161,8 @@ for c in split('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', '\zs')
 endfor
 " }}}
 
-" Statusline {{{
-function! LinterStatus() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
-
-    let l:all_errors = l:counts.error + l:counts.style_error
-    let l:all_non_errors = l:counts.total - l:all_errors
-
-    return l:counts.total == 0 ? 'OK' : printf(
-    \   '%dW %dE',
-    \   all_non_errors,
-    \   all_errors
-    \)
-endfunction
-
-set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-set statusline+=%{LinterStatus()}
-" }}}
+" Statusline
+source ~/.vim/statusline.vim
 
 " Custom autocmd's {{{
 augroup vimrcEx
