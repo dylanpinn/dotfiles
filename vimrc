@@ -34,10 +34,6 @@ nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-" save session
-nnoremap <leader>s :mksession<CR>
-" " open ag.vim
-" nnoremap <leader>a :Ag
 "Quickly switch between last used buffers
 nnoremap <leader><leader> <c-^>
 " }}}
@@ -164,18 +160,8 @@ endfor
 " Statusline
 source ~/.vim/statusline.vim
 
-" Custom autocmd's {{{
-augroup vimrcEx
-    " Clear all autocmds in the group
-  autocmd!
-  autocmd FileType text setlocal textwidth=78
-  " Jump to last cursor position unless it's invalid or in an event handler
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-augroup END
-" }}}
+" Autocmd
+source ~/.vim/autocmds.vim
 
 " Rename Current File {{{
 function! RenameFile()
