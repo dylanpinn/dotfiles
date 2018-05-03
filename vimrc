@@ -29,38 +29,20 @@ set colorcolumn=+1
 " Bindings
 source ~/.vim/bindings.vim
 
-" Navigate lists {{{
-" jump between quicklist items
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
-" }}}
-
 "" Search {{{
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
 set smartcase           " ignore case unless CAPS
 set hlsearch            " highlight matches
-" turn off search highlight
-nmap \q :nohlsearch<CR>
 " Use ag with ack.vim
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-" Search with fzf
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>f :Files<CR>
 " }}}
 
 "" Splits {{{
 set splitbelow "New splits below, not above
 set splitright "New splits on the right, not left
-
-" easier split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 "}}}
 
 "" Folding {{{
@@ -71,23 +53,6 @@ set foldnestmax=10      " 10 nested fold max
 nnoremap <space> za
 vnoremap <space> zf
 set foldmethod=indent   " fold based on indent level
-" }}}
-
-"" Movement {{{
-" move vertically by visual line
-nnoremap j gj
-nnoremap k gk
-" move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-" $/^ doesn't do anything
-nnoremap $ <nop>
-nnoremap ^ <nop>
-" highlight last inserted text
-nnoremap gV `[v`]
-" " nav between git hunks
-" nnoremap <silent> <cr> :GitGutterNextHunk<cr>
-" nnoremap <silent> <backspace> :GitGutterPrevHunk<cr>
 " }}}
 
 "" Misc {{{
@@ -117,13 +82,6 @@ let g:jsx_ext_required=0            " Highlight JSX in .js files
 
 " ALE {{{
 let g:ale_fixers = {}
-" }}}
-
-" {{{ Rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 " }}}
 
 " Tags {{{
