@@ -4,14 +4,13 @@ source ~/.vim/plugins.vim
 " Colours
 source ~/.vim/colours.vim
 
-"" Spaces & Tabs {{{
+"" Spaces & Tabs
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set shiftwidth=2    " number of spaces when visual indenting
-" }}}
 
-"" UI Config {{{
+"" UI Config
 set number              " show line numbers
 set showcmd             " show command in bottom bar
 set nocursorline        " don't highlight current line
@@ -24,12 +23,11 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
-" }}}
 
 " Bindings
 source ~/.vim/bindings.vim
 
-"" Search {{{
+"" Search
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
 set smartcase           " ignore case unless CAPS
@@ -38,41 +36,32 @@ set hlsearch            " highlight matches
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
-" }}}
 
-"" Splits {{{
+"" Splits
 set splitbelow "New splits below, not above
 set splitright "New splits on the right, not left
-"}}}
 
-"" Folding {{{
+"" Folding
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
-" space open/closes folds
-nnoremap <space> za
-vnoremap <space> zf
 set foldmethod=indent   " fold based on indent level
-" }}}
 
-"" Misc {{{
+"" Misc
 " Improve join lines
 if v:version > 703 || v:version == 703 && has('patch541')
   set formatoptions+=j
 endif
 " don't store swap files in current directory
 set directory=~/.vim/swapfiles//
-
 " autoread file changes
 set autoread
-" }}}
 
-"" Undotree {{{
+"" Undo
 if has("persistent_undo")
   set undodir=~/.vim/undodir/
   set undofile
 endif
-" }}}
 
 """ Javascript {{{
 let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
@@ -160,4 +149,3 @@ autocmd FileType go nmap <Leader>c  <Plug>(go-coverage-toggle)
 let g:go_fmt_command = "goimports" " use goimports instead of gofmt
 let g:go_metalinter_autosave = 1 " use gometalinter on save
 " }}}
-" " vim:foldmethod=marker:foldlevel=0
