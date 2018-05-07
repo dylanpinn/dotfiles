@@ -37,6 +37,13 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
+" Formatting
+" Use par formatting for better paragraph formatting.
+" TODO: Look at moving this out into txt, md & tex files only.
+if executable("par")
+  set formatprg=par\ -w78
+endif
+
 "" Splits
 set splitbelow "New splits below, not above
 set splitright "New splits on the right, not left
