@@ -42,7 +42,7 @@ nnoremap ^ <nop>
 " highlight last inserted text
 nnoremap gV `[v`]
 
-" Rspec
+" Rspec TODO: Move this out into Ruby specific file.
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
@@ -51,3 +51,10 @@ map <Leader>a :call RunAllSpecs()<CR>
 " space open/closes folds
 nnoremap <space> za
 vnoremap <space> zf
+
+" Add shortcuts to current dir
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>eq :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
