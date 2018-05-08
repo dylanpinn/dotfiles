@@ -32,9 +32,10 @@ set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
 set smartcase           " ignore case unless CAPS
 set hlsearch            " highlight matches
-" Use ag with ack.vim
+" Improve the built in grep
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
 " Formatting
