@@ -61,9 +61,6 @@ augroup vimrc
   au BufReadPre * setlocal foldmethod=indent
   au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
 augroup END
-" Automatically create save and load views when leaving.
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
 
 "" Misc
 " Improve join lines
