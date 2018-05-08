@@ -58,3 +58,6 @@ map <leader>ew :e %%
 map <leader>es :sp %%
 map <leader>ev :vsp %%
 map <leader>et :tabe %%
+
+" Toggle Spell check
+nmap <silent> <leader>s :set spell!<CR>
