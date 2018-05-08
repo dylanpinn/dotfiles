@@ -44,6 +44,9 @@ if executable("par")
   set formatprg=par\ -w78
 endif
 
+" Spelling
+set spelllang=en_au
+
 "" Splits
 set splitbelow "New splits below, not above
 set splitright "New splits on the right, not left
