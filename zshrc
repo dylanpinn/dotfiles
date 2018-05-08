@@ -44,5 +44,8 @@ alias wget='wget --no-hsts'
 alias ls='ls -G'
 alias ll='ls -lG'
 
+# Edit TODO file
+alias todo='nvim ~/Desktop/TODO'
+
 # Load completion menu styles last
 source $HOME/.zsh/styles.zsh
