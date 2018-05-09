@@ -38,6 +38,9 @@ if executable('ag')
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
+" Completion
+set omnifunc=syntaxcomplete#Complete
+
 " Formatting
 " Use par formatting for better paragraph formatting.
 " TODO: Look at moving this out into txt, md & tex files only.
@@ -164,3 +167,4 @@ autocmd FileType go nmap <Leader>c  <Plug>(go-coverage-toggle)
 let g:go_fmt_command = "goimports" " use goimports instead of gofmt
 let g:go_metalinter_autosave = 1 " use gometalinter on save
 " }}}
+
