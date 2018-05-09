@@ -122,18 +122,6 @@ endfunction
 map <leader>n :call RenameFile()<cr>
 " }}}
 
-" Promote RSpec variable to let {{{
-function! PromoteToLet()
-  :normal! dd
-  " :exec '?^\s*it\>'
-  :normal! P
-  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
-  :normal ==
-endfunction
-:command! PromoteToLet :call PromoteToLet()
-:map <leader>p :PromoteToLet<cr>
-" }}}
-
 " Autoread files and autosave
 au FocusGained,BufEnter * :silent! !
 au FocusLost,WinLeave * :silent! noautocmd w
