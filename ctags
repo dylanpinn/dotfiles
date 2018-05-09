@@ -5,4 +5,4 @@
 --exclude=node_modules/*
 --exclude=db/*
 --exclude=log/*
-
+--exclude=public/*
