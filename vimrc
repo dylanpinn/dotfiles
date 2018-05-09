@@ -81,16 +81,6 @@ if has("persistent_undo")
   set undofile
 endif
 
-""" Javascript {{{
-let g:javascript_plugin_jsdoc = 1   " syntax for jsdoc
-let g:javascript_plugin_flow = 1    " syntax for flow
-let g:jsx_ext_required=0            " Highlight JSX in .js files
-" }}}
-
-" ALE {{{
-let g:ale_fixers = {}
-" }}}
-
 " Tags {{{
 " Show available tags
 noremap <Leader>g. :TTags<cr>
