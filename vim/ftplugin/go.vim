@@ -13,6 +13,6 @@ nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 nmap <leader>r  <Plug>(go-run)
 nmap <leader>t  <Plug>(go-test)
 nmap <Leader>c  <Plug>(go-coverage-toggle)
-let b:go_fmt_command = "goimports" " use goimports instead of gofmt
-let b:go_metalinter_autosave = 1 " use gometalinter on save
+let g:go_fmt_command = "goimports" " use goimports instead of gofmt
+let g:go_metalinter_autosave = 1 " use gometalinter on save
 
