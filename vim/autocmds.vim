@@ -10,3 +10,5 @@ augroup vimrcEx
     \ endif
 augroup END
 
+" Open QuickFix after make
+autocmd QuickFixCmdPost * copen
