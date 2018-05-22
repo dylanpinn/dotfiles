@@ -1,7 +1,6 @@
 " Vim compiler file
-" Language:		Rubocop
-" Function:		Syntax check and/or error reporting
-" Maintainer:		Dylan Pinn <dylan@dylanpinn.com>
+" Compiler:   Rubocop
+" Language:   Ruby
 " ----------------------------------------------------------------------------
 
 if exists("current_compiler")
@@ -16,10 +15,13 @@ endif
 let s:cpo_save = &cpo
 set cpo-=C
 
-CompilerSet makeprg=rubocop
+CompilerSet makeprg=rubocop\ --format\ emacs\ $*\ %:S
 
-" CompilerSet errorformat=
-"   \%f:%l:%c: %t: %m
+CompilerSet errorformat=
+      \%W%f:%l:%c:\ C:\ %m,
+      \%W%f:%l:%c:\ W:\ %m,
+      \%E%f:%l:%c:\ E:\ %m,
+      \%E%f:%l:%c:\ F:\ %m
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
