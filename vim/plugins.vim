@@ -31,7 +31,7 @@ Plug 'tomtom/tlib_vim'
   Plug 'tomtom/ttags_vim'                   " searching tags
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
-" Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
+Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
 " Plug 'wincent/terminus'                   " better vim and terminal support
 Plug 'tpope/vim-unimpaired'               " more pair mappings
 Plug 'tpope/vim-eunuch'                   " helpers for UNIX
