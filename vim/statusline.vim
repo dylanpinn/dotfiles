@@ -13,6 +13,6 @@ function! LinterStatus() abort
 endfunction
 
 set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-set statusline+=%{LinterStatus()}
+" set statusline+=%{LinterStatus()}
 set statusline+=%{gutentags#statusline()}
 

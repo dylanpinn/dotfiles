@@ -25,7 +25,7 @@ Plug 'wakatime/vim-wakatime'              " wakatime
 Plug 'tpope/vim-fugitive'                 " git manager
 Plug 'tpope/vim-rhubarb'                  " GitHub support for fugitive
 Plug 'ajh17/VimCompletesMe'               " auto-completion
-Plug 'w0rp/ale'                           " async linting
+" Plug 'w0rp/ale'                           " async linting
 Plug 'ludovicchabant/vim-gutentags'       " tag indexing
 Plug 'tomtom/tlib_vim'
   Plug 'tomtom/ttags_vim'                   " searching tags
