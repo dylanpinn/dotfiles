@@ -39,6 +39,10 @@ alias ll='ls -lG'
 
 # Edit TODO file
 alias todo='nvim ~/Desktop/TODO'
+alias scratch-pad='nvim ~/Desktop/SCRATCH-PAD'
+
+# Dotfiles
+alias dotfiles='cd ~/.dotfiles'
 
 # Load completion menu styles last
 source $HOME/.zsh/styles.zsh
