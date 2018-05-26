@@ -1,3 +1,4 @@
+CoenraadS.bracket-pair-colorizer
 DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 GrapeCity.gc-excelviewer
@@ -5,11 +6,14 @@ James-Yu.latex-workshop
 Orta.vscode-jest
 PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
+auiworks.amvim
+bungcip.better-toml
 castwide.solargraph
 christian-kohler.npm-intellisense
 codezombiech.gitignore
 dbaeumer.vscode-eslint
 dbankier.vscode-instant-markdown
+deerawan.vscode-dash
 donjayamanne.githistory
 dracula-theme.theme-dracula
 ecmel.vscode-html-css
@@ -23,13 +27,15 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 jock.svg
 leizongmin.node-module-intellisense
-lukehoban.Go
 mauve.terraform
 mrmlnc.vscode-puglint
 mrmlnc.vscode-stylefmt
+ms-vscode.Go
 msjsdiag.debugger-for-chrome
 rebornix.Ruby
+sdras.night-owl
 shinnn.stylelint
+streetsidesoftware.code-spell-checker
 sysoev.language-stylus
 vtfn.stylint
 waderyan.gitblame
