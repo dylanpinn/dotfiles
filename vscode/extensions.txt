@@ -6,7 +6,6 @@ James-Yu.latex-workshop
 Orta.vscode-jest
 PeterJausovec.vscode-docker
 WakaTime.vscode-wakatime
-auiworks.amvim
 bungcip.better-toml
 castwide.solargraph
 christian-kohler.npm-intellisense
