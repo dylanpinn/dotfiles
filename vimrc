@@ -23,6 +23,9 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
+" Prevent Vim from clobbering the scrollback buffer. See
+" http://www.shallowsky.com/linux/noaltscreen.html
+set t_ti= t_te=
 
 " Bindings
 source ~/.vim/bindings.vim
