@@ -16,8 +16,17 @@
     "prettier": "^1.11.1"
   },
   "lint-staged": {
-    "**/*.sh": ["shfmt -i 2 -ci -w", "git add"],
-    "bin/*": ["shell-fmt", "git add"],
-    "*.{json,js}": ["prettier --write", "git add"]
+    "**/*.sh": [
+      "shfmt -i 2 -ci -w",
+      "git add"
+    ],
+    "bin/*": [
+      "shell-fmt",
+      "git add"
+    ],
+    "*.{json,js}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
