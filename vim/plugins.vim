@@ -48,5 +48,6 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
 Plug 'AndrewRadev/splitjoin.vim'          " improved split & joins
+Plug 'rizzatti/dash.vim'                  " Dash plugin
 call plug#end()
 
