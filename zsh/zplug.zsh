@@ -23,7 +23,7 @@ if [ -z ${RELOAD} ]; then
   zplug "lukechilds/zsh-nvm"
   zplug "lukechilds/zsh-better-npm-completion", defer:2
 
-  zplug "erikced/zsh-pyenv-lazy-load"
+  # zplug "erikced/zsh-pyenv-lazy-load"
 
   zplug "plugins/colored-man-pages", from:oh-my-zsh
 
