@@ -37,9 +37,7 @@ alias wget='wget --no-hsts'
 alias ls='ls -G'
 alias ll='ls -lG'
 
-# Edit TODO file
-alias todo='nvim ~/Desktop/TODO'
-alias scratch-pad='nvim ~/Desktop/SCRATCH-PAD'
+alias npm-global='npm list -g --depth=0'
 
 # Dotfiles
 alias dotfiles='cd ~/.dotfiles'
