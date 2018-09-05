@@ -132,3 +132,5 @@ map <leader>n :call RenameFile()<cr>
 au FocusGained,BufEnter * :silent! !
 au FocusLost,WinLeave * :silent! noautocmd w
 
+" improved git commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
