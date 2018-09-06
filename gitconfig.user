@@ -40,11 +40,19 @@
   la = !git l --all
   b = "!. ~/.githelpers.sh && pretty_git_branch"
   bs = "!. ~/.githelpers.sh && pretty_git_branch_sorted"
-
 [color]
   ui = auto
-
 [mergetool]
   keepBackup = false
+[core]
+  autocrlf = input
+[merge]
+  ff = only
+[fetch]
+  prune = true
+[rebase]
+  autosquash = true
+[diff]
+  colorMoved = zebra
 
 # vi:syntax=gitconfig
