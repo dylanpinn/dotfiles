@@ -1,12 +1,14 @@
 [alias]
-  st = status
+  aa = add --all
+  amend = commit --amend
+  ap = add --patch
   ci = commit --verbose
   co = checkout
   di = diff
   dc = diff --cached
-  amend = commit --amend
-  aa = add --all
   ff = merge --ff-only
+  pf = push --force-with-lease
+  st = status
   noff = merge --no-ff
   fa = fetch --all
   pom = push origin master
