@@ -2,8 +2,7 @@
   "css.validate": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
-  "editor.fontFamily":
-    "SF Mono, 'Droid Sans Mono', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "SF Mono, 'Droid Sans Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.renderWhitespace": "boundary",
   "editor.tabSize": 2,
@@ -24,5 +23,12 @@
   "stylelint.enable": true,
   "window.zoomLevel": 0,
   "workbench.iconTheme": "vs-seti",
-  "workbench.colorTheme": "Night Owl"
+  "workbench.colorTheme": "Night Owl",
+  "github.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ]
 }
