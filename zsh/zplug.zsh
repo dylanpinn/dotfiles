@@ -26,6 +26,7 @@ if [ -z ${RELOAD} ]; then
   # zplug "erikced/zsh-pyenv-lazy-load"
 
   zplug "plugins/colored-man-pages", from:oh-my-zsh
+  zplug "caarlos0/ports", lazy:true
 
   # Install plugins if there are plugins that have not been installed
   if ! zplug check; then
