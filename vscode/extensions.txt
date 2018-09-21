@@ -25,6 +25,8 @@ mikestead.dotenv
 mrmlnc.vscode-apache
 mrmlnc.vscode-puglint
 mrmlnc.vscode-stylefmt
+ms-python.python
+ms-vscode.cpptools
 ms-vscode.Go
 msjsdiag.debugger-for-chrome
 PeterJausovec.vscode-docker
