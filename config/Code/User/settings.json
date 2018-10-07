@@ -8,6 +8,7 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
   "editor.wrappingIndent": "indent",
+  "eslint.packageManager": "yarn",
   "files.associations": {
     ".simplecov": "ruby",
     ".stylelintrc": "json",
@@ -19,16 +20,17 @@
   },
   "flow.enabled": false,
   "git.autofetch": true,
-  "scss.validate": false,
-  "stylelint.enable": true,
-  "window.zoomLevel": 0,
-  "workbench.iconTheme": "vs-seti",
-  "workbench.colorTheme": "Night Owl",
   "github.hosts": [
     {
       "host": "https://github.com",
       "username": "oauth",
       "token": "system"
     }
-  ]
+  ],
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "terminal.integrated.rendererType": "dom",
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "vs-seti",
+  "workbench.colorTheme": "Night Owl"
 }
