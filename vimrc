@@ -51,6 +51,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
 """ Searching
 
 set ignorecase          " ignore case when searching
