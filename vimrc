@@ -23,17 +23,17 @@ colorscheme jellybeans
 let g:jellybeans_use_term_italics = 1  " enable italics
 
 """ Spaces & Tabs
-set tabstop=2 			" number of visual spaces per TAB
-set softtabstop=2 		" number of spaces in tab when editing
-set expandtab           	" tabs are spaces
-set shiftwidth=2 		" number of spaces when visual indenting
+set tabstop=2	      " number of visual spaces per TAB
+set softtabstop=2   " number of spaces in tab when editing
+set expandtab       " tabs are spaces
+set shiftwidth=2    " number of spaces when visual indenting
 
 
 """ Searching
 
 if executable("ag")
-	set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
-	set grepformat=%f:%l:%c:%m,%f:%l:%m
+  set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
+  set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
 """ Status Line
