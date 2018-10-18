@@ -13,5 +13,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sensible'       	" sensible defaults
+Plug 'nanotech/jellybeans.vim' 		" theme
 call plug#end()
+
+""" Colours
+
+colorscheme jellybeans
