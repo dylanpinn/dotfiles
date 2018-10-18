@@ -20,3 +20,11 @@ call plug#end()
 """ Colours
 
 colorscheme jellybeans
+
+
+""" Searching
+
+if executable("ag")
+	set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
+	set grepformat=%f:%l:%c:%m,%f:%l:%m
+endif
