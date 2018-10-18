@@ -34,10 +34,19 @@ colorscheme jellybeans
 let g:jellybeans_use_term_italics = 1  " enable italics
 
 """ Spaces & Tabs
+
 set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set shiftwidth=2    " number of spaces when visual indenting
+
+""" Bindings
+
+" easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 """ Searching
 
