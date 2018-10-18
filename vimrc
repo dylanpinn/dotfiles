@@ -20,6 +20,7 @@ call plug#end()
 """ Colours
 
 colorscheme jellybeans
+let g:jellybeans_use_term_italics = 1  " enable italics
 
 
 """ Searching
