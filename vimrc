@@ -62,3 +62,10 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | | +-- readonly flag in square brackets
 "              | +-- rodified flag in square brackets
 "              +-- full path to file in the buffer
+
+""" Language Features
+
+"" Javascript
+
+" Enable flow type syntax
+let g:javascript_plugin_flow = 1
