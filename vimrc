@@ -31,10 +31,10 @@ set shiftwidth=2    " number of spaces when visual indenting
 
 """ Searching
 
-set ignorecase      " ignore case when searching
-set incsearch       " search as characters are entered
-set smartcase       " ignore case unless CAPS
-set hlsearch        " highlight matches
+set ignorecase          " ignore case when searching
+set incsearch           " search as characters are entered
+set smartcase           " ignore case unless CAPS
+set hlsearch            " highlight matches
 
 if executable("ag")
   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
