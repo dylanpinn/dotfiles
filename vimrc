@@ -21,6 +21,9 @@ Plug 'tpope/vim-surround'         " better surrounds
 Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
 
+" Terminal/Tmux
+Plug 'wincent/terminus'         " improved terminal
+
 " Theme
 Plug 'nanotech/jellybeans.vim'
 call plug#end()
