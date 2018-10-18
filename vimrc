@@ -23,7 +23,7 @@ colorscheme jellybeans
 let g:jellybeans_use_term_italics = 1  " enable italics
 
 """ Spaces & Tabs
-set tabstop=2	      " number of visual spaces per TAB
+set tabstop=2       " number of visual spaces per TAB
 set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set shiftwidth=2    " number of spaces when visual indenting
@@ -33,8 +33,8 @@ set shiftwidth=2    " number of spaces when visual indenting
 
 set ignorecase      " ignore case when searching
 set incsearch       " search as characters are entered
-set smartcase       " ingore case unless CAPS
-set hlsearch        " hilight matches
+set smartcase       " ignore case unless CAPS
+set hlsearch        " highlight matches
 
 if executable("ag")
   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
