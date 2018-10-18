@@ -32,7 +32,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'tmux-plugins/vim-tmux-focus-events' " improve vim tmux integration
 Plug 'tmux-plugins/vim-tmux'              " improve tmux.conf
 Plug 'christoomey/vim-tmux-navigator'     " navigate between vim and tmux
-" Plug 'wincent/terminus'                   " better vim and terminal support
+Plug 'wincent/terminus'                   " better vim and terminal support
 Plug 'tpope/vim-unimpaired'               " more pair mappings
 Plug 'tpope/vim-eunuch'                   " helpers for UNIX
 Plug 'qpkorr/vim-bufkill'                 " close buff without closing tab
