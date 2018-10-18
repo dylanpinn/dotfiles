@@ -42,6 +42,9 @@ set shiftwidth=2    " number of spaces when visual indenting
 
 """ Bindings
 
+" leader
+let mapleader=","
+
 " easier split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
