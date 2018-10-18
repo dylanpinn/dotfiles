@@ -13,8 +13,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-sensible'       	" sensible defaults
-Plug 'nanotech/jellybeans.vim' 		" theme
+Plug 'tpope/vim-sensible'         " sensible defaults
+Plug 'tpope/vim-surround'         " better surrounds
+Plug 'nanotech/jellybeans.vim'    " theme
 call plug#end()
 
 """ Colours
@@ -28,7 +29,6 @@ set softtabstop=2   " number of spaces in tab when editing
 set expandtab       " tabs are spaces
 set shiftwidth=2    " number of spaces when visual indenting
 
-
 """ Searching
 
 set ignorecase          " ignore case when searching
@@ -36,7 +36,7 @@ set incsearch           " search as characters are entered
 set smartcase           " ignore case unless CAPS
 set hlsearch            " highlight matches
 
-if executable("ag")
+if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
