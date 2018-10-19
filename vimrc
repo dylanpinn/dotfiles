@@ -69,6 +69,11 @@ if executable('ag')
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
+""" Splits	
+
+set splitbelow      "New splits below, not above
+set splitright      "New splits on the right, not left
+
 """ Status Line
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | | | | |  |   |      |  |     |    |
