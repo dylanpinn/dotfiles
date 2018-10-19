@@ -52,6 +52,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Quickly switch between last used buffers	
+nnoremap <leader><leader> <c-^>
+
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
