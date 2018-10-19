@@ -16,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 " General
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
+Plug 'ajh17/VimCompletesMe'               " smarter completion
 
 " Javascript
 Plug 'pangloss/vim-javascript'            " improved javascript
