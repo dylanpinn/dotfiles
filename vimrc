@@ -14,8 +14,8 @@ endif
 
 call plug#begin('~/.vim/plugged')
 " General
-Plug 'tpope/vim-sensible'         " sensible defaults
-Plug 'tpope/vim-surround'         " better surrounds
+Plug 'tpope/vim-sensible'                 " sensible defaults
+Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
 
 " Javascript
 Plug 'pangloss/vim-javascript'            " improved javascript
@@ -62,6 +62,7 @@ set incsearch           " search as characters are entered
 set smartcase           " ignore case unless CAPS
 set hlsearch            " highlight matches
 
+" Improve the built in grep
 if executable('ag')
   set grepprg=ag\ --nogroup\ --nocolor\ --ignore-case\ --column
   set grepformat=%f:%l:%c:%m,%f:%l:%m
