@@ -2,7 +2,10 @@
 source ~/.vim/plugins.vim
 
 " Colours
-source ~/.vim/colours.vim
+let g:dracula_colorterm = 0
+colorscheme dracula
+syntax enable           " enable syntax processing
+
 
 "" Spaces & Tabs
 set tabstop=2       " number of visual spaces per TAB
