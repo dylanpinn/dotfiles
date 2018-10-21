@@ -60,6 +60,13 @@ nnoremap <leader><leader> <c-^>
 nnoremap j gj
 nnoremap k gk
 
+" getting around
+
+" edit a file
+nnoremap <leader>e :e **/
+" buff list
+nnoremap <leader>b :b <C-d>
+
 """ Searching
 
 set ignorecase          " ignore case when searching
