@@ -20,6 +20,7 @@ Plug 'ajh17/VimCompletesMe'               " smarter completion
 Plug 'wakatime/vim-wakatime'              " Wakatime
 Plug 'editorconfig/editorconfig-vim'      " EditorConfig
 Plug 'tpope/vim-commentary'               " Comment stuff out
+Plug 'vim-scripts/gitignore'              " Add gitignore to wildmenu
 Plug 'tpope/vim-dispatch'                 " Async tasks
 Plug 'tpope/vim-fugitive'                 " Git manager
 
