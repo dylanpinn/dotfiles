@@ -55,7 +55,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Quickly switch between last used buffers	
+" Quickly switch between last used buffers
 nnoremap <leader><leader> <c-^>
 
 " move vertically by visual line
@@ -68,6 +68,18 @@ nnoremap k gk
 nnoremap <leader>e :e **/
 " buff list
 nnoremap <leader>b :b <C-d>
+
+" Rename Current File
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>n :call RenameFile()<cr>
 
 """ Searching
 
@@ -82,7 +94,7 @@ if executable('ag')
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-""" Splits	
+""" Splits
 
 set splitbelow      "New splits below, not above
 set splitright      "New splits on the right, not left
