@@ -20,6 +20,7 @@ Plug 'ajh17/VimCompletesMe'               " smarter completion
 Plug 'wakatime/vim-wakatime'              " Wakatime
 Plug 'editorconfig/editorconfig-vim'      " EditorConfig
 Plug 'tpope/vim-commentary'               " Comment stuff out	
+Plug 'tpope/vim-dispatch'                 " Async tasks
 
 " Javascript
 Plug 'pangloss/vim-javascript'            " improved javascript
