@@ -70,6 +70,8 @@ nnoremap <leader>e :e **/
 " buff list
 nnoremap <leader>b :b <C-d>
 
+" Run make
+nnoremap <leader>m :Make<cr>
 " Rename Current File
 function! RenameFile()
     let old_name = expand('%')
