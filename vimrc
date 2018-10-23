@@ -23,6 +23,7 @@ Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'vim-scripts/gitignore'              " Add gitignore to wildmenu
 Plug 'tpope/vim-dispatch'                 " Async tasks
 Plug 'tpope/vim-fugitive'                 " Git manager
+Plug 'tpope/vim-vinegar'                  " Improve netrw
 
 " Javascript
 Plug 'pangloss/vim-javascript'            " improved javascript
