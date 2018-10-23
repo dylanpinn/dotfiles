@@ -3,12 +3,12 @@
 " CompilerSet makeprg=yarn\ eslint\ --format\ compact
 " CompilerSet errorformat=%f:\ line\ %l\\,\ col\ %c\\,\ %m,%-G%.%#
 
-if exists("current_compiler")
+if exists('current_compiler')
     finish
 endif
-let current_compiler = "eslint"
+let current_compiler = 'eslint'
 
-if exists(":CompilerSet") != 2
+if exists(':CompilerSet') != 2
     command -nargs=* CompilerSet setlocal <args>
 endif
 
