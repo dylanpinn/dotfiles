@@ -30,7 +30,8 @@ Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
 
 " Terminal/Tmux
-Plug 'wincent/terminus'         " improved terminal
+Plug 'wincent/terminus'                   " improved terminal
+Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
 
 " Theme
 Plug 'nanotech/jellybeans.vim'
@@ -115,6 +116,11 @@ endif
 
 set splitbelow      "New splits below, not above
 set splitright      "New splits on the right, not left
+
+""" Misc
+
+set autoread                        " read file changes
+set directory=~/.vim/swapfiles//    " don't store swap files in cur dir
 
 """ Status Line
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
