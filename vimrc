@@ -29,6 +29,9 @@ Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
 
+" Ruby
+Plug 'vim-ruby/vim-ruby'                  " update ruby syntax
+
 " Terminal/Tmux
 Plug 'wincent/terminus'                   " improved terminal
 Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
