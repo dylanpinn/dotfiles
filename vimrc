@@ -31,6 +31,7 @@ Plug 'mxw/vim-jsx'                        " improved JSX
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'                  " update ruby syntax
+Plug 'tpope/vim-rails'                    " improve editing rails apps
 
 " Terminal/Tmux
 Plug 'wincent/terminus'                   " improved terminal
