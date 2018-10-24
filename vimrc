@@ -24,6 +24,7 @@ Plug 'vim-scripts/gitignore'              " Add gitignore to wildmenu
 Plug 'tpope/vim-dispatch'                 " Async tasks
 Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
+Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
 
 " Javascript
 Plug 'pangloss/vim-javascript'            " improved javascript
