@@ -32,7 +32,7 @@
   "terminal.integrated.rendererType": "dom",
   "window.zoomLevel": 0,
   "workbench.iconTheme": "vs-seti",
-  "workbench.colorTheme": "Night Owl",
+  "workbench.colorTheme": "Night Owl No Italics",
   "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
   "flow.useNPMPackagedFlow": true
 }
