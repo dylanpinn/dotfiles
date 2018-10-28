@@ -1,4 +1,6 @@
 EditorConfig.EditorConfig
+akamud.vscode-theme-onedark
+auiworks.amvim
 bungcip.better-toml
 christian-kohler.npm-intellisense
 codezombiech.gitignore
@@ -11,6 +13,7 @@ ecmel.vscode-html-css
 eg2.vscode-npm-script
 esbenp.prettier-vscode
 fallenwood.vimL
+faustinoaq.lex-flex-yacc-bison
 felixfbecker.php-debug
 felixfbecker.php-intellisense
 flowtype.flow-for-vscode
@@ -29,6 +32,7 @@ ms-python.python
 ms-vscode.cpptools
 ms-vscode.Go
 msjsdiag.debugger-for-chrome
+Orta.vscode-jest
 PeterJausovec.vscode-docker
 rebornix.ruby
 sdras.night-owl
@@ -39,3 +43,4 @@ waderyan.gitblame
 WakaTime.vscode-wakatime
 wayou.vscode-todo-highlight
 wix.vscode-import-cost
+zhuangtongfa.Material-theme
