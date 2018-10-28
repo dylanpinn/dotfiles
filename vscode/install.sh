@@ -15,6 +15,6 @@ if test "$(which code)"; then
   filename="$DOTFILES/vscode/extensions.txt"
   while read -r line; do
     module="$line"
-    code --install-extension "$module" || true
+    code --install-extension "$module" --force || true
   done <"$filename"
 fi
