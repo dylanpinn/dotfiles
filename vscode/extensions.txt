@@ -1,6 +1,6 @@
-EditorConfig.EditorConfig
 akamud.vscode-theme-onedark
 auiworks.amvim
+aws-scripting-guy.cform
 bungcip.better-toml
 christian-kohler.npm-intellisense
 codezombiech.gitignore
@@ -10,6 +10,7 @@ dbaeumer.vscode-eslint
 deerawan.vscode-dash
 donjayamanne.githistory
 ecmel.vscode-html-css
+EditorConfig.EditorConfig
 eg2.vscode-npm-script
 esbenp.prettier-vscode
 fallenwood.vimL
@@ -20,6 +21,7 @@ flowtype.flow-for-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 GitHub.vscode-pull-request-github
+ikappas.phpcs
 jock.svg
 kumar-harsh.graphql-for-vscode
 leizongmin.node-module-intellisense
@@ -35,6 +37,7 @@ msjsdiag.debugger-for-chrome
 Orta.vscode-jest
 PeterJausovec.vscode-docker
 rebornix.ruby
+redhat.vscode-yaml
 sdras.night-owl
 shinnn.stylelint
 sysoev.language-stylus
