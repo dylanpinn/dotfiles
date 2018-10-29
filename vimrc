@@ -47,6 +47,12 @@ call plug#end()
 colorscheme jellybeans
 let g:jellybeans_use_term_italics = 1  " enable italics
 
+""" UI Config
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
+
 """ Spaces & Tabs
 
 set tabstop=2       " number of visual spaces per TAB
