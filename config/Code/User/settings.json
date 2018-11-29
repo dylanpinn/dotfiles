@@ -20,13 +20,6 @@
   },
   "flow.enabled": false,
   "git.autofetch": true,
-  "github.hosts": [
-    {
-      "host": "https://github.com",
-      "username": "oauth",
-      "token": "system"
-    }
-  ],
   "scss.validate": false,
   "stylelint.enable": true,
   "terminal.integrated.rendererType": "dom",
@@ -34,5 +27,12 @@
   "workbench.iconTheme": "vs-seti",
   "workbench.colorTheme": "Night Owl No Italics",
   "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
-  "flow.useNPMPackagedFlow": true
+  "flow.useNPMPackagedFlow": true,
+  "githubPullRequests.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ]
 }
