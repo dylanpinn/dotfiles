@@ -29,6 +29,7 @@ Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
 " Javascript
 Plug 'pangloss/vim-javascript'            " improved javascript
 Plug 'mxw/vim-jsx'                        " improved JSX
+Plug 'digitaltoad/vim-pug'                " pug syntax
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'                  " update ruby syntax
