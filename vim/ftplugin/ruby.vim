@@ -15,3 +15,6 @@ map <Leader>ts :call RunNearestSpec()<CR>
 map <Leader>tl :call RunLastSpec()<CR>
 map <Leader>ta :call RunAllSpecs()<CR>
 let g:rspec_command = "Dispatch rspec {spec}"
+
+" Linting
+let b:ale_linters = ['rubocop']
