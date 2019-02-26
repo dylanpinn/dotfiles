@@ -24,6 +24,7 @@ Plug 'tpope/vim-dispatch'                 " Async tasks
 Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
+Plug 'w0rp/ale'                           " linting
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -162,3 +163,13 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | | +-- readonly flag in square brackets
 "              | +-- rodified flag in square brackets
 "              +-- full path to file in the buffer
+
+" ALE Configuration
+
+" Only run linters named in ale_linters settings.
+let g:ale_linters_explicit = 1
+
+" Only lint on save
+let g:ale_lint_on_text_changed = 'never'
+" if you don't want linters to run on opening a file
+let g:ale_lint_on_enter = 0
