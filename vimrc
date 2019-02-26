@@ -20,11 +20,14 @@ Plug 'ajh17/VimCompletesMe'               " smarter completion
 Plug 'wakatime/vim-wakatime'              " Wakatime
 Plug 'editorconfig/editorconfig-vim'      " EditorConfig
 Plug 'tpope/vim-commentary'               " Comment stuff out
-Plug 'vim-scripts/gitignore'              " Add gitignore to wildmenu
 Plug 'tpope/vim-dispatch'                 " Async tasks
 Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
+
+" FZF
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Javascript
 Plug 'pangloss/vim-javascript'            " improved javascript
@@ -82,10 +85,20 @@ nnoremap k gk
 
 " getting around
 
-" edit a file
-nnoremap <leader>e :e **/
-" buff list
-nnoremap <leader>b :b <C-d>
+"" File finder
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+
+"" Buffer finder
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+
+"" Tag finder
+nmap <Leader>t :BTags<CR>
+nmap <Leader>T :Tags<CR>
+
+"" Project finder
+nmap <Leader>a :Ag<Space>
 
 " Run make
 nnoremap <leader>m :Make<cr>
