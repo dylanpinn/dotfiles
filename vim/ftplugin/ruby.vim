@@ -18,3 +18,4 @@ let g:rspec_command = "Dispatch rspec {spec}"
 
 " Linting
 let b:ale_linters = ['rubocop']
+let b:ale_fixers = ['rubocop']
