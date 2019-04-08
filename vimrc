@@ -25,6 +25,7 @@ Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
 Plug 'w0rp/ale'                           " linting
+Plug 'embear/vim-localvimrc'              " local vimrc
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
