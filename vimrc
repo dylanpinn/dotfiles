@@ -31,16 +31,10 @@ Plug 'embear/vim-localvimrc'              " local vimrc
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-" Javascript
-Plug 'pangloss/vim-javascript'            " improved javascript
-Plug 'mxw/vim-jsx'                        " improved JSX
-Plug 'digitaltoad/vim-pug'                " pug syntax
-
-" Ruby
-Plug 'vim-ruby/vim-ruby'                  " update ruby syntax
+" Language Support
+Plug 'sheerun/vim-polyglot'               " improved language support
 Plug 'tpope/vim-rails'                    " improve editing rails apps
 Plug 'thoughtbot/vim-rspec'               " rspec runner
-
 " Terminal/Tmux
 Plug 'wincent/terminus'                   " improved terminal
 Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
