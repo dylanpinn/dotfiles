@@ -44,3 +44,6 @@ alias dotfiles='cd ~/.dotfiles'
 
 # Load completion menu styles last
 source $HOME/.zsh/styles.zsh
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
