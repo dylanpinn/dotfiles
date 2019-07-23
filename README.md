@@ -2,6 +2,16 @@
 
 My dotfiles.
 
+## Includes
+
+- ag
+- ctags
+- git
+- ruby
+- tmux
+- vscode
+- zsh
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -32,10 +42,12 @@ Give an example
 
 ### And coding style tests
 
-Explain what these tests test and why
+Formatting Bash scripts
 
-```
-Give an example
+```bash
+# requires shfmt to be install
+# go get -u mvdan.cc/sh/cmd/shfmt
+shfmt -i 2 -ci
 ```
 
 ## Built With
@@ -62,27 +74,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
-## Includes
-
-- ag
-- ctags
-- git
-- iterm2
-- ruby
-- tmux
-- vscode
-- zsh
-
-## Other
-
-### Formatting Bash scripts
-
-```bash
-# requires shfmt to be install
-# go get -u mvdan.cc/sh/cmd/shfmt
-shfmt -i 2 -ci
-```
+* [thoughtbot](https://github.com/thoughtbot/dotfiles)
+* [holman](https://github.com/holman/dotfiles)
