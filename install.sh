@@ -8,3 +8,5 @@ env RCRC="$HOME/.dotfiles/rcrc" rcup -v
 
 # Setup VSCode config
 . vscode/install.sh
+
+yarn install
