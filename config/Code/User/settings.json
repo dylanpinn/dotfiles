@@ -1,1 +1,4 @@
-{}
+{
+  "editor.renderWhitespace": "boundary",
+  "editor.wordWrap": "bounded"
+}
