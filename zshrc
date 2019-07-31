@@ -34,8 +34,8 @@ bindkey '\C-x\C-e' edit-command-line
 alias wget='wget --no-hsts'
 
 # Colorize terminal
-alias ls='ls -G'
-alias ll='ls -lG'
+alias ls='ls --color'
+alias ll='ls -l --color'
 
 alias npm-global='npm list -g --depth=0'
 
