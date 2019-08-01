@@ -2,5 +2,5 @@
 
 " Linting
 let b:ale_fixers = ['phpcbf']
-let b:ale_linters = ['phpcs']
+let b:ale_linters = ['php', 'phpcs']
 
