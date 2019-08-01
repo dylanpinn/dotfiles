@@ -26,7 +26,6 @@ Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
 Plug 'w0rp/ale'                           " linting
 Plug 'embear/vim-localvimrc'              " local vimrc
-Plug 'vimwiki/vimwiki'                    " wiki
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -175,9 +174,3 @@ let g:ale_set_loclist = 0
 let g:ale_set_quickfix = 1
 " Open list on errors
 let g:ale_open_list = 1
-
-
-" Vimwiki Configuration
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/wiki'}] " set path to a directory inside Dropbox
-let g:vimwiki_ext = '.md' " set extension to .md
-let g:vimwiki_global_ext = 0 " make sure vimwiki doesn't own all .md files
