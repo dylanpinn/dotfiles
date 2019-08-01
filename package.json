@@ -7,9 +7,7 @@
   "author": "Dylan Pinn <dylan@dylanpinn.com>",
   "license": "MIT",
   "private": true,
-  "scripts": {
-    "precommit": "lint-staged"
-  },
+  "scripts": {},
   "devDependencies": {
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
@@ -28,5 +26,10 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
