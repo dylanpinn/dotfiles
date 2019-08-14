@@ -1,2 +1,6 @@
+dbaeumer.vscode-eslint
 EditorConfig.EditorConfig
+flowtype.flow-for-vscode
+ms-python.python
+shinnn.stylelint
 WakaTime.vscode-wakatime
