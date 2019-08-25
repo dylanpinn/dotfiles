@@ -21,6 +21,10 @@ export PATH="$PATH:$GOPATH/bin"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 # fzf
 ## follow symbolic links, include hidden files and respect ignore
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
