@@ -34,6 +34,7 @@ bindkey '\C-x\C-e' edit-command-line
 alias wget='wget --no-hsts'
 
 # Colorize terminal
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 if [[ `uname` == 'Darwin' ]]; then
   alias ls='ls -G'
   alias ll='ls -lG'
