@@ -42,11 +42,25 @@ Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
 
 " Theme
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 """ Colours
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
 
-colorscheme dracula
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" Italics for my favorite color scheme
+let g:palenight_terminal_italics=1
+
+set background=dark
+colorscheme palenight
+
+" colorscheme dracula
 
 """ UI Config
 set number              " show line numbers
