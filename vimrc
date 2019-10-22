@@ -40,6 +40,10 @@ Plug 'thoughtbot/vim-rspec'               " rspec runner
 Plug 'wincent/terminus'                   " improved terminal
 Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
 
+" Tags
+Plug 'ludovicchabant/vim-gutentags'       " auto-generate tags file
+Plug 'tomtom/ttags_vim'                   " tag explorer
+
 " Theme
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'drewtempelmeyer/palenight.vim'
