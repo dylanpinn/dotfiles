@@ -28,6 +28,15 @@ These instructions will get you a copy of the project up and running on your loc
 ./install.sh
 ```
 
+#### Installing Terminal Profiles
+
+To install the terminal profiles required to get `vim` and `tmux` working correctly with italics.
+
+```bash
+tic terminal-profiles/($profile-name).terminfo
+# replacing ($profile-name) with the contents of the directory.
+```
+
 ## Running the tests
 
 Explain how to run the automated tests for this system
