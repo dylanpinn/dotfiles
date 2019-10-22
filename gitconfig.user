@@ -17,6 +17,7 @@
   keepBackup = false
 [core]
   autocrlf = input
+	excludesfile = ~/.gitignore
 [merge]
   ff = only
 [fetch]
