@@ -50,12 +50,6 @@ for f in split(glob('~/.vim/config/*.vim'), '\n')
   exe 'source' f
 endfor
 
-""" UI Config
-set number              " show line numbers
-set showcmd             " show command in bottom bar
-set lazyredraw          " redraw only when we need to.
-set showmatch           " highlight matching [{()}]
-
 """ Spaces & Tabs
 
 set tabstop=2       " number of visual spaces per TAB
