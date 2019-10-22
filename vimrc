@@ -41,13 +41,12 @@ Plug 'wincent/terminus'                   " improved terminal
 Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
 
 " Theme
-Plug 'nanotech/jellybeans.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
 
 """ Colours
 
-colorscheme jellybeans
-let g:jellybeans_use_term_italics = 1  " enable italics
+colorscheme dracula
 
 """ UI Config
 set number              " show line numbers
