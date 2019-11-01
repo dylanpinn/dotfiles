@@ -98,3 +98,9 @@ let g:vim_markdown_folding_disabled = 1
 
 " Softwrap
 command! -nargs=* Wrap set wrap linebreak nolist
+
+" Toggle spell checking on and off with `,s`
+nmap <silent> <leader>s :set spell!<CR>
+
+" Set region to Australian English
+set spelllang=en_au
