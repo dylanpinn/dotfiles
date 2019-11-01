@@ -104,3 +104,20 @@ nmap <silent> <leader>s :set spell!<CR>
 
 " Set region to Australian English
 set spelllang=en_au
+
+if has("autocmd")
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost vimrc source $MYVIMRC
+endif
+
+" Edit vimrc in a new tab.
+nmap <leader>v :tabedit $MYVIMRC<CR>
