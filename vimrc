@@ -96,3 +96,5 @@ let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_strikethrough = 2
 let g:vim_markdown_folding_disabled = 1
 
+" Softwrap
+command! -nargs=* Wrap set wrap linebreak nolist
