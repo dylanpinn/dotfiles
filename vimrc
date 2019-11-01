@@ -35,6 +35,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'               " improved language support
 Plug 'tpope/vim-rails'                    " improve editing rails apps
 Plug 'thoughtbot/vim-rspec'               " rspec runner
+Plug 'godlygeek/tabular'                  " Improved table support
+Plug 'plasticboy/vim-markdown'            " Improved markdown support
 
 " Terminal/Tmux
 Plug 'wincent/terminus'                   " improved terminal
@@ -76,4 +78,20 @@ function! RenameFile()
     endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+" Markdown options
+
+" This line prevents polyglot from loading markdown packages.
+let g:polyglot_disabled = ['md', 'markdown']
+
+" This line configures markdown-vim to highlight code blocks for given languages.
+let g:markdown_fenced_languages = ['html', 'css', 'php']
+
+" Enable Markdown math
+let g:vim_markdown_math = 1
+
+let g:vim_markdown_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_strikethrough = 2
+let g:vim_markdown_folding_disabled = 1
 
