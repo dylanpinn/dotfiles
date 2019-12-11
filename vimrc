@@ -85,7 +85,7 @@ map <leader>n :call RenameFile()<cr>
 let g:polyglot_disabled = ['md', 'markdown']
 
 " This line configures markdown-vim to highlight code blocks for given languages.
-let g:markdown_fenced_languages = ['html', 'css', 'php']
+let g:markdown_fenced_languages = ['html', 'css', 'php', 'js']
 
 " Enable Markdown math
 let g:vim_markdown_math = 1
