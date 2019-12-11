@@ -48,7 +48,6 @@ Plug 'tomtom/ttags_vim'                   " tag explorer
 Plug 'tomtom/tlib_vim'                    " dep for ttags_vim
 
 " Theme
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
