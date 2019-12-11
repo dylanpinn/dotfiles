@@ -44,7 +44,6 @@ if [[ `uname` == 'Linux' ]]; then
   alias ll='ls -l --color'
 fi
 
-
 alias npm-global='npm list -g --depth=0'
 
 # Dotfiles
@@ -60,4 +59,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Enable BG and Jobs
 setopt monitor
-
