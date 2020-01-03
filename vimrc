@@ -33,9 +33,9 @@ Plug 'junegunn/fzf.vim'
 " Language Support
 Plug 'sheerun/vim-polyglot'               " improved language support
 Plug 'tpope/vim-rails'                    " improve editing rails apps
-Plug 'thoughtbot/vim-rspec'               " rspec runner
 Plug 'godlygeek/tabular'                  " Improved table support
 Plug 'plasticboy/vim-markdown'            " Improved markdown support
+Plug 'janko/vim-test'                     " Test runner
 
 " Terminal/Tmux
 Plug 'wincent/terminus'                   " improved terminal
