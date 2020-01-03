@@ -16,7 +16,6 @@ call plug#begin('~/.vim/plugged')
 " General
 Plug 'tpope/vim-sensible'                 " sensible defaults
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
-Plug 'ajh17/VimCompletesMe'               " smarter completion
 Plug 'wakatime/vim-wakatime'              " Wakatime
 Plug 'editorconfig/editorconfig-vim'      " EditorConfig
 Plug 'tpope/vim-commentary'               " Comment stuff out
@@ -24,8 +23,8 @@ Plug 'tpope/vim-dispatch'                 " Async tasks
 Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
-Plug 'w0rp/ale'                           " linting
 Plug 'embear/vim-localvimrc'              " local vimrc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

@@ -1,8 +1,4 @@
-" Better Autocomplete
-if exists("g:loaded_VimCompletesMe")
-  " use omni completion
-  let b:vcm_tab_complete = 'omni'
-endif
+" Ruby Configuration
 
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_rails = 1
