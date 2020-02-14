@@ -2,5 +2,6 @@
 tags
 tags.lock
 tags.temp
+tags.temp.tmp
 .DS_Store
 
