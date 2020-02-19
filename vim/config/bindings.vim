@@ -34,4 +34,4 @@ nmap <Leader>h :History<CR>
 nmap <Leader>a :Ag<Space>
 
 " Run make
-nnoremap <leader>m :Make<cr>
+nnoremap <leader>m :Make %<cr>
