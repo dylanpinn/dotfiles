@@ -24,7 +24,7 @@ Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
 Plug 'embear/vim-localvimrc'              " local vimrc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ajh17/VimCompletesMe'               " better auto-complete
 
 " FZF
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
