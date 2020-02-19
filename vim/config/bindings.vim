@@ -27,8 +27,8 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 
 "" Tag finder
-nmap <Leader>t :BTags<CR>
-nmap <Leader>T :Tags<CR>
+" nmap <Leader>t :BTags<CR>
+" nmap <Leader>T :Tags<CR>
 
 "" Project finder
 nmap <Leader>a :Ag<Space>
