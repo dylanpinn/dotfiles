@@ -120,8 +120,12 @@ endif
 " Edit vimrc in a new tab.
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+
 "-- FOLDING --
-set foldmethod=syntax "syntax highlighting items specify folds
+" set foldmethod=syntax "syntax highlighting items specify folds
 " set foldcolumn=1 "defines 1 col at window left, to indicate folding
-let javaScript_fold=1 "activate folding by JS syntax
-set foldlevelstart=99 "start file with all folds opened
+" let javaScript_fold=1 "activate folding by JS syntax
+" set foldlevelstart=99 "start file with all folds opened
+
+autocmd FileType javascript set formatprg=prettier\ --stdin\ --parser\ babel 2> /dev/null
+autocmd FileType javascript set equalprg=prettier\ --stdin\ --parser\ babel 2> /dev/null
