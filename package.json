@@ -15,16 +15,13 @@
   },
   "lint-staged": {
     "**/*.sh": [
-      "shfmt -i 2 -ci -w",
-      "git add"
+      "shfmt -i 2 -ci -w"
     ],
     "bin/*": [
-      "shell-fmt",
-      "git add"
+      "shell-fmt"
     ],
     "*.{json,js}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "husky": {
