@@ -23,7 +23,7 @@ Plug 'tpope/vim-dispatch'                 " Async tasks
 Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
-Plug 'embear/vim-localvimrc'              " local vimrc
+" Plug 'embear/vim-localvimrc'              " local vimrc
 Plug 'ajh17/VimCompletesMe'               " better auto-complete
 
 " FZF
@@ -32,19 +32,19 @@ Plug 'junegunn/fzf.vim'
 
 " Language Support
 Plug 'sheerun/vim-polyglot'               " improved language support
-Plug 'tpope/vim-rails'                    " improve editing rails apps
-Plug 'godlygeek/tabular'                  " Improved table support
+" Plug 'tpope/vim-rails'                    " improve editing rails apps
+" Plug 'godlygeek/tabular'                  " Improved table support
 Plug 'plasticboy/vim-markdown'            " Improved markdown support
-Plug 'janko/vim-test'                     " Test runner
+" Plug 'janko/vim-test'                     " Test runner
 
 " Terminal/Tmux
 Plug 'wincent/terminus'                   " improved terminal
 Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
 
 " Tags
-Plug 'ludovicchabant/vim-gutentags'       " auto-generate tags file
-Plug 'tomtom/ttags_vim'                   " tag explorer
-Plug 'tomtom/tlib_vim'                    " dep for ttags_vim
+" Plug 'ludovicchabant/vim-gutentags'       " auto-generate tags file
+" Plug 'tomtom/ttags_vim'                   " tag explorer
+" Plug 'tomtom/tlib_vim'                    " dep for ttags_vim
 
 " Theme
 Plug 'drewtempelmeyer/palenight.vim'
