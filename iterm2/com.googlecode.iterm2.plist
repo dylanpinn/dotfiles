@@ -430,7 +430,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 363 620 392 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 15 2560 1402 0 0 2560 1417 </string>
+	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 15 2554 1402 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
@@ -1087,13 +1087,13 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>SFMono-LightItalic 14</string>
+			<string>Menlo-Regular 11</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Non-ASCII Ligatures</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SFMono-Regular 12</string>
+			<string>Menlo-Regular 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1932,9 +1932,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>0D5EA8DC-224D-41A1-9DFB-09126D75B8A3</string>
 	<key>NoSyncLastTipTime</key>
-	<real>603760219.53457201</real>
+	<real>604375648.65178394</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>52</integer>
+	<integer>56</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2700,13 +2700,16 @@
 		<string>0001</string>
 		<string>0013</string>
 		<string>0025</string>
+		<string>0037</string>
 		<string>0021</string>
 		<string>0033</string>
+		<string>0041</string>
 		<string>0006</string>
 		<string>0018</string>
 		<string>0002</string>
 		<string>0014</string>
 		<string>0026</string>
+		<string>0038</string>
 		<string>0010</string>
 		<string>0022</string>
 		<string>000</string>
@@ -2717,6 +2720,7 @@
 		<string>0003</string>
 		<string>0015</string>
 		<string>0027</string>
+		<string>0039</string>
 		<string>0011</string>
 		<string>0023</string>
 		<string>0035</string>
@@ -2731,9 +2735,10 @@
 		<string>0036</string>
 		<string>0020</string>
 		<string>0032</string>
+		<string>0040</string>
 		<string>0009</string>
 		<string>0005</string>
-		<string>0037</string>
+		<string>0042</string>
 	</array>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
@@ -2781,7 +2786,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-19T22:17:05Z</date>
+	<date>2020-02-25T23:48:26Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
