@@ -57,3 +57,11 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Enable BG and Jobs
 setopt monitor
+
+# Display AWS Account if set
+function aws_account {
+  if [ -n "${AWS_ACCOUNT}" ]; then
+    echo -e "${RED}${BOLD}${AWS_ACCOUNT}:${AWS_ROLE}${RESET}"
+  fi
+}
+PROMPT="%F{green}$(aws_account)"$PROMPT
