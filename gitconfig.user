@@ -11,6 +11,7 @@
   pf = push --force-with-lease
   st = status
   noff = merge --no-ff
+  update-branch = !git fetch --all -p && git rebase origin/master
 
 [color]
   ui = auto
