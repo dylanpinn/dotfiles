@@ -42,7 +42,7 @@ Plug 'wincent/terminus'                   " improved terminal
 Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
 
 " Tags
-" Plug 'ludovicchabant/vim-gutentags'       " auto-generate tags file
+Plug 'ludovicchabant/vim-gutentags'       " auto-generate tags file
 " Plug 'tomtom/ttags_vim'                   " tag explorer
 " Plug 'tomtom/tlib_vim'                    " dep for ttags_vim
 
