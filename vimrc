@@ -25,10 +25,7 @@ Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
 " Plug 'embear/vim-localvimrc'              " local vimrc
 Plug 'ajh17/VimCompletesMe'               " better auto-complete
-
-" FZF
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'                   " Bindings for FZF
 
 " Language Support
 Plug 'sheerun/vim-polyglot'               " improved language support
