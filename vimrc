@@ -116,3 +116,6 @@ endif
 
 " Edit vimrc in a new tab.
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" FZF - Add to path if installed using Homebrew
+set rtp+=/usr/local/opt/fzf
