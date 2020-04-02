@@ -28,19 +28,19 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
-[mergetool]
-  keepBackup = false
 [core]
   autocrlf = input
 	excludesfile = ~/.gitignore
   pager = diff-so-fancy | less --tabs=4 -RFX
-[merge]
-  ff = only
-[fetch]
-  prune = true
-[rebase]
-  autosquash = true
 [diff]
   colorMoved = zebra
+[fetch]
+  prune = true
+[merge]
+  ff = only
+[mergetool]
+  keepBackup = false
+[rebase]
+  autosquash = true
 
 # vi:syntax=gitconfig
