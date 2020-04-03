@@ -36,6 +36,7 @@
 [fetch]
   prune = true
 [merge]
+  conflictStyle = diff3
   ff = only
 [mergetool]
   keepBackup = false
