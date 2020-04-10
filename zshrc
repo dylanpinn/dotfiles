@@ -73,3 +73,4 @@ function aws_account {
   fi
 }
 PROMPT="%F{green}$(aws_account)"$PROMPT
+export PATH="/usr/local/sbin:$PATH"
