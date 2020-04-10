@@ -3,6 +3,14 @@
 # source all .zsh files inside of the zsh/ directory
 for config ($ZSH/**/*.zsh) source $config
 
+# Homebrew autocomplete
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Initialise autocomplete
 autoload -U compinit add-zsh-hook
 compinit
