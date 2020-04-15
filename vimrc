@@ -24,7 +24,7 @@ Plug 'tpope/vim-fugitive'                 " Git manager
 Plug 'tpope/vim-vinegar'                  " Improve netrw
 Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
 " Plug 'embear/vim-localvimrc'              " local vimrc
-Plug 'ajh17/VimCompletesMe'               " better auto-complete
+" Plug 'ajh17/VimCompletesMe'               " better auto-complete
 Plug 'junegunn/fzf.vim'                   " Bindings for FZF
 
 " Language Support
@@ -33,6 +33,12 @@ Plug 'sheerun/vim-polyglot'               " improved language support
 " Plug 'godlygeek/tabular'                  " Improved table support
 Plug 'plasticboy/vim-markdown'            " Improved markdown support
 " Plug 'janko/vim-test'                     " Test runner
+
+" LSP
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Terminal/Tmux
 Plug 'wincent/terminus'                   " improved terminal
@@ -119,3 +125,7 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " FZF - Add to path if installed using Homebrew
 set rtp+=/usr/local/opt/fzf
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
