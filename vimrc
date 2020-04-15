@@ -15,117 +15,147 @@ endif
 call plug#begin('~/.vim/plugged')
 " General
 Plug 'tpope/vim-sensible'                 " sensible defaults
-Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
-Plug 'wakatime/vim-wakatime'              " Wakatime
-Plug 'editorconfig/editorconfig-vim'      " EditorConfig
-Plug 'tpope/vim-commentary'               " Comment stuff out
-Plug 'tpope/vim-dispatch'                 " Async tasks
-Plug 'tpope/vim-fugitive'                 " Git manager
-Plug 'tpope/vim-vinegar'                  " Improve netrw
-Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
-" Plug 'embear/vim-localvimrc'              " local vimrc
-" Plug 'ajh17/VimCompletesMe'               " better auto-complete
-Plug 'junegunn/fzf.vim'                   " Bindings for FZF
-
-" Language Support
 Plug 'sheerun/vim-polyglot'               " improved language support
-" Plug 'tpope/vim-rails'                    " improve editing rails apps
-" Plug 'godlygeek/tabular'                  " Improved table support
-Plug 'plasticboy/vim-markdown'            " Improved markdown support
-" Plug 'janko/vim-test'                     " Test runner
-
-" LSP
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-" Terminal/Tmux
-Plug 'wincent/terminus'                   " improved terminal
-Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
-
-" Tags
-Plug 'ludovicchabant/vim-gutentags'       " auto-generate tags file
-" Plug 'tomtom/ttags_vim'                   " tag explorer
-" Plug 'tomtom/tlib_vim'                    " dep for ttags_vim
-
-" Theme
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" Import all .vim files in config
-for f in split(glob('~/.vim/config/*.vim'), '\n')
-  exe 'source' f
-endfor
+" COC
+" TextEdit might fail if hidden is not set.
+set hidden
 
-" Automatically open, but do not go to (if there are errors) the quickfix /
-" location list window, or close it when is has become empty.
-"
-" Note: Must allow nesting of autocmds to enable any customizations for quickfix
-" buffers.
-" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
-" (but not if it's already open). However, as part of the autocmd, this doesn't
-" seem to happen.
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
 
-" Rename Current File
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-map <leader>n :call RenameFile()<cr>
 
-" Markdown options
+" Use <c-space> to trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
 
-" This line prevents polyglot from loading markdown packages.
-let g:polyglot_disabled = ['md', 'markdown']
-
-" This line configures markdown-vim to highlight code blocks for given languages.
-let g:markdown_fenced_languages = ['html', 'css', 'php', 'js']
-
-" Enable Markdown math
-let g:vim_markdown_math = 1
-
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_toml_frontmatter = 1
-let g:vim_markdown_strikethrough = 2
-let g:vim_markdown_folding_disabled = 1
-
-" Softwrap
-command! -nargs=* Wrap set wrap linebreak nolist
-
-" Toggle spell checking on and off with `,s`
-nmap <silent> <leader>s :set spell!<CR>
-
-" Set region to Australian English
-set spelllang=en_au
-
-if has("autocmd")
-  " Restore cursor position
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+" position. Coc only does snippet and additional edit on confirm.
+if exists('*complete_info')
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
-" Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-  autocmd bufwritepost vimrc source $MYVIMRC
-endif
+" Use `[g` and `]g` to navigate diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
-" Edit vimrc in a new tab.
-nmap <leader>v :tabedit $MYVIMRC<CR>
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-" FZF - Add to path if installed using Homebrew
-set rtp+=/usr/local/opt/fzf
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder.
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
+" Applying codeAction to the selected region.
+" Example: `<leader>aap` for current paragraph
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+
+" Introduce function text object
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+xmap if <Plug>(coc-funcobj-i)
+xmap af <Plug>(coc-funcobj-a)
+omap if <Plug>(coc-funcobj-i)
+omap af <Plug>(coc-funcobj-a)
+
+" Use <TAB> for selections ranges.
+" NOTE: Requires 'textDocument/selectionRange' support from the language server.
+" coc-tsserver, coc-python are the examples of servers that support it.
+nmap <silent> <TAB> <Plug>(coc-range-select)
+xmap <silent> <TAB> <Plug>(coc-range-select)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Mappings using CoCList:
+" Show all diagnostics.
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions.
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands.
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document.
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Do default action for next item.
+nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" Do default action for previous item.
+nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
