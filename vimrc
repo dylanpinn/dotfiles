@@ -119,3 +119,7 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " FZF - Add to path if installed using Homebrew
 set rtp+=/usr/local/opt/fzf
+
+
+set wildcharm=<C-z>
+nnoremap ,e :e **/*<C-z><S-Tab>
