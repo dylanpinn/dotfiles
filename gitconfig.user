@@ -11,7 +11,8 @@
   pf = push --force-with-lease
   st = status
   noff = merge --no-ff
-
+  update-branch = !"git fetch --all -p && git rebase origin/master"
+  remove-remote = !"git fetch --all -p; git branch -vv | grep \": gone]\" | awk '{ print $1 }' | xargs -n 1 git branch -D"
 [color]
   ui = auto
 [color "diff-highlight"]
