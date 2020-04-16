@@ -1,4 +1,4 @@
-" Vim Compiler FilE
+" Vim ESLint Compiler
 " Compiler:	eslint
 " Maintainer:	Dylan Pinn <me@dylanpinn.com>
 
