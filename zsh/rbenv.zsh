@@ -1,3 +1,8 @@
 #!/bin/zsh
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
+
+rbenv() {
+  eval "$(command rbenv init -)"
+  rbenv "$@"
+}

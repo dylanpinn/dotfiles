@@ -1,19 +1,21 @@
 #!/bin/zsh
 
+zmodload zsh/zprof
+
 # source all .zsh files inside of the zsh/ directory
 for config ($ZSH/**/*.zsh) source $config
 
-# Homebrew autocomplete
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+# # Homebrew autocomplete
+# if type brew &>/dev/null; then
+#   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
 
-  autoload -Uz compinit
-  compinit
-fi
+#   autoload -Uz compinit
+#   compinit
+# fi
 
-# Initialise autocomplete
-autoload -U compinit add-zsh-hook
-compinit
+# # Initialise autocomplete
+# autoload -U compinit add-zsh-hook
+# compinit
 
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
@@ -56,21 +58,29 @@ alias npm-global='npm list -g --depth=0'
 alias dotfiles='cd ~/.dotfiles'
 
 # Load completion menu styles last
-source $HOME/.zsh/styles.zsh
+# source $HOME/.zsh/styles.zsh
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Enable BG and Jobs
 setopt monitor
 
 # Display AWS Account if set
-function aws_account {
-  if [ -n "${AWS_ACCOUNT}" ]; then
-    echo -e "${RED}${BOLD}${AWS_ACCOUNT}:${AWS_ROLE}${RESET}"
-  fi
-}
-PROMPT="%F{green}$(aws_account)"$PROMPT
-export PATH="/usr/local/sbin:$PATH"
+# function aws_account {
+#   if [ -n "${AWS_ACCOUNT}" ]; then
+#     echo -e "${RED}${BOLD}${AWS_ACCOUNT}:${AWS_ROLE}${RESET}"
+#   fi
+# }
+# PROMPT="%F{green}$(aws_account)"$PROMPT
+# export PATH="/usr/local/sbin:$PATH"
+
+
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
