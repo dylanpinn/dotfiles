@@ -28,13 +28,13 @@ if [ -z ${RELOAD} ]; then
   zplug "plugins/colored-man-pages", from:oh-my-zsh, lazy:true
   # zplug "caarlos0/ports", lazy:true
 
-  # Install plugins if there are plugins that have not been installed
-  if ! zplug check; then
-    printf "Install? [y/N]: "
-    if read -q; then
-      echo; zplug install
-    fi
-  fi
+  # # Install plugins if there are plugins that have not been installed
+  # if ! zplug check; then
+  #   printf "Install? [y/N]: "
+  #   if read -q; then
+  #     echo; zplug install
+  #   fi
+  # fi
 
   zplug load
 fi
