@@ -77,7 +77,6 @@ setopt monitor
 # PROMPT="%F{green}$(aws_account)"$PROMPT
 # export PATH="/usr/local/sbin:$PATH"
 
-
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
   compinit
