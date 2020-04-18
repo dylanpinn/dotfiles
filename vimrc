@@ -7,10 +7,11 @@ set hidden                     " Possibility to have more than one unsaved
                                " buffers.
 set number                     " Show line numbers.
 
-" Spacing
-set shiftwidth=2               " Set tabwidth to 2 spaces.
-let &softtabstop = &shiftwidth " Set softtabs to same as shiftwidth.
-set expandtab                  " Use spaces instead of tabs.
+" Spaces & Tabs
+set tabstop=2       " Number of visual spaces per TAB.
+set softtabstop=2   " Number of spaces in tab when editing.
+set expandtab       " Tabs are spaces.
+set shiftwidth=2    " Number of spaces when visual indenting.
 
 " Colours
 if !empty($COLORTERM)
