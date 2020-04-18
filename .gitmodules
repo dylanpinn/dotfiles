@@ -1,3 +1,6 @@
 [submodule "vim/pack/bundle/start/apprentice"]
 	path = vim/pack/bundle/start/apprentice
 	url = https://github.com/romainl/Apprentice
+[submodule "vim/pack/bundle/start/sensible"]
+	path = vim/pack/bundle/start/sensible
+	url = https://github.com/tpope/vim-sensible
