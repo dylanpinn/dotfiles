@@ -95,9 +95,20 @@ command! -nargs=+ -complete=file_in_path -bar LGrep lgetexpr Grep(<f-args>)
 cnoreabbrev <expr> grep (getcmdtype() ==# ':' && getcmdline() ==# 'grep') ? 'Grep' : 'grep'
 cnoreabbrev <expr> lgrep (getcmdtype() ==# ':' && getcmdline() ==# 'lgrep') ? 'LGrep' : 'grep'
 
+" Automatically open, but do not go to (if there are errors) the quickfix /
+" location list window, or close it when is has become empty.
+"
+" Note: Must allow nesting of autocmds to enable any customizations for quickfix
+" buffers.
+" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
+" (but not if it's already open). However, as part of the autocmd, this doesn't
+" seem to happen.
 augroup quickfix
-    autocmd!
-    autocmd QuickFixCmdPost [^l]* cwindow
-    autocmd QuickFixCmdPost l* lwindow
+  autocmd!
+  autocmd QuickFixCmdPost [^l]* cwindow
+  " TODO: Figure out what nested does.
+  " autocmd QuickFixCmdPost [^l]* nested cwindow
+  autocmd QuickFixCmdPost l* lwindow
+  " autocmd QuickFixCmdPost    l* nested lwindow
 augroup END
 " # vim: set syntax=vim:
