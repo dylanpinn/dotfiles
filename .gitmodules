@@ -1,0 +1,3 @@
+[submodule "vim/pack/bundle/start/apprentice"]
+	path = vim/pack/bundle/start/apprentice
+	url = https://github.com/romainl/Apprentice
