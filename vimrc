@@ -27,3 +27,8 @@ set number                     " Show line numbers.
 set shiftwidth=2               " Set tabwidth to 2 spaces.
 let &softtabstop = &shiftwidth " Set softtabs to same as shiftwidth.
 set expandtab                  " Use spaces instead of tabs.
+
+" Colours
+if !empty($COLORTERM)
+  set termguicolors " Enable 24-bit colours in terminal vim (if supported).
+endif
