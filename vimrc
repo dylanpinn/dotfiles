@@ -74,6 +74,9 @@ let mapleader=","
 " Fuzzy searching using wildmenu.
 nnoremap <Leader>e :edit **/*<C-z><S-Tab>
 nnoremap <Leader>f :find **/*<C-z><S-Tab>
+nnoremap <Leader>s :sfind **/*<C-z><S-Tab>
+nnoremap <Leader>v :vert sfind **/*<C-z><S-Tab>
+nnoremap <Leader>t :tabfind **/*<C-z><S-Tab>
 
 nnoremap <Leader>n :call RenameFile()<cr>
 " }}}
