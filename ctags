@@ -6,6 +6,8 @@
 --exclude=db/*
 --exclude=log/*
 --exclude=public/*
+--exclude=.cache/*
+--exclude=dist/*
 
 --langmap=javascript:.js.es6.es.jsx
 --javascript-kinds=-c-f-m-p-v
