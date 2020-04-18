@@ -11,7 +11,8 @@ colorscheme apprentice " https://github.com/romainl/Apprentice
 " }}}
 
 " Misc {{{
-set hidden " Possibility to have more than one unsaved buffer.
+set hidden   " Possibility to have more than one unsaved buffer.
+set autoread " Read file changes.
 
 " Centralize backups, swapfiles and undo history
 set backupdir=~/.vim/backups
@@ -29,7 +30,9 @@ set shiftwidth=2    " Number of spaces when visual indenting.
 " }}}
 
 " UI Layout {{{
-set number " Show line numbers.
+set number          " Show line numbers.
+set splitbelow      "New splits below, not above
+set splitright      "New splits on the right, not left
 " }}}
 
 " Searching {{{

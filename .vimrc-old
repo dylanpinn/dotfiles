@@ -94,15 +94,6 @@ if executable('ag')
   set grepformat=%f:%l:%c:%m,%f:%l:%m
 endif
 
-""" Splits
-
-set splitbelow      "New splits below, not above
-set splitright      "New splits on the right, not left
-
-""" Misc
-
-set autoread                        " read file changes
-
 " " vim-test configuration
 
 " " Key mappings
@@ -157,18 +148,6 @@ colorscheme palenight
 " seem to happen.
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-
-" Rename Current File
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <leader>n :call RenameFile()<cr>
 
 " Markdown options
 
