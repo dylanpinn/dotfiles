@@ -22,3 +22,8 @@ set ruler                      " Shows the current line number at the
 set wildmenu                   " Great command-line completion, use `<Tab>` to
                                " move around and `<CR>` to validate.
 set number                     " Show line numbers.
+
+" Spacing
+set shiftwidth=2               " Set tabwidth to 2 spaces.
+let &softtabstop = &shiftwidth " Set softtabs to same as shiftwidth.
+set expandtab                  " Use spaces instead of tabs.
