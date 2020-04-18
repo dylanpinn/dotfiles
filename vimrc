@@ -3,6 +3,7 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
+" Settings
 set hidden                     " Possibility to have more than one unsaved
                                " buffers.
 set number                     " Show line numbers.
@@ -28,6 +29,9 @@ set ignorecase " Ignore case when searching.
 set smartcase  " Ignore case unless CAPS.
 set hlsearch   " Highlight matches.
 
+" Ignore tag files
+set wildignore+=tags,tags.*
+
 set wildcharm=<C-z>
 nnoremap <Leader>e :e **/*<C-z><S-Tab>
 " }
@@ -39,7 +43,7 @@ if exists("&undodir")
   set undodir=~/.vim/undo
 endif
 
-""" Status Line
+" Status Line
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 "              | | | | |  |   |      |  |     |    |
 "              | | | | |  |   |      |  |     |    +-- current column
