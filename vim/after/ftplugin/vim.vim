@@ -5,3 +5,6 @@ setlocal textwidth=80
 if exists('+colorcolumn')
   setlocal colorcolumn=80
 endif
+
+setlocal foldmethod=marker
+setlocal foldlevel=0
