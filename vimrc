@@ -71,6 +71,8 @@ let mapleader=","
 " Fuzzy searching using wildmenu.
 nnoremap <Leader>e :edit **/*<C-z><S-Tab>
 nnoremap <Leader>f :find **/*<C-z><S-Tab>
+
+nnoremap <Leader>n :call RenameFile()<cr>
 " }}}
 
 " # vim: set syntax=vim:
