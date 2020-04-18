@@ -19,10 +19,16 @@ endif
 
 colorscheme apprentice " https://github.com/romainl/Apprentice
 
+" leader
+let mapleader=","
+
 " Searching {
 set ignorecase " Ignore case when searching.
 set smartcase  " Ignore case unless CAPS.
 set hlsearch   " Highlight matches.
+
+set wildcharm=<C-z>
+nnoremap <Leader>e :e **/*<C-z><S-Tab>
 " }
 
 " Centralize backups, swapfiles and undo history
