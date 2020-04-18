@@ -224,5 +224,5 @@ colorscheme palenight
 "" FZF - Add to path if installed using Homebrew
 "set rtp+=/usr/local/opt/fzf
 
-"set wildcharm=<C-z>
-"nnoremap ,e :e **/*<C-z><S-Tab>
+set wildcharm=<C-z>
+nnoremap ,e :e **/*<C-z><S-Tab>
