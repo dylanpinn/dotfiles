@@ -38,6 +38,9 @@ set splitright      "New splits on the right, not left
 " }}}
 
 " Searching {{{
+
+set grepprg=ag\ --vimgrep "Use better searching tool.
+
 set ignorecase " Ignore case when searching.
 set smartcase  " Ignore case unless CAPS.
 set hlsearch   " Highlight matches.
@@ -83,4 +86,18 @@ nnoremap <Leader>t :tabfind **/*<C-z><S-Tab>
 nnoremap <Leader>n :call RenameFile()<cr>
 " }}}
 
+" Async grepping without losing vim focus.
+function! Grep(...)
+  return system(join([&grepprg] + [a:1] + [expandcmd(join(a:000[1:-1], ' '))], ' '))
+endfunction
+command! -nargs=+ -complete=file_in_path -bar Grep  cgetexpr Grep(<f-args>)
+command! -nargs=+ -complete=file_in_path -bar LGrep lgetexpr Grep(<f-args>)
+cnoreabbrev <expr> grep (getcmdtype() ==# ':' && getcmdline() ==# 'grep') ? 'Grep' : 'grep'
+cnoreabbrev <expr> lgrep (getcmdtype() ==# ':' && getcmdline() ==# 'lgrep') ? 'LGrep' : 'grep'
+
+augroup quickfix
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l* lwindow
+augroup END
 " # vim: set syntax=vim:
