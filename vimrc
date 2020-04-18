@@ -24,3 +24,10 @@ set ignorecase " Ignore case when searching.
 set smartcase  " Ignore case unless CAPS.
 set hlsearch   " Highlight matches.
 " }
+
+" Centralize backups, swapfiles and undo history
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+	set undodir=~/.vim/undo
+endif
