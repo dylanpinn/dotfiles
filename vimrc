@@ -18,3 +18,9 @@ if !empty($COLORTERM)
 endif
 
 colorscheme apprentice " https://github.com/romainl/Apprentice
+
+" Searching {
+set ignorecase " Ignore case when searching.
+set smartcase  " Ignore case unless CAPS.
+set hlsearch   " Highlight matches.
+" }
