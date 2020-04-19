@@ -15,7 +15,6 @@ endif
 call plug#begin('~/.vim/plugged')
 " General
 Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
-Plug 'wakatime/vim-wakatime'              " Wakatime
 Plug 'editorconfig/editorconfig-vim'      " EditorConfig
 Plug 'tpope/vim-commentary'               " Comment stuff out
 Plug 'tpope/vim-dispatch'                 " Async tasks
