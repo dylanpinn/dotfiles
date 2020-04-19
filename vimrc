@@ -19,10 +19,10 @@ set autoread " Read file changes.
 set complete+=d " Scan current and included files for defined name or macro.
 
 " Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
+set backupdir=$VIMFILES/backups
+set directory=$VIMFILES/swaps
 if exists("&undodir")
-  set undodir=~/.vim/undo
+  set undodir=$VIMFILES/undo
 endif
 " }}}
 
