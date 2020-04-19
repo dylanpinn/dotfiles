@@ -140,4 +140,8 @@ command -nargs=? -complete=filetype EditFileTypePlugin
             \ exe 'keepj vsplit $VIMFILES/after/ftplugin/' . (empty(<q-args>) ? &filetype : <q-args>) . '.vim'
 command -nargs=? -complete=filetype Eft EditFileTypePlugin <args>
 
+" Simple mappings for buffer switching.
+nnoremap <Leader>d :b *
+nnoremap <Leader>l :ls<CR>
+
 " # vim: set syntax=vim:
