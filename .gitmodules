@@ -4,3 +4,6 @@
 [submodule "vim/pack/bundle/start/sensible"]
 	path = vim/pack/bundle/start/sensible
 	url = https://github.com/tpope/vim-sensible
+[submodule "vim/pack/bundle/start/night-owl"]
+	path = vim/pack/bundle/start/night-owl
+	url = https://github.com/haishanh/night-owl.vim
