@@ -18,23 +18,23 @@ if [ -z ${RELOAD} ]; then
   zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
   # nvm and npm
-  # export NVM_LAZY_LOAD=true
+  export NVM_LAZY_LOAD=true
   export NVM_AUTO_USE=true
   zplug "lukechilds/zsh-nvm"
   zplug "lukechilds/zsh-better-npm-completion", defer:2
 
   # zplug "erikced/zsh-pyenv-lazy-load"
 
-  zplug "plugins/colored-man-pages", from:oh-my-zsh
-  zplug "caarlos0/ports", lazy:true
+  zplug "plugins/colored-man-pages", from:oh-my-zsh, lazy:true
+  # zplug "caarlos0/ports", lazy:true
 
-  # Install plugins if there are plugins that have not been installed
-  if ! zplug check; then
-    printf "Install? [y/N]: "
-    if read -q; then
-      echo; zplug install
-    fi
-  fi
+  # # Install plugins if there are plugins that have not been installed
+  # if ! zplug check; then
+  #   printf "Install? [y/N]: "
+  #   if read -q; then
+  #     echo; zplug install
+  #   fi
+  # fi
 
   zplug load
 fi
