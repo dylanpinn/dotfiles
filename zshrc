@@ -17,8 +17,7 @@ bindkey '^[[B' history-substring-search-down
 if [[ `uname` == 'Darwin' ]]; then
   bindkey "^[^[[C" forward-word
   bindkey "^[^[[D" backward-word
-fi
-if [[ `uname` == 'Linux' ]]; then
+elif [[ `uname` == 'Linux' ]]; then
   bindkey "^[[1;3C" forward-word
   bindkey "^[[1;3D" backward-word
 fi
@@ -38,8 +37,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 if [[ `uname` == 'Darwin' ]]; then
   alias ls='ls -G'
   alias ll='ls -lG'
-fi
-if [[ `uname` == 'Linux' ]]; then
+elif [[ `uname` == 'Linux' ]]; then
   alias ls='ls --color'
   alias ll='ls -l --color'
 fi
