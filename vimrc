@@ -3,6 +3,8 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
+let $VIMFILES = expand("~/.vim")
+
 " Colours {{{
 if !empty($COLORTERM)
   set termguicolors " Enable 24-bit colours in terminal vim (if supported).
@@ -83,7 +85,11 @@ nnoremap <Leader>s :sfind **/*<C-z><S-Tab>
 nnoremap <Leader>v :vert sfind **/*<C-z><S-Tab>
 nnoremap <Leader>t :tabfind **/*<C-z><S-Tab>
 
+" Rename current file.
 nnoremap <Leader>n :call RenameFile()<cr>
+
+" Edit vimrc in a new tab.
+nnoremap cv :tabedit $MYVIMRC<CR>
 " }}}
 
 " Async grepping without losing vim focus.
@@ -108,7 +114,21 @@ augroup quickfix
   autocmd QuickFixCmdPost [^l]* cwindow
   " TODO: Figure out what nested does.
   " autocmd QuickFixCmdPost [^l]* nested cwindow
-  autocmd QuickFixCmdPost l* lwindow
+  autocmd QuickFixCmdPost l*    lwindow
   " autocmd QuickFixCmdPost    l* nested lwindow
 augroup END
+
+" Source the vimrc file after saving it
+" TODO: Wrap in augroup
+" TODO: Move to ftplugin
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost vimrc source $MYVIMRC
+endif
+
+" Edit my filetype/syntax plugin files for current filetype.
+command -nargs=? -complete=filetype EditFileTypePlugin
+            \ exe 'keepj vsplit $VIMFILES/after/ftplugin/' . (empty(<q-args>) ? &filetype : <q-args>) . '.vim'
+command -nargs=? -complete=filetype Eft EditFileTypePlugin <args>
+
 " # vim: set syntax=vim:

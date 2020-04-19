@@ -171,15 +171,6 @@ if has("autocmd")
     \ endif
 endif
 
-" Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-  autocmd bufwritepost vimrc source $MYVIMRC
-endif
-
-" Edit vimrc in a new tab.
-nmap <leader>v :tabedit $MYVIMRC<CR>
-
 " FZF - Add to path if installed using Homebrew
 set rtp+=/usr/local/opt/fzf
 

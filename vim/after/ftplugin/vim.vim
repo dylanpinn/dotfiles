@@ -1,3 +1,5 @@
+" Vim script
+
 " Wrap text at 80 chars.
 setlocal textwidth=80
 
