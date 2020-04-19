@@ -37,6 +37,15 @@ set shiftwidth=2    " Number of spaces when visual indenting.
 set number          " Show line numbers.
 set splitbelow      "New splits below, not above
 set splitright      "New splits on the right, not left
+
+" Set and show tite; which contains the buffer's name, indicators for modified
+" and read-only, value of the global variable cur_project (if set), path of the
+" current buffer relative from current directory, the current working directory
+" itself, and finally, the servername.
+set title
+let &titlestring = '%t%( %m%r%)%( <%{get(g:, "cur_project", "")}>%)' .
+      \ '%( (%{expand("%:~:.:h")})%)' .
+      \ '%( (%{getcwd()})%)%( %a%) - %(%{v:servername}%)'
 " }}}
 
 " Searching {{{
