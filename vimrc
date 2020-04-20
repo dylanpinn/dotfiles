@@ -145,4 +145,6 @@ command -nargs=? -complete=filetype Eft EditFileTypePlugin <args>
 nnoremap <Leader>d :b *
 nnoremap <Leader>l :ls<CR>
 
+nnoremap <Leader>m :make %<CR>
+
 " # vim: set syntax=vim:
