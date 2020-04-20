@@ -60,7 +60,7 @@ set hlsearch   " Highlight matches.
 " Ignore tag files
 set wildignore+=tags,tags.*
 " Allow expanding wildmenu.
-set wildcharm=<C-z>
+" set wildcharm=<C-z>
 " Remove unused directory from path.
 set path-=/usr/include
 " }}}
@@ -89,11 +89,11 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 let mapleader=","
 
 " Fuzzy searching using wildmenu.
-nnoremap <Leader>e :edit **/*<C-z><S-Tab>
-nnoremap <Leader>f :find **/*<C-z><S-Tab>
-nnoremap <Leader>s :sfind **/*<C-z><S-Tab>
-nnoremap <Leader>v :vert sfind **/*<C-z><S-Tab>
-nnoremap <Leader>t :tabfind **/*<C-z><S-Tab>
+nnoremap <Leader>e :edit **/
+nnoremap <Leader>f :find **/
+nnoremap <Leader>s :sfind **/
+nnoremap <Leader>v :vert sfind **/
+nnoremap <Leader>t :tabfind **/
 
 " Rename current file.
 nnoremap <Leader>n :call RenameFile()<cr>
