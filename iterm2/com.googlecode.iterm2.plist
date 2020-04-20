@@ -428,11 +428,11 @@
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 561 400 129 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>860 -537 620 392 450 -900 1440 877 </string>
+	<string>1410 768 620 392 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1713 1417 0 0 3440 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 426 650 451 0 0 1440 877 </string>
+	<string>0 904 665 513 0 0 3440 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1301,7 +1301,7 @@
 					</dict>
 					<dict>
 						<key>class</key>
-						<string>iTermStatusBarClockComponent</string>
+						<string>iTermStatusBarGitComponent</string>
 						<key>configuration</key>
 						<dict>
 							<key>knobs</key>
@@ -1310,21 +1310,12 @@
 								<integer>1</integer>
 								<key>base: priority</key>
 								<real>5</real>
-								<key>format</key>
-								<string>M/dd h:mm</string>
-								<key>shared text color</key>
-								<dict>
-									<key>Alpha Component</key>
-									<real>1</real>
-									<key>Blue Component</key>
-									<real>0.77580000000000005</real>
-									<key>Color Space</key>
-									<string>sRGB</string>
-									<key>Green Component</key>
-									<real>0.63</real>
-									<key>Red Component</key>
-									<real>0.90000000000000002</real>
-								</dict>
+								<key>iTermStatusBarGitComponentPollingIntervalKey</key>
+								<real>2</real>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<integer>0</integer>
 							</dict>
 							<key>layout advanced configuration dictionary value</key>
 							<dict>
@@ -1332,8 +1323,33 @@
 								<integer>1</integer>
 								<key>auto-rainbow style</key>
 								<integer>0</integer>
-								<key>font</key>
-								<string>.AppleSystemUIFont 12</string>
+							</dict>
+						</dict>
+					</dict>
+					<dict>
+						<key>class</key>
+						<string>iTermStatusBarWorkingDirectoryComponent</string>
+						<key>configuration</key>
+						<dict>
+							<key>knobs</key>
+							<dict>
+								<key>base: compression resistance</key>
+								<integer>1</integer>
+								<key>base: priority</key>
+								<real>5</real>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<integer>0</integer>
+								<key>path</key>
+								<string>path</string>
+							</dict>
+							<key>layout advanced configuration dictionary value</key>
+							<dict>
+								<key>algorithm</key>
+								<integer>1</integer>
+								<key>auto-rainbow style</key>
+								<integer>0</integer>
 							</dict>
 						</dict>
 					</dict>
@@ -1371,6 +1387,7 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.10beta3</string>
 		<string>3.3.8beta5</string>
 		<string>3.3.9beta1</string>
 		<string>3.3.8beta4</string>
@@ -1398,9 +1415,9 @@
 	<key>NoSyncInstallationId</key>
 	<string>0D5EA8DC-224D-41A1-9DFB-09126D75B8A3</string>
 	<key>NoSyncLastTipTime</key>
-	<real>606868197.51542699</real>
+	<real>609029671.13598204</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>66</integer>
+	<integer>81</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2166,6 +2183,7 @@
 		<string>0016</string>
 		<string>0009</string>
 		<string>0059</string>
+		<string>0066</string>
 		<string>0002</string>
 		<string>0045</string>
 		<string>0038</string>
@@ -2173,6 +2191,7 @@
 		<string>0017</string>
 		<string>0031</string>
 		<string>0024</string>
+		<string>0067</string>
 		<string>0010</string>
 		<string>0046</string>
 		<string>0003</string>
@@ -2182,18 +2201,22 @@
 		<string>0025</string>
 		<string>0018</string>
 		<string>0032</string>
+		<string>0068</string>
 		<string>0011</string>
 		<string>0047</string>
 		<string>0004</string>
 		<string>0054</string>
+		<string>0061</string>
 		<string>0033</string>
 		<string>0026</string>
 		<string>0019</string>
 		<string>0040</string>
+		<string>0069</string>
 		<string>0012</string>
 		<string>0048</string>
 		<string>0005</string>
 		<string>0055</string>
+		<string>0062</string>
 		<string>0041</string>
 		<string>0034</string>
 		<string>0027</string>
@@ -2202,6 +2225,8 @@
 		<string>0006</string>
 		<string>0020</string>
 		<string>0056</string>
+		<string>0063</string>
+		<string>0070</string>
 		<string>0042</string>
 		<string>0035</string>
 		<string>0028</string>
@@ -2209,6 +2234,8 @@
 		<string>0014</string>
 		<string>0007</string>
 		<string>0057</string>
+		<string>0064</string>
+		<string>0071</string>
 		<string>0000</string>
 		<string>0029</string>
 		<string>0050</string>
@@ -2218,12 +2245,13 @@
 		<string>0015</string>
 		<string>0008</string>
 		<string>0058</string>
+		<string>0065</string>
 		<string>0001</string>
 		<string>0037</string>
 		<string>000</string>
 		<string>0044</string>
 		<string>0051</string>
-		<string>0061</string>
+		<string>0072</string>
 	</array>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>0</integer>
@@ -2271,7 +2299,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-03-25T22:21:58Z</date>
+	<date>2020-04-19T22:52:16Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
@@ -2295,6 +2323,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.10beta2</string>
+	<string>3.3.10beta3</string>
 </dict>
 </plist>
