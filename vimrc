@@ -161,4 +161,6 @@ nnoremap <Leader>n :call RenameFile()<cr>
 
 "" SCRATCH AREA
 
+nnoremap <Leader>m :make %<CR>
+
 " # vim: set syntax=vim:
