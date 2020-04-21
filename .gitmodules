@@ -10,9 +10,3 @@
 [submodule "vim/pack/bundle/start/wakatime"]
 	path = vim/pack/bundle/start/wakatime
 	url = git://github.com/wakatime/vim-wakatime.git
-[submodule "vim/pack/bundle/start/js"]
-	path = vim/pack/bundle/start/js
-	url = https://github.com/yuezk/vim-js
-[submodule "vim/pack/bundle/start/jsx-pretty"]
-	path = vim/pack/bundle/start/jsx-pretty
-	url = https://github.com/MaxMEllon/vim-jsx-pretty
