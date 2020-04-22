@@ -8,3 +8,5 @@ source ~/.bashrc
 
 # Bash completion - TODO: See if needs to move to bashrc.
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+test -r ~/.bash_completion/alacritty && source ~/.bash_completion/alacritty
