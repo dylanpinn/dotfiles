@@ -10,7 +10,7 @@ if (has("termguicolors") && !empty($COLORTERM))
   set termguicolors " Enable 24-bit colours in terminal vim (if supported).
 endif
 " colorscheme apprentice " https://github.com/romainl/Apprentice
-colorscheme night-owl
+colorscheme spacecamp
 " }}}
 
 " Misc {{{
