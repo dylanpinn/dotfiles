@@ -161,6 +161,52 @@ nnoremap <Leader>n :call RenameFile()<cr>
 
 "" SCRATCH AREA
 
+" Edit vimrc in a new tab.
+nnoremap cv :tabedit $MYVIMRC<CR>
+
+" Async grepping without losing vim focus.
+function! Grep(...)
+  return system(join([&grepprg] + [a:1] + [expandcmd(join(a:000[1:-1], ' '))], ' '))
+endfunction
+command! -nargs=+ -complete=file_in_path -bar Grep  cgetexpr Grep(<f-args>)
+command! -nargs=+ -complete=file_in_path -bar LGrep lgetexpr Grep(<f-args>)
+cnoreabbrev <expr> grep (getcmdtype() ==# ':' && getcmdline() ==# 'grep') ? 'Grep' : 'grep'
+cnoreabbrev <expr> lgrep (getcmdtype() ==# ':' && getcmdline() ==# 'lgrep') ? 'LGrep' : 'grep'
+
+" Automatically open, but do not go to (if there are errors) the quickfix /
+" location list window, or close it when is has become empty.
+"
+" Note: Must allow nesting of autocmds to enable any customizations for quickfix
+" buffers.
+" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
+" (but not if it's already open). However, as part of the autocmd, this doesn't
+" seem to happen.
+augroup quickfix
+  autocmd!
+  autocmd QuickFixCmdPost [^l]* cwindow
+  " TODO: Figure out what nested does.
+  " autocmd QuickFixCmdPost [^l]* nested cwindow
+  autocmd QuickFixCmdPost l*    lwindow
+  " autocmd QuickFixCmdPost    l* nested lwindow
+augroup END
+
+" Source the vimrc file after saving it
+" TODO: Wrap in augroup
+" TODO: Move to ftplugin
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd bufwritepost vimrc source $MYVIMRC
+endif
+
+" Edit my filetype/syntax plugin files for current filetype.
+command -nargs=? -complete=filetype EditFileTypePlugin
+            \ exe 'keepj vsplit $VIMFILES/after/ftplugin/' . (empty(<q-args>) ? &filetype : <q-args>) . '.vim'
+command -nargs=? -complete=filetype Eft EditFileTypePlugin <args>
+
+" Simple mappings for buffer switching.
+nnoremap <Leader>d :b *
+nnoremap <Leader>l :ls<CR>
+
 nnoremap <Leader>m :make %<CR>
 
 " # vim: set syntax=vim:
