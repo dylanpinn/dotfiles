@@ -16,6 +16,10 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc   # --> Read /etc/bashrc, if present.
 fi
 
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 export NVM_DIR="$HOME/.nvm"
 
 # Lazy load nvm
