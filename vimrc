@@ -5,11 +5,27 @@
 
 let $VIMFILES = expand("~/.vim")
 
+" Plugins {{{
+if exists('*minpac#init')
+  " minpac is loaded.
+  call minpac#init()
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+  " Additional plugins here.
+  call minpac#add('tpope/vim-sensible')
+endif
+
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
+" }}}
+
+
 " Colours {{{
 if (has("termguicolors") && !empty($COLORTERM))
   set termguicolors " Enable 24-bit colours in terminal vim (if supported).
 endif
-colorscheme jellybeans
+" colorscheme jellybeans
 " }}}
 
 " Misc {{{
