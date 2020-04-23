@@ -13,6 +13,8 @@ if exists('*minpac#init')
 
   " Additional plugins here.
   call minpac#add('tpope/vim-sensible')
+  call minpac#add('nanotech/jellybeans.vim')
+  call minpac#add('wakatime/vim-wakatime')
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
@@ -20,12 +22,11 @@ command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 " }}}
 
-
 " Colours {{{
 if (has("termguicolors") && !empty($COLORTERM))
   set termguicolors " Enable 24-bit colours in terminal vim (if supported).
 endif
-" colorscheme jellybeans
+colorscheme jellybeans
 " }}}
 
 " Misc {{{
@@ -116,6 +117,8 @@ nnoremap <Leader>n :call RenameFile()<cr>
 " Edit vimrc in a new tab.
 nnoremap cv :tabedit $MYVIMRC<CR>
 " }}}
+
+"" SCRATCH AREA
 
 " Async grepping without losing vim focus.
 function! Grep(...)
