@@ -12,9 +12,11 @@ if exists('*minpac#init')
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
   " Additional plugins here.
-  call minpac#add('tpope/vim-sensible')
-  call minpac#add('nanotech/jellybeans.vim')
-  call minpac#add('wakatime/vim-wakatime')
+  call minpac#add('tpope/vim-sensible')  " sensible vim defaults.
+  call minpac#add('nanotech/jellybeans.vim')  " colourscheme
+  call minpac#add('wakatime/vim-wakatime')  " track time per editor, lang, etc.
+  call minpac#add('yuezk/vim-js')  " improve JS syntax
+  call minpac#add('MaxMEllon/vim-jsx-pretty')  " improve JSX syntax
 endif
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
