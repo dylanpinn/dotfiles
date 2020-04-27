@@ -14,8 +14,8 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
-" TODO: Use ./node_modules/.bin/eslint if present.
-CompilerSet makeprg=npx\ eslint\ -f\ unix
+" NOTE: Requires node_modules/.bin to be added to $PATH.
+CompilerSet makeprg=eslint\ -f\ unix
 
 " filename:252:3: Error message goes here
 CompilerSet errorformat=%f:%l:%c:\ %#%m
