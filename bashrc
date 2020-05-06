@@ -96,3 +96,6 @@ cdnvm(){
     fi
 }
 alias cd='cdnvm'
+
+# Emacs
+export PATH="$HOME/.emacs.d/bin:$PATH"
