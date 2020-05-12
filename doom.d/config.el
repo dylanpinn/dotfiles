@@ -54,3 +54,6 @@
 
 ;; Insert state change notes and time stamps into a drawer
 (setq org-log-into-drawer t)
+
+;; Insert CLOSED timestamp when a task is finished.
+(setq org-log-done 'time)
