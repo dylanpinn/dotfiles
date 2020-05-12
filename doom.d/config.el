@@ -57,3 +57,6 @@
 
 ;; Insert CLOSED timestamp when a task is finished.
 (setq org-log-done 'time)
+
+;; Timestamp when a task was rescheduled.
+(setq org-log-reschedule 'time)
