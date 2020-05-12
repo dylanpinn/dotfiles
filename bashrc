@@ -92,3 +92,8 @@ alias cd='cdnvm'
 
 # Emacs
 export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# Local customized path and environment settings, etc.
+if [ -f ~/.bashrc.local ]; then
+  . ~/.bashrc.local
+fi
