@@ -51,3 +51,6 @@
 ;;
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Insert state change notes and time stamps into a drawer
+(setq org-log-into-drawer t)
