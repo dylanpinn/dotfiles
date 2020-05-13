@@ -46,4 +46,5 @@ fi
 # Golang
 export PATH=$PATH:$(go env GOPATH)/bin
 
+# Add dotfiles bin to PATH
 export PATH="$HOME/.bin:$PATH"
