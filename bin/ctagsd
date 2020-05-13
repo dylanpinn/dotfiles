@@ -10,5 +10,5 @@
 #     $ ctagsd
 
 while true; do
-	git ls-files --modified --exclude-standard --others | entr -dnp ctags -R .;
+  git ls-files --modified --exclude-standard --others | entr -dnp ctags -R .
 done
