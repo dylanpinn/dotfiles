@@ -13,19 +13,19 @@
 #-------------------------------------------------------------
 
 if [ -f /etc/bashrc ]; then
-  . /etc/bashrc   # --> Read /etc/bashrc, if present.
+  . /etc/bashrc # --> Read /etc/bashrc, if present.
 fi
 
 if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+  . ~/.bash_aliases
 fi
 
 export NVM_DIR="$HOME/.nvm"
 
 # Lazy load nvm
 nvm() {
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"                    # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
   nvm $@
 }
 
