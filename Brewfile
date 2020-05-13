@@ -12,7 +12,7 @@ brew "bash-completion@2"
 brew "git"
 brew "rcm"
 # brew "ripgrep"  # required for shell-fmt script.
-# brew "vim"
+brew "vim"
 
 # Casks
 
