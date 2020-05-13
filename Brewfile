@@ -9,6 +9,9 @@ brew "vim"
 
 # Casks
 
+cask "1password"
+cask "alfred"
+cask "firefox-developer-edition"
 cask "imageoptim"
 
 # vim: set syntax=ruby:
