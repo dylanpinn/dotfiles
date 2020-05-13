@@ -14,16 +14,7 @@
     "prettier": "^2.0.5"
   },
   "lint-staged": {
-    "profile": [
-      "shfmt -i 2 -ci -w"
-    ],
-    "bash*": [
-      "shfmt -i 2 -ci -w"
-    ],
-    "**/*.sh": [
-      "shfmt -i 2 -ci -w"
-    ],
-    "bin/*": [
+    "*": [
       "shell-fmt"
     ],
     "*.{json,js}": [
