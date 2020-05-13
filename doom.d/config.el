@@ -34,7 +34,6 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
@@ -60,3 +59,7 @@
 
 ;; Timestamp when a task was rescheduled.
 (setq org-log-reschedule 'time)
+
+(use-package! wakatime-mode
+              :hook (after-init . global-wakatime-mode))
+(setq wakatime-cli-path "/usr/local/bin/wakatime")
