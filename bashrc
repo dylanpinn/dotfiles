@@ -42,3 +42,8 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 if [ -f ~/.bashrc.local ]; then
   . ~/.bashrc.local
 fi
+
+# Golang
+export PATH=$PATH:$(go env GOPATH)/bin
+
+export PATH="$HOME/.bin:$PATH"
