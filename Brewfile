@@ -7,6 +7,7 @@ tap "homebrew/cask-versions"
 
 brew "bash"     # use a newer version of bash.
 brew "bash-completion@2"
+brew "git"
 brew "ripgrep"  # required for shell-fmt script.
 brew "vim"
 
