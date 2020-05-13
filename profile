@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 export EDITOR="vim"
 
-# vim syntax=bash
+# vim: set syntax=bash:

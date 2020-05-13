@@ -5,6 +5,11 @@
 #
 # By Dylan Pinn
 #
+# Contains:
+# - aliases
+# - functions
+# - shell options
+# - prompt settings
 # ===========================================================#
 
 # If not running interactively, don't do anything
