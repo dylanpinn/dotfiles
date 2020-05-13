@@ -1,6 +1,7 @@
 # Taps
 
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 
 # brew
 
