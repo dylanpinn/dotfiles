@@ -24,21 +24,15 @@ if [ -f /etc/bashrc ]; then
   . /etc/bashrc # --> Read /etc/bashrc, if present.
 fi
 
-if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+# Local customized path and environment settings, etc.
+if [ -f ~/.bashrc.local ]; then
+  . ~/.bashrc.local
 fi
 
 # Bash completion.
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-# Lazy load nvm
-nvm() {
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"                    # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-  nvm $@
-}
-
-# Prompt
+## Prompt
 # ~/pwd (git-branch)$
 # TODO: Replace with native PS1 and implement colours that way.
 PROMPT_COMMAND='__git_ps1 "\w" "\$ " " (%s)"'
@@ -49,7 +43,17 @@ GIT_PS1_SHOWUPSTREAM="auto"    # '<' behind, '>' ahead, '<>' diverged, '=' no di
 GIT_PS1_DESCRIBE_STYLE=default # more info when in a detached HEAD
 GIT_PS1_SHOWCOLORHINTS=1       # Display colours in PROMPT_COMMAND
 
-# Local customized path and environment settings, etc.
-if [ -f ~/.bashrc.local ]; then
-  . ~/.bashrc.local
+## ALIASES
+
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
 fi
+
+## FUNCTIONS
+
+# Lazy load nvm
+nvm() {
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"                    # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+  nvm $@
+}
