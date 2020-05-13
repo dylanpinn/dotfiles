@@ -33,9 +33,9 @@ fi
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 ## Prompt
-# ~/pwd (git-branch)$
+# ~/pwd(git-branch)$
 # TODO: Replace with native PS1 and implement colours that way.
-PROMPT_COMMAND='__git_ps1 "\w" "\$ " " (%s)"'
+PROMPT_COMMAND='__git_ps1 "\n\w" "\$ " "(%s)"'
 GIT_PS1_SHOWDIRTYSTATE=1       # staged '+', unstaged '*'
 GIT_PS1_SHOWSTASHSTATE=1       # '$' something is stashed
 GIT_PS1_SHOWUNTRACKEDFILES=1   # '%' untracked files
