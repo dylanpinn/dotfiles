@@ -31,8 +31,6 @@ fi
 # Bash completion.
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
-export NVM_DIR="$HOME/.nvm"
-
 # Lazy load nvm
 nvm() {
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"                    # This loads nvm
@@ -51,16 +49,7 @@ GIT_PS1_SHOWUPSTREAM="auto"    # '<' behind, '>' ahead, '<>' diverged, '=' no di
 GIT_PS1_DESCRIBE_STYLE=default # more info when in a detached HEAD
 GIT_PS1_SHOWCOLORHINTS=1       # Display colours in PROMPT_COMMAND
 
-# Emacs
-export PATH="$HOME/.emacs.d/bin:$PATH"
-
 # Local customized path and environment settings, etc.
 if [ -f ~/.bashrc.local ]; then
   . ~/.bashrc.local
 fi
-
-# Golang
-export PATH=$PATH:$(go env GOPATH)/bin
-
-# Add dotfiles bin to PATH
-export PATH="$HOME/.bin:$PATH"
