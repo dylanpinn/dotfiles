@@ -37,8 +37,8 @@ nvm() {
 }
 
 # Prompt
-# ~/pwd $
-# PS1="\w \$ "
+# ~/pwd (git-branch) $
+# TODO: Make this work with just PS1.
 PROMPT_COMMAND='__git_ps1 "\w" " \\\$ "'
 PS1="\\w\$(__git_ps1 '(%s)') \$ "
 
