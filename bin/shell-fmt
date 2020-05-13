@@ -1,8 +1,14 @@
 #!/bin/bash
 
+# Format SH and BASH script files. These must have a correct shebang containing
+# either bash or sh.
+# The formatting is done with shfmt and matches the Google Style Guide.
+
 file_pattern=$1
 
-res=$(ack -rl '^#!/.*bash' "$file_pattern")
+# Match files with sh in shebang but not files with zsh.
+# TODO: Replace this with a single regex.
+res=$(rg -l '^#!/.*sh' "$file_pattern" | xargs rg --files-without-match '^#!/.*zsh')
 
 if [ "$res" ]; then
   shfmt -i 2 -ci -w "$res"

@@ -4,7 +4,7 @@ tap "homebrew/cask"
 
 # brew
 
-brew "ack"  # required for shell-fmt script
+brew "ripgrep"  # required for shell-fmt script
 brew "vim"
 
 # Casks
