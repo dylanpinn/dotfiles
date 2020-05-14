@@ -9,6 +9,7 @@ tap "thoughtbot/formulae"
 
 brew "bash"     # use a newer version of bash.
 brew "bash-completion@2"
+brew "diff-so-fancy" # required by git
 brew "git"
 brew "rcm"
 # brew "ripgrep"  # required for shell-fmt script.
