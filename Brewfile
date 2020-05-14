@@ -19,6 +19,8 @@ brew "diff-so-fancy" # required by git.
 brew "d12frosted/emacs-plus/emacs-plus"
 # Simple, fast and user-friendly alternative to find
 brew "fd" # required by doom-emacs.
+# Improved top (interactive process viewer)
+brew "htop"
 # Distributed revision control system
 brew "git"
 # RC file (dotfile) management
