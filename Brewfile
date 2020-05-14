@@ -7,14 +7,23 @@ tap "thoughtbot/formulae"
 
 # brew
 
-brew "bash"     # use a newer version of bash.
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 4.1+
 brew "bash-completion@2"
+# Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy" # required by git.
-brew "emacs-plus"
+# GNU Emacs text editor
+brew "d12frosted/emacs-plus/emacs-plus"
+# Simple, fast and user-friendly alternative to find
 brew "fd" # required by doom-emacs.
+# Distributed revision control system
 brew "git"
+# RC file (dotfile) management
 brew "rcm"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"  # required for shell-fmt script and doom-emacs.
+# Vi 'workalike' with many additional features
 brew "vim"
 
 # Casks
