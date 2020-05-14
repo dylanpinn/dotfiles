@@ -15,4 +15,6 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 # Set NVM directory.
 export NVM_DIR="$HOME/.nvm"
 
+# Add yarn to PATH.
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # vim: set syntax=bash:
