@@ -1,6 +1,6 @@
 # Taps
 
-# tap "homebrew/cask"
+tap "homebrew/cask"
 # tap "homebrew/cask-versions"
 
 tap "thoughtbot/formulae"
@@ -19,8 +19,9 @@ brew "vim"
 cask "1password"
 # cask "alfred"
 # cask "dash"
-# cask "docker"
+cask "docker"
 # cask "firefox-developer-edition"
 # cask "imageoptim"
+cask "zoomus"
 
 # vim: set syntax=ruby:
