@@ -1,7 +1,6 @@
 # Taps
 
 tap "homebrew/cask"
-# tap "homebrew/cask-versions"
 
 tap "thoughtbot/formulae"
 
@@ -21,14 +20,16 @@ cask "1password"
 # cask "alfred"
 # cask "dash"
 cask "docker"
-# cask "firefox-developer-edition"
-# cask "imageoptim"
 cask "rectangle"
 cask "zoomus"
 
 # Custom per environment/workstation.
 
 if ENV["HOMEBREW_PROFILE"] == "work"
+  tap "homebrew/cask-versions"
+
+  cask "firefox-developer-edition"
+  cask "imageoptim"
   cask "slack"
 end
 
