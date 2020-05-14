@@ -11,6 +11,8 @@ tap "thoughtbot/formulae"
 brew "bash"
 # Programmable completion for Bash 4.1+
 brew "bash-completion@2"
+# GNU File, Shell, and Text utilities
+brew "coreutils" # required for doom-emacs.
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy" # required by git.
 # GNU Emacs text editor
