@@ -25,4 +25,10 @@ cask "docker"
 cask "rectangle"
 cask "zoomus"
 
+# Custom per environment/workstation.
+
+if ENV["HOMEBREW_PROFILE"] == "work"
+  cask "slack"
+end
+
 # vim: set syntax=ruby:
