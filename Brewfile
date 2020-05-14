@@ -22,6 +22,7 @@ cask "1password"
 cask "docker"
 # cask "firefox-developer-edition"
 # cask "imageoptim"
+cask "rectangle"
 cask "zoomus"
 
 # vim: set syntax=ruby:
