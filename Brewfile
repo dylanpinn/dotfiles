@@ -50,4 +50,8 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "slack"
 end
 
+if ENV["HOMEBREW_PROFILE"] == "personal"
+  cask "google-backup-and-sync"
+end
+
 # vim: set syntax=ruby:
