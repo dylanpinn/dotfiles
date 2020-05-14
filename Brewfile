@@ -32,6 +32,7 @@ brew "vim"
 
 cask "1password"
 # cask "alfred"
+cask "appcleaner"
 # cask "dash"
 cask "docker"
 cask "rectangle"
