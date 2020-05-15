@@ -43,6 +43,7 @@ cask "rectangle"
 cask "zoomus"
 
 # App Store
+mas "Drafts", id: 1435957248
 mas "Evernote Web Clipper", id: 1481669779
 mas "Todoist", id: 585829637
 
