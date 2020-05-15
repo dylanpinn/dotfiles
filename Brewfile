@@ -23,6 +23,8 @@ brew "fd" # required by doom-emacs.
 brew "htop"
 # Distributed revision control system
 brew "git"
+# Mac App Store command-line interface
+brew "mas"
 # RC file (dotfile) management
 brew "rcm"
 # Search tool like grep and The Silver Searcher
@@ -40,13 +42,13 @@ cask "docker"
 cask "rectangle"
 cask "zoomus"
 
+# App Store
+mas "Todoist: To-Do List & Tasks", id: 585829637
+
 # Custom per environment/workstation.
 
 if ENV["HOMEBREW_PROFILE"] == "work"
   tap "homebrew/cask-versions"
-
-  # Mac App Store command-line interface
-  brew "mas"
 
   cask "firefox-developer-edition"
   cask "imageoptim"
