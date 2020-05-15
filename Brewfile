@@ -45,9 +45,14 @@ cask "zoomus"
 if ENV["HOMEBREW_PROFILE"] == "work"
   tap "homebrew/cask-versions"
 
+  # Mac App Store command-line interface
+  brew "mas"
+
   cask "firefox-developer-edition"
   cask "imageoptim"
   cask "slack"
+
+  mas "Grammarly for Safari", id: 1462114288
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
