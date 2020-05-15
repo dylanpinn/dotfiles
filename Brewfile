@@ -56,6 +56,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
+  cask "evernote"
   cask "google-backup-and-sync"
 end
 
