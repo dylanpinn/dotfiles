@@ -20,11 +20,6 @@ echo "Setting up nvm..."
 [ ! -d "$HOME/.nvm" ] && \
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-echo "Setting up emacs-doom..."
-[ ! -d "$HOME/.emacs.d" ] && \
-  git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d && \
-  ~/.emacs.d/bin/doom install
-
 echo "Setting up yarn..."
 [ ! -d "$HOME/.yarn" ] && \
   curl -o- -L https://yarnpkg.com/install.sh | bash

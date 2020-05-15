@@ -9,9 +9,6 @@ export EDITOR="vim"
 # Add dotfiles bin to PATH
 export PATH="$HOME/.bin:$PATH"
 
-# Doom Emacs.
-export PATH="$HOME/.emacs.d/bin:$PATH"
-
 # Set NVM directory.
 export NVM_DIR="$HOME/.nvm"
 

@@ -2,7 +2,6 @@
 
 tap "homebrew/cask"
 
-tap "d12frosted/emacs-plus"
 tap "thoughtbot/formulae"
 
 # brew
@@ -11,15 +10,9 @@ tap "thoughtbot/formulae"
 brew "bash"
 # Programmable completion for Bash 4.1+
 brew "bash-completion@2"
-# GNU File, Shell, and Text utilities
-brew "coreutils" # required for doom-emacs.
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy" # required by git.
-# GNU Emacs text editor
-brew "d12frosted/emacs-plus/emacs-plus"
 # Simple, fast and user-friendly alternative to find
-brew "fd" # required by doom-emacs.
-# Improved top (interactive process viewer)
 brew "htop"
 # Distributed revision control system
 brew "git"
@@ -28,7 +21,7 @@ brew "mas"
 # RC file (dotfile) management
 brew "rcm"
 # Search tool like grep and The Silver Searcher
-brew "ripgrep"  # required for shell-fmt script and doom-emacs.
+brew "ripgrep"  # required for shell-fmt script.
 # Vi 'workalike' with many additional features
 brew "vim"
 
