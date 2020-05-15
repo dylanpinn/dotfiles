@@ -43,7 +43,8 @@ cask "rectangle"
 cask "zoomus"
 
 # App Store
-mas "Todoist: To-Do List & Tasks", id: 585829637
+mas "Evernote Web Clipper", id: 1481669779
+mas "Todoist", id: 585829637
 
 # Custom per environment/workstation.
 
