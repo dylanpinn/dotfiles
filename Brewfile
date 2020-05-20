@@ -46,9 +46,11 @@ mas "Todoist", id: 585829637
 
 if ENV["HOMEBREW_PROFILE"] == "work"
   tap "homebrew/cask-versions"
+  tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 
   # Official Amazon AWS command-line interface
   brew "awscli"
+  brew "rea-as"
 
   cask "firefox-developer-edition"
   cask "imageoptim"
