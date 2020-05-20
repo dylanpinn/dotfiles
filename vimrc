@@ -189,8 +189,11 @@ augroup END
 " TODO: Wrap in augroup
 " TODO: Move to ftplugin
 if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-  autocmd bufwritepost vimrc source $MYVIMRC
+  augroup write_vimrc
+    autocmd!
+    autocmd bufwritepost .vimrc source $MYVIMRC
+    autocmd bufwritepost vimrc source $MYVIMRC
+  augroup END
 endif
 
 " Edit my filetype/syntax plugin files for current filetype.
@@ -203,9 +206,52 @@ nnoremap <Leader>d :b *
 nnoremap <Leader>l :ls<CR>
 
 nnoremap <Leader>m :make %<CR>
+nnoremap <Leader>ml :compiler eslint <bar> make %<CR>
+nnoremap <Leader>mt :compiler jest-cli <bar> make %<CR>
 
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+noremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
       \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
       \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+" Insert current path
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+" RUN make on write
+" autocmd BufWritePost <pattern> silent make! <afile> | silent redraw!
+" autocmd BufWritePost *.py,*.js silent make! <afile> | silent redraw!
+
+
+set showmatch " Jump back to matching bracket briefly.
+
+" Make space more useful
+nnoremap <leader><space> za
+
+" Move line down.
+noremap <leader>- ddp
+noremap <leader>= ddkP
+
+" Uppercase word
+imap <C-u> <ESC>viwUea
+
+let maplocalleader = "\\"
+
+" Save VIMRC
+nnoremap <leader>vs :source $MYVIMRC<CR>
+
+" Edit vimrc in a new tab.
+nnoremap <leader>ve :tabedit $MYVIMRC<CR>
+
+" Surround in quotes
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
+vnoremap <leader>" di"<esc>pa"<esc>
+vnoremap <leader>( di(<esc>pa)<esc>
+
+nnoremap H 0
+nnoremap L $
+
+inoremap jk <ESC>
+
+" common spelling errors
+iabbrev adn and
 
 " # vim: set syntax=vim:
