@@ -47,6 +47,9 @@ mas "Todoist", id: 585829637
 if ENV["HOMEBREW_PROFILE"] == "work"
   tap "homebrew/cask-versions"
 
+  # Official Amazon AWS command-line interface
+  brew "awscli"
+
   cask "firefox-developer-edition"
   cask "imageoptim"
   cask "slack"
