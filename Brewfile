@@ -50,8 +50,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "firefox-developer-edition"
   cask "imageoptim"
   cask "slack"
-
-  mas "Grammarly for Safari", id: 1462114288
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
