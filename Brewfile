@@ -55,4 +55,26 @@ mas "Evernote Web Clipper", id: 1481669779
 mas "Grammarly for Safari", id: 1462114288
 mas "Things 3", id: 904280696
 
+# Custom per environment/workstation.
+
+if ENV["HOMEBREW_PROFILE"] == "work"
+  tap "homebrew/cask-versions"
+  tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
+
+  # Official Amazon AWS command-line interface
+  brew "awscli"
+  brew "rea-as"
+
+  cask "firefox-developer-edition"
+  cask "imageoptim"
+  cask "slack"
+end
+
+if ENV["HOMEBREW_PROFILE"] == "personal"
+  cask "google-backup-and-sync"
+
+  mas "LINER - Web / PDF Highlighter", id: 1463530746
+end
+
+# vim: set syntax=ruby:
 # vim: set syntax=ruby:
