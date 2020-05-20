@@ -40,7 +40,6 @@ cask "zoomus"
 mas "Drafts", id: 1435957248
 mas "Evernote Web Clipper", id: 1481669779
 mas "Grammarly for Safari", id: 1462114288
-mas "LINER - Web / PDF Highlighter", id: 1463530746
 mas "Todoist", id: 585829637
 
 # Custom per environment/workstation.
@@ -57,6 +56,8 @@ end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "google-backup-and-sync"
+
+  mas "LINER - Web / PDF Highlighter", id: 1463530746
 end
 
 # vim: set syntax=ruby:
