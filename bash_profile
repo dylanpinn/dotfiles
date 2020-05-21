@@ -10,7 +10,3 @@ source ~/.bashrc
 
 # Bash completion - TODO: See if needs to move to bashrc.
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-# jEnv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
