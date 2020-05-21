@@ -83,6 +83,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 
   cask "figma"
   cask "firefox-developer-edition"
+  cask "google-chrome"
   cask "imageoptim"
 end
 
