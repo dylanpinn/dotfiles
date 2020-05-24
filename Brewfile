@@ -90,7 +90,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "google-backup-and-sync"
   cask "notion"
 
-  mas "LINER - Web / PDF Highlighter", id: 1463530746
+  mas "Kindle", id: 405399194
 end
 
 # vim: set syntax=ruby:
