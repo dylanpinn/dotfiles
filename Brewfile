@@ -80,6 +80,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
+  cask "calibre"
   cask "google-backup-and-sync"
   cask "notion"
 
