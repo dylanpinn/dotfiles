@@ -70,6 +70,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
+  cask "calibre"
   cask "google-backup-and-sync"
 
   mas "LINER - Web / PDF Highlighter", id: 1463530746
