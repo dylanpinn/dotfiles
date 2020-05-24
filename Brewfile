@@ -62,7 +62,6 @@ mas "Things 3", id: 904280696
 # Custom per environment/workstation.
 
 if ENV["HOMEBREW_PROFILE"] == "work"
-  tap "homebrew/cask-versions"
   tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 
   # Official Amazon AWS command-line interface
@@ -75,7 +74,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "hub"
 
   cask "figma"
-  cask "firefox-developer-edition"
   cask "google-chrome"
   cask "imageoptim"
   cask "slack"
