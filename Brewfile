@@ -74,7 +74,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "hub"
 
   cask "figma"
-  cask "google-chrome"
   cask "imageoptim"
   cask "slack"
 end
