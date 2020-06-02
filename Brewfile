@@ -64,7 +64,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "awscli"
   brew "rea-as"
 
-  cask "google-chrome"
   cask "imageoptim"
   cask "slack"
 end
