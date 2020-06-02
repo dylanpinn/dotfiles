@@ -20,6 +20,8 @@ brew "diff-so-fancy"
 brew "exercism"
 # Distributed revision control system
 brew "git"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
