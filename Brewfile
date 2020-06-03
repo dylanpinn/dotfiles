@@ -20,8 +20,6 @@ brew "diff-so-fancy"
 brew "exercism"
 # Distributed revision control system
 brew "git"
-# Lightweight and flexible command-line JSON processor
-brew "jq"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
@@ -64,7 +62,10 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 
   # Official Amazon AWS command-line interface
   brew "awscli"
-  brew "rea-as"
+  # Authenticate to REA AWS accounts
+  brew "cowbell/stuff/rea-as"
+  # Making SLiPs easy to use
+  brew "cowbell/stuff/rea-slip-utils"
 
   cask "imageoptim"
   cask "slack"
