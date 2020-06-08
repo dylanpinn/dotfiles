@@ -118,13 +118,13 @@ nnoremap <Leader>n :call RenameFile()<cr>
 nnoremap cv :tabedit $MYVIMRC<CR>
 
 " Async grepping without losing vim focus.
-function! Grep(...)
-  return system(join([&grepprg] + [a:1] + [expandcmd(join(a:000[1:-1], ' '))], ' '))
-endfunction
-command! -nargs=+ -complete=file_in_path -bar Grep  cgetexpr Grep(<f-args>)
-command! -nargs=+ -complete=file_in_path -bar LGrep lgetexpr Grep(<f-args>)
-cnoreabbrev <expr> grep (getcmdtype() ==# ':' && getcmdline() ==# 'grep') ? 'Grep' : 'grep'
-cnoreabbrev <expr> lgrep (getcmdtype() ==# ':' && getcmdline() ==# 'lgrep') ? 'LGrep' : 'grep'
+" function! Grep(...)
+"   return system(join([&grepprg] + [a:1] + [expandcmd(join(a:000[1:-1], ' '))], ' '))
+" endfunction
+" command! -nargs=+ -complete=file_in_path -bar Grep  cgetexpr Grep(<f-args>)
+" command! -nargs=+ -complete=file_in_path -bar LGrep lgetexpr Grep(<f-args>)
+" cnoreabbrev <expr> grep (getcmdtype() ==# ':' && getcmdline() ==# 'grep') ? 'Grep' : 'grep'
+" cnoreabbrev <expr> lgrep (getcmdtype() ==# ':' && getcmdline() ==# 'lgrep') ? 'LGrep' : 'grep'
 
 " Automatically open, but do not go to (if there are errors) the quickfix /
 " location list window, or close it when is has become empty.
