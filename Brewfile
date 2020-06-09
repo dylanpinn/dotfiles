@@ -69,6 +69,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-slip-utils"
   brew "sbt"
 
+  cask "homebrew/cask-versions/adoptopenjdk8"
   cask "adoptopenjdk11"
   cask "intellij-idea-ce"
   cask "imageoptim"
