@@ -87,6 +87,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "calibre"
   cask "google-backup-and-sync"
   cask "notion"
+  cask "whatsapp"
 
   mas "Kindle", id: 405399194
 end
