@@ -75,6 +75,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "hub"
   brew "sbt"
 
+  cask "homebrew/cask-versions/adoptopenjdk8"
   cask "adoptopenjdk11"
   cask "intellij-idea-ce"
   cask "figma"
