@@ -3,3 +3,4 @@
 for bcfile in ~/.bash_completion.d/*; do
   [ -f "$bcfile" ] && . $bcfile
 done
+unset -v bcfile
