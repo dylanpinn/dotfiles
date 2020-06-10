@@ -410,4 +410,6 @@ if exists(":CocInfo")
   set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
 endif
 
+set viminfofile=~/.vim/viminfo
+
 " # vim: set syntax=vim:
