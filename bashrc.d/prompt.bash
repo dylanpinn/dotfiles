@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Prompt
 
 # If Bash 4.0 is available, trim very long paths in prompt
