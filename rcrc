@@ -1,2 +1,2 @@
 EXCLUDES="README*.md LICENSE.md install.sh tags Brewfile bin Brewfile*
-          lint-*.sh requirements"
+          lint-*.sh requirements.txt"
