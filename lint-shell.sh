@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 shellcheck profile install.sh lint-shell.sh lint-vim.sh bash_completion \
   bash_profile bashrc
 
