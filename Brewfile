@@ -26,6 +26,8 @@ brew "htop"
 brew "jq"
 # Mac App Store command-line interface
 brew "mas"
+# Python version management
+brew "pyenv"
 # RC file (dotfile) management
 brew "rcm"
 # Search tool like grep and The Silver Searcher
