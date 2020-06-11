@@ -1,9 +1,0 @@
-#!/bin/bash
-
-file_pattern=$1
-
-res=$(ack -rl '^#!/.*bash' "$file_pattern")
-
-if [ "$res" ]; then
-  shfmt -i 2 -ci -w "$res"
-fi
