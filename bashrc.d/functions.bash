@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 ## FUNCTIONS
 
 # Lazy load nvm
