@@ -1,3 +1,2 @@
-EXCLUDES="README*.md LICENSE.md install.sh **/*.sh tags package.json yarn.lock
-          node_modules terminal-profiles Brewfile"
+EXCLUDES="README*.md LICENSE.md install.sh tags Brewfile bin"
 
