@@ -3,119 +3,113 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
-""" Plugins
+let $VIMFILES = expand("~/.vim")
 
-" install vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+" Plugins {{{
+if exists('*minpac#init')
+  " minpac is loaded.
+  call minpac#init()
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+  " Additional plugins here.
+  call minpac#add('tpope/vim-sensible')  " sensible vim defaults.
+  call minpac#add('nanotech/jellybeans.vim')  " colourscheme
+  call minpac#add('wakatime/vim-wakatime')  " track time per editor, lang, etc.
+  call minpac#add('yuezk/vim-js')  " improve JS syntax
+  call minpac#add('MaxMEllon/vim-jsx-pretty')  " improve JSX syntax
 endif
 
-call plug#begin('~/.vim/plugged')
-" General
-Plug 'tpope/vim-sensible'                 " sensible defaults
-Plug 'tpope/vim-surround'                 " quoting/paraenthese easier
-Plug 'wakatime/vim-wakatime'              " Wakatime
-Plug 'editorconfig/editorconfig-vim'      " EditorConfig
-Plug 'tpope/vim-commentary'               " Comment stuff out
-Plug 'tpope/vim-dispatch'                 " Async tasks
-Plug 'tpope/vim-fugitive'                 " Git manager
-Plug 'tpope/vim-vinegar'                  " Improve netrw
-Plug 'qpkorr/vim-bufkill'                 " rm bufs w/out closing splits
-" Plug 'embear/vim-localvimrc'              " local vimrc
-Plug 'ajh17/VimCompletesMe'               " better auto-complete
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
+" }}}
 
-" FZF
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
-" Language Support
-Plug 'sheerun/vim-polyglot'               " improved language support
-" Plug 'tpope/vim-rails'                    " improve editing rails apps
-" Plug 'godlygeek/tabular'                  " Improved table support
-Plug 'plasticboy/vim-markdown'            " Improved markdown support
-" Plug 'janko/vim-test'                     " Test runner
-
-" Terminal/Tmux
-Plug 'wincent/terminus'                   " improved terminal
-Plug 'tmux-plugins/vim-tmux-focus-events' " Fix vim focus events inside tmux
-
-" Tags
-" Plug 'ludovicchabant/vim-gutentags'       " auto-generate tags file
-" Plug 'tomtom/ttags_vim'                   " tag explorer
-" Plug 'tomtom/tlib_vim'                    " dep for ttags_vim
-
-" Theme
-Plug 'drewtempelmeyer/palenight.vim'
-call plug#end()
-
-" Import all .vim files in config
-for f in split(glob('~/.vim/config/*.vim'), '\n')
-  exe 'source' f
-endfor
-
-" Automatically open, but do not go to (if there are errors) the quickfix /
-" location list window, or close it when is has become empty.
-"
-" Note: Must allow nesting of autocmds to enable any customizations for quickfix
-" buffers.
-" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
-" (but not if it's already open). However, as part of the autocmd, this doesn't
-" seem to happen.
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
-
-" Rename Current File
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <leader>n :call RenameFile()<cr>
-
-" Markdown options
-
-" This line prevents polyglot from loading markdown packages.
-let g:polyglot_disabled = ['md', 'markdown']
-
-" This line configures markdown-vim to highlight code blocks for given languages.
-let g:markdown_fenced_languages = ['html', 'css', 'php', 'js']
-
-" Enable Markdown math
-let g:vim_markdown_math = 1
-
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_toml_frontmatter = 1
-let g:vim_markdown_strikethrough = 2
-let g:vim_markdown_folding_disabled = 1
-
-" Softwrap
-command! -nargs=* Wrap set wrap linebreak nolist
-
-" Toggle spell checking on and off with `,s`
-nmap <silent> <leader>s :set spell!<CR>
-
-" Set region to Australian English
-set spelllang=en_au
-
-if has("autocmd")
-  " Restore cursor position
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+" Colours {{{
+if (has("termguicolors") && !empty($COLORTERM))
+  set termguicolors " Enable 24-bit colours in terminal vim (if supported).
 endif
+colorscheme jellybeans
+" }}}
 
-" Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-  autocmd bufwritepost vimrc source $MYVIMRC
+" Misc {{{
+set hidden   " Possibility to have more than one unsaved buffer.
+set autoread " Read file changes.
+
+set complete+=d " Scan current and included files for defined name or macro.
+
+" Centralize backups, swapfiles and undo history
+set backupdir=$VIMFILES/backups
+set directory=$VIMFILES/swaps
+if exists("&undodir")
+  set undodir=$VIMFILES/undo
 endif
+" }}}
 
-" Edit vimrc in a new tab.
-nmap <leader>v :tabedit $MYVIMRC<CR>
+" Spaces & Tabs {{{
+set tabstop=2       " Number of visual spaces per TAB.
+set softtabstop=2   " Number of spaces in tab when editing.
+set expandtab       " Tabs are spaces.
+set shiftwidth=2    " Number of spaces when visual indenting.
+" }}}
+
+" UI Layout {{{
+set number          " Show line numbers.
+set splitbelow      "New splits below, not above
+set splitright      "New splits on the right, not left
+
+" Set and show tite; which contains the buffer's name, indicators for modified
+" and read-only, value of the global variable cur_project (if set), path of the
+" current buffer relative from current directory, the current working directory
+" itself, and finally, the servername.
+set title
+let &titlestring = '%t%( %m%r%)%( <%{get(g:, "cur_project", "")}>%)' .
+      \ '%( (%{expand("%:~:.:h")})%)' .
+      \ '%( (%{getcwd()})%)%( %a%) - %(%{v:servername}%)'
+" }}}
+
+" Searching {{{
+set ignorecase " Ignore case when searching.
+set smartcase  " Ignore case unless CAPS.
+set hlsearch   " Highlight matches.
+
+" Ignore tag files
+set wildignore+=tags,tags.*
+" Allow expanding wildmenu.
+" Remove unused directory from path.
+set path-=/usr/include
+" }}}
+
+" Status Line {{{
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"              | | | | |  |   |      |  |     |    |
+"              | | | | |  |   |      |  |     |    +-- current column
+"              | | | | |  |   |      |  |     +-- current line
+"              | | | | |  |   |      |  +-- current % into file
+"              | | | | |  |   |      +-- current syntax
+"              | | | | |  |   +-- current fileformat
+"              | | | | |  +-- number of lines
+"              | | | | +-- preview flag in square brackets
+"              | | | +-- help flag in square brackets
+"              | | +-- readonly flag in square brackets
+"              | +-- rodified flag in square brackets
+"              +-- full path to file in the buffer
+" }}}
+
+" Keybindings {{{
+" leader
+let mapleader=","
+
+" Fuzzy searching using wildmenu.
+nnoremap <Leader>e :edit **/
+nnoremap <Leader>f :find **/
+nnoremap <Leader>s :sfind **/
+nnoremap <Leader>v :vert sfind **/
+nnoremap <Leader>t :tabfind **/
+
+" Rename current file.
+nnoremap <Leader>n :call RenameFile()<cr>
+" }}}
+
+"" SCRATCH AREA
+
+" # vim: set syntax=vim:
