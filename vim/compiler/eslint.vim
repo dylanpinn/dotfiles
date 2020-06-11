@@ -14,7 +14,6 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
-" TODO: Handle both yarn and npx projects.
 CompilerSet makeprg=npx\ eslint\ -f\ unix
 
 " filename:252:3: Error message goes here
