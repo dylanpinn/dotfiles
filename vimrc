@@ -77,9 +77,14 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 " }}}
 
 " Colours {{{
+
+" Enable 24-bit colours in terminal vim (if it is supported by Vim and the
+" terminal).
 if (has("termguicolors") && !empty($COLORTERM))
-  set termguicolors " Enable 24-bit colours in terminal vim (if supported).
+  set termguicolors
 endif
+
+" Load colorscheme.
 colorscheme jellybeans
 " }}}
 
