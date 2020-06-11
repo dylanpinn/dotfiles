@@ -1,9 +1,0 @@
-dbaeumer.vscode-eslint
-EditorConfig.EditorConfig
-flowtype.flow-for-vscode
-ms-azuretools.vscode-docker
-ms-python.python
-rebornix.ruby
-shinnn.stylelint
-WakaTime.vscode-wakatime
-wix.vscode-import-cost
