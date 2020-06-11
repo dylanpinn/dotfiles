@@ -88,6 +88,8 @@ if exists('*minpac#init')
   " Improve JSX syntax highlighting, Vim's default highlighting can leave a bit
   " to be desired.
   call minpac#add('MaxMEllon/vim-jsx-pretty')
+
+  call minpac#add('neoclide/coc.nvim', { 'type': 'opt', 'branch': 'release' })
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
@@ -410,6 +412,5 @@ if exists(":CocInfo")
   set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
 endif
 
-set viminfofile=~/.vim/viminfo
 
 " # vim: set syntax=vim:
