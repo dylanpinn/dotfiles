@@ -3,7 +3,33 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
-let $VIMFILES = expand("~/.vim")
+" This will be the configuration file for "most" of vim. This file (vimrc)
+" should be the only file located in the home directory.
+let $VIMFILES = expand("$HOME/.vim")
+
+" Move the viminfo file out of the home directory.
+set viminfofile=$VIMFILES/viminfo
+
+" Increase size of history from 50 to 1000.
+set history=1000
+
+" Create automatic backups for all files.
+" Store these in the ~/.vim/backups directory. Double slashes are added to the
+" end of the path to ensure that the file names are constructed using the full
+" path. This ensures that file collisions are minimised.
+set backup
+set backupdir=$VIMFILES/backups//
+
+" Keep swapfiles out of the current directory. Double slahses are added to the
+" end of the path to reduce naming collisions.
+set directory=$VIMFILES/swaps//
+
+" Keep track of undo history for files. Check if the current vim version has
+" this enabled and then save these using the full file path to avoid collisions.
+if has("persistent_undo")
+  set undofile
+  set undodir=$VIMFILES/undo//
+endif
 
 " Plugins {{{
 if exists('*minpac#init')
@@ -39,12 +65,6 @@ set autoread " Read file changes.
 
 set complete+=d " Scan current and included files for defined name or macro.
 
-" Centralize backups, swapfiles and undo history
-set backupdir=$VIMFILES/backups
-set directory=$VIMFILES/swaps
-if exists("&undodir")
-  set undodir=$VIMFILES/undo
-endif
 " }}}
 
 " Spaces & Tabs {{{
@@ -368,6 +388,5 @@ if exists(":CocInfo")
   set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
 endif
 
-set viminfofile=~/.vim/viminfo
 
 " # vim: set syntax=vim:
