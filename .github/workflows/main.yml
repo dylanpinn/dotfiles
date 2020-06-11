@@ -22,3 +22,12 @@ jobs:
     - name: Lint Vim files
       run: ./lint-vim.sh
 
+  lint-shell:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Lint Shell files
+      run: ./lint-shell.sh
+
