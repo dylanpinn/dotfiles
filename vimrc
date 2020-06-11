@@ -32,21 +32,45 @@ if has("persistent_undo")
 endif
 
 " Plugins {{{
+" Use vim Minpac (https://github.com/k-takata/minpac) to manage plugins. This
+" uses the built in Vim 8 package feature.
+"
+" Main reason for using this is to load 3rd party plugins without having to deal
+" with submodules or install scripts.
 if exists('*minpac#init')
-  " minpac is loaded.
   call minpac#init()
+  " Load minpac using minpac (Inception). This is loaded as optional plugin and
+  " loaded only when required to update plugins.
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-  " Additional plugins here.
-  call minpac#add('tpope/vim-sensible')  " sensible vim defaults.
-  call minpac#add('nanotech/jellybeans.vim')  " colourscheme
-  call minpac#add('wakatime/vim-wakatime')  " track time per editor, lang, etc.
-  call minpac#add('yuezk/vim-js')  " improve JS syntax
-  call minpac#add('MaxMEllon/vim-jsx-pretty')  " improve JSX syntax
+  " A universal set of defaults that (hopefully) everyone can agree on. Might
+  " look into replacing this in the future with the defaults directly. However,
+  " I do like being able to add some settings that are almost considered best
+  " practices.
+  call minpac#add('tpope/vim-sensible')
 
+  " Color (colour) scheme; tried many but always come back to this one. Will
+  " probably last me until I go down the rabbithole of creating my own.
+  call minpac#add('nanotech/jellybeans.vim')
+
+  " I use Wakatime to roughly track how much actual "development" I am doing and
+  " what I am doing. This isn't always acurate as can be doing pair programming
+  " on a remote computer.
+  call minpac#add('wakatime/vim-wakatime')
+
+  " Improve JavaScript syntax highlighting, enahnces highlighting for > ES5.
+  call minpac#add('yuezk/vim-js')
+
+  " Improve JSX syntax highlighting, Vim's default highlighting can leave a bit
+  " to be desired.
+  call minpac#add('MaxMEllon/vim-jsx-pretty')
+
+  " Add optional LSP support to Vim. Looking at using this with metals for Scala
+  " development.
   call minpac#add('neoclide/coc.nvim', { 'type': 'opt', 'branch': 'release' })
 endif
 
+" Manage Minpac commands by loading the plugin then executing the commands.
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
