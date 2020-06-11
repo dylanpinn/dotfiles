@@ -77,6 +77,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 
   cask "homebrew/cask-versions/adoptopenjdk8"
   cask "adoptopenjdk11"
+  cask "figma"
   cask "intellij-idea-ce"
   cask "figma"
   cask "imageoptim"
