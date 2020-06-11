@@ -31,6 +31,30 @@ if has("persistent_undo")
   set undodir=$VIMFILES/undo//
 endif
 
+" Enable 24-bit colours in terminal vim (if it is supported by Vim and the
+" terminal).
+if (has("termguicolors") && !empty($COLORTERM))
+  set termguicolors
+endif
+
+" Load colorscheme.
+colorscheme jellybeans
+
+" Vim by default does not allow a file buffer to have unsaved changes if it is
+" not displayed in a window. Ideally, most buffers would be saved before moving
+" away from them, however, this option now allows this.
+set hidden
+
+" Reload files if they have changed on the disk.
+set autoread
+
+" Use 2 spaces as indent. If tabs or changes are needed this should be done on a
+" filetype by filetype basis in after/ftplugin/*.vim.
+set tabstop=2       " Number of visual spaces per TAB.
+set softtabstop=2   " Number of spaces in tab when editing.
+set expandtab       " Tabs are spaces.
+set shiftwidth=2    " Number of spaces when visual indenting.
+
 " Plugins {{{
 " Use vim Minpac (https://github.com/k-takata/minpac) to manage plugins. This
 " uses the built in Vim 8 package feature.
@@ -74,33 +98,6 @@ endif
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
 command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
-" }}}
-
-" Colours {{{
-
-" Enable 24-bit colours in terminal vim (if it is supported by Vim and the
-" terminal).
-if (has("termguicolors") && !empty($COLORTERM))
-  set termguicolors
-endif
-
-" Load colorscheme.
-colorscheme jellybeans
-" }}}
-
-" Misc {{{
-set hidden   " Possibility to have more than one unsaved buffer.
-set autoread " Read file changes.
-
-set complete+=d " Scan current and included files for defined name or macro.
-
-" }}}
-
-" Spaces & Tabs {{{
-set tabstop=2       " Number of visual spaces per TAB.
-set softtabstop=2   " Number of spaces in tab when editing.
-set expandtab       " Tabs are spaces.
-set shiftwidth=2    " Number of spaces when visual indenting.
 " }}}
 
 " UI Layout {{{
