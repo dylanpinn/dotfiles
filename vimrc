@@ -197,7 +197,7 @@ augroup END
 " Source the vimrc file after saving it
 " TODO: Wrap in augroup
 " TODO: Move to ftplugin
-if has("autocmd")
+if has('autocmd')
   augroup write_vimrc
     autocmd!
     autocmd bufwritepost .vimrc source $MYVIMRC
@@ -282,7 +282,7 @@ iabbrev adn and
 " Finally, keep in mind that these are "suggested" settings. Play around with
 " them and change them to your liking.
 
-if exists(":CocInfo")
+if exists(':CocInfo')
   " If hidden is not set, TextEdit might fail.
   set hidden
 
