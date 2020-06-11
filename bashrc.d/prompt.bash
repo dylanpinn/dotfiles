@@ -33,7 +33,9 @@ prompt_on() {
   PS1=$PS1' '
 
   local color_prompt
-  color_prompt=$(tput setaf 2)
+  color_prompt=$(tput bold)
+  # Set colour to TEAL.
+  color_prompt=$color_prompt$(tput setaf 6)
   local color_reset
   color_reset=$(tput sgr0)
 
