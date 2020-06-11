@@ -5,7 +5,7 @@
 
 " This will be the configuration file for "most" of vim. This file (vimrc)
 " should be the only file located in the home directory.
-let $VIMFILES = expand("$HOME/.vim")
+let $VIMFILES = expand('$HOME/.vim')
 
 " Move the viminfo file out of the home directory.
 set viminfofile=$VIMFILES/viminfo
@@ -26,14 +26,14 @@ set directory=$VIMFILES/swaps//
 
 " Keep track of undo history for files. Check if the current vim version has
 " this enabled and then save these using the full file path to avoid collisions.
-if has("persistent_undo")
+if has('persistent_undo')
   set undofile
   set undodir=$VIMFILES/undo//
 endif
 
 " Enable 24-bit colours in terminal vim (if it is supported by Vim and the
 " terminal).
-if (has("termguicolors") && !empty($COLORTERM))
+if (has('termguicolors') && !empty($COLORTERM))
   set termguicolors
 endif
 
@@ -145,7 +145,7 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 
 " Keybindings {{{
 " leader
-let mapleader=","
+let mapleader=','
 
 " Fuzzy searching using wildmenu.
 nnoremap <Leader>e :edit **/
@@ -192,7 +192,7 @@ augroup END
 " Source the vimrc file after saving it
 " TODO: Wrap in augroup
 " TODO: Move to ftplugin
-if has("autocmd")
+if has('autocmd')
   augroup write_vimrc
     autocmd!
     autocmd bufwritepost .vimrc source $MYVIMRC
@@ -277,7 +277,7 @@ iabbrev adn and
 " Finally, keep in mind that these are "suggested" settings. Play around with
 " them and change them to your liking.
 
-if exists(":CocInfo")
+if exists(':CocInfo')
   " If hidden is not set, TextEdit might fail.
   set hidden
 
