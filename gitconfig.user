@@ -26,6 +26,7 @@
 
 	# Push
 	pf = push --force-with-lease
+	set-upstream = !git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`
 [color]
 	ui = auto
 [color "diff-highlight"]
