@@ -10,6 +10,7 @@
 
 	di = diff
 	dc = diff --cached
+	wdiff = diff -w --word-diff=color
 
 	ff = merge --ff-only
 	noff = merge --no-ff
