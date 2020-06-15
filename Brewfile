@@ -88,6 +88,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "intellij-idea-ce"
   cask "figma"
   cask "imageoptim"
+  cask "lastpass"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
