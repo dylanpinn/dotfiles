@@ -1,5 +1,6 @@
 # Taps
 
+tap "AdoptOpenJDK/openjdk"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -42,6 +43,7 @@ brew "vim"
 # Casks
 
 cask "1password"
+cask "adoptopenjdk11"
 cask "alfred"
 cask "appcleaner"
 cask "dash"
@@ -49,6 +51,7 @@ cask "docker"
 cask "evernote"
 cask "firefox-developer-edition"
 cask "google-chrome"
+cask "intellij-idea-ce"
 cask "rectangle"
 cask "xmind-zen"
 cask "zoomus"
@@ -62,7 +65,6 @@ mas "Things 3", id: 904280696
 # Custom per environment/workstation.
 
 if ENV["HOMEBREW_PROFILE"] == "work"
-  tap "AdoptOpenJDK/openjdk"
   tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 
   # Official Amazon AWS command-line interface
@@ -76,9 +78,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "sbt"
 
   cask "homebrew/cask-versions/adoptopenjdk8"
-  cask "adoptopenjdk11"
-  cask "figma"
-  cask "intellij-idea-ce"
   cask "figma"
   cask "imageoptim"
   cask "lastpass"
