@@ -82,6 +82,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-slip-utils"
   # Add GitHub support to git on the command-line
   brew "hub"
+  # Build tool for Scala projects
   brew "sbt"
 
   cask "homebrew/cask-versions/adoptopenjdk8"
