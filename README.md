@@ -4,9 +4,9 @@ My dotfiles.
 
 ## Includes
 
+- bash
 - git
 - vim
-- zsh
 
 ## Getting Started
 
