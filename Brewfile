@@ -96,6 +96,8 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
 
   # Simple read-only comand-line interface to your Things 3 database
   brew "things.sh"
+  # Text interface for Git repositories
+  brew "tig"
 
   cask "calibre"
   cask "google-backup-and-sync"
