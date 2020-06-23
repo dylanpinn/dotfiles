@@ -92,12 +92,18 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
+  tap "alexanderwillner/tap"
+
+  # Simple read-only comand-line interface to your Things 3 database
+  brew "things.sh"
+
   cask "calibre"
   cask "google-backup-and-sync"
   cask "notion"
   cask "whatsapp"
 
   mas "Kindle", id: 405399194
+  mas "Numbers", id: 409203825
 end
 
 # vim: set syntax=ruby:
