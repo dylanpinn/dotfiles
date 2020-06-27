@@ -94,6 +94,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   brew "tig"
 
   cask "calibre"
+  cask "epic-games"
   cask "google-backup-and-sync"
   cask "notion"
   cask "whatsapp"
