@@ -16,9 +16,11 @@
 	noff = merge --no-ff
 
 	pf = push --force-with-lease
+	# TODO: Fix this command.
 	set-upsteam = !"git push --set-upstream origin $(git branch --show-current)"
 
 	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+	# TODO: Allow this to take an optional branch as an argument.
 	update-branch = !"git fetch --all -p && git rebase origin/master"
 	remove-remote = !"git fetch --all -p; git branch -vv | grep \": gone]\" | awk '{ print $1 }' | xargs -n 1 git branch -D"
 [color]
