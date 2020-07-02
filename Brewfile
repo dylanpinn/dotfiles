@@ -54,6 +54,7 @@ cask "google-chrome"
 cask "iina"
 cask "intellij-idea-ce"
 cask "rectangle"
+cask "spotify"
 cask "xmind-zen"
 cask "zoomus"
 
