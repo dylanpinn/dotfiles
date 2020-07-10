@@ -76,6 +76,7 @@ end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "google-backup-and-sync"
+  cask "notion"
 end
 
 # vim: set syntax=ruby:
