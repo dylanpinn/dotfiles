@@ -91,6 +91,8 @@ if exists('*minpac#init')
 
   " Add optional LSP support to Vim. Looking at using this with metals for Scala
   " development.
+  " TODO: Load the configuration for this when loading the plugin. 
+  "       Could look at a function that loads this plugin and the configuration.
   call minpac#add('neoclide/coc.nvim', { 'type': 'opt', 'branch': 'release' })
 endif
 
