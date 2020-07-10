@@ -66,6 +66,8 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-as"
   # Making SLiPs easy to use
   brew "cowbell/stuff/rea-slip-utils"
+  # Add GitHub support to git on the command-line
+  brew "hub"
 
   cask "figma"
   cask "imageoptim"
