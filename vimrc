@@ -125,6 +125,10 @@ set wildignore+=tags,tags.*
 " Allow expanding wildmenu.
 " Remove unused directory from path.
 set path-=/usr/include
+
+" Use ripgrep as default grep program, this is faster than "grep" and also
+" performs recursive search and respects ignore files by default.
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 " }}}
 
 " Status Line {{{
@@ -413,8 +417,5 @@ if exists(':CocInfo')
   " Statusline
   set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
 endif
-
-" Use ripgrep as default grep program
-set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 
 " # vim: set syntax=vim:
