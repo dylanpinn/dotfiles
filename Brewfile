@@ -85,6 +85,8 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "hub"
   # Build tool for Scala projects
   brew "sbt"
+  # Watch files and take action when they change
+  brew "watchman"
 
   cask "homebrew/cask-versions/adoptopenjdk8"
   cask "figma"
