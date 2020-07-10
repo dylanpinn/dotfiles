@@ -3,53 +3,97 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
-let $VIMFILES = expand("~/.vim")
+" This will be the configuration file for "most" of vim. This file (vimrc)
+" should be the only file located in the home directory.
+let $VIMFILES = expand('$HOME/.vim')
 
-" Plugins {{{
-if exists('*minpac#init')
-  " minpac is loaded.
-  call minpac#init()
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
+" Move the viminfo file out of the home directory.
+set viminfofile=$VIMFILES/viminfo
 
-  " Additional plugins here.
-  call minpac#add('tpope/vim-sensible')  " sensible vim defaults.
-  call minpac#add('nanotech/jellybeans.vim')  " colourscheme
-  call minpac#add('wakatime/vim-wakatime')  " track time per editor, lang, etc.
-  call minpac#add('yuezk/vim-js')  " improve JS syntax
-  call minpac#add('MaxMEllon/vim-jsx-pretty')  " improve JSX syntax
+" Increase size of history from 50 to 1000.
+set history=1000
+
+" Create automatic backups for all files.
+" Store these in the ~/.vim/backups directory. Double slashes are added to the
+" end of the path to ensure that the file names are constructed using the full
+" path. This ensures that file collisions are minimised.
+set backup
+set backupdir=$VIMFILES/backups//
+
+" Keep swapfiles out of the current directory. Double slahses are added to the
+" end of the path to reduce naming collisions.
+set directory=$VIMFILES/swaps//
+
+" Keep track of undo history for files. Check if the current vim version has
+" this enabled and then save these using the full file path to avoid collisions.
+if has('persistent_undo')
+  set undofile
+  set undodir=$VIMFILES/undo//
 endif
 
-command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
-command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
-command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
-" }}}
-
-" Colours {{{
-if (has("termguicolors") && !empty($COLORTERM))
-  set termguicolors " Enable 24-bit colours in terminal vim (if supported).
+" Enable 24-bit colours in terminal vim (if it is supported by Vim and the
+" terminal).
+if (has('termguicolors') && !empty($COLORTERM))
+  set termguicolors
 endif
+
+" Load colorscheme.
 colorscheme jellybeans
-" }}}
 
-" Misc {{{
-set hidden   " Possibility to have more than one unsaved buffer.
-set autoread " Read file changes.
+" Vim by default does not allow a file buffer to have unsaved changes if it is
+" not displayed in a window. Ideally, most buffers would be saved before moving
+" away from them, however, this option now allows this.
+set hidden
 
-set complete+=d " Scan current and included files for defined name or macro.
+" Reload files if they have changed on the disk.
+set autoread
 
-" Centralize backups, swapfiles and undo history
-set backupdir=$VIMFILES/backups
-set directory=$VIMFILES/swaps
-if exists("&undodir")
-  set undodir=$VIMFILES/undo
-endif
-" }}}
-
-" Spaces & Tabs {{{
+" Use 2 spaces as indent. If tabs or changes are needed this should be done on a
+" filetype by filetype basis in after/ftplugin/*.vim.
 set tabstop=2       " Number of visual spaces per TAB.
 set softtabstop=2   " Number of spaces in tab when editing.
 set expandtab       " Tabs are spaces.
 set shiftwidth=2    " Number of spaces when visual indenting.
+
+" Plugins {{{
+" Use vim Minpac (https://github.com/k-takata/minpac) to manage plugins. This
+" uses the built in Vim 8 package feature.
+"
+" Main reason for using this is to load 3rd party plugins without having to deal
+" with submodules or install scripts.
+if exists('*minpac#init')
+  call minpac#init()
+  " Load minpac using minpac (Inception). This is loaded as optional plugin and
+  " loaded only when required to update plugins.
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+  " A universal set of defaults that (hopefully) everyone can agree on. Might
+  " look into replacing this in the future with the defaults directly. However,
+  " I do like being able to add some settings that are almost considered best
+  " practices.
+  call minpac#add('tpope/vim-sensible')
+
+  " Color (colour) scheme; tried many but always come back to this one. Will
+  " probably last me until I go down the rabbithole of creating my own.
+  call minpac#add('nanotech/jellybeans.vim')
+
+  " I use Wakatime to roughly track how much actual "development" I am doing and
+  " what I am doing. This isn't always acurate as can be doing pair programming
+  " on a remote computer.
+  call minpac#add('wakatime/vim-wakatime')
+
+  " Improve JavaScript syntax highlighting, enahnces highlighting for > ES5.
+  call minpac#add('yuezk/vim-js')
+
+  " Improve JSX syntax highlighting, Vim's default highlighting can leave a bit
+  " to be desired.
+  call minpac#add('MaxMEllon/vim-jsx-pretty')
+endif
+
+" Manage Minpac commands by loading the plugin then executing the commands.
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 " }}}
 
 " UI Layout {{{
@@ -97,7 +141,7 @@ set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 
 " Keybindings {{{
 " leader
-let mapleader=","
+let mapleader=','
 
 " Fuzzy searching using wildmenu.
 nnoremap <Leader>e :edit **/
