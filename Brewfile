@@ -95,10 +95,14 @@ end
 if ENV["HOMEBREW_PROFILE"] == "personal"
   tap "alexanderwillner/tap"
 
+  # Play, record, convert, and stream audio and video
+  brew "ffmpeg"
   # Simple read-only comand-line interface to your Things 3 database
   brew "things.sh"
   # Text interface for Git repositories
   brew "tig"
+  # Download YouTube videos from the command-line
+  brew "youtube-dl"
 
   cask "calibre"
   cask "epic-games"
@@ -106,6 +110,11 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "notion"
   cask "whatsapp"
 
+  mas "Amphetamine", id: 937984704
+  mas "Broken Age", id: 621712754
+  mas "Day of the Tentacle Remastered", id: 1094931305
+  mas "Full Throttle Remastered", id: 1230268291
+  mas "Grim Fandango", id: 1022841309
   mas "Kindle", id: 405399194
   mas "Numbers", id: 409203825
 end
