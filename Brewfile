@@ -3,8 +3,8 @@
 tap "adoptopenjdk/openjdk"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/cask-versions"
+tap "homebrew/core"
 tap "thoughtbot/formulae"
 
 # brew
