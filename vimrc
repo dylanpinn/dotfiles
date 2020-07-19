@@ -264,6 +264,7 @@ inoremap jk <ESC>
 
 " common spelling errors
 iabbrev adn and
+iabbrev mosiac mosaic
 
 " CoC Settings
 
