@@ -39,6 +39,8 @@ brew "ripgrep"
 brew "shellcheck"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Internet file retriever
+brew "wget"
 
 # Casks
 
