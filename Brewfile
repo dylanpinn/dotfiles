@@ -105,6 +105,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   brew "youtube-dl"
 
   cask "calibre"
+  cask "discord"
   cask "epic-games"
   cask "google-backup-and-sync"
   cask "notion"
