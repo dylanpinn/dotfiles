@@ -109,6 +109,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "epic-games"
   cask "google-backup-and-sync"
   cask "notion"
+  cask "qbittorrent"
   cask "whatsapp"
 
   mas "Amphetamine", id: 937984704
