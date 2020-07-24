@@ -123,8 +123,6 @@ set smartcase  " Ignore case unless CAPS.
 set hlsearch   " Highlight matches.
 
 " Ignore tag files
-set wildignore+=tags,tags.*
-" Allow expanding wildmenu.
 " Remove unused directory from path.
 set path-=/usr/include
 
@@ -419,6 +417,23 @@ if exists(':CocInfo')
 
   " Statusline
   set statusline+=%{coc#status()}%{get(b:,'coc_current_function','')}
+endif
+
+" Wildmenu
+if has("wildmenu")
+  " Ignore filetypes and directories that I will not want to edit in vim.
+  set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+  set wildignore+=.DS_Store,.git
+  set wildignore+=*~,*.swp,*.tmp
+  set wildignore+=tags,tags.*
+  set wildignore+=node_modules
+  set wildmenu
+  set wildmode=list:longest,full
+
+  " Ignore case in the Ex command line.
+  if exists('+wildignorecase')
+    set wildignorecase
+  endif
 endif
 
 " # vim: set syntax=vim:
