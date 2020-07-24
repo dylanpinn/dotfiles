@@ -77,6 +77,11 @@ if exists('*minpac#init')
   " probably last me until I go down the rabbithole of creating my own.
   call minpac#add('nanotech/jellybeans.vim')
 
+  " Provid mappings to easily delete, change and add surroundings in pairs.
+  " Surroundings are defined as parentheses, brackets, quotes, XML tags, and
+  " more.
+  call minpac#add('tpope/vim-surround')
+
   " I use Wakatime to roughly track how much actual "development" I am doing and
   " what I am doing. This isn't always accurate as can be doing pair programming
   " on a remote computer.
