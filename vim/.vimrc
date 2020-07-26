@@ -176,7 +176,7 @@ nnoremap <Leader>l :ls<CR>
 "" SCRATCH AREA
 
 " Wildmenu
-if has("wildmenu")
+if has('wildmenu')
   " Ignore filetypes and directories that I will not want to edit in vim.
   set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
   set wildignore+=.DS_Store,.git
@@ -184,6 +184,8 @@ if has("wildmenu")
   set wildignore+=tags,tags.*
   set wildignore+=node_modules
   set wildmenu
+  " set wildmode=longest:full,full
+  " set wildmode=longest,list
   set wildmode=list:longest,full
 
   " Ignore case in the Ex command line.
