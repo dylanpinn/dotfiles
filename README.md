@@ -1,5 +1,7 @@
 # Dotfiles
 
+![CI](https://github.com/dylanpinn/dotfiles/workflows/CI/badge.svg)
+
 My dotfiles.
 
 ## Includes
