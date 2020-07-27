@@ -93,6 +93,10 @@ if exists('*minpac#init')
   " Improve JSX syntax highlighting, Vim's default highlighting can leave a bit
   " to be desired.
   call minpac#add('MaxMEllon/vim-jsx-pretty')
+
+  " Attempt to standardise indentation and other styling by reading
+  " configuration values from an .editorconfig file if present.
+  call minpac#add('editorconfig/editorconfig-vim')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
