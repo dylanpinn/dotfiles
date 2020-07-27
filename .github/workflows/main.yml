@@ -9,11 +9,17 @@ on:
       - '**'
 
 jobs:
-  lint-shell:
+  build:
+    name: Lint Code Base
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-      - name: Lint Shell files
-        run: ./lint-shell.sh
+      - name: Lint Code Base
+        uses: docker://github/super-linter:v3
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
