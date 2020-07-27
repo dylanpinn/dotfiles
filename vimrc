@@ -94,6 +94,10 @@ if exists('*minpac#init')
   " to be desired.
   call minpac#add('MaxMEllon/vim-jsx-pretty')
 
+  " Attempt to standardise indentation and other styling by reading
+  " configuration values from an .editorconfig file if present.
+  call minpac#add('editorconfig/editorconfig-vim')
+
   " Add optional LSP support to Vim. Looking at using this with metals for Scala
   " development.
   " TODO: Load the configuration for this when loading the plugin.
