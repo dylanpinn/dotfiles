@@ -9,6 +9,15 @@ on:
       - '**'
 
 jobs:
+  lint-shell:
+    name: Lint shell config files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Lint shell configuration files
+        run: ./lint-shell.sh
+
   build:
     name: Lint Code Base
     runs-on: ubuntu-latest
