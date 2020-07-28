@@ -20,7 +20,7 @@ set history=1000
 set backup
 set backupdir=$VIMFILES/backups//
 
-" Keep swapfiles out of the current directory. Double slahses are added to the
+" Keep swapfiles out of the current directory. Double slashes are added to the
 " end of the path to reduce naming collisions.
 set directory=$VIMFILES/swaps//
 
@@ -78,11 +78,11 @@ if exists('*minpac#init')
   call minpac#add('nanotech/jellybeans.vim')
 
   " I use Wakatime to roughly track how much actual "development" I am doing and
-  " what I am doing. This isn't always acurate as can be doing pair programming
+  " what I am doing. This isn't always accurate as can be doing pair programming
   " on a remote computer.
   call minpac#add('wakatime/vim-wakatime')
 
-  " Improve JavaScript syntax highlighting, enahnces highlighting for > ES5.
+  " Improve JavaScript syntax highlighting, enhances highlighting for >= ES5.
   call minpac#add('yuezk/vim-js')
 
   " Improve JSX syntax highlighting, Vim's default highlighting can leave a bit
@@ -98,13 +98,13 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
 " UI Layout {{{
 set number          " Show line numbers.
-set splitbelow      "New splits below, not above
-set splitright      "New splits on the right, not left
+set splitbelow      " New splits below, not above
+set splitright      " New splits on the right, not left
 
-" Set and show tite; which contains the buffer's name, indicators for modified
+" Set and show title; which contains the buffer's name, indicators for modified
 " and read-only, value of the global variable cur_project (if set), path of the
 " current buffer relative from current directory, the current working directory
-" itself, and finally, the servername.
+" itself, and finally, the server name.
 set title
 let &titlestring = '%t%( %m%r%)%( <%{get(g:, "cur_project", "")}>%)' .
       \ '%( (%{expand("%:~:.:h")})%)' .
