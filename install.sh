@@ -23,3 +23,7 @@ echo "Setting up nvm..."
 echo "Setting up yarn..."
 [ ! -d "$HOME/.yarn" ] && \
   curl -o- -L https://yarnpkg.com/install.sh | bash
+
+echo "Installing Python dependencies..."
+pyenv &> /dev/null
+pip3 install -r requirements.txt
