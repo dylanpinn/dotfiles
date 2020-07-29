@@ -9,6 +9,14 @@ nvm() {
   nvm "$@"
 }
 
+# Lazy load pyenv
+pyenv() {
+  unset -f pyenv
+  eval "$(command pyenv init -)" # Load pyenv shims and autocompletion.
+  eval "$(command pyenv virtualenv-init -)" # Load pyenv virtualenv.
+  pyenv "$@"
+}
+
 # Load JDK version.
 # e.g. jdk 1.8; jdk 11
 jdk() {
