@@ -16,3 +16,7 @@ indent_size = 4
 
 [*.sh]
 insert_final_newline = false
+
+[gitconfig*]
+indent_style = tab
+indent_size = 4
