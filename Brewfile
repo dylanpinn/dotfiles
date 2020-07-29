@@ -92,6 +92,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "lastpass"
   cask "slack"
 
+  mas "Keynote", id: 409183694
   mas "Trello", id: 1278508951
 end
 
