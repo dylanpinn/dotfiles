@@ -50,6 +50,8 @@
 	ff = only
 [mergetool]
 	keepBackup = false
+[pull]
+	ff = only
 [rebase]
 	autosquash = true
 
