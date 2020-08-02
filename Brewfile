@@ -122,6 +122,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   mas "Full Throttle Remastered", id: 1230268291
   mas "Grim Fandango", id: 1022841309
   mas "Kindle", id: 405399194
+  mas "Microsoft To Do", id: 1274495053
   mas "Numbers", id: 409203825
 end
 
