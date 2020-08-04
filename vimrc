@@ -440,7 +440,5 @@ if has('wildmenu')
     set wildignorecase
   endif
 endif
-
-set cursorline
 " }}}}
 " # vim: set syntax=vim:
