@@ -3,6 +3,7 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
+" General {{{{
 " This will be the configuration file for "most" of vim. This file (vimrc)
 " should be the only file located in the home directory.
 let $VIMFILES = expand('$HOME/.vim')
@@ -54,6 +55,7 @@ set tabstop=2       " Number of visual spaces per TAB.
 set softtabstop=2   " Number of spaces in tab when editing.
 set expandtab       " Tabs are spaces.
 set shiftwidth=2    " Number of spaces when visual indenting.
+" }}}}
 
 " Plugins {{{
 " Use vim Minpac (https://github.com/k-takata/minpac) to manage plugins. This
@@ -172,7 +174,7 @@ nnoremap <Leader>t :tabfind **/
 nnoremap <Leader>n :call RenameFile()<cr>
 " }}}
 
-"" SCRATCH AREA
+" SCRATCH AREA {{{{
 
 " Edit vimrc in a new tab.
 nnoremap cv :tabedit $MYVIMRC<CR>
@@ -440,4 +442,5 @@ if has('wildmenu')
 endif
 
 set cursorline
+" }}}}
 " # vim: set syntax=vim:
