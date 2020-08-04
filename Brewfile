@@ -29,6 +29,8 @@ brew "htop"
 brew "jq"
 # Mac App Store command-line interface
 brew "mas"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "nvim"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
