@@ -115,8 +115,9 @@ command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
 
 " UI Layout {{{
 set number          " Show line numbers.
-set splitbelow      " New splits below, not above
-set splitright      " New splits on the right, not left
+set splitbelow      " New horizontal splits below, not above
+set splitright      " New vertical splits on the right, not left
+set cursorline      " Highlight current line.
 
 " Set and show title; which contains the buffer's name, indicators for modified
 " and read-only, value of the global variable cur_project (if set), path of the
@@ -439,7 +440,5 @@ if has('wildmenu')
     set wildignorecase
   endif
 endif
-
-set cursorline
 " }}}}
 " # vim: set syntax=vim:
