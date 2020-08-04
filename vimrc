@@ -438,4 +438,5 @@ if has('wildmenu')
   endif
 endif
 
+set cursorline
 " # vim: set syntax=vim:
