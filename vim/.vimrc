@@ -128,7 +128,6 @@ set ignorecase " Ignore case when searching.
 set smartcase  " Ignore case unless CAPS.
 set hlsearch   " Highlight matches.
 
-" Ignore tag files
 " Remove unused directory from path.
 set path-=/usr/include
 
