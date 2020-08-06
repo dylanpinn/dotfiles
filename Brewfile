@@ -15,6 +15,8 @@ brew "bash"
 brew "bash-completion@2"
 # Bash Automated Testing System
 brew "bats-core"
+# Reimplementation of ctags(1)
+brew "ctags"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
 # Command-line tool to interact with exercism.io
