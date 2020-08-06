@@ -34,7 +34,7 @@ set -e
         LOCAL=`branch`
         REMOTE=$1
     else
-        LOCAL=`branch`
+        LOCAL=$(branch)
         REMOTE=origin/$LOCAL
     fi
 
@@ -53,7 +53,7 @@ set -e
     echo
     echo outgoing:
     echo
-    for rev in `git rev-list $REMOTE..$LOCAL`; do
-        show_rev $rev
+    for rev in `git rev-list "$REMOTE".."$LOCAL"`; do
+        show_rev "$rev"
     done
 ) | less -r
