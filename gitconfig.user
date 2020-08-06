@@ -1,28 +1,34 @@
 [alias]
-	aa = add --all
-	ap = add --patch
-
-	amend = commit --amend
-	ci = commit --verbose
-
 	co = checkout
 	st = status
 
-	di = diff
-	dc = diff --cached
-	wdiff = diff -w --word-diff=color
+	# Add
+	aa = add --all
+	ap = add --patch
 
-	ff = merge --ff-only
-	noff = merge --no-ff
-
-	pf = push --force-with-lease
-	# TODO: Fix this command.
-	set-upsteam = !"git push --set-upstream origin $(git branch --show-current)"
-
+	# Branch
 	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
 	# TODO: Allow this to take an optional branch as an argument.
 	update-branch = !"git fetch --all -p && git rebase origin/master"
 	remove-remote = !"git fetch --all -p; git branch -vv | grep \": gone]\" | awk '{ print $1 }' | xargs -n 1 git branch -D"
+
+	# Commit
+	amend = commit --amend
+	ci = commit --verbose
+
+	# Diff
+	di = diff
+	dc = diff --cached
+	wdiff = diff -w --word-diff=color
+
+	# Merge
+	ff = merge --ff-only
+	noff = merge --no-ff
+
+	# Push
+	pf = push --force-with-lease
+	# TODO: Fix this command.
+	set-upsteam = !"git push --set-upstream origin $(git branch --show-current)"
 [color]
 	ui = auto
 [color "diff-highlight"]
