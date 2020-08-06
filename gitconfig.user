@@ -21,6 +21,9 @@
 	dc = diff --cached
 	wdiff = diff -w --word-diff=color
 
+	# Divergence (commits we added and commits remote added)
+	div = divergence
+
 	# Merge
 	ff = merge --ff-only
 	noff = merge --no-ff
