@@ -97,6 +97,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "sbt"
 
   cask "homebrew/cask-versions/adoptopenjdk8"
+  cask "browserstacklocal"
   cask "figma"
   cask "imageoptim"
   # Password manager
