@@ -95,6 +95,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "watchman"
 
   cask "homebrew/cask-versions/adoptopenjdk8"
+  cask "browserstacklocal"
   cask "figma"
   cask "imageoptim"
   cask "lastpass"
