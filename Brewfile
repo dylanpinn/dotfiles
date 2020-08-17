@@ -11,7 +11,7 @@ tap "thoughtbot/formulae"
 
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# Programmable completion for Bash 4.1+
+# Programmable completion for Bash 4.2+
 brew "bash-completion@2"
 # Bash Automated Testing System
 brew "bats-core"
@@ -30,7 +30,7 @@ brew "jq"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
-brew "nvim"
+brew "neovim"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
@@ -69,7 +69,7 @@ cask "zoomus"
 mas "Drafts", id: 1435957248
 mas "Evernote Web Clipper", id: 1481669779
 mas "Grammarly for Safari", id: 1462114288
-mas "Things 3", id: 904280696
+mas "Things", id: 904280696
 mas "Twitter", id: 1482454543
 
 # Custom per environment/workstation.
@@ -105,12 +105,12 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
 
   # Play, record, convert, and stream audio and video
   brew "ffmpeg"
-  # Simple read-only comand-line interface to your Things 3 database
-  brew "things.sh"
   # Text interface for Git repositories
   brew "tig"
   # Download YouTube videos from the command-line
   brew "youtube-dl"
+  # Simple read-only comand-line interface to your Things 3 database
+  brew "alexanderwillner/tap/things.sh"
 
   cask "calibre"
   cask "discord"
@@ -126,6 +126,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   mas "Full Throttle Remastered", id: 1230268291
   mas "Grim Fandango", id: 1022841309
   mas "Kindle", id: 405399194
+  mas "Messenger", id: 1480068668
   mas "Microsoft To Do", id: 1274495053
   mas "Numbers", id: 409203825
 end
