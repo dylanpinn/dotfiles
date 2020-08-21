@@ -46,7 +46,7 @@ colorscheme jellybeans
 " away from them, however, this option now allows this.
 set hidden
 
-" Reload files if they have changed on the disk.
+" Automatically Reload files if they have changed on the disk.
 set autoread
 
 " Use 2 spaces as indent. If tabs or changes are needed this should be done on a
@@ -180,7 +180,8 @@ nnoremap <Leader>l :ls<CR>
 
 " SCRATCH AREA {{{{
 
-" Wildmenu
+" Wildmenu enables enhanced command-line completion.
+" Press <Tab> to invoke completion.
 if has('wildmenu')
   " Ignore filetypes and directories that I will not want to edit in vim.
   set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
