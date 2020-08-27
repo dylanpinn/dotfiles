@@ -70,6 +70,7 @@ mas "Drafts", id: 1435957248
 mas "Evernote Web Clipper", id: 1481669779
 mas "Grammarly for Safari", id: 1462114288
 mas "Things", id: 904280696
+mas "Trello", id: 1278508951
 mas "Twitter", id: 1482454543
 
 # Custom per environment/workstation.
@@ -98,7 +99,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "slack"
 
   mas "Keynote", id: 409183694
-  mas "Trello", id: 1278508951
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
