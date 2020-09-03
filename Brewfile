@@ -96,6 +96,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "figma"
   cask "imageoptim"
   cask "lastpass"
+  cask "screen"
   cask "slack"
 
   mas "Keynote", id: 409183694
