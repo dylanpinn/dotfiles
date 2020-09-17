@@ -61,6 +61,7 @@ cask "iina"
 cask "intellij-idea-ce"
 cask "pocket-casts"
 cask "rectangle"
+cask "slack"
 cask "spotify"
 cask "xmind-zen"
 cask "zoomus"
@@ -97,7 +98,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "imageoptim"
   cask "lastpass"
   cask "screen"
-  cask "slack"
 
   mas "Keynote", id: 409183694
 end
