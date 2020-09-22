@@ -44,6 +44,8 @@ brew "neovim"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Ruby version manager
+brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
