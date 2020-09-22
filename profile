@@ -15,4 +15,8 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Move Wakatime config out of home directory.
 export WAKATIME_HOME="$HOME/.config/wakatime"
 
+# Load rbenv
+# TODO: Look at ways to make this lazy load.
+eval "$(rbenv init -)"
+
 # vim: set syntax=bash:
