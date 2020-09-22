@@ -26,4 +26,8 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 # Install pyenv into XDG path.
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 
+# Load rbenv
+# TODO: Look at ways to make this lazy load.
+eval "$(rbenv init -)"
+
 # vim: set syntax=sh:
