@@ -17,7 +17,7 @@ mkdir -p ~/.vim/{backups,swaps,undo}
 
 echo "Setting up nvm..."
 # NOTE: Try to keep this version up-to date.
-[ ! -d "$HOME/.nvm" ] &&
+[ ! -d "$HOME/.nvm" ] && \
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash
 
 echo "Setting up yarn..."
