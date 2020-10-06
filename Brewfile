@@ -97,11 +97,13 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "watchman"
 
   cask "homebrew/cask-versions/adoptopenjdk8"
+  cask "dbeaver-community"
   cask "browserstacklocal"
   cask "figma"
   cask "imageoptim"
   cask "lastpass"
   cask "screen"
+  cask "visual-studio-code"
 
   mas "Keynote", id: 409183694
 end
