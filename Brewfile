@@ -149,6 +149,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "safari-technology-preview"
   cask "sequel-pro"
   cask "tableplus"
+  cask "screen"
   cask "visual-studio-code"
 
   mas "Keynote", id: 409183694
