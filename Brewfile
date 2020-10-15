@@ -18,6 +18,8 @@ brew "bats-core"
 brew "diff-so-fancy"
 # Command-line tool to interact with exercism.io
 brew "exercism"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
