@@ -15,11 +15,13 @@ fi
 # Load Bash-specific startup files
 for bash in "$HOME"/.bashrc.d/*.bash; do
   [[ -e $bash ]] || continue
+  # shellcheck source=bashrc.d/functions.bash disabled=SC1091
   source "$bash"
 done
 unset -v bash
 
 # Local customized path and environment settings, etc.
 if [ -f ~/.bashrc.local ]; then
+  # shellcheck disable=SC1091 source=bashrc.local
   . ~/.bashrc.local
 fi
