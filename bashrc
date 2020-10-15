@@ -15,7 +15,7 @@ fi
 # Load Bash-specific startup files
 for bash in "$HOME"/.bashrc.d/*.bash; do
   [[ -e $bash ]] || continue
-  # shellcheck source=bashrc.d/functions.bash disabled=SC1091
+  # shellcheck source=bashrc.d/functions.bash disable=SC1091
   source "$bash"
 done
 unset -v bash
