@@ -96,6 +96,9 @@ if exists('*minpac#init')
   " to be desired.
   call minpac#add('MaxMEllon/vim-jsx-pretty')
 
+  " Improved TypeScript syntax highlight.
+  call minpac#add('leafgarland/typescript-vim')
+
   " Attempt to standardise indentation and other styling by reading
   " configuration values from an .editorconfig file if present.
   call minpac#add('editorconfig/editorconfig-vim')
