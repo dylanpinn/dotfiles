@@ -27,12 +27,20 @@ prompt_jobs() {
   fi
 }
 
+function __node {
+  if hash node 2>/dev/null; then
+    local v=$(node -v)
+  fi
+  [ "$v" != "" ] && echo "[n:${v:1}]"
+}
+
 # ~/pwd(git-branch){job-count}$
 prompt_on() {
   PS1=
   PS1=$PS1"\w"
   PS1=$PS1'$(__git_ps1)'
   PS1=$PS1'$(prompt_jobs)'
+  PS1=$PS1'$(__node)'
   PS1=$PS1'\$'
   PS1=$PS1' '
 
