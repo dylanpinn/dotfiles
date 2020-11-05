@@ -107,6 +107,9 @@ if exists('*minpac#init')
   call minpac#add('tpope/vim-vinegar')
 
   call minpac#add('editorconfig/editorconfig-vim')
+
+  " TODO: Add comment
+  call minpac#add('dense-analysis/ale')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
@@ -287,4 +290,10 @@ if has('wildmenu')
   endif
 endif
 " }}}}
+
+let g:ale_linters_explicit = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 1
+
 " # vim: set syntax=vim:

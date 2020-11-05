@@ -9,3 +9,6 @@ setlocal include=from
 let &l:define = '^\s*\(var\|let\|const\|class\|import\|function\)'
 
 set makeprg=npx\ tsc
+
+let b:ale_linters = ['tsserver', 'eslint']
+let b:ale_fixers = ['prettier']
