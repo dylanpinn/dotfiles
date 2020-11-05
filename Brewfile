@@ -74,6 +74,7 @@ cask "firefox-developer-edition"
 cask "google-chrome"
 # Free and open-source media player
 cask "iina"
+cask "insomnia"
 cask "rectangle"
 cask "slack"
 cask "spotify"
