@@ -103,12 +103,6 @@ if exists('*minpac#init')
   " configuration values from an .editorconfig file if present.
   call minpac#add('editorconfig/editorconfig-vim')
 
-  " Add optional LSP support to Vim. Looking at using this with metals for Scala
-  " development.
-  " TODO: Load the configuration for this when loading the plugin.
-  "       Could look at a function that loads this plugin and the configuration.
-  call minpac#add('neoclide/coc.nvim', { 'type': 'opt', 'branch': 'release' })
-
   " Improve netrw.
   call minpac#add('tpope/vim-vinegar')
 
@@ -273,4 +267,24 @@ inoremap jk <ESC>
 iabbrev adn and
 iabbrev mosiac mosaic
 
+" Wildmenu enables enhanced command-line completion.
+" Press <Tab> to invoke completion.
+if has('wildmenu')
+  " Ignore filetypes and directories that I will not want to edit in vim.
+  set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+  set wildignore+=.DS_Store,.git
+  set wildignore+=*~,*.swp,*.tmp
+  set wildignore+=tags,tags.*
+  set wildignore+=node_modules
+  set wildmenu
+  " set wildmode=longest:full,full
+  " set wildmode=longest,list
+  set wildmode=list:longest,full
+
+  " Ignore case in the Ex command line.
+  if exists('+wildignorecase')
+    set wildignorecase
+  endif
+endif
+" }}}}
 " # vim: set syntax=vim:
