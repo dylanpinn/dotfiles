@@ -214,7 +214,7 @@ augroup END
 " Source the vimrc file after saving it
 " TODO: Wrap in augroup
 " TODO: Move to ftplugin
-if has("autocmd")
+if has('autocmd')
   augroup write_vimrc
     autocmd!
     autocmd bufwritepost .vimrc source $MYVIMRC
