@@ -1,19 +1,19 @@
 # Prompt
 
 # If Bash 4.0 is available, trim very long paths in prompt
-if ((BASH_VERSINFO[0] >= 4)) ; then
+if ((BASH_VERSINFO[0] >= 4)); then
   PROMPT_DIRTRIM=4
 fi
 
 # git prompt settings.
 # shellcheck disable=SC2034
-GIT_PS1_SHOWDIRTYSTATE=1       # staged '+', unstaged '*'
+GIT_PS1_SHOWDIRTYSTATE=1 # staged '+', unstaged '*'
 # shellcheck disable=SC2034
-GIT_PS1_SHOWSTASHSTATE=1       # '$' something is stashed
+GIT_PS1_SHOWSTASHSTATE=1 # '$' something is stashed
 # shellcheck disable=SC2034
-GIT_PS1_SHOWUNTRACKEDFILES=1   # '%' untracked files
+GIT_PS1_SHOWUNTRACKEDFILES=1 # '%' untracked files
 # shellcheck disable=SC2034
-GIT_PS1_SHOWUPSTREAM="auto"    # '<' behind, '>' ahead, '<>' diverged, '=' no difference
+GIT_PS1_SHOWUPSTREAM="auto" # '<' behind, '>' ahead, '<>' diverged, '=' no difference
 # shellcheck disable=SC2034
 GIT_PS1_DESCRIBE_STYLE=default # more info when in a detached HEAD
 
@@ -27,9 +27,10 @@ prompt_jobs() {
   fi
 }
 
-function __node {
+function __node() {
   if hash node 2>/dev/null; then
-    local v=$(node -v)
+    local v
+    v=$(node -v)
   fi
   [ "$v" != "" ] && echo "[n:${v:1}]"
 }

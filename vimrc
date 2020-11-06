@@ -111,6 +111,8 @@ if exists('*minpac#init')
 
   " Improve netrw.
   call minpac#add('tpope/vim-vinegar')
+
+  call minpac#add('editorconfig/editorconfig-vim')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
