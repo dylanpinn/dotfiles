@@ -302,5 +302,4 @@ if has('wildmenu')
 endif
 " }}}}
 
-
 " # vim: set syntax=vim:
