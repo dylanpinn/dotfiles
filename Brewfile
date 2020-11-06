@@ -33,7 +33,7 @@ brew "pyenv-virtualenv"
 # RC file (dotfile) management
 brew "rcm"
 # Search tool like grep and The Silver Searcher
-brew "ripgrep"  # required for shell-fmt script.
+brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Vi 'workalike' with many additional features
