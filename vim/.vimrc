@@ -102,6 +102,9 @@ if exists('*minpac#init')
   " Attempt to standardise indentation and other styling by reading
   " configuration values from an .editorconfig file if present.
   call minpac#add('editorconfig/editorconfig-vim')
+
+  " Improve netrw.
+  call minpac#add('tpope/vim-vinegar')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
