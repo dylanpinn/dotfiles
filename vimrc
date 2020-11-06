@@ -121,6 +121,10 @@ set wildignore+=tags,tags.*
 " Allow expanding wildmenu.
 " Remove unused directory from path.
 set path-=/usr/include
+
+" Use ripgrep as default grep program, this is faster than "grep" and also
+" performs recursive search and respects ignore files by default.
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 " }}}
 
 " Status Line {{{
