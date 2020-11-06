@@ -47,7 +47,7 @@
 	colorMoved = zebra
 [fetch]
 	prune = true
-[main]
+[init]
 	defaultBranch = main
 [merge]
 	ff = only
