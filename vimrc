@@ -108,6 +108,9 @@ if exists('*minpac#init')
   " TODO: Load the configuration for this when loading the plugin.
   "       Could look at a function that loads this plugin and the configuration.
   call minpac#add('neoclide/coc.nvim', { 'type': 'opt', 'branch': 'release' })
+
+  " Improve netrw.
+  call minpac#add('tpope/vim-vinegar')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
