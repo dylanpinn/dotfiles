@@ -110,6 +110,16 @@ if exists('*minpac#init')
 
   " TODO: Add comment
   call minpac#add('dense-analysis/ale')
+
+  " Disable all linters by default.
+  let g:ale_linters_explicit = 1
+  " Use quickfix list instead of loclist.
+  let g:ale_set_loclist = 0
+  let g:ale_set_quickfix = 1
+  " Automatically open list when there are errors.
+  let g:ale_open_list = 1
+
+  " TODO: Add comment
   call minpac#add('ajh17/VimCompletesMe')
 endif
 
@@ -292,9 +302,5 @@ if has('wildmenu')
 endif
 " }}}}
 
-let g:ale_linters_explicit = 1
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
-let g:ale_open_list = 1
 
 " # vim: set syntax=vim:
