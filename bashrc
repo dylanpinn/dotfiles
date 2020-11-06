@@ -13,7 +13,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Load Bash-specific startup files
-for bash in "$HOME"/.bashrc.d/*.bash ; do
+for bash in "$HOME"/.bashrc.d/*.bash; do
   [[ -e $bash ]] || continue
   source "$bash"
 done
