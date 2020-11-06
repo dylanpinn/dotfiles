@@ -15,11 +15,13 @@ fi
 # Load Bash-specific startup files
 for bash in "$HOME"/.bashrc.d/*.bash ; do
   [[ -e $bash ]] || continue
+  # shellcheck source=./bashrc.d/aliases.bash
   source "$bash"
 done
 unset -v bash
 
 # Local customized path and environment settings, etc.
 if [ -f ~/.bashrc.local ]; then
+  # shellcheck source=./bashrc.local
   . ~/.bashrc.local
 fi
