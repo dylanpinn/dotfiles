@@ -29,7 +29,8 @@ prompt_jobs() {
 
 function __node {
   if hash node 2>/dev/null; then
-    local v=$(node -v)
+    local v
+    v=$(node -v)
   fi
   [ "$v" != "" ] && echo "[n:${v:1}]"
 }
