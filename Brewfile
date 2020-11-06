@@ -45,6 +45,8 @@ brew "rcm"
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Internet file retriever
