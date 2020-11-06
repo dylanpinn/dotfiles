@@ -10,7 +10,7 @@ tap "thoughtbot/formulae"
 
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# Programmable completion for Bash 4.1+
+# Programmable completion for Bash 4.2+
 brew "bash-completion@2"
 # Bash Automated Testing System
 brew "bats-core"
@@ -18,6 +18,8 @@ brew "bats-core"
 brew "diff-so-fancy"
 # Command-line tool to interact with exercism.io
 brew "exercism"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
@@ -49,7 +51,10 @@ cask "docker"
 cask "evernote"
 cask "firefox-developer-edition"
 cask "google-chrome"
+cask "pocket-casts"
 cask "rectangle"
+cask "slack"
+cask "spotify"
 cask "xmind-zen"
 cask "zoomus"
 
@@ -57,7 +62,9 @@ cask "zoomus"
 mas "Drafts", id: 1435957248
 mas "Evernote Web Clipper", id: 1481669779
 mas "Grammarly for Safari", id: 1462114288
-mas "Things 3", id: 904280696
+mas "Things", id: 904280696
+mas "Trello", id: 1278508951
+mas "Twitter", id: 1482454543
 
 # Custom per environment/workstation.
 
@@ -75,7 +82,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 
   cask "figma"
   cask "imageoptim"
-  cask "slack"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
