@@ -110,6 +110,7 @@ if exists('*minpac#init')
 
   " TODO: Add comment
   call minpac#add('dense-analysis/ale')
+  call minpac#add('ajh17/VimCompletesMe')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
