@@ -41,6 +41,8 @@
 	colorMoved = zebra
 [fetch]
 	prune = true
+[main]
+	defaultBranch = main
 [merge]
 	ff = only
 [mergetool]
