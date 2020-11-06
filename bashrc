@@ -22,6 +22,6 @@ unset -v bash
 
 # Local customized path and environment settings, etc.
 if [ -f ~/.bashrc.local ]; then
-  # shellcheck source=./bashrc.local
+  # shellcheck disable=SC1091
   . ~/.bashrc.local
 fi
