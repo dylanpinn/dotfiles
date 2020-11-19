@@ -3,7 +3,7 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
-" General {{{{
+" General {{{
 " This will be the configuration file for "most" of vim. This file (vimrc)
 " should be the only file located in the home directory.
 let $VIMFILES = expand('$HOME/.vim')
@@ -108,7 +108,7 @@ if exists('*minpac#init')
 
   call minpac#add('editorconfig/editorconfig-vim')
 
-  " TODO: Add comment
+  " Linting, fixing and LSP support.
   call minpac#add('dense-analysis/ale')
 
   " Disable all linters by default.
@@ -119,7 +119,8 @@ if exists('*minpac#init')
   " Automatically open list when there are errors.
   " let g:ale_open_list = 1
 
-  " TODO: Add comment
+  " Improve built in auto-complete by using <Tab> to intelligently select best
+  " method.
   call minpac#add('ajh17/VimCompletesMe')
 endif
 
@@ -200,7 +201,7 @@ nnoremap <Leader>b :b *
 nnoremap <Leader>l :ls<CR>
 " }}}
 
-" SCRATCH AREA {{{{
+" SCRATCH AREA {{{
 
 " Wildmenu enables enhanced command-line completion.
 " Press <Tab> to invoke completion.
