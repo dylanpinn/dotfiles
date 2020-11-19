@@ -44,8 +44,6 @@ brew "neovim"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8", link: true
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -102,6 +100,8 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-as"
   # Making SLiPs easy to use
   brew "cowbell/stuff/rea-slip-utils"
+  # Interpreted, interactive, object-oriented programming language
+  brew "python@3.8", link: true
   # Build tool for Scala projects
   brew "sbt"
 
