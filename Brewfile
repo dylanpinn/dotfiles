@@ -44,6 +44,8 @@ brew "neovim"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8", link: true
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -86,6 +88,7 @@ cask "zoom"
 
 # App Store
 mas "Drafts", id: 1435957248
+mas "Microsoft To Do", id: 1274495053
 mas "Things", id: 904280696
 
 # Custom per environment/workstation.
@@ -109,7 +112,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "imageoptim"
   # Password manager
   cask "lastpass"
-  cask "screen"
   cask "visual-studio-code"
 
   mas "Keynote", id: 409183694
@@ -138,7 +140,6 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   mas "Amphetamine", id: 937984704
   mas "Kindle", id: 405399194
   mas "Messenger", id: 1480068668
-  mas "Microsoft To Do", id: 1274495053
   mas "Numbers", id: 409203825
 end
 
