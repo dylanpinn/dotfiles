@@ -46,6 +46,8 @@ brew "node"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8", link: true
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
@@ -149,7 +151,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "safari-technology-preview"
   cask "sequel-pro"
   cask "tableplus"
-  cask "screen"
   cask "visual-studio-code"
 
   mas "Keynote", id: 409183694
