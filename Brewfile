@@ -16,6 +16,8 @@ brew "bash"
 brew "bash-completion@2"
 # Bash Automated Testing System
 brew "bats-core"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8", link: true
 # Reimplementation of ctags(1)
 brew "ctags"
 # Good-lookin' diffs with diff-highlight and more
@@ -100,8 +102,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-as"
   # Making SLiPs easy to use
   brew "cowbell/stuff/rea-slip-utils"
-  # Interpreted, interactive, object-oriented programming language
-  brew "python@3.8", link: true
   # Build tool for Scala projects
   brew "sbt"
 
