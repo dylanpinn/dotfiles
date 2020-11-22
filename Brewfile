@@ -17,7 +17,7 @@ brew "bash-completion@2"
 # Bash Automated Testing System
 brew "bats-core"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.8", link: true
+brew "python@3.8"
 # Reimplementation of ctags(1)
 brew "ctags"
 # Good-lookin' diffs with diff-highlight and more
