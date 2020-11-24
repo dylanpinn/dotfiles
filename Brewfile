@@ -79,6 +79,7 @@ cask "google-chrome"
 # Free and open-source media player
 cask "iina"
 cask "insomnia"
+cask "notion"
 cask "obsidian"
 cask "rectangle"
 cask "slack"
@@ -131,7 +132,6 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   # Launcher for *Epic Games* games
   cask "epic-games"
   cask "google-backup-and-sync"
-  cask "notion"
   cask "pocket-casts"
   # Peer to peer Bitorrent client
   cask "qbittorrent"
