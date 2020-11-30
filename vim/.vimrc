@@ -211,7 +211,7 @@ if has('wildmenu')
   set wildignore+=.DS_Store,.git
   set wildignore+=*~,*.swp,*.tmp
   set wildignore+=tags,tags.*
-  set wildignore+=node_modules
+  set wildignore+=node_modules/*
   set wildmenu
   " set wildmode=longest:full,full
   " set wildmode=longest,list
