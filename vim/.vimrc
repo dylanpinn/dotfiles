@@ -122,6 +122,10 @@ if exists('*minpac#init')
   " Improve built in auto-complete by using <Tab> to intelligently select best
   " method.
   call minpac#add('ajh17/VimCompletesMe')
+
+  " Improve vim's built in Markdown editing.
+  call minpac#add('godlygeek/tabular')  " required for vim-markdown.
+  call minpac#add('plasticboy/vim-markdown')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
