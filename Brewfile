@@ -40,6 +40,8 @@ brew "htop"
 brew "jq"
 # Mac App Store command-line interface
 brew "mas"
+# Platform built on V8 to build network applications
+brew "node"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
