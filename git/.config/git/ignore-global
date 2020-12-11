@@ -13,3 +13,6 @@ tags.temp.tmp
 .metals/
 .bloop/
 project/metals.sbt
+
+" Local vim config.
+.lvimrc

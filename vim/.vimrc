@@ -126,6 +126,9 @@ if exists('*minpac#init')
   " Improve vim's built in Markdown editing.
   call minpac#add('godlygeek/tabular')  " required for vim-markdown.
   call minpac#add('plasticboy/vim-markdown')
+
+  " Allow reading project specific configuration from a local vimrc file.
+  call minpac#add('embear/vim-localvimrc')
 endif
 
 " Manage Minpac commands by loading the plugin then executing the commands.
