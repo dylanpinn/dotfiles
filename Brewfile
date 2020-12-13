@@ -113,6 +113,9 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "imageoptim"
   # Password manager
   cask "lastpass"
+  cask "postico"
+  cask "sequel-pro"
+  cask "tableplus"
   cask "visual-studio-code"
 
   mas "Keynote", id: 409183694
