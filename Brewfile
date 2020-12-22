@@ -111,6 +111,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "dbeaver-community"
   cask "browserstacklocal"
   cask "figma"
+  cask "google-chrome-dev"
   cask "imageoptim"
   # Password manager
   cask "lastpass"
