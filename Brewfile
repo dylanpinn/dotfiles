@@ -115,6 +115,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "imageoptim"
   # Password manager
   cask "lastpass"
+  cask "microsoft-edge-dev"
   cask "postico"
   cask "sequel-pro"
   cask "tableplus"
