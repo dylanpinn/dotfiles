@@ -142,7 +142,7 @@
   ;;factor
   ;;ledger            ; an accounting system in Emacs
   ;;lua               ; one-based indices? one-based indices
-  ;;markdown          ; writing docs for people to ignore
+  markdown            ; writing docs for people to ignore
   ;;nim               ; python + lisp at the speed of c
   ;;nix               ; I hereby declare "nix geht mehr!"
   ;;ocaml             ; an objective camel
@@ -160,7 +160,7 @@
   ;;rust              ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
   ;;scala             ; java, but good
   ;;scheme            ; a fully conniving family of lisps
-  sh                ; she sells {ba,z,fi}sh shells on the C xor
+  sh                  ; she sells {ba,z,fi}sh shells on the C xor
   ;;sml
   ;;solidity          ; do you need a blockchain? No.
   ;;swift             ; who asked for emoji variables?
