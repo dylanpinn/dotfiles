@@ -57,3 +57,9 @@
 ;; Enable Wakatime
 (global-wakatime-mode)
 (setq wakatime-cli-path "/usr/local/bin/wakatime")
+
+(setq org-capture-templates
+  `(("i" "Inbox" entry (file "~/vaults/inbox.org")
+      "* TODO %?\n Entered on: %u")))
+
+(setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
