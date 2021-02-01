@@ -102,6 +102,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 
   # Official Amazon AWS command-line interface
   brew "awscli"
+  brew "coursier/formulas/coursier"
   # Authenticate to REA AWS accounts
   brew "cowbell/stuff/rea-as"
   # Making SLiPs easy to use
