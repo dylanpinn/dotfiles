@@ -231,4 +231,7 @@ if has('wildmenu')
 endif
 " }}}}
 
+" Search entire directory
+nnoremap <leader>* :grep <cword> * <CR><CR>
+
 " # vim: set syntax=vim:
