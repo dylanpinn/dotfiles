@@ -107,6 +107,8 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-as"
   # Making SLiPs easy to use
   brew "cowbell/stuff/rea-slip-utils"
+  # Cross-platform program for developing Haskell projects
+  brew "haskell-stack"
   # Build tool for Scala projects
   brew "sbt"
 
