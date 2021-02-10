@@ -1,5 +1,7 @@
 let b:ale_linters = ['metals']
-let b:ale_fixers = []
+let b:ale_fixers = ['scalafmt']
+
+let g:ale_scala_metals_executable = 'metals'
 
 set omnifunc=ale#completion#OmniFunc
 
