@@ -65,3 +65,9 @@
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
 (add-hook 'js2-mode-hook 'nvm-use-for-buffer)
+
+(use-package! forge
+  :config
+  (add-to-list 'forge-alist '("git.realestate.com.au" "git.realestate.com.au/api"
+                              "git.realestate.com.au" forge-github-repository)))
+(setq auth-sources '("~/.authinfo"))
