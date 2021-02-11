@@ -64,8 +64,10 @@
 
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
+;; Setup JavaScript to NVM
 (add-hook 'js2-mode-hook 'nvm-use-for-buffer)
 
+;; Configure Magit Forge
 (use-package! forge
   :config
   (add-to-list 'forge-alist '("git.realestate.com.au" "git.realestate.com.au/api"
