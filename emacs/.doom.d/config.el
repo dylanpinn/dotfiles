@@ -63,3 +63,5 @@
       "* TODO %?\n Entered on: %u")))
 
 (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+
+(add-hook 'js2-mode-hook 'nvm-use-for-buffer)
