@@ -153,6 +153,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "pocket-casts"
   # Peer to peer Bitorrent client
   cask "qbittorrent"
+  cask "steam"
   cask "whatsapp"
 
   mas "Amphetamine", id: 937984704
