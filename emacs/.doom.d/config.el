@@ -73,3 +73,6 @@
   (add-to-list 'forge-alist '("git.realestate.com.au" "git.realestate.com.au/api"
                               "git.realestate.com.au" forge-github-repository)))
 (setq auth-sources '("~/.authinfo"))
+
+;; Load Ruby mode for Brewfile
+:(add-to-list 'auto-mode-alist '("Brewfile" . ruby-mode))
