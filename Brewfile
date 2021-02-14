@@ -134,6 +134,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "visual-studio-code"
 
   mas "Keynote", id: 409183694
+  mas "Slack", id: 803453959
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
