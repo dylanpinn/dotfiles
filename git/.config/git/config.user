@@ -19,9 +19,6 @@
 	di = diff
 	dc = diff --cached
 
-	# Divergence (commits we added and commits remote added)
-	div = divergence
-
 	# Merge
 	ff = merge --ff-only
 	noff = merge --no-ff
