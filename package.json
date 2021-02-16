@@ -1,0 +1,33 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "My personal dotfiles.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "scripts": {
+    "commit": "cz",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanpinn/dotfiles.git"
+  },
+  "author": {
+    "name": "Dylan Pinn",
+    "email": "me@dylanpinn.com",
+    "url": "https://dylanpinn.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dylanpinn/dotfiles/issues"
+  },
+  "homepage": "https://github.com/dylanpinn/dotfiles#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
