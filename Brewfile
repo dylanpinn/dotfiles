@@ -23,6 +23,8 @@ brew "editorconfig"
 brew "emacs-plus"
 # Command-line tool to interact with exercism.io
 brew "exercism"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
