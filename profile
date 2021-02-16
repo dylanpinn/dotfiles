@@ -15,4 +15,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # Move Wakatime config out of home directory.
 export WAKATIME_HOME="$HOME/.config/wakatime"
 
+# Add Doom Emacs to PATH.
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
 # vim: set syntax=bash:
