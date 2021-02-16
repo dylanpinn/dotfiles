@@ -66,6 +66,7 @@
 
 ;; Setup JavaScript to NVM
 (add-hook 'js2-mode-hook 'nvm-use-for-buffer)
+(add-hook 'typescript-mode-hook 'nvm-use-for-buffer)
 
 ;; Configure Magit Forge
 (use-package! forge
@@ -76,3 +77,13 @@
 
 ;; Load Ruby mode for Brewfile
 :(add-to-list 'auto-mode-alist '("Brewfile" . ruby-mode))
+
+
+(use-package! nvm
+  :commands (nvm-use nvm-use-for nvm--installed-versions))
+
+;; org-journal
+;; Use weekly journal
+(setq org-journal-file-type "weekly")
+;; Add to agenda
+(setq org-journal-enable-agenda-integration t)
