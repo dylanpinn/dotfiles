@@ -63,7 +63,7 @@ cask "rectangle"
 cask "slack"
 cask "spotify"
 cask "xmind-zen"
-cask "zoomus"
+cask "zoom"
 
 # App Store
 mas "Drafts", id: 1435957248
