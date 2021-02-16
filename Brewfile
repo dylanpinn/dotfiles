@@ -17,6 +17,8 @@ brew "bash-completion@2"
 brew "bats-core"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
+# Maintain consistent coding style between multiple editors
+brew "editorconfig"
 # Emacs
 brew "emacs-plus"
 # Command-line tool to interact with exercism.io
