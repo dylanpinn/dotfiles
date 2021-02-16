@@ -47,6 +47,8 @@ brew "ripgrep"
 brew "shellcheck"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Command-line interface to the WakaTime api
+brew "wakatime-cli"
 
 # Casks
 
