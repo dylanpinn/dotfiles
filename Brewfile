@@ -1,5 +1,6 @@
 # Taps
 
+tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -16,6 +17,8 @@ brew "bash-completion@2"
 brew "bats-core"
 # Good-lookin' diffs with diff-highlight and more
 brew "diff-so-fancy"
+# Emacs
+brew "emacs-plus"
 # Command-line tool to interact with exercism.io
 brew "exercism"
 # GitHub command-line tool
