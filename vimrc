@@ -157,6 +157,10 @@ nnoremap <Leader>t :tabfind **/
 
 " Rename current file.
 nnoremap <Leader>n :call RenameFile()<cr>
+
+" Run :make to either test, build or lint. This improves feeback time when
+" developing.
+nnoremap <Leader>m :make %<CR>
 " }}}
 
 "" SCRATCH AREA
