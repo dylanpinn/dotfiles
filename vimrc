@@ -161,6 +161,9 @@ nnoremap <Leader>n :call RenameFile()<cr>
 " Run :make to either test, build or lint. This improves feeback time when
 " developing.
 nnoremap <Leader>m :make %<CR>
+
+" Edit vimrc in a new tab.
+nnoremap cv :tabedit $MYVIMRC<CR>
 " }}}
 
 "" SCRATCH AREA
