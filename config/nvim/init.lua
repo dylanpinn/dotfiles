@@ -34,7 +34,7 @@ vim.cmd [[packadd packer.nvim]]
 require 'plugins'
 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = {'html', 'javascript', 'yaml', 'css', 'typescript', 'lua', 'json'},
+  ensure_installed = {'html', 'javascript', 'css', 'typescript', 'lua', 'json'},
   highlight = {enable = true},
 }
 
@@ -46,11 +46,17 @@ g['mapleader'] = ','
 ----------------------------------
 -- OPTIONS -----------------------
 ----------------------------------
-opt('o', 'path', 'src/**')
-opt('o', 'tabstop', 2) 		-- Number of visual spaces per <Tab>.
-opt('o', 'softtabstop', 2) 	-- Number of spaces in <Tab> when editing.
-opt('o', 'expandtab', true)     -- Tabs are spaces.
-opt('o', 'shiftwidth', 2)       -- Number of spaces when visual indenting.
+-- global
+
+-- window-scoped
+opt('w', 'number', true) 	-- Show line numbers.
+
+-- buffer-scoped
+opt('b', 'tabstop', 2)     		-- Number of visual spaces per <Tab>.
+opt('b', 'softtabstop', 2)  	-- Number of spaces in <Tab> when editing.
+opt('b', 'expandtab', true)   -- Tabs are spaces.
+opt('b', 'shiftwidth', 2)     -- Number of spaces when visual indenting.
+
 
 -- MAPPINGS ----------------------
 -- insert-mode mappings
