@@ -35,7 +35,7 @@ require 'plugins'
 
 require('nvim-treesitter.configs').setup {
   ensure_installed = {'html', 'javascript', 'yaml', 'css', 'typescript', 'lua', 'json'},
-  highlight = {enable = true}
+  highlight = {enable = true},
 }
 
 ----------------------------------
@@ -56,11 +56,14 @@ map('n', '<Leader>e', ':edit **/')
 map('n', '<Leader>f', ':find ')
 
 -- LSP
+map('n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>')
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+map('n', 'gD', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+map('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+map('n', 'g0', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
+map('n', 'gW', '<cmd>lua vim.lsp.buf.workspace_symbol()<CR>')
+map('n', 'gd', '<cmd>lua vim.lsp.buf.declaration()<CR>')
 
 ----------------------------------
 -- COMMANDS ----------------------
