@@ -50,6 +50,12 @@ map('n', '<C-L>', ':nohlsearch<CR>')
 map('n', '<Leader>e', ':edit **/')
 map('n', '<Leader>f', ':find ')
 
+-- LSP
+map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+
 ----------------------------------
 -- COMMANDS ----------------------
 ----------------------------------
@@ -58,3 +64,6 @@ cmd 'colorscheme dracula'
 ----------------------------------
 -- LSP Setup ---------------------
 ----------------------------------
+local lsp_config = require 'lspconfig'
+
+lsp_config.tsserver.setup {}
