@@ -47,6 +47,10 @@ g['mapleader'] = ','
 -- OPTIONS -----------------------
 ----------------------------------
 opt('o', 'path', 'src/**')
+opt('o', 'tabstop', 2) 		-- Number of visual spaces per <Tab>.
+opt('o', 'softtabstop', 2) 	-- Number of spaces in <Tab> when editing.
+opt('o', 'expandtab', true)     -- Tabs are spaces.
+opt('o', 'shiftwidth', 2)       -- Number of spaces when visual indenting.
 
 -- MAPPINGS ----------------------
 -- insert-mode mappings
