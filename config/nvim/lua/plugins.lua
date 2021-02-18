@@ -4,5 +4,6 @@ require('packer').startup(function(use)
   use {'wakatime/vim-wakatime'}
   use {'dracula/vim', as = 'dracula'}
   use {'neovim/nvim-lspconfig'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 end)
 
