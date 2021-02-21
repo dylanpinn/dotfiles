@@ -164,6 +164,10 @@ nnoremap <Leader>m :make %<CR>
 
 " Edit vimrc in a new tab.
 nnoremap cv :tabedit $MYVIMRC<CR>
+
+" Simple mappings for buffer switching.
+nnoremap <Leader>b :b *
+nnoremap <Leader>l :ls<CR>
 " }}}
 
 "" SCRATCH AREA
