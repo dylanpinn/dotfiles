@@ -87,3 +87,8 @@
 (setq org-journal-file-type "weekly")
 ;; Add to agenda
 (setq org-journal-enable-agenda-integration t)
+
+;; deft-mode
+(setq deft-directory "~/vaults"
+      deft-extensions '("org" "txt" "md")
+      deft-recursive t)
