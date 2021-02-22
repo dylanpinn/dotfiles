@@ -97,6 +97,8 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "calibre"
   cask "google-backup-and-sync"
   cask "notion"
+
+  mas "Kindle", id: 405399194
 end
 
 # vim: set syntax=ruby:
