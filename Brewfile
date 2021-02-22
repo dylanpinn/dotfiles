@@ -93,6 +93,7 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   # Build tool for Scala projects
   brew "sbt"
 
+  cask "homebrew/cask-versions/adoptopenjdk8"
   cask "figma"
   cask "imageoptim"
 end
