@@ -5,3 +5,7 @@ tags.temp
 tags.temp.tmp
 .DS_Store
 
+" Metals for Scala
+.metals/
+.bloop/
+project/metals.sbt
