@@ -58,11 +58,11 @@
 (global-wakatime-mode)
 (setq wakatime-cli-path "/usr/local/bin/wakatime")
 
-(setq org-capture-templates
-  `(("i" "Inbox" entry (file "~/vaults/inbox.org")
-      "* TODO %?\n Entered on: %u")))
+;;(setq org-capture-templates
+;;  `(("i" "Inbox" entry (file "~/vaults/inbox.org")
+;;      "* TODO %?\n Entered on: %u")))
 
-(setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+;; (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
 ;; Setup JavaScript to NVM
 (add-hook 'js2-mode-hook 'nvm-use-for-buffer)
@@ -83,10 +83,13 @@
   :commands (nvm-use nvm-use-for nvm--installed-versions))
 
 ;; org-journal
+(setq org-journal-file-format "%Y%m%d.org"
+      org-journal-file-type "daily")
+
 ;; Use weekly journal
-(setq org-journal-file-type "weekly")
+;; (setq org-journal-file-type "weekly")
 ;; Add to agenda
-(setq org-journal-enable-agenda-integration t)
+;; (setq org-journal-enable-agenda-integration t)
 
 ;; deft-mode
 (setq deft-directory "~/vaults"
