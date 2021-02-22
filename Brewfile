@@ -1,5 +1,6 @@
 # Taps
 
+tap "adoptopenjdk/openjdk"
 tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -53,6 +54,7 @@ brew "wakatime-cli"
 # Casks
 
 cask "1password"
+cask "adoptopenjdk11"
 cask "alfred"
 cask "appcleaner"
 cask "dash"
