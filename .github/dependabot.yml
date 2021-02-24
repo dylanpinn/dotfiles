@@ -10,18 +10,18 @@ updates:
     schedule:
       interval: "daily"
     assignees:
-      - "dylan.pinn"
+      - "dylanpinn"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"      
     assignees:
-      - "dylan.pinn"
+      - "dylanpinn"
 
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "daily"
     assignees:
-      - "dylan.pinn"
+      - "dylanpinn"
