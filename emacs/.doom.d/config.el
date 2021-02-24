@@ -78,18 +78,8 @@
 ;; Load Ruby mode for Brewfile
 :(add-to-list 'auto-mode-alist '("Brewfile" . ruby-mode))
 
-
 (use-package! nvm
   :commands (nvm-use nvm-use-for nvm--installed-versions))
-
-;; org-journal
-(setq org-journal-file-format "%Y%m%d.org"
-      org-journal-file-type "daily")
-
-;; Use weekly journal
-;; (setq org-journal-file-type "weekly")
-;; Add to agenda
-;; (setq org-journal-enable-agenda-integration t)
 
 ;; deft-mode
 (setq deft-directory "~/vaults"
