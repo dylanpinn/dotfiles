@@ -16,8 +16,6 @@ brew "bash"
 brew "bash-completion@2"
 # Bash Automated Testing System
 brew "bats-core"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
 # Reimplementation of ctags(1)
 brew "ctags"
 # Good-lookin' diffs with diff-highlight and more
@@ -25,7 +23,7 @@ brew "diff-so-fancy"
 # Maintain consistent coding style between multiple editors
 brew "editorconfig"
 # Emacs
-brew "emacs-plus"
+brew "d12frosted/emacs-plus/emacs-plus@27"
 # Command-line tool to interact with exercism.io
 brew "exercism"
 # Simple, fast and user-friendly alternative to find
@@ -69,25 +67,43 @@ brew "watchman"
 
 # Casks
 
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk11"
+# Application launcher and productivity software
 cask "alfred"
+# Application uninstaller
 cask "appcleaner"
+# API documentation browser and code snippet manager
 cask "dash"
+# App to build and share containerized applications and microservices
 cask "docker"
+# App for note taking, organizing, task lists, and archiving
 cask "evernote"
+# Web browser
 cask "firefox-developer-edition"
+# Web browser
 cask "google-chrome"
 # Free and open-source media player
 cask "iina"
+# HTTP and GraphQL Client
 cask "insomnia"
+# JetBrains tools manager
 cask "jetbrains-toolbox"
+# App to write, plan, collaborate, and get organized
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# Mindmap and brainstorming app
 cask "xmind-zen"
+# Video communication and virtual meeting platform
 cask "zoom"
 
 # App Store
@@ -145,16 +161,20 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   # Download YouTube videos from the command-line
   brew "youtube-dl"
 
+  # E-books management software
   cask "calibre"
   # Voice and text chat software
   cask "discord"
   # Launcher for *Epic Games* games
   cask "epic-games"
   cask "google-backup-and-sync"
+  # Podcast platform
   cask "pocket-casts"
   # Peer to peer Bitorrent client
   cask "qbittorrent"
+  # Video game digital distribution service
   cask "steam"
+  # Desktop client for WhatsApp
   cask "whatsapp"
 
   mas "Amphetamine", id: 937984704
