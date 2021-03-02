@@ -36,3 +36,7 @@ man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
+
+create-pr() {
+  gh pr create -f -a @me -d -B "$1"
+}
