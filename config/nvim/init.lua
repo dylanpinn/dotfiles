@@ -33,10 +33,10 @@ vim.cmd [[packadd packer.nvim]]
 
 require 'plugins'
 
-require('nvim-treesitter.configs').setup {
-  ensure_installed = {'html', 'javascript', 'css', 'typescript', 'lua', 'json'},
-  highlight = {enable = true},
-}
+-- require('nvim-treesitter.configs').setup {
+--   ensure_installed = {'html', 'javascript', 'css', 'typescript', 'lua', 'json'},
+--   highlight = {enable = true},
+-- }
 
 ----------------------------------
 -- VARIABLES ---------------------
