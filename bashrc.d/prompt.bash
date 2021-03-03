@@ -23,7 +23,7 @@ PROMPT_SHOW_NODE_VERSION=0
 # Run checks that will customise the prompt.
 # Globals:
 #   PROMPT_SHOW_NODE_VERSION
-# Argumetns:
+# Arguments:
 #   None
 #######################################
 function __check_prompt() {
@@ -35,7 +35,14 @@ function __check_prompt() {
 # activating it
 export PROMPT_COMMAND=__check_prompt
 
-__prompt_jobs() {
+#######################################
+# Show background jobs in the prompt.
+# Arguments:
+#   None
+# Outputs:
+#   Writes number of jobs wrapped in "{}" if present.
+#######################################
+function __prompt_jobs() {
   local jobc
   while read -r _; do
     ((jobc++))
@@ -45,6 +52,15 @@ __prompt_jobs() {
   fi
 }
 
+#######################################
+# Show NodeJS version in the prompt.
+# Globals
+#   PROMPT_SHOW_NODE_VERSION
+# Arguments:
+#   None
+# Outputs:
+#   Writes NodeJS version prefixed with "n:" and wrapped in "[]".
+#######################################
 function __node() {
   if [[ $PROMPT_SHOW_NODE_VERSION = 1 ]]; then
     local v
@@ -53,8 +69,14 @@ function __node() {
   fi
 }
 
-# ~/pwd(git-branch){job-count}[versions]$
-prompt_on() {
+#######################################
+# Show the custom prompt.
+# Arguments:
+#   None
+# Outputs:
+#   Export PS1 to show prompt as: ~/pwd(git-branch){job-count}[versions]$
+#######################################
+function prompt_on() {
   PS1=
   PS1=$PS1"\w"
   PS1=$PS1'$(__git_ps1)'
@@ -73,8 +95,14 @@ prompt_on() {
   export PS1="\\[$color_prompt\\]$PS1\\[$color_reset\\]"
 }
 
-# $
-prompt_off() {
+#######################################
+# Show the standard prompt.
+# Arguments:
+#   None
+# Outputs:
+#   Export PS1 to show prompt as: $
+#######################################
+function prompt_off() {
   PS1='\$'
   PS1=$PS1' '
   export PS1
