@@ -1,4 +1,4 @@
-# Prompt
+# Customise bash prompt.
 
 # If Bash 4.0 is available, trim very long paths in prompt
 if ((BASH_VERSINFO[0] >= 4)); then
@@ -17,17 +17,25 @@ GIT_PS1_SHOWUPSTREAM="auto" # '<' behind, '>' ahead, '<>' diverged, '=' no diffe
 # shellcheck disable=SC2034
 GIT_PS1_DESCRIBE_STYLE=default # more info when in a detached HEAD
 
-PROMPT_SHOW_NVM=0
-function check_prompt() {
+PROMPT_SHOW_NODE_VERSION=0
+
+#######################################
+# Run checks that will customise the prompt.
+# Globals:
+#   PROMPT_SHOW_NODE_VERSION
+# Argumetns:
+#   None
+#######################################
+function __check_prompt() {
   if hash node 2>/dev/null; then
-    PROMPT_SHOW_NVM=1
+    PROMPT_SHOW_NODE_VERSION=1
   fi
 }
 
 # activating it
-export PROMPT_COMMAND=check_prompt
+export PROMPT_COMMAND=__check_prompt
 
-prompt_jobs() {
+__prompt_jobs() {
   local jobc
   while read -r _; do
     ((jobc++))
@@ -38,7 +46,7 @@ prompt_jobs() {
 }
 
 function __node() {
-  if [[ $PROMPT_SHOW_NVM = 1 ]]; then
+  if [[ $PROMPT_SHOW_NODE_VERSION = 1 ]]; then
     local v
     v=$(node -v)
     [ "$v" != "" ] && echo "[n:${v:1}]"
@@ -50,7 +58,7 @@ prompt_on() {
   PS1=
   PS1=$PS1"\w"
   PS1=$PS1'$(__git_ps1)'
-  PS1=$PS1'$(prompt_jobs)'
+  PS1=$PS1'$(__prompt_jobs)'
   PS1=$PS1'$(__node)'
   PS1=$PS1'\$'
   PS1=$PS1' '
