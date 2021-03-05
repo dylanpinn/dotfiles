@@ -46,12 +46,13 @@ g['mapleader'] = ','
 ----------------------------------
 -- OPTIONS -----------------------
 ----------------------------------
--- global
+-- global ------------------------
+opt('o', 'undofile', true) -- Persist undo between sessions.
 
--- window-scoped
+-- window-scoped -----------------
 opt('w', 'number', true) 	-- Show line numbers.
 
--- buffer-scoped
+-- buffer-scoped ----------------
 opt('b', 'tabstop', 2)     		-- Number of visual spaces per <Tab>.
 opt('b', 'softtabstop', 2)  	-- Number of spaces in <Tab> when editing.
 opt('b', 'expandtab', true)   -- Tabs are spaces.
