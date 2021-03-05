@@ -47,10 +47,23 @@ g['mapleader'] = ','
 -- OPTIONS -----------------------
 ----------------------------------
 -- global ------------------------
-opt('o', 'undofile', true) -- Persist undo between sessions.
+opt('o', 'undofile', true)    -- Persist undo between sessions.
+opt('o', 'splitbelow', true)  -- New horizontal splits below, not above.
+opt('o', 'splitright', true)  -- New vertical splits on the right, not left.
+opt('o', 'ignorecase', true)  -- Ignore case when searching.
+opt('o', 'smartcase', true)   -- Ignore case unless all CAPS.
+
+opt('o', 'wildignorecase', true)   -- Ignore case in the Ex command line.
+
+-- Use ripgrep as default grep program, this is faster than "grep" and also
+-- performs recursive search and respects ignore files by default.
+opt('o', 'grepprg', 'rg --vimgrep --no-heading --smart-case')
+
+vim.api.nvim_command(':set path-=/usr/include') -- Remove unused directory from path.
 
 -- window-scoped -----------------
 opt('w', 'number', true) 	-- Show line numbers.
+opt('w', 'cursorline', true) 	-- Show line numbers.
 
 -- buffer-scoped ----------------
 opt('b', 'tabstop', 2)     		-- Number of visual spaces per <Tab>.
