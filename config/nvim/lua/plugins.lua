@@ -11,6 +11,9 @@ require('packer').startup(function(use)
 
   -- Configure and use the built in LSP server for Neovim.
   use {'neovim/nvim-lspconfig'}
+
+  -- Add basic snippet support.
+  use {'norcalli/snippets.nvim'}
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'tpope/vim-projectionist'}
   use {'tpope/vim-surround'}

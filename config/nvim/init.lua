@@ -76,6 +76,11 @@ cmd 'colorscheme dracula'
 ----------------------------------
 local lsp_config = require 'lspconfig'
 
+-- Enable basic snippet support.
+require'snippets'.use_suggested_mappings()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true;
+
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -134,7 +139,7 @@ end
 -- and map buffer local keybindings when the language server attaches
 local servers = { "tsserver" }
 for _, lsp in ipairs(servers) do
-  lsp_config[lsp].setup { on_attach = on_attach }
+  lsp_config[lsp].setup { on_attach = on_attach, capabilities = capabilities }
 end
 
 local system_name
@@ -152,6 +157,7 @@ local sumneko_root_path = vim.fn.getenv("HOME").."/.local/bin/sumneko_lua"
 lsp_config.sumneko_lua.setup {
   cmd = { sumneko_root_path .. "/bin/"..system_name.."/lua-language-server", "-E", sumneko_root_path .. "/main.lua"};
   on_attach = on_attach,
+  capabilities = capabilities,
   settings = {
       Lua = {
           runtime = {
