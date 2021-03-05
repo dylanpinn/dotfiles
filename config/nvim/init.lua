@@ -4,6 +4,7 @@ local g = vim.g      -- a table to access global variables
 local execute = vim.api.nvim_command
 
 local function opt(scope, key, value)
+  -- luacheck: ignore 241
   local scopes = {o = vim.o, b = vim.bo, w = vim.wo}
   scopes[scope][key] = value
   if scope ~= 'o' then
