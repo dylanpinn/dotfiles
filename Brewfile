@@ -176,6 +176,8 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "steam"
   # Desktop client for WhatsApp
   cask "whatsapp"
+  # Collect, organize, cite, and share research sources
+  cask "zotero"
 
   mas "Amphetamine", id: 937984704
   mas "Instapaper", id: 288545208
