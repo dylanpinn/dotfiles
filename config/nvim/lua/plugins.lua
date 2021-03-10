@@ -14,7 +14,8 @@ require('packer').startup(function(use)
 
   -- Add basic snippet support.
   use {'norcalli/snippets.nvim'}
-  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+  use {'nvim-treesitter/nvim-treesitter'}
+  -- use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'tpope/vim-dispatch'}
   use {'tpope/vim-projectionist'}
   use {'tpope/vim-surround'}
