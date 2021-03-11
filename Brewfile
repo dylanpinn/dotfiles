@@ -58,6 +58,8 @@ brew "shfmt"
 brew "stow"
 # Text interface for Git repositories
 brew "tig"
+# Terminal multiplexer
+brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Command-line interface to the WakaTime api
