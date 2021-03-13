@@ -71,6 +71,7 @@ opt('b', 'tabstop', 2)     		-- Number of visual spaces per <Tab>.
 opt('b', 'softtabstop', 2)  	-- Number of spaces in <Tab> when editing.
 opt('b', 'expandtab', true)   -- Tabs are spaces.
 opt('b', 'shiftwidth', 2)     -- Number of spaces when visual indenting.
+opt('b', 'spellcapcheck', '') -- Do not treat capitalised words as incorrect spelling.
 
 
 -- MAPPINGS ----------------------
