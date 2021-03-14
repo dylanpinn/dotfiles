@@ -1,3 +1,0 @@
-EXCLUDES="README*.md LICENSE.md install.sh tags Brewfile bin Brewfile*
-          lint-*.sh requirements.txt node_modules vintrc.yml
-          package.json package-lock.json"

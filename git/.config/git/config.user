@@ -41,7 +41,7 @@
 	whitespace = red reverse
 [core]
 	autocrlf = input
-	excludesfile = ~/.gitignore
+	excludesfile = ignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [diff]
 	colorMoved = zebra
