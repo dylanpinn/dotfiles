@@ -46,6 +46,8 @@ brew "ripgrep"
 brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Text interface for Git repositories
+brew "tig"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Command-line interface to the WakaTime api
