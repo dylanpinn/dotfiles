@@ -16,7 +16,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* [`rcm`](https://github.com/thoughtbot/rcm)
 * [`brew`](https://brew.sh)
 
 ### Installing
