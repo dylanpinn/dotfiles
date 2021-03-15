@@ -93,6 +93,8 @@ end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "calibre"
+  # Launcher for *Epic Games* games
+  cask "epic-games"
   cask "google-backup-and-sync"
   cask "notion"
   cask "pocket-casts"
