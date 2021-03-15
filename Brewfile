@@ -98,6 +98,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "pocket-casts"
   cask "whatsapp"
 
+  mas "Amphetamine", id: 937984704
   mas "Kindle", id: 405399194
 end
 
