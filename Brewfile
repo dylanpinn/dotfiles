@@ -40,12 +40,12 @@ brew "mas"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# RC file (dotfile) management
-brew "rcm"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Command-line interface to the WakaTime api
