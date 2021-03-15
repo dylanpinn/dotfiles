@@ -92,6 +92,11 @@ if ENV["HOMEBREW_PROFILE"] == "work"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
+  # Play, record, convert, and stream audio and video
+  brew "ffmpeg"
+# Download YouTube videos from the command-line
+  brew "youtube-dl"
+
   cask "calibre"
   cask "google-backup-and-sync"
   cask "notion"
