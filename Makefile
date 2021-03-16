@@ -7,6 +7,7 @@ all: install-brew \
 	install-bash \
 	install-git \
 	install-emacs \
+	install-neovim \
 	install-nvm \
 	install-python-pkgs \
 	install-vim \
@@ -29,6 +30,10 @@ install-git:
 	@echo "Installing git..."
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	stow -v -R -t ~ git
+
+install-neovim:
+	@echo "Installing neovim..."
+	stow -v -R -t ~ nvim
 
 install-nvm:
 	@echo "Installing nvm..."
