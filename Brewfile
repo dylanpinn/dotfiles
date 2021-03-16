@@ -46,10 +46,14 @@ brew "ripgrep"
 brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Text interface for Git repositories
+brew "tig"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Command-line interface to the WakaTime api
 brew "wakatime-cli"
+# Watch files and take action when they change
+brew "watchman"
 
 # Casks
 
@@ -62,6 +66,8 @@ cask "docker"
 cask "evernote"
 cask "firefox-developer-edition"
 cask "google-chrome"
+# Free and open-source media player
+cask "iina"
 cask "rectangle"
 cask "slack"
 cask "spotify"
@@ -89,15 +95,25 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "homebrew/cask-versions/adoptopenjdk8"
   cask "figma"
   cask "imageoptim"
+  # Password manager
+  cask "lastpass"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
+  # Play, record, convert, and stream audio and video
+  brew "ffmpeg"
+# Download YouTube videos from the command-line
+  brew "youtube-dl"
+
   cask "calibre"
+  # Launcher for *Epic Games* games
+  cask "epic-games"
   cask "google-backup-and-sync"
   cask "notion"
   cask "pocket-casts"
   cask "whatsapp"
 
+  mas "Amphetamine", id: 937984704
   mas "Kindle", id: 405399194
   mas "Numbers", id: 409203825
 end
