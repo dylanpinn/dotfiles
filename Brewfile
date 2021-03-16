@@ -106,6 +106,8 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   brew "youtube-dl"
 
   cask "calibre"
+  # Voice and text chat software
+  cask "discord"
   # Launcher for *Epic Games* games
   cask "epic-games"
   cask "google-backup-and-sync"
