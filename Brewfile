@@ -115,6 +115,7 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
 
   mas "Amphetamine", id: 937984704
   mas "Kindle", id: 405399194
+  mas "Numbers", id: 409203825
 end
 
 # vim: set syntax=ruby:
