@@ -115,6 +115,8 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   cask "google-backup-and-sync"
   cask "notion"
   cask "pocket-casts"
+  # Peer to peer Bitorrent client
+  cask "qbittorrent"
   cask "whatsapp"
 
   mas "Amphetamine", id: 937984704
