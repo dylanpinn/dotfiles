@@ -188,7 +188,7 @@ let mapleader=','
 
 " Fuzzy searching using wildmenu.
 nnoremap <Leader>e :edit **/
-nnoremap <Leader>f :find 
+nnoremap <Leader>f :find " "
 nnoremap <Leader>s :sfind **/
 nnoremap <Leader>v :vert sfind **/
 nnoremap <Leader>t :tabfind **/
