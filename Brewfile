@@ -102,10 +102,12 @@ end
 if ENV["HOMEBREW_PROFILE"] == "personal"
   # Play, record, convert, and stream audio and video
   brew "ffmpeg"
-# Download YouTube videos from the command-line
+  # Download YouTube videos from the command-line
   brew "youtube-dl"
 
   cask "calibre"
+  # Voice and text chat software
+  cask "discord"
   # Launcher for *Epic Games* games
   cask "epic-games"
   cask "google-backup-and-sync"
