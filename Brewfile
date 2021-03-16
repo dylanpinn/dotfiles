@@ -50,6 +50,8 @@ brew "stow"
 brew "vim"
 # Command-line interface to the WakaTime api
 brew "wakatime-cli"
+# Watch files and take action when they change
+brew "watchman"
 
 # Casks
 
