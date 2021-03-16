@@ -89,6 +89,8 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "homebrew/cask-versions/adoptopenjdk8"
   cask "figma"
   cask "imageoptim"
+  # Password manager
+  cask "lastpass"
 end
 
 if ENV["HOMEBREW_PROFILE"] == "personal"
