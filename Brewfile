@@ -102,7 +102,7 @@ end
 if ENV["HOMEBREW_PROFILE"] == "personal"
   # Play, record, convert, and stream audio and video
   brew "ffmpeg"
-# Download YouTube videos from the command-line
+  # Download YouTube videos from the command-line
   brew "youtube-dl"
 
   cask "calibre"
