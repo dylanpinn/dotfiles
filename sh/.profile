@@ -1,5 +1,13 @@
 #!/usr/bin/env sh
 
+# Load all supplementaty scripts in ~/.profile.d
+for sh in "$HOME"/.profile.d/*.sh; do
+  [ -e "$sh" ] || continue
+  # shellcheck source=/dev/null
+  . "$sh"
+done
+unset -v sh
+
 # Set XDG defaults.
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config

@@ -45,6 +45,7 @@ install-python-pkgs:
 
 install-sh:
 	@echo "Installing sh..."
+	mkdir -p -- ~/.profile.d
 	stow -v -R -t ~ sh
 
 install-vim:
