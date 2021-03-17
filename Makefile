@@ -11,7 +11,8 @@ all: install-brew \
 	install-nvm \
 	install-python-pkgs \
 	install-vim \
-	install-vint
+	install-vint \
+	install-yarn
 
 install-bash:
 	@echo "Installing bash..."
@@ -57,3 +58,7 @@ install-vim:
 install-vint:
 	@echo "Installing vint..."
 	stow -v -R -t ~ vint
+
+install-yarn: install-sh
+	@echo "Installing yarn..."
+	stow -v -R -t ~ yarn
