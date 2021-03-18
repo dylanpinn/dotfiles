@@ -8,6 +8,7 @@ all: install-brew \
 	install-git \
 	install-emacs \
 	install-neovim \
+	install-npm \
 	install-nvm \
 	install-python-pkgs \
 	install-vim \
@@ -35,6 +36,10 @@ install-git:
 install-neovim:
 	@echo "Installing neovim..."
 	stow -v -R -t ~ nvim
+
+install-npm: install-sh
+	@echo "Installing npm..."
+	stow -v -R -t ~ npm
 
 install-nvm:
 	@echo "Installing nvm..."
