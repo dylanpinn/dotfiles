@@ -17,6 +17,18 @@ set viminfofile=$XDG_CACHE_HOME/vim/viminfo
 "
 set history=200
 
+" Enable automatic backups before overwriting a file and leave it around after
+" the file has been written.
+"
+" We will also want to move these backup files to the $XDG_CACHE_HOME
+" directory. This directory is created by the `install-vim` in the Makefile.
+"
+" The double trailing slashes will tell Vim to use the full escaped path of
+" the file to avoid collisions.
+"
+set backup
+set backupdir=$XDG_CACHE_HOME/vim/backup//
+
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
