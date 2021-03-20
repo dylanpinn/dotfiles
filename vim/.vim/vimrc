@@ -211,7 +211,7 @@ set wildmode=list:longest,full
 " therefore would not want to edit, and directories that contain generated
 " files that won't want to be edited either.
 "
-set wildignore+=node_modules/* 	" ignore dependency directories.
+set wildignore+=*/node_modules/* 	" ignore dependency directories.
 
 " Ignore case when matching wildmenu options.
 "
