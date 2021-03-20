@@ -176,6 +176,12 @@ set showcmd
 "
 set virtualedit+=block
 
+" Stop Vim from emitting sounds, rather use a visual bell. Also disables any
+" efforts by Vim that would trigger any visual queues such as flashing or
+" blinking.
+"
+set visualbell t_vb=
+
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
   syntax on
