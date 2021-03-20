@@ -171,6 +171,11 @@ set splitbelow splitright
 "
 set showcmd
 
+" When using virtual block mode, allow me to navigate to to any column even if
+" there is no contents there.
+"
+set virtualedit+=block
+
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
   syntax on
