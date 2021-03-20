@@ -208,5 +208,10 @@ if !exists('syntax_on')
   syntax on
 endif
 
+" Because we are loading Minpac from a plugin file, it needs to be activated
+" here to be able to be used in the vimrc.
+"
+" TODO: Look into ways of removing this packadd! command.
+"
 packadd! dracula
 colorscheme dracula
