@@ -151,6 +151,20 @@ set listchars+=extends:»,precedes:«
 "
 set nomodeline
 
+" Numbers that start with a zero should be treated as decimal and not octal.
+" This allows Vim to increment and decrement these numbers.
+"
+set nrformats-=octal
+
+" Show the line and column number of the cursor position at the last line of
+" the screen.
+"
+set ruler
+
+" Show (partial) command in the last line of the screen.
+"
+set showcmd
+
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
   syntax on
