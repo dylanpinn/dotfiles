@@ -83,5 +83,10 @@ set linebreak
 " have git yell at us for trailing whitespace.
 :let &showbreak = '> '
 
+" When wrapping a line, if that line is indented then the wrapped line is
+" also indented the same amount.
+"
+set breakindent
+
 " Switch syntax highlighting on.
 syntax on
