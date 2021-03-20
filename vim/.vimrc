@@ -29,6 +29,15 @@ set history=200
 set backup
 set backupdir=$XDG_CACHE_HOME/vim/backup//
 
+" Move swap files to a dedicated directory, rather than the default of the
+" same directory as the source file. This directory is created by
+" `install-vim` in the Makefile.
+"
+" Add two trailing slashes to the path to tell Vim to use the full escaped
+" path of the file to avoid collisions.
+"
+set directory=$XDG_CACHE_HOME/vim/swap//
+
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
