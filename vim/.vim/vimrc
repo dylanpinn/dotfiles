@@ -3,6 +3,10 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
+" Because we are using unicode characters in this vimrc file we need to set
+" this option, otherwise vint will yell at us.
+scriptencoding utf-8
+
 " Move the viminfo file out of the $HOME directory.  A logical place would be
 " $XDG_CACHE_HOME (typically $HOME/.cache/).
 "
@@ -83,7 +87,7 @@ set linebreak
 
 " When wrapping a line using soft-wraps, highlight that it has been wrapped by
 " inserting a leading string - "> ".
-" 
+"
 " Using the following syntax so we don't have to escape the trailing space and
 " have git yell at us for trailing whitespace.
 :let &showbreak = '> '
