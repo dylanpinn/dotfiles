@@ -3,7 +3,7 @@
 " Author: Dylan Pinn
 " Repo: https://github.com/dylanpinn/dotfiles
 
-" Move the viminfo file out of the $HOME directory. A logical place would be
+" Move the viminfo file out of the $HOME directory.  A logical place would be
 " $XDG_CACHE_HOME (typically $HOME/.cache/).
 "
 " This file will only be created if this directory exists, so this is handled
@@ -21,7 +21,7 @@ set history=200
 " the file has been written.
 "
 " We will also want to move these backup files to the $XDG_CACHE_HOME
-" directory. This directory is created by the `install-vim` in the Makefile.
+" directory.  This directory is created by the `install-vim` in the Makefile.
 "
 " The double trailing slashes will tell Vim to use the full escaped path of
 " the file to avoid collisions.
@@ -30,7 +30,7 @@ set backup
 set backupdir=$XDG_CACHE_HOME/vim/backup//
 
 " Move swap files to a dedicated directory, rather than the default of the
-" same directory as the source file. This directory is created by
+" same directory as the source file.  This directory is created by
 " `install-vim` in the Makefile.
 "
 " Add two trailing slashes to the path to tell Vim to use the full escaped
@@ -38,9 +38,9 @@ set backupdir=$XDG_CACHE_HOME/vim/backup//
 "
 set directory=$XDG_CACHE_HOME/vim/swap//
 
-" Keep track of undo history for files between sessions. This ensures that
-" undo and redo are available between Vim invocations. These files are kept in
-" a cache directory. This directory is created by `install-vim` in the
+" Keep track of undo history for files between sessions.  This ensures that
+" undo and redo are available between Vim invocations.  These files are kept
+" in a cache directory.  This directory is created by `install-vim` in the
 " Makefile.
 "
 " Add two trailing slashes to the path to tell Vim to use the full escaped
@@ -59,7 +59,7 @@ filetype plugin indent on
 set spelllang=en_au
 
 " Vim includes defaults for comments and path that date back to its history as
-" a mainly C development environment. Removing these values allows us to use
+" a mainly C development environment.  Removing these values allows us to use
 " filetype plugins to set them as needed.
 "
 set comments= commentstring= define= include=
@@ -87,6 +87,34 @@ set linebreak
 " also indented the same amount.
 "
 set breakindent
+
+" Automatic text wrapping options using flags in the 'formatoptions' option
+" begin here.
+
+" Don't break a line after a one-letter word like "I" or "a".
+"
+set formatoptions+=1
+
+" When joining lines that contain comments, if possible remove the comment
+" leader.
+"
+set formatoptions+=j
+
+" Use two spaces to end a sentence. This helps improve readability using
+" monospaced fonts.  This also helps vim work with sentence objects for the
+" purpose of the 's' text objects, the '(' and ')' sentence motions, and
+" formatting with the 'gq' command must now be separated by two spaces.
+"
+" See https://stevelosh.com/blog/2012/10/why-i-two-space/
+"
+set cpoptions+=J
+
+" Because we are using two spaces for ending sentences. Vim can determine if
+" the space after an abbreviation such as "Mr. Pinn" is the end of the
+" sentence or not and then determine if it should be split on it. The 'p' flag
+" makes this possible.
+"
+set formatoptions+=p
 
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
