@@ -127,6 +127,24 @@ nohlsearch
 "
 set incsearch
 
+" Don't redraw the screen when executing macros, registers and other commands
+" that have not been typed.
+"
+set lazyredraw
+
+" Set some default characters to show when the 'list' option is set. Most of
+" these will help define invisible or indistinguishable characters. We will
+" leave the default eol:$ to show newlines.
+"
+set listchars+=tab:>- 	" Tab characters, preserve width with hyphens.
+set listchars+=trail:-	" Trailing spaces.
+set listchars+=nbsp:+ 	" Non-breaking spaces.
+
+" These two options define what is shown when text is not wrapped and
+" continues off the screen.
+"
+set listchars+=extends:»,precedes:«
+
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
   syntax on
