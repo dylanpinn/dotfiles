@@ -12,6 +12,11 @@ function! PackInit() abort
   " Color (colour) scheme.  Using this one until I get sick of it and end up
   " creating my own or find another.
   call minpac#add('dracula/vim', {'name': 'dracula'})
+
+  " I use Wakatime to roughly track how much actual "development" is happening
+  " and what I am working on.  This isn't always accurate as can be doing pair
+  " programming on a remote computer.
+  call minpac#add('wakatime/vim-wakatime')
 endfunction
 
 " Load minpac and then manage it.
