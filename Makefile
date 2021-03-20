@@ -56,8 +56,7 @@ install-sh:
 
 install-vim:
 	@echo "Installing vim..."
-	# mkdir -p ~/.vim/{backups,swaps,undo}
-	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap}
+	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
 	stow -v -R -t ~ vim
 	# ./install/vim.sh
 

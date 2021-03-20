@@ -38,6 +38,17 @@ set backupdir=$XDG_CACHE_HOME/vim/backup//
 "
 set directory=$XDG_CACHE_HOME/vim/swap//
 
+" Keep track of undo history for files between sessions. This ensures that
+" undo and redo are available between Vim invocations. These files are kept in
+" a cache directory. This directory is created by `install-vim` in the
+" Makefile.
+"
+" Add two trailing slashes to the path to tell Vim to use the full escaped
+" path of the file to avoid collisions.
+"
+set undofile
+set undodir=$XDG_CACHE_HOME/vim/undo//
+
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
