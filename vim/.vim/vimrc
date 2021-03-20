@@ -132,6 +132,11 @@ nohlsearch
 "
 set incsearch
 
+" Ignore case when searching, unless the search contains upper-case characters.
+"
+set ignorecase
+set smartcase
+
 " Don't redraw the screen when executing macros, registers and other commands
 " that have not been typed.
 "
@@ -238,7 +243,7 @@ colorscheme dracula
 " CTRL-L by default in Vim redraws the screen.  Tacking on :nohlsearch is
 " a good fit to stop highlighting search results.
 "
-nnoremap <C-L> <C-U>:nohlsearch<CR><C-L>
+nnoremap <C-L> :<C-U>nohlsearch<CR><C-L>
 
 " The following maps use the Leader key.
 "
