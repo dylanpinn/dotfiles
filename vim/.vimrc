@@ -145,6 +145,12 @@ set listchars+=nbsp:+ 	" Non-breaking spaces.
 "
 set listchars+=extends:»,precedes:«
 
+" Disable modeline, editor options should not be set in the source code of the
+" file.  It is better to use filetype plugins, automatic command hooks, or
+" EditorConfig to set these values.
+"
+set nomodeline
+
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
   syntax on

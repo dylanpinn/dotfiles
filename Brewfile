@@ -186,5 +186,3 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   mas "Messenger", id: 1480068668
   mas "Numbers", id: 409203825
 end
-
-# vim: set syntax=ruby:
