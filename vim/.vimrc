@@ -65,5 +65,11 @@ set spelllang=en_au
 set comments= commentstring= define= include=
 set path-=/usr/include
 
+" Allow Vim's backspace to behave a bit more as you would expect it to.
+"
+set backspace+=indent	" Leading whitespace created by autoindent.
+set backspace+=eol	" Line breaks.
+set backspace+=start 	" Text before the start of the current insertion.
+
 " Switch syntax highlighting on.
 syntax on
