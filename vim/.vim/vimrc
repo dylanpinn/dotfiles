@@ -215,3 +215,46 @@ endif
 "
 packadd! dracula
 colorscheme dracula
+
+" Mapping defnitions are defined here.  Here are some rules I have tried to
+" use as much as possible.
+"
+" * Use Leader key as a prefix for mappings as much as possible.
+"
+" * Only use the LocalLeader key as a prefix for mappings that are defined as
+"   local to a buffer, which should always be based on filetype and be setup
+"   in ftplugin files.
+"
+" * Avoid shadowing any of Vim’s existing functionality.  If possible, extend
+"   or supplement what Vim does, rather than replacing it.
+"
+" The following are mappings that do not use the Leader key.
+
+" CTRL-L by default in Vim redraws the screen.  Tacking on :nohlsearch is
+" a good fit to stop highlighting search results.
+"
+nnoremap <C-L> <C-U>:nohlsearch<CR><C-L>
+
+" The following maps use the Leader key.
+"
+" Let us set the leader keys; backslash happens to be the default but setting
+" it explicitly here.
+"
+let mapleader = '\'
+let maplocalleader = ','
+
+"" Leader,c toggles highlighted cursor row.
+nnoremap <Leader>c
+      \ :<C-U>set cursorline! cursorline?<CR>
+"" Leader,l toggles showing tab, end-of-line, and trailing white space.
+noremap <Leader>l
+      \ :<C-U>set list! list?<CR>
+"" Leader,n toggles line number display
+noremap <Leader>n
+      \ :<C-U>set number! number?<CR>
+"" Leader,s toggles spell checking.
+nnoremap <Leader>s
+      \ :<C-U>set spell! spell?<CR>
+"" Leader,w toggles soft wrapping
+noremap <Leader>w
+      \ :<C-U>set wrap! wrap?<CR>
