@@ -65,6 +65,11 @@ set spelllang=en_au
 set comments= commentstring= define= include=
 set path-=/usr/include
 
+" Automatically reload a file inside of Vim if it has changed on the disk.
+" A good example of this is updated code from a VCS.
+"
+set autoread
+
 " Allow Vim's backspace to behave a bit more as you would expect it to.
 "
 set backspace+=indent	" Leading whitespace created by autoindent.
