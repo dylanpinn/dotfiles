@@ -76,5 +76,12 @@ set backspace+=start 	" Text before the start of the current insertion.
 "
 set linebreak
 
+" When wrapping a line using soft-wraps, highlight that it has been wrapped by
+" inserting a leading string - "> ".
+" 
+" Using the following syntax so we don't have to escape the trailing space and
+" have git yell at us for trailing whitespace.
+:let &showbreak = '> '
+
 " Switch syntax highlighting on.
 syntax on
