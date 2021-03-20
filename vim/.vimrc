@@ -71,5 +71,10 @@ set backspace+=indent	" Leading whitespace created by autoindent.
 set backspace+=eol	" Line breaks.
 set backspace+=start 	" Text before the start of the current insertion.
 
+" When soft-wraps are enabled with 'wrap' option, then break the line between
+" words, rather than within them.
+"
+set linebreak
+
 " Switch syntax highlighting on.
 syntax on
