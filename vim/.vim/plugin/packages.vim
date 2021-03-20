@@ -20,7 +20,9 @@ function! PackInit() abort
 
   " Attempt to standardise indentation and other styling by reading
   " configuration values from a .editorconfig file if present.
-  call minpac#add('editorconfig/editorconfig-vim')
+  " This is loaded on demand only if there is a .editorconfig file present at
+  " the :pwd path.
+  call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt', 'name': 'editorconfig'})
 endfunction
 
 " Load minpac and then manage it.
