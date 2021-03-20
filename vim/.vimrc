@@ -182,6 +182,27 @@ set virtualedit+=block
 "
 set visualbell t_vb=
 
+" When completing commands with <Tab>, list valid completions and complete the
+" command line using the longest common substring with a single key press.
+"
+set wildmenu
+set wildmode=list:longest,full
+
+" Configure the wildmenu to ignore a list of patterns for file and directory
+" command line completion.  Files and directories matching any of these
+" patterns won't be presented as candidates for tab completion on the command
+" line.
+"
+" The list combines a mixture of binary files that would not contain text and
+" therefore would not want to edit, and directories that contain generated
+" files that won't want to be edited either.
+"
+set wildignore+=node_modules/* 	" ignore dependency directories.
+
+" Ignore case when matching wildmenu options.
+"
+set wildignorecase
+
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
   syntax on
