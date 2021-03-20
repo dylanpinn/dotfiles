@@ -1,6 +1,15 @@
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+""" vimrc
+"
+" Author: Dylan Pinn
+" Repo: https://github.com/dylanpinn/dotfiles
+
+" Move the viminfo file out of the $HOME directory. A logical place would be
+" $XDG_CACHE_HOME (typically $HOME/.cache/).
+"
+" This file will only be created if this directory exists, so this is handled
+" in the `install-vim` part of the Makefile.
+"
+set viminfofile=$XDG_CACHE_HOME/vim/viminfo
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -10,4 +19,3 @@ filetype plugin indent on
 
 " Switch syntax highlighting on.
 syntax on
-
