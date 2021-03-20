@@ -17,6 +17,10 @@ function! PackInit() abort
   " and what I am working on.  This isn't always accurate as can be doing pair
   " programming on a remote computer.
   call minpac#add('wakatime/vim-wakatime')
+
+  " Attempt to standardise indentation and other styling by reading
+  " configuration values from a .editorconfig file if present.
+  call minpac#add('editorconfig/editorconfig-vim')
 endfunction
 
 " Load minpac and then manage it.
