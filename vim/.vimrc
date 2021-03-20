@@ -207,3 +207,6 @@ set wildignorecase
 if !exists('syntax_on')
   syntax on
 endif
+
+packadd! dracula
+colorscheme dracula
