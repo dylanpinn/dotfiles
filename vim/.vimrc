@@ -88,5 +88,7 @@ set linebreak
 "
 set breakindent
 
-" Switch syntax highlighting on.
-syntax on
+" Switch syntax highlighting on if it already not enabled.
+if !exists('syntax_on')
+  syntax on
+endif
