@@ -161,6 +161,12 @@ set nrformats-=octal
 "
 set ruler
 
+" I prefer when Vim opens new splits to the right and below the current,
+" rather than the default of to the left and above.  This just makes more
+" sense.
+"
+set splitbelow splitright
+
 " Show (partial) command in the last line of the screen.
 "
 set showcmd
