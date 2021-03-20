@@ -56,9 +56,9 @@ install-sh:
 
 install-vim:
 	@echo "Installing vim..."
-	mkdir -p ~/.vim/{backups,swaps,undo}
+	# mkdir -p ~/.vim/{backups,swaps,undo}
 	stow -v -R -t ~ vim
-	./install/vim.sh
+	# ./install/vim.sh
 
 install-vint:
 	@echo "Installing vint..."
