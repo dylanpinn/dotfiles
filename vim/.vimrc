@@ -116,6 +116,17 @@ set cpoptions+=J
 "
 set formatoptions+=p
 
+" Highlight search matches in the text.  Highlights then can be turned off by
+" using :nohlsearch.  When this file is sourced, turn off any highlights that
+" are set and would have been resurfaced.
+"
+set hlsearch
+nohlsearch
+
+" Start searching and highlighting as soon as something is typed.
+"
+set incsearch
+
 " Switch syntax highlighting on if it already not enabled.
 if !exists('syntax_on')
   syntax on
