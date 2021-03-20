@@ -50,10 +50,20 @@ set undofile
 set undodir=$XDG_CACHE_HOME/vim/undo//
 
 " Enable file type detection.
-" Use the default filetype settings, so that mail gets 'tw' set to 72,
-" 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
+"
 filetype plugin indent on
+
+" When checking spelling, use Australian English by default.
+"
+set spelllang=en_au
+
+" Vim includes defaults for comments and path that date back to its history as
+" a mainly C development environment. Removing these values allows us to use
+" filetype plugins to set them as needed.
+"
+set comments= commentstring= define= include=
+set path-=/usr/include
 
 " Switch syntax highlighting on.
 syntax on
