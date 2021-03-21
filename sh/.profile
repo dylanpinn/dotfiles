@@ -1,5 +1,11 @@
 #!/usr/bin/env sh
 
+# Set XDG defaults.
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_RUNTIME_DIR=/tmp
+
 # Load all supplementaty scripts in ~/.profile.d
 for sh in "$HOME"/.profile.d/*.sh; do
   [ -e "$sh" ] || continue
@@ -7,12 +13,6 @@ for sh in "$HOME"/.profile.d/*.sh; do
   . "$sh"
 done
 unset -v sh
-
-# Set XDG defaults.
-export XDG_CACHE_HOME="$HOME"/.cache
-export XDG_CONFIG_HOME="$HOME"/.config
-export XDG_DATA_HOME="$HOME"/.local/share
-export XDG_RUNTIME_DIR=/tmp
 
 # Set vim as default editor.
 export EDITOR="vim"
