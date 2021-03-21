@@ -40,14 +40,10 @@ brew "jq"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
-# Platform built on V8 to build network applications
-brew "node"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8", link: true
 # Ruby version manager
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
