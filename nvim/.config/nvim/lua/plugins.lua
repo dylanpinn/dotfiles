@@ -6,4 +6,7 @@ return require('packer').startup(function()
   use {'wbthomason/packer.nvim', opt = true}
 
   use {'dracula/vim', as = 'dracula'}
+
+  use {'wakatime/vim-wakatime'}
+  use {'editorconfig/editorconfig-vim', opt = true, as = 'editorconfig'}
 end)

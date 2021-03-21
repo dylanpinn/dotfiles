@@ -1,11 +1,11 @@
 -- luacheck: globals vim
 
 local function map(mode, lhs, rhs, opts)
-	local options = {noremap = true}
-	if opts then
-		options = vim.tbl_extend('force', options, opts)
-	end
-	vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+  local options = {noremap = true}
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
 -- Load plugin configuration
@@ -15,9 +15,8 @@ require('plugins')
 -- Most of these options have come from my vimrc. See there for notes on why
 -- these options are added.
 
-vim.o['backup'] = true
-
-vim.o['backupdir'] = '$XDG_DATA_HOME/nvim/backup//'
+-- vim.o['backup'] = true
+-- vim.o['backupdir'] = '~/.local/share/nvim/backup//'
 vim.o['undofile'] = true
 vim.bo['spelllang'] = 'en_au'
 
