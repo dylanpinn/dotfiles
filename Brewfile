@@ -125,10 +125,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-slip-utils"
   # Cross-platform program for developing Haskell projects
   brew "haskell-stack"
-  # CLI for Node.js style checker and lint tool for Markdown files
-  brew "markdownlint-cli"
-  # Linter for prose
-  brew "proselint"
   # Build tool for Scala projects
   brew "sbt"
 
