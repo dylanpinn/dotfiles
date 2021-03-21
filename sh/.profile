@@ -17,9 +17,6 @@ unset -v sh
 # Set vim as default editor.
 export EDITOR="vim"
 
-# Add dotfiles bin to PATH
-export PATH="$HOME/.bin:$PATH"
-
 # Set NVM directory.
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 
