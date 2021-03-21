@@ -35,7 +35,9 @@ install-git:
 
 install-neovim:
 	@echo "Installing neovim..."
+	mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,lua,plugin}
 	stow -v -R -t ~ nvim
+	./install/nvim.sh
 
 install-npm: install-sh
 	@echo "Installing npm..."
