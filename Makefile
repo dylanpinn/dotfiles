@@ -35,8 +35,9 @@ install-git:
 
 install-neovim:
 	@echo "Installing neovim..."
-	mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,lua,plugin}
-	stow -v -R -t ~ nvim
+	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,plugin}
+	stow -t ~ nvim
+	stow -t $(XDG_CACHE_HOME)/nvim/ vim-shared
 	./install/nvim.sh
 
 install-npm: install-sh
@@ -58,9 +59,10 @@ install-sh:
 
 install-vim:
 	@echo "Installing vim..."
-	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
-	mkdir -p -- ~/.vim
-	stow -v -R -t ~ vim
+	@mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
+	@mkdir -p -- ~/.vim/plugin
+	stow -t ~ vim
+	stow -t ~/.vim/ vim-shared
 	./install/vim.sh
 
 install-vint:
