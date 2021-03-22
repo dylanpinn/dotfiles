@@ -17,6 +17,10 @@ return require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter'}
   require('settings/nvim-treesitter')
 
+  -- Configure and use the built in LSP server for Neovim.
+  use {'neovim/nvim-lspconfig'}
+  require('settings/nvim-lspconfig')
+
   -- Track development effort across projects.
   use {'wakatime/vim-wakatime'}
 end)
