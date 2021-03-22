@@ -1,2 +1,1 @@
-" Use improved version of matchit.
-packadd! matchit
+../../../vim/.vim/plugin/matchit.vim
