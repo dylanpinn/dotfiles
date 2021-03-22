@@ -141,6 +141,10 @@ set incsearch
 set ignorecase
 set smartcase
 
+" Always show the statusline.
+"
+set laststatus=2
+
 " Don't redraw the screen when executing macros, registers and other commands
 " that have not been typed.
 "
@@ -169,11 +173,6 @@ set nomodeline
 " This allows Vim to increment and decrement these numbers.
 "
 set nrformats-=octal
-
-" Show the line and column number of the cursor position at the last line of
-" the screen.
-"
-set ruler
 
 " I prefer when Vim opens new splits to the right and below the current,
 " rather than the default of to the left and above.  This just makes more
