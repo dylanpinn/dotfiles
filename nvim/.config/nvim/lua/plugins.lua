@@ -23,6 +23,10 @@ return require('packer').startup(function(use)
   use {'scalameta/nvim-metals'}
   require('settings/lspconfig')
 
+  -- Configure and use the built in LSP server for Neovim.
+  use {'neovim/nvim-lspconfig'}
+  require('settings/nvim-lspconfig')
+
   -- Track development effort across projects.
   use {'wakatime/vim-wakatime'}
 end)
