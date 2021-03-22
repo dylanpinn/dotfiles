@@ -23,6 +23,9 @@ function! PackInit() abort
   " This is loaded on demand only if there is a .editorconfig file present at
   " the :pwd path.
   call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt', 'name': 'editorconfig'})
+
+  " Improve JavaScript syntax highlighting to include modern (ES5+) features.
+  call minpac#add('yuezk/vim-js')
 endfunction
 
 " Load minpac and then manage it.
