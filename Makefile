@@ -59,6 +59,7 @@ install-sh:
 install-vim:
 	@echo "Installing vim..."
 	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
+	mkdir -p -- ~/.vim
 	stow -v -R -t ~ vim
 	./install/vim.sh
 
@@ -68,4 +69,5 @@ install-vint:
 
 install-yarn: install-sh
 	@echo "Installing yarn..."
+	mkdir -p -- $(XDG_CONFIG_HOME)/yarn
 	stow -v -R -t ~ yarn
