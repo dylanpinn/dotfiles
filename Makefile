@@ -12,6 +12,7 @@ all: install-brew \
 	install-nvm \
 	install-python-pkgs \
 	install-vim \
+	install-terminfo \
 	install-vint \
 	install-yarn
 
@@ -56,6 +57,10 @@ install-sh:
 	@echo "Installing sh..."
 	mkdir -p -- ~/.profile.d
 	stow -v -R -t ~ sh
+
+install-terminfo:
+	@echo "Installing terminfo..."
+	tic terminfo/xterm-256color-italic.terminfo
 
 install-vim:
 	@echo "Installing vim..."
