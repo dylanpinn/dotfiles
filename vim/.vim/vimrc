@@ -248,6 +248,14 @@ colorscheme dracula
 "
 nnoremap <C-L> :<C-U>nohlsearch<CR><C-L>
 
+" The idea for this is taken from tpop/vim-vinegar.  Being able to hit "-" and
+" be taken automatically the files directory in netrw is very helpful and much
+" easier than typing ":Ex".  Only stealing this keybinding at the moment
+" (definitely not as powerful as the original) as don't require the rest of
+" the plugin (currently).
+"
+nnoremap - :Ex<CR>
+
 " The following maps use the Leader key.
 "
 " Let us set the leader keys; backslash happens to be the default but setting
