@@ -56,10 +56,10 @@ end
 
 -- Use a loop to conveniently both setup defined servers
 -- and map buffer local keybindings when the language server attaches
-local servers = { "tsserver" }
-for _, lsp in ipairs(servers) do
-	lsp_config[lsp].setup { on_attach = on_attach, capabilities = capabilities }
-end
+lsp_config.tsserver.setup {
+  cmd = { "typescript-language-server", "--stdio", "--tsserver-path", "./node_modules/.bin/tsserver" },
+  on_attach = on_attach,
+}
 
 local system_name
 if vim.fn.has("mac") == 1 then
@@ -75,7 +75,6 @@ local sumneko_root_path = vim.fn.getenv("HOME").."/.local/bin/sumneko_lua"
 lsp_config.sumneko_lua.setup {
 	cmd = { sumneko_root_path .. "/bin/"..system_name.."/lua-language-server", "-E", sumneko_root_path .. "/main.lua"};
 	on_attach = on_attach,
-	capabilities = capabilities,
 	settings = {
 		Lua = {
 			runtime = {
