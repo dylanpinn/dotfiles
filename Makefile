@@ -5,6 +5,7 @@ XDG_DATA_HOME = $(HOME)/.local/share
 all: install-brew \
 	install-sh \
 	install-bash \
+	install-bin \
 	install-git \
 	install-emacs \
 	install-neovim \
@@ -19,6 +20,11 @@ all: install-brew \
 install-bash:
 	@echo "Installing bash..."
 	stow -v -R -t ~ bash
+
+install-bin:
+	@echo "Installing bin..."
+	@mkdir -p -- $(HOME)/.local/bin
+	stow -R -t $(HOME)/.local/bin/ bin
 
 install-brew:
 	@echo "Installing dependencies..."
