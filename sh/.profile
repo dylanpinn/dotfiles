@@ -7,8 +7,8 @@ export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_RUNTIME_DIR=/tmp
 
 # Add ~/.local/bin to PATH if it exists
-if [ -d "$HOME"/.local/bin ] ; then
-    PATH=$HOME/.local/bin:$PATH
+if [ -d "$HOME"/.local/bin ]; then
+  PATH=$HOME/.local/bin:$PATH
 fi
 
 # Load all supplementaty scripts in ~/.profile.d
