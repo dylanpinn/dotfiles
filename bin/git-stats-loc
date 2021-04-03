@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Print LOC for each commit of the Git repo.
 
