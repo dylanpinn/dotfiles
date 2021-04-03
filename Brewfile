@@ -32,6 +32,8 @@ brew "fd"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
@@ -52,6 +54,8 @@ brew "ripgrep"
 brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
+# Command-line interface for SQLite
+brew "sqlite"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Text interface for Git repositories
