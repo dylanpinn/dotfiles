@@ -28,9 +28,6 @@ export NVM_DIR="$XDG_DATA_HOME/nvm"
 # Move Wakatime config out of home directory.
 export WAKATIME_HOME="$HOME/.config/wakatime"
 
-# Add Doom Emacs to PATH.
-export PATH="$HOME/.emacs.d/bin:$PATH"
-
 # Install pyenv into XDG path.
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 

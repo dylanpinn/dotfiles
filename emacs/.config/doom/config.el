@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
 (setq user-full-name "Dylan Pinn"
-      user-mail-address "dylan.pinn@gmail.com")
+      user-mail-address "me@dylanpinn.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -26,11 +26,10 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-one)
-(setq doom-font (font-spec :family "Menlo" :size 16))
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/vaults/")
+(setq org-directory "~/org/")
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -53,35 +52,3 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-
-;; Enable Wakatime
-(global-wakatime-mode)
-(setq wakatime-cli-path "/usr/local/bin/wakatime")
-
-;;(setq org-capture-templates
-;;  `(("i" "Inbox" entry (file "~/vaults/inbox.org")
-;;      "* TODO %?\n Entered on: %u")))
-
-;; (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
-
-;; Setup JavaScript to NVM
-(add-hook 'js2-mode-hook 'nvm-use-for-buffer)
-(add-hook 'typescript-mode-hook 'nvm-use-for-buffer)
-
-;; Configure Magit Forge
-(use-package! forge
-  :config
-  (add-to-list 'forge-alist '("git.realestate.com.au" "git.realestate.com.au/api"
-                              "git.realestate.com.au" forge-github-repository)))
-(setq auth-sources '("~/.authinfo"))
-
-;; Load Ruby mode for Brewfile
-:(add-to-list 'auto-mode-alist '("Brewfile" . ruby-mode))
-
-(use-package! nvm
-  :commands (nvm-use nvm-use-for nvm--installed-versions))
-
-;; deft-mode
-(setq deft-directory "~/vaults"
-      deft-extensions '("org" "txt" "md")
-      deft-recursive t)
