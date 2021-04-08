@@ -9,8 +9,9 @@ return require('packer').startup(function(use)
   -- Color scheme
   use {'dracula/vim', as = 'dracula'}
 
-  -- Apply consisistent editor settings for a project.  Tracked in
-  -- a .editorconfig file.
+  -- Attempt to standardise indentation and other styling by reading
+  -- configuration values from a .editorconfig file if present.  This is loaded
+  -- on demand only if there is a .editorconfig file present at the :pwd path.
   use {'editorconfig/editorconfig-vim', opt = true, as = 'editorconfig'}
 
   -- Use treesitter to improve syntax highlighting.

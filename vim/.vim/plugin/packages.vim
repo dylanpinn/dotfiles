@@ -19,9 +19,8 @@ function! PackInit() abort
   call minpac#add('wakatime/vim-wakatime')
 
   " Attempt to standardise indentation and other styling by reading
-  " configuration values from a .editorconfig file if present.
-  " This is loaded on demand only if there is a .editorconfig file present at
-  " the :pwd path.
+  " configuration values from a .editorconfig file if present.  This is loaded
+  " on demand only if there is a .editorconfig file present at the :pwd path.
   call minpac#add('editorconfig/editorconfig-vim', {'type': 'opt', 'name': 'editorconfig'})
 
   " Improve JavaScript syntax highlighting to include modern (ES5+) features.
