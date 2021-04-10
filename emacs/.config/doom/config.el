@@ -55,9 +55,14 @@
 ;; they are implemented.
 
 ;; Integrate org-journal with org-roam by using it to create daily notes.
+(setq org-journal-enable-agenda-integration t)
 (use-package! org-journal
   :custom
-  (org-journal-date-prefix "#+title: ")
+  (org-journal-date-prefix "#+TITLE: ")
   (org-journal-file-format "%Y-%m-%d.org")
   (org-journal-dir "~/org/notes/daily/")
   (org-journal-date-format "%A, %d %B %Y"))
+
+(use-package! deft
+  :custom
+  (deft-directory "~/org/notes"))
