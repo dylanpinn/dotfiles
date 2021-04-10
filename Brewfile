@@ -164,6 +164,8 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   # Download YouTube videos from the command-line
   brew "youtube-dl"
 
+  # Compact TeX distribution as alternative to the full TeX Live / MacTeX
+  cask "basictex"
   # E-books management software
   cask "calibre"
   # Voice and text chat software
