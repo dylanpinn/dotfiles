@@ -91,6 +91,8 @@ cask "firefox-developer-edition"
 cask "google-chrome"
 # Free and open-source media player
 cask "iina"
+# Tool to optimize images to a smaller size
+cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
 # JetBrains tools manager
@@ -138,7 +140,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "figma"
   cask "firefox"
   cask "google-chrome-dev"
-  cask "imageoptim"
   # Password manager
   cask "lastpass"
   cask "microsoft-edge"
