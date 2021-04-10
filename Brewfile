@@ -157,6 +157,8 @@ end
 if ENV["HOMEBREW_PROFILE"] == "personal"
   # Play, record, convert, and stream audio and video
   brew "ffmpeg"
+  # Swiss-army knife of markup format conversion
+  brew "pandoc"
   # Internet file retriever
   brew "wget"
   # Download YouTube videos from the command-line
