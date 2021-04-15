@@ -2,7 +2,3 @@
 node_modules/
 *.log
 Brewfile.lock.json
-
-vim/.vim/backups/
-vim/.vim/pack/
-vim/.vim/viminfo

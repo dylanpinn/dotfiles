@@ -32,6 +32,8 @@ brew "fd"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
@@ -52,6 +54,8 @@ brew "ripgrep"
 brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
+# Command-line interface for SQLite
+brew "sqlite"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Text interface for Git repositories
@@ -87,6 +91,8 @@ cask "firefox-developer-edition"
 cask "google-chrome"
 # Free and open-source media player
 cask "iina"
+# Tool to optimize images to a smaller size
+cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
 # JetBrains tools manager
@@ -125,10 +131,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   brew "cowbell/stuff/rea-slip-utils"
   # Cross-platform program for developing Haskell projects
   brew "haskell-stack"
-  # CLI for Node.js style checker and lint tool for Markdown files
-  brew "markdownlint-cli"
-  # Linter for prose
-  brew "proselint"
   # Build tool for Scala projects
   brew "sbt"
 
@@ -138,7 +140,6 @@ if ENV["HOMEBREW_PROFILE"] == "work"
   cask "figma"
   cask "firefox"
   cask "google-chrome-dev"
-  cask "imageoptim"
   # Password manager
   cask "lastpass"
   cask "microsoft-edge"
@@ -156,11 +157,15 @@ end
 if ENV["HOMEBREW_PROFILE"] == "personal"
   # Play, record, convert, and stream audio and video
   brew "ffmpeg"
+  # Swiss-army knife of markup format conversion
+  brew "pandoc"
   # Internet file retriever
   brew "wget"
   # Download YouTube videos from the command-line
   brew "youtube-dl"
 
+  # Compact TeX distribution as alternative to the full TeX Live / MacTeX
+  cask "basictex"
   # E-books management software
   cask "calibre"
   # Voice and text chat software
@@ -186,5 +191,3 @@ if ENV["HOMEBREW_PROFILE"] == "personal"
   mas "Messenger", id: 1480068668
   mas "Numbers", id: 409203825
 end
-
-# vim: set syntax=ruby:

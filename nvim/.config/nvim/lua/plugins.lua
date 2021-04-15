@@ -1,25 +1,27 @@
-require('packer').startup(function(use)
-  -- Package manager, loaded optionally when required to update.
+-- luacheck: globals vim
+
+vim.cmd [[packadd packer.nvim]]
+
+return require('packer').startup(function(use)
+  -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
-  -- Minimal vim completion plugin, <Tab> can cycles built in completion
-  -- methods.
-  use {'ajh17/VimCompletesMe'}
-
-  -- Simple dark theme.
+  -- Color scheme
   use {'dracula/vim', as = 'dracula'}
+
+  -- Attempt to standardise indentation and other styling by reading
+  -- configuration values from a .editorconfig file if present.  This is loaded
+  -- on demand only if there is a .editorconfig file present at the :pwd path.
+  use {'editorconfig/editorconfig-vim', opt = true, as = 'editorconfig'}
+
+  -- Use treesitter to improve syntax highlighting.
+  use {'nvim-treesitter/nvim-treesitter'}
+  require('settings/treesitter')
 
   -- Configure and use the built in LSP server for Neovim.
   use {'neovim/nvim-lspconfig'}
+  require('settings/lspconfig')
 
-  -- Add basic snippet support.
-  use {'norcalli/snippets.nvim'}
-  use {'nvim-treesitter/nvim-treesitter'}
-  -- use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-  use {'tpope/vim-dispatch'}
-  use {'tpope/vim-projectionist'}
-  use {'tpope/vim-surround'}
-  use {'tpope/vim-vinegar'}
+  -- Track development effort across projects.
   use {'wakatime/vim-wakatime'}
 end)
-

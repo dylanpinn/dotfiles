@@ -2,4 +2,4 @@
 
 set -e
 
-vint vim/.vimrc vim
+vint vim/.vim

@@ -5,6 +5,7 @@ XDG_DATA_HOME = $(HOME)/.local/share
 all: install-brew \
 	install-sh \
 	install-bash \
+	install-bin \
 	install-git \
 	install-emacs \
 	install-neovim \
@@ -12,12 +13,18 @@ all: install-brew \
 	install-nvm \
 	install-python-pkgs \
 	install-vim \
+	install-terminfo \
 	install-vint \
 	install-yarn
 
 install-bash:
 	@echo "Installing bash..."
 	stow -v -R -t ~ bash
+
+install-bin:
+	@echo "Installing bin..."
+	@mkdir -p -- $(HOME)/.local/bin
+	stow -R -t $(HOME)/.local/bin/ bin
 
 install-brew:
 	@echo "Installing dependencies..."
@@ -35,7 +42,10 @@ install-git:
 
 install-neovim:
 	@echo "Installing neovim..."
-	stow -v -R -t ~ nvim
+	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,plugin}
+	stow -v -t ~ nvim
+	stow -v -t $(XDG_CONFIG_HOME)/nvim/ vim-shared
+	./install/nvim.sh
 
 install-npm: install-sh
 	@echo "Installing npm..."
@@ -54,10 +64,16 @@ install-sh:
 	mkdir -p -- ~/.profile.d
 	stow -v -R -t ~ sh
 
+install-terminfo:
+	@echo "Installing terminfo..."
+	tic terminfo/xterm-256color-italic.terminfo
+
 install-vim:
 	@echo "Installing vim..."
-	mkdir -p ~/.vim/{backups,swaps,undo}
-	stow -v -R -t ~ vim
+	@mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
+	@mkdir -p -- ~/.vim/plugin
+	stow -t ~ vim
+	stow -t ~/.vim/ vim-shared
 	./install/vim.sh
 
 install-vint:
@@ -66,4 +82,5 @@ install-vint:
 
 install-yarn: install-sh
 	@echo "Installing yarn..."
+	mkdir -p -- $(XDG_CONFIG_HOME)/yarn
 	stow -v -R -t ~ yarn
