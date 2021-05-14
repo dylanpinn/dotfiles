@@ -84,7 +84,7 @@ cask "dash"
 # App to build and share containerized applications and microservices
 cask "docker"
 # App for note taking, organizing, task lists, and archiving
-cask "evernote"
+# cask "evernote"
 # Web browser
 cask "firefox-developer-edition"
 # Web browser
@@ -100,7 +100,7 @@ cask "jetbrains-toolbox"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
+# cask "obsidian"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
