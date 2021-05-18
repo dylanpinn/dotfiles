@@ -14,7 +14,7 @@ endif
 let s:cpo_save = &cpoptions
 set cpoptions&vim
 
-CompilerSet makeprg=npx\ eslint\ -f\ unix
+CompilerSet makeprg=npx\ eslint\ -f\ unix\ --ext\ .ts,.js,.tsx,.jsx
 
 " filename:252:3: Error message goes here
 CompilerSet errorformat=%f:%l:%c:\ %#%m
