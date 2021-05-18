@@ -15,6 +15,7 @@ all: install-brew \
 	install-python-pkgs \
 	install-vim \
 	install-terminfo \
+	install-tree-sitter \
 	install-vint \
 	install-yarn
 
@@ -72,6 +73,10 @@ install-sh:
 install-terminfo:
 	@echo "Installing terminfo..."
 	tic terminfo/xterm-256color-italic.terminfo
+
+install-tree-sitter: install-sh
+	@echo "Installing tree-sitter..."
+	stow -v -R -t ~ tree-sitter
 
 install-vim:
 	@echo "Installing vim..."
