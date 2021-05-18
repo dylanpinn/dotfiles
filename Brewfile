@@ -34,8 +34,8 @@ tap "homebrew/cask"
 # brew "htop"
 # # Lightweight and flexible command-line JSON processor
 # brew "jq"
-# # Mac App Store command-line interface
-# brew "mas"
+# Mac App Store command-line interface
+brew "mas"
 # # Python version management
 # brew "pyenv"
 # # Pyenv plugin to manage virtualenv
@@ -76,7 +76,7 @@ cask "1password"
 # 
 # # App Store
 # mas "Drafts", id: 1435957248
-# mas "Things", id: 904280696
+mas "Things", id: 904280696
 # 
 # # Custom per environment/workstation.
 # 
