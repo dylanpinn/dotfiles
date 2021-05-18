@@ -6,6 +6,7 @@ all: install-brew \
 	install-sh \
 	install-bash \
 	install-bin \
+	install-docker \
 	install-git \
 	install-emacs \
 	install-neovim \
@@ -30,6 +31,10 @@ install-brew:
 	@echo "Installing dependencies..."
 	brew update
 	brew bundle --verbose
+
+install-docker: install-sh
+	@echo "Installing docker..."
+	stow -v -R -t ~ docker
 
 install-emacs:
 	@echo "Installing emacs..."
