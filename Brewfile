@@ -60,7 +60,7 @@ brew "mas"
 cask "1password"
 # cask "adoptopenjdk11"
 # cask "alfred"
-# cask "appcleaner"
+cask "appcleaner"
 # cask "dash"
 # cask "docker"
 # cask "evernote"
@@ -73,11 +73,12 @@ cask "1password"
 # cask "spotify"
 # cask "xmind-zen"
 # cask "zoom"
-# 
-# # App Store
+
+# App Store
 # mas "Drafts", id: 1435957248
 mas "Things", id: 904280696
-# 
+mas "1Blocker: Ad Blocker & Privacy", id: 1365531024
+
 # # Custom per environment/workstation.
 # 
 # if ENV["HOMEBREW_PROFILE"] == "work"
