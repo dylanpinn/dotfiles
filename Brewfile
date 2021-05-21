@@ -56,8 +56,8 @@ brew "bash"
 # brew "shfmt"
 # # Command-line interface for SQLite
 # brew "sqlite"
-# # Organize software neatly under a single directory tree (e.g. /usr/local)
-# brew "stow"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # # Text interface for Git repositories
 # brew "tig"
 # # Terminal multiplexer
