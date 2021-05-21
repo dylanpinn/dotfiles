@@ -5,10 +5,10 @@ XDG_DATA_HOME = $(HOME)/.local/share
 all: install-brew \
 	install-sh \
 	install-bash \
+	install-git \
 	install-nvm
 # 	install-bin \
 # 	install-docker \
-# 	install-git \
 # 	install-emacs \
 # 	install-neovim \
 # 	install-npm \
