@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-NVM_DIR="${XDG_DATA_HOME:$HOME/.local/share}/nvm"
+XDG_DATA_HOME="$HOME"/.local/share
+NVM_DIR="${XDG_DATA_HOME}/nvm"
 # Check if NVM has been installed
 if [ ! -d "$NVM_DIR" ]; then
   # If not install it
