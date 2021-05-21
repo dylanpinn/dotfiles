@@ -3,6 +3,7 @@ XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
 all: install-brew \
+	install-nvm
 # 	install-sh \
 # 	install-bash \
 # 	install-bin \
@@ -11,7 +12,6 @@ all: install-brew \
 # 	install-emacs \
 # 	install-neovim \
 # 	install-npm \
-	install-nvm \
 # 	install-python-pkgs \
 # 	install-vim \
 # 	install-terminfo \
@@ -57,7 +57,7 @@ install-npm: install-sh
 	@echo "Installing npm..."
 	stow -v -R -t ~ npm
 
-install-nvm: install-sh
+install-nvm:
 	@echo "Installing nvm..."
 	./install/nvm.sh
 
