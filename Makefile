@@ -3,9 +3,9 @@ XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
 all: install-brew \
+ 	install-sh \
+ 	install-bash \
 	install-nvm
-# 	install-sh \
-# 	install-bash \
 # 	install-bin \
 # 	install-docker \
 # 	install-git \
@@ -21,6 +21,7 @@ all: install-brew \
 
 install-bash:
 	@echo "Installing bash..."
+	./install/bash.sh
 	stow -v -R -t ~ bash
 
 install-bin:

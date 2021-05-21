@@ -10,8 +10,8 @@
 # 
 # # brew
 # 
-# # Bourne-Again SHell, a UNIX command interpreter
-# brew "bash"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # # Programmable completion for Bash 4.2+
 # brew "bash-completion@2"
 # # Bash Automated Testing System
