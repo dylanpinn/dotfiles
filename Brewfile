@@ -12,8 +12,8 @@
 # 
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# # Programmable completion for Bash 4.2+
-# brew "bash-completion@2"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
 # # Bash Automated Testing System
 # brew "bats-core"
 # # Reimplementation of ctags(1)
@@ -30,8 +30,8 @@ brew "bash"
 # brew "fd"
 # # GitHub command-line tool
 # brew "gh"
-# # Distributed revision control system
-# brew "git"
+# Distributed revision control system
+brew "git"
 # # Graph visualization software from AT&T and Bell Labs
 # brew "graphviz"
 # # Improved top (interactive process viewer)
