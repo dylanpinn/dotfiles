@@ -6,14 +6,14 @@ all: install-brew \
 	install-sh \
 	install-bash \
 	install-git \
-	install-nvm
+	install-nvm \
+	install-vim
 # 	install-bin \
 # 	install-docker \
 # 	install-emacs \
 # 	install-neovim \
 # 	install-npm \
 # 	install-python-pkgs \
-# 	install-vim \
 # 	install-terminfo \
 # 	install-tree-sitter \
 # 	install-vint \

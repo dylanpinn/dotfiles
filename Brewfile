@@ -62,8 +62,8 @@ brew "stow"
 # brew "tig"
 # # Terminal multiplexer
 # brew "tmux"
-# # Vi 'workalike' with many additional features
-# brew "vim"
+# Vi 'workalike' with many additional features
+brew "vim"
 # # Command-line interface to the WakaTime api
 # brew "wakatime-cli"
 # # Watch files and take action when they change
