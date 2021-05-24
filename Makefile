@@ -61,6 +61,7 @@ install-npm: install-sh
 
 install-nvm:
 	@echo "Installing nvm..."
+	stow -v -R -t ~ nvm
 	./install/nvm.sh
 
 install-python-pkgs:
