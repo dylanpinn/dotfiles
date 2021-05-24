@@ -1,6 +1,7 @@
 tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Official Amazon AWS command-line interface
 brew "awscli"
@@ -20,6 +21,8 @@ brew "vim"
 brew "cowbell/stuff/rea-as"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Prebuilt OpenJDK binaries
+cask "adoptopenjdk8"
 # Application launcher and productivity software
 cask "alfred"
 # App to build and share containerized applications and microservices
@@ -28,3 +31,7 @@ cask "docker"
 cask "jetbrains-toolbox"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Team communication and collaboration software
+cask "slack"
+# Video communication and virtual meeting platform
+cask "zoom"
