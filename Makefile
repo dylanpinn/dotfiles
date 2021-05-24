@@ -53,6 +53,6 @@ install-vint:
 	stow -v -R -t ~ vint
 
 install-wakatime: install-sh
- 	@echo "Installing wakatime..."
- 	@mkdir -p -- $(XDG_CONFIG_HOME)/wakatime
- 	stow -v -R -t ~ wakatime
+	@echo "Installing wakatime..."
+	@mkdir -p -- $(XDG_CONFIG_HOME)/wakatime
+	stow -v -R -t ~ wakatime
