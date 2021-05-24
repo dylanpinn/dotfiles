@@ -2,6 +2,8 @@ tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
