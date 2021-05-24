@@ -7,12 +7,12 @@ all: install-brew \
 	install-bash \
 	install-docker \
 	install-git \
+	install-neovim \
 	install-nvm \
 	install-vim \
 	install-wakatime
 # 	install-bin \
 # 	install-emacs \
-# 	install-neovim \
 # 	install-npm \
 # 	install-python-pkgs \
 # 	install-terminfo \
