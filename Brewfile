@@ -1,3 +1,4 @@
+tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -11,5 +12,7 @@ brew "git"
 brew "stow"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Authenticate to REA AWS accounts
+brew "cowbell/stuff/rea-as"
 # App to build and share containerized applications and microservices
 cask "docker"
