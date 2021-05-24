@@ -8,6 +8,8 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
