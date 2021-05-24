@@ -13,6 +13,8 @@ brew "bash-completion@2"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim", args: ["HEAD"]
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Vi 'workalike' with many additional features
