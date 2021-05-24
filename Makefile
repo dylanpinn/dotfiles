@@ -7,7 +7,8 @@ all: install-brew \
 	install-bash \
 	install-git \
 	install-nvm \
-	install-vim
+	install-vim \
+	install-wakatime
 
 install-bash:
 	@echo "Installing bash..."
