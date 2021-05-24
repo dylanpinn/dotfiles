@@ -18,3 +18,5 @@ brew "vim"
 brew "cowbell/stuff/rea-as"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
