@@ -8,7 +8,8 @@ all: install-brew \
 	install-docker \
 	install-git \
 	install-nvm \
-	install-vim
+	install-vim \
+	install-wakatime
 # 	install-bin \
 # 	install-emacs \
 # 	install-neovim \
@@ -90,6 +91,11 @@ install-vim:
 install-vint:
 	@echo "Installing vint..."
 	stow -v -R -t ~ vint
+
+install-wakatime: install-sh
+	@echo "Installing wakatime..."
+	@mkdir -p -- $(XDG_CONFIG_HOME)/wakatime
+	stow -v -R -t ~ wakatime
 
 install-yarn: install-sh
 	@echo "Installing yarn..."
