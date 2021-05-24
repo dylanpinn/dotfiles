@@ -20,6 +20,8 @@ brew "vim"
 brew "cowbell/stuff/rea-as"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Application launcher and productivity software
+cask "alfred"
 # App to build and share containerized applications and microservices
 cask "docker"
 # JetBrains tools manager
