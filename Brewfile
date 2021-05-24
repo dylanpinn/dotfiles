@@ -7,5 +7,4 @@ brew "mas"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
-mas "1Blocker", id: 1365531024
 mas "Things", id: 904280696
