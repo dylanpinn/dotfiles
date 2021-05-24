@@ -19,4 +19,6 @@ brew "vim"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 mas "Things", id: 904280696
