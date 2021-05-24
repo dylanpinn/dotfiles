@@ -2,17 +2,12 @@ XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
-all: install-brew
-
-# all: install-brew \
-# 	install-sh \
-# 	install-bash \
-# 	install-git \
-# 	install-emacs \
-# 	install-nvm \
-# 	install-python-pkgs \
-# 	install-vim \
-# 	install-vint
+all: install-brew \
+	install-sh \
+	install-bash \
+	install-git \
+	install-nvm \
+	install-vim
 
 install-bash:
 	@echo "Installing bash..."
