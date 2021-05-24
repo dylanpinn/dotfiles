@@ -1,5 +1,5 @@
 # # Taps
-# 
+#
 # tap "adoptopenjdk/openjdk"
 # tap "d12frosted/emacs-plus"
 # tap "homebrew/bundle"
@@ -7,9 +7,9 @@
 # tap "homebrew/cask-versions"
 # tap "homebrew/core"
 # tap "thoughtbot/formulae"
-# 
+#
 # # brew
-# 
+#
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -68,9 +68,9 @@ brew "vim"
 # brew "wakatime-cli"
 # # Watch files and take action when they change
 # brew "watchman"
-# 
+#
 # # Casks
-# 
+#
 # # Password manager that keeps all passwords secure behind one password
 # cask "1password"
 # # AdoptOpenJDK OpenJDK (Java) Development Kit
@@ -81,8 +81,8 @@ brew "vim"
 # cask "appcleaner"
 # # API documentation browser and code snippet manager
 # cask "dash"
-# # App to build and share containerized applications and microservices
-# cask "docker"
+# App to build and share containerized applications and microservices
+cask "docker"
 # # App for note taking, organizing, task lists, and archiving
 # # cask "evernote"
 # # Web browser
@@ -111,17 +111,17 @@ brew "vim"
 # cask "xmind-zen"
 # # Video communication and virtual meeting platform
 # cask "zoom"
-# 
+#
 # # App Store
 # mas "Drafts", id: 1435957248
 # mas "Microsoft To Do", id: 1274495053
 # mas "Things", id: 904280696
-# 
+#
 # # Custom per environment/workstation.
-# 
+#
 # if ENV["HOMEBREW_PROFILE"] == "work"
 #   tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
-# 
+#
 #   # Official Amazon AWS command-line interface
 #   brew "awscli"
 #   brew "coursier/formulas/coursier"
@@ -133,7 +133,7 @@ brew "vim"
 #   brew "haskell-stack"
 #   # Build tool for Scala projects
 #   brew "sbt"
-# 
+#
 #   cask "homebrew/cask-versions/adoptopenjdk8"
 #   cask "dbeaver-community"
 #   cask "browserstacklocal"
@@ -149,11 +149,11 @@ brew "vim"
 #   cask "sequel-pro"
 #   cask "tableplus"
 #   cask "visual-studio-code"
-# 
+#
 #   mas "Keynote", id: 409183694
 #   mas "Slack", id: 803453959
 # end
-# 
+#
 # if ENV["HOMEBREW_PROFILE"] == "personal"
 #   # Play, record, convert, and stream audio and video
 #   brew "ffmpeg"
@@ -163,7 +163,7 @@ brew "vim"
 #   brew "wget"
 #   # Download YouTube videos from the command-line
 #   brew "youtube-dl"
-# 
+#
 #   # Compact TeX distribution as alternative to the full TeX Live / MacTeX
 #   cask "basictex"
 #   # E-books management software
@@ -183,7 +183,7 @@ brew "vim"
 #   cask "whatsapp"
 #   # Collect, organize, cite, and share research sources
 #   cask "zotero"
-# 
+#
 #   mas "Amphetamine", id: 937984704
 #   mas "Instapaper", id: 288545208
 #   mas "Instapaper Save", id: 1481302432
