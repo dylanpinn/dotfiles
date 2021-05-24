@@ -16,7 +16,11 @@ brew "stow"
 brew "vim"
 # Authenticate to REA AWS accounts
 brew "cowbell/stuff/rea-as"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
 # App to build and share containerized applications and microservices
 cask "docker"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
