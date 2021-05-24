@@ -1,3 +1,4 @@
+tap "coursier/formulas"
 tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -19,6 +20,8 @@ brew "neovim", args: ["HEAD"]
 brew "stow"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Launcher for Coursier
+brew "coursier/formulas/coursier"
 # Authenticate to REA AWS accounts
 brew "cowbell/stuff/rea-as"
 # Password manager that keeps all passwords secure behind one password
