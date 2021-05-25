@@ -4,6 +4,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "saadparwaiz1/personal"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -24,6 +25,8 @@ brew "vim"
 brew "coursier/formulas/coursier"
 # Authenticate to REA AWS accounts
 brew "cowbell/stuff/rea-as"
+# Language Server For Lua
+brew "saadparwaiz1/personal/lua-language-server"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Prebuilt OpenJDK binaries

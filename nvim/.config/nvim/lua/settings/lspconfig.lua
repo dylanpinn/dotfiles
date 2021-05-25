@@ -63,19 +63,10 @@ lsp_config.tsserver.setup {
   on_attach = on_attach,
 }
 
-local system_name
-if vim.fn.has("mac") == 1 then
-  system_name = "macOS"
-elseif vim.fn.has("unix") == 1 then
-  system_name = "Linux"
-elseif vim.fn.has('win32') == 1 then
-  system_name = "Windows"
-else
-  print("Unsupported system for sumneko")
-end
-local sumneko_root_path = vim.fn.getenv("HOME").."/.local/bin/sumneko_lua"
+-- TODO: Replace this with brew --prefix lua-language-server
+local sumneko_root_path = "/usr/local/opt/lua-language-server"
 lsp_config.sumneko_lua.setup {
-  cmd = { sumneko_root_path .. "/bin/"..system_name.."/lua-language-server", "-E", sumneko_root_path .. "/main.lua"};
+  cmd = { 'lua-langserver', "-E", sumneko_root_path .. "/main.lua"};
   on_attach = on_attach,
   settings = {
     Lua = {
