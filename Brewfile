@@ -15,6 +15,8 @@ brew "bash-completion@2"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Postgres C API library
+brew "libpq", link: true
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
 # Organize software neatly under a single directory tree (e.g. /usr/local)
