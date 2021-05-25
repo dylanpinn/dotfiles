@@ -90,3 +90,16 @@ lsp_config.sumneko_lua.setup {
     },
   },
 }
+
+local shared_diagnostic_settings = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, { virtual_text = false })
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+Metals_config = require("metals").bare_config
+Metals_config.settings = {
+  showImplicitArguments = true,
+  showInferredType = true,
+}
+
+Metals_config.init_options.statusBarProvider = "on"
+Metals_config.handlers["textDocument/publishDiagnostics"] = shared_diagnostic_settings
+Metals_config.capabilities = capabilities

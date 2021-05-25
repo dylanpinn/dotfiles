@@ -51,6 +51,7 @@ install-git:
 install-neovim:
 	@echo "Installing neovim..."
 	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,plugin}
+	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/after/ftplugin
 	stow -v -t ~ nvim
 	stow -v -t $(XDG_CONFIG_HOME)/nvim/ vim-shared
 	./install/nvim.sh
