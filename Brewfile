@@ -1,3 +1,4 @@
+tap "adoptopenjdk/openjdk"
 tap "coursier/formulas"
 tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
@@ -37,6 +38,8 @@ brew "cowbell/stuff/rea-as"
 brew "saadparwaiz1/personal/lua-language-server"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# AdoptOpenJDK OpenJDK (Java) Development Kit
+cask "adoptopenjdk11"
 # Prebuilt OpenJDK binaries
 cask "adoptopenjdk8"
 # Application launcher and productivity software
