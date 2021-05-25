@@ -11,7 +11,6 @@ install-shared: install-brew \
 	install-bash \
 	install-git \
 	install-nvm \
-	install-postgres \
 	install-vim \
 	install-wakatime
 
