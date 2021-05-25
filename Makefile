@@ -7,9 +7,12 @@ all: install-brew \
 	install-bash \
 	install-docker \
 	install-git \
+	install-jenv \
 	install-neovim \
 	install-nvm \
 	install-postgres \
+	install-sbt \
+ 	install-tree-sitter \
 	install-vim \
 	install-wakatime
 # 	install-bin \
@@ -17,7 +20,6 @@ all: install-brew \
 # 	install-npm \
 # 	install-python-pkgs \
 # 	install-terminfo \
-# 	install-tree-sitter \
 # 	install-vint \
 # 	install-yarn
 
@@ -49,6 +51,10 @@ install-git:
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	stow -v -R -t ~ git
 
+install-jenv:
+	@echo "Installing jenv..."
+	stow -v -R -t ~ jenv
+
 install-neovim:
 	@echo "Installing neovim..."
 	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,plugin}
@@ -74,6 +80,10 @@ install-postgres:
 install-python-pkgs:
 	@echo "Installing Python packages..."
 	pip3 install -r requirements.txt
+
+install-sbt:
+	@echo "Installing sbt..."
+	stow -v -R -t ~ sbt
 
 install-sh:
 	@echo "Installing sh..."
