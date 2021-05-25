@@ -19,6 +19,8 @@ brew "git"
 brew "neovim", args: ["HEAD"]
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Terminal multiplexer
+brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Launcher for Coursier
