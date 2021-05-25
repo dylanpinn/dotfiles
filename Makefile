@@ -9,6 +9,7 @@ all: install-brew \
 	install-git \
 	install-neovim \
 	install-nvm \
+	install-postgres \
 	install-vim \
 	install-wakatime
 # 	install-bin \
@@ -64,6 +65,11 @@ install-nvm:
 	@echo "Installing nvm..."
 	stow -v -R -t ~ nvm
 	./install/nvm.sh
+
+install-postgres:
+	@echo "Installing postgres..."
+	stow -v -R -t ~ postgres
+	mkdir -p $(XDG_CONFIG_HOME)/pg && mkdir -p $(XDG_CACHE_HOME)/pg
 
 install-python-pkgs:
 	@echo "Installing Python packages..."
