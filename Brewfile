@@ -48,6 +48,8 @@ cask "alfred"
 cask "docker"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# App to write, plan, collaborate, and get organized
+cask "notion"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
