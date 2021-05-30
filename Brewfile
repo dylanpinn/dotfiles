@@ -21,4 +21,6 @@ cask "1password"
 cask "appcleaner"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Video communication and virtual meeting platform
+cask "zoom"
 mas "Things", id: 904280696
