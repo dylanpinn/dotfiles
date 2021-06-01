@@ -6,23 +6,30 @@ My dotfiles.
 
 ## Includes
 
-- Bash
-- Emacs
-- Git
-- Neovim
-- Vim
+...
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your
-local machine for development and testing purposes.
+...
 
 ### Prerequisites
 
-* [`brew`](https://brew.sh)
+- [`brew`](https://brew.sh)
 
 ### Installing
 
-```bash
-./install.sh
+...
+
+### Setup git
+
+Copy the following to a new file at `~/.config/git/config`.
+
+```gitconfig
+[include]
+  path = config.user
+
+[user]
+	name = Dylan Pinn
+	email = email@example.com
 ```
+
