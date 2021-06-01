@@ -23,6 +23,9 @@ all: install-brew \
 # 	install-vint \
 # 	install-yarn
 
+brew-dump:
+	brew bundle dump --force --describe
+
 install-bash:
 	@echo "Installing bash..."
 	./install/bash.sh
