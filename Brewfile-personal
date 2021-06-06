@@ -19,6 +19,8 @@ brew "vim"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+# App to write, plan, collaborate, and get organized
+cask "notion"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video communication and virtual meeting platform
