@@ -2,29 +2,28 @@ XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
-all: install-brew \
-	install-sh \
-	install-bash \
+all: install-shared
+
+brew-dump:
+	brew bundle dump --force --describe
+
+install-shared: install-brew \
+		install-sh \
+		install-bash \
+		install-git \
+		install-vim \
+		install-wakatime
+
+install-personal: install-shared
+
+install-work: install-shared \
 	install-docker \
-	install-git \
 	install-jenv \
 	install-neovim \
 	install-nvm \
 	install-postgres \
 	install-sbt \
- 	install-tree-sitter \
-	install-vim \
-	install-wakatime
-# 	install-bin \
-# 	install-emacs \
-# 	install-npm \
-# 	install-python-pkgs \
-# 	install-terminfo \
-# 	install-vint \
-# 	install-yarn
-
-brew-dump:
-	brew bundle dump --force --describe
+	install-yarn
 
 install-bash:
 	@echo "Installing bash..."
@@ -58,7 +57,7 @@ install-jenv:
 	@echo "Installing jenv..."
 	stow -v -R -t ~ jenv
 
-install-neovim:
+install-neovim: install-tree-sitter
 	@echo "Installing neovim..."
 	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,plugin}
 	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/after/ftplugin
