@@ -20,6 +20,8 @@ brew "git"
 brew "jenv"
 # Postgres C API library
 brew "libpq", link: true
+# Mac App Store command-line interface
+brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
 # Build tool for Scala projects
@@ -56,3 +58,4 @@ cask "rectangle"
 cask "slack"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Keynote", id: 409183694
