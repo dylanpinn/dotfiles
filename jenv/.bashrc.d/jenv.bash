@@ -5,4 +5,3 @@ function jenv() {
   eval "$(command jenv init -)"
   jenv "$@"
 }
-
