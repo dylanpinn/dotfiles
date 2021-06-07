@@ -29,7 +29,7 @@ Copy the following to a new file at `~/.config/git/config`.
   path = config.user
 
 [user]
-	name = Dylan Pinn
-	email = email@example.com
+  name = Dylan Pinn
+  email = email@example.com
 ```
 
