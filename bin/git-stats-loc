@@ -1,6 +1,8 @@
 #!/bin/sh
 #
 # Print LOC for each commit of the Git repo.
+# Output
+# LOC SHA Commit Message
 
 set -e
 
