@@ -120,4 +120,5 @@ install-wakatime: install-sh
 install-yarn: install-sh
 	@echo "Installing yarn..."
 	mkdir -p -- $(XDG_CONFIG_HOME)/yarn
+	touch $(XDG_CONFIG_HOME)/yarn/config
 	stow -v -R -t ~ yarn
