@@ -34,6 +34,8 @@ cask "appcleaner"
 cask "notion"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Video game digital distribution service
+cask "steam"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Things", id: 904280696
