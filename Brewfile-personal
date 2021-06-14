@@ -5,6 +5,8 @@ tap "homebrew/core"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -15,6 +17,8 @@ brew "mas"
 brew "stow"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application uninstaller
