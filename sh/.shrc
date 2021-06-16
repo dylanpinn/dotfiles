@@ -12,6 +12,7 @@ fi
 # like bash will have their own functions in addition to these
 for sh in "$HOME"/.shrc.d/*.sh; do
   [ -e "$sh" ] || continue
+  # shellcheck source=/dev/null
   . "$sh"
 done
 unset -v sh
