@@ -65,3 +65,4 @@ cask "slack"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Keynote", id: 409183694
+mas "Wipr", id: 1320666476
