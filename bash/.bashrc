@@ -5,8 +5,9 @@
 
 # If ENV is set, source it to get all the POSIX-compatible interactive stuff;
 # we should be able to do this even if we're running a truly ancient Bash
-if [ -n "$ENV" ] ; then
-    . "$ENV"
+if [ -n "$ENV" ]; then
+  # shellcheck source=/dev/null
+  . "$ENV"
 fi
 
 # Load Bash-specific startup files
