@@ -18,3 +18,9 @@ for sh in "$HOME"/.profile.d/*.sh; do
   . "$sh"
 done
 unset -v sh
+
+# If ~/.shinit exists, set ENV to that
+if [ -f "$HOME"/.shinit ]; then
+  ENV=$HOME/.shinit
+  export ENV
+fi

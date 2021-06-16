@@ -3,6 +3,12 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# If ENV is set, source it to get all the POSIX-compatible interactive stuff;
+# we should be able to do this even if we're running a truly ancient Bash
+if [ -n "$ENV" ] ; then
+    . "$ENV"
+fi
+
 # Load Bash-specific startup files
 for bash in "$HOME"/.bashrc.d/*.bash; do
   [[ -e $bash ]] || continue
