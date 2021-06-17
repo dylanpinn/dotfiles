@@ -24,6 +24,7 @@ install-work: install-shared \
 	install-postgres \
 	install-sbt \
 	install-yarn
+	stow -v -R -t ~ work
 
 install-bash: install-sh
 	@echo "Installing bash..."
