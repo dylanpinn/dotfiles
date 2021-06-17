@@ -3,7 +3,6 @@ tap "coursier/formulas"
 tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "saadparwaiz1/personal"
 # Official Amazon AWS command-line interface
@@ -48,7 +47,7 @@ brew "saadparwaiz1/personal/lua-language-server"
 cask "1password"
 # AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk11"
-# Prebuilt OpenJDK binaries
+# AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk8"
 # Application launcher and productivity software
 cask "alfred"
@@ -60,6 +59,10 @@ cask "jetbrains-toolbox"
 cask "notion"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Team communication and collaboration software
-# cask "slack"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Microsoft To Do", id: 1274495053
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Wipr", id: 1320666476
