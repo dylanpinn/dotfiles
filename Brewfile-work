@@ -61,8 +61,5 @@ cask "notion"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Team communication and collaboration software
-cask "slack"
-# Video communication and virtual meeting platform
-cask "zoom"
-mas "Keynote", id: 409183694
+# cask "slack"
 mas "Wipr", id: 1320666476
