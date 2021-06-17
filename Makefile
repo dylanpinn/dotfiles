@@ -25,9 +25,8 @@ install-work: install-shared \
 	install-sbt \
 	install-yarn
 
-install-bash:
+install-bash: install-sh
 	@echo "Installing bash..."
-	./install/bash.sh
 	stow -v -R -t ~ bash
 
 install-bin:
