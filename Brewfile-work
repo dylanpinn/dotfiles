@@ -37,6 +37,8 @@ brew "stow"
 brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Watch files and take action when they change
+brew "watchman"
 # Launcher for Coursier
 brew "coursier/formulas/coursier"
 # Authenticate to REA AWS accounts
