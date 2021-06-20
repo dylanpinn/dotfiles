@@ -61,8 +61,12 @@ cask "docker"
 cask "jetbrains-toolbox"
 # App to write, plan, collaborate, and get organized
 cask "notion"
+# Podcast platform
+cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Music streaming service
+cask "spotify"
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
