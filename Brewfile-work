@@ -57,6 +57,8 @@ cask "adoptopenjdk8"
 cask "alfred"
 # App to build and share containerized applications and microservices
 cask "docker"
+# HTTP and GraphQL Client
+cask "insomnia"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # App to write, plan, collaborate, and get organized
