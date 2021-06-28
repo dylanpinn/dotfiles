@@ -3,6 +3,7 @@ tap "coursier/formulas"
 tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "saadparwaiz1/personal"
 # Official Amazon AWS command-line interface
@@ -51,12 +52,16 @@ brew "saadparwaiz1/personal/lua-language-server"
 cask "1password"
 # AdoptOpenJDK OpenJDK (Java) Development Kit
 cask "adoptopenjdk11"
-# AdoptOpenJDK OpenJDK (Java) Development Kit
+# Prebuilt OpenJDK binaries
 cask "adoptopenjdk8"
 # Application launcher and productivity software
 cask "alfred"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Web browser
+cask "firefox-developer-edition"
+# Web browser
+cask "google-chrome-beta"
 # HTTP and GraphQL Client
 cask "insomnia"
 # JetBrains tools manager
