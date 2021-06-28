@@ -72,6 +72,8 @@ cask "notion"
 cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Web browser
+cask "safari-technology-preview"
 # Music streaming service
 cask "spotify"
 mas "GarageBand", id: 682658836
