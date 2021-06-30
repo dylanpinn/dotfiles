@@ -66,6 +66,8 @@ cask "google-chrome-beta"
 cask "insomnia"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Password manager
+cask "lastpass"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 # Podcast platform
