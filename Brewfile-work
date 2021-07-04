@@ -27,7 +27,7 @@ brew "libpq", link: true
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
-brew "neovim", args: ["HEAD"]
+brew "neovim"
 # Build tool for Scala projects
 brew "sbt"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -62,6 +62,8 @@ cask "docker"
 cask "firefox-developer-edition"
 # Web browser
 cask "google-chrome-beta"
+# Tool to optimize images to a smaller size
+cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
 # JetBrains tools manager
