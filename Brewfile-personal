@@ -39,4 +39,5 @@ cask "steam"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Things", id: 904280696
+mas "Trello", id: 1278508951
 mas "Wipr", id: 1320666476
