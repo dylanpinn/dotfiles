@@ -12,8 +12,12 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # GitHub command-line tool
 brew "gh"
+# GIF image/animation creator/editor
+brew "gifsicle"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
@@ -60,6 +64,8 @@ cask "alfred"
 cask "docker"
 # Web browser
 cask "firefox-developer-edition"
+# Web browser
+cask "google-chrome"
 # Web browser
 cask "google-chrome-beta"
 # Tool to optimize images to a smaller size
