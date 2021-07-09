@@ -15,11 +15,12 @@ return require('packer').startup(function(use)
   use {'editorconfig/editorconfig-vim', opt = true, as = 'editorconfig'}
 
   -- Use treesitter to improve syntax highlighting.
-  use {'nvim-treesitter/nvim-treesitter'}
+  use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   require('settings/treesitter')
 
   -- Configure and use the built in LSP server for Neovim.
   use {'neovim/nvim-lspconfig'}
+  use {'scalameta/nvim-metals'}
   require('settings/lspconfig')
 
   -- Track development effort across projects.

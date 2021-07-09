@@ -2,24 +2,31 @@ XDG_CACHE_HOME = $(HOME)/.cache
 XDG_CONFIG_HOME = $(HOME)/.config
 XDG_DATA_HOME = $(HOME)/.local/share
 
-all: install-brew \
-	install-sh \
-	install-bash \
-	install-bin \
-	install-docker \
-	install-git \
-	install-emacs \
-	install-neovim \
-	install-npm \
-	install-nvm \
-	install-python-pkgs \
-	install-vim \
-	install-terminfo \
-	install-tree-sitter \
-	install-vint \
-	install-yarn
+all: install-shared
 
-install-bash:
+brew-dump:
+	brew bundle dump --force --describe
+
+install-shared: install-brew \
+		install-sh \
+		install-bash \
+		install-git \
+		install-vim \
+		install-wakatime
+
+install-personal: install-shared
+
+install-work: install-shared \
+	install-docker \
+	install-jenv \
+	install-neovim \
+	install-nvm \
+	install-postgres \
+	install-sbt \
+	install-yarn
+	stow -v -R -t ~ work
+
+install-bash: install-sh
 	@echo "Installing bash..."
 	stow -v -R -t ~ bash
 
@@ -46,9 +53,14 @@ install-git:
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	stow -v -R -t ~ git
 
-install-neovim:
+install-jenv:
+	@echo "Installing jenv..."
+	stow -v -R -t ~ jenv
+
+install-neovim: install-tree-sitter
 	@echo "Installing neovim..."
 	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/{after,plugin}
+	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim/after/ftplugin
 	stow -v -t ~ nvim
 	stow -v -t $(XDG_CONFIG_HOME)/nvim/ vim-shared
 	./install/nvim.sh
@@ -59,11 +71,21 @@ install-npm: install-sh
 
 install-nvm:
 	@echo "Installing nvm..."
+	stow -v -R -t ~ nvm
 	./install/nvm.sh
+
+install-postgres:
+	@echo "Installing postgres..."
+	stow -v -R -t ~ postgres
+	mkdir -p $(XDG_CONFIG_HOME)/pg && mkdir -p $(XDG_CACHE_HOME)/pg
 
 install-python-pkgs:
 	@echo "Installing Python packages..."
 	pip3 install -r requirements.txt
+
+install-sbt:
+	@echo "Installing sbt..."
+	stow -v -R -t ~ sbt
 
 install-sh:
 	@echo "Installing sh..."
@@ -90,7 +112,13 @@ install-vint:
 	@echo "Installing vint..."
 	stow -v -R -t ~ vint
 
+install-wakatime: install-sh
+	@echo "Installing wakatime..."
+	@mkdir -p -- $(XDG_CONFIG_HOME)/wakatime
+	stow -v -R -t ~ wakatime
+
 install-yarn: install-sh
 	@echo "Installing yarn..."
 	mkdir -p -- $(XDG_CONFIG_HOME)/yarn
+	touch $(XDG_CONFIG_HOME)/yarn/config
 	stow -v -R -t ~ yarn

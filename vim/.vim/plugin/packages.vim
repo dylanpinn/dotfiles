@@ -25,6 +25,8 @@ function! PackInit() abort
 
   " Improve JavaScript syntax highlighting to include modern (ES5+) features.
   call minpac#add('yuezk/vim-js')
+  call minpac#add('maxmellon/vim-jsx-pretty')
+
 endfunction
 
 " Load minpac and then manage it.
