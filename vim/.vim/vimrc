@@ -256,6 +256,11 @@ nnoremap <C-L> :<C-U>nohlsearch<CR><C-L>
 "
 nnoremap - :Ex<CR>
 
+" This is taken from VimTricks
+" (https://vimtricks.com/p/reselect-pasted-text/). This allows reselecting
+" pasted text, similar to `gv` (reselect last visual selection).
+nnoremap gp `[v`]
+
 " The following maps use the Leader key.
 "
 " Let us set the leader keys; backslash happens to be the default but setting

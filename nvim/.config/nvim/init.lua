@@ -56,6 +56,7 @@ vim.g['maplocalleader'] = ','
 
 map('n', '<C-L>', ':<C-U>nohlsearch<CR><C-L>')
 map('n', '-', ':Ex<CR>')
+map('n', 'gp', '`[v`]')
 map('n', '<Leader>c', ':<C-U>set cursorline! cursorline?<CR>')
 map('n', '<Leader>l', ':<C-U>set list! list?<CR>')
 map('n', '<Leader>n', ':<C-U>set number! number?<CR>')
