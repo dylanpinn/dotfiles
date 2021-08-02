@@ -1,0 +1,99 @@
+tap "adoptopenjdk/openjdk"
+tap "coursier/formulas"
+tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "saadparwaiz1/personal"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# GitHub command-line tool
+brew "gh"
+# GIF image/animation creator/editor
+brew "gifsicle"
+# Distributed revision control system
+brew "git"
+# Improved top (interactive process viewer)
+brew "htop"
+# Manage your Java environment
+brew "jenv"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Postgres C API library
+brew "libpq", link: true
+# Mac App Store command-line interface
+brew "mas"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Build tool for Scala projects
+brew "sbt"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Terminal multiplexer
+brew "tmux"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Watch files and take action when they change
+brew "watchman"
+# Launcher for Coursier
+brew "coursier/formulas/coursier"
+# Authenticate to REA AWS accounts
+brew "cowbell/stuff/rea-as"
+# Language Server For Lua
+brew "saadparwaiz1/personal/lua-language-server"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# AdoptOpenJDK OpenJDK (Java) Development Kit
+cask "adoptopenjdk11"
+# Prebuilt OpenJDK binaries
+cask "adoptopenjdk8"
+# Application launcher and productivity software
+cask "alfred"
+# API documentation browser and code snippet manager
+cask "dash"
+# App to build and share containerized applications and microservices
+cask "docker"
+# Collaborative team software
+cask "figma"
+# Web browser
+cask "firefox-developer-edition"
+# Web browser
+cask "google-chrome"
+# Web browser
+cask "google-chrome-beta"
+# Tool to optimize images to a smaller size
+cask "imageoptim"
+# HTTP and GraphQL Client
+cask "insomnia"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
+# Password manager
+cask "lastpass"
+# App to write, plan, collaborate, and get organized
+cask "notion"
+# Podcast platform
+cask "pocket-casts"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Web browser
+cask "safari-technology-preview"
+# Music streaming service
+cask "spotify"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Microsoft To Do", id: 1274495053
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Wipr", id: 1320666476
