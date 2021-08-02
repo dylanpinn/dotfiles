@@ -1,99 +1,100 @@
+# Taps
+
 tap "adoptopenjdk/openjdk"
-tap "coursier/formulas"
-tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
+tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "saadparwaiz1/personal"
-# Official Amazon AWS command-line interface
-brew "awscli"
+tap "thoughtbot/formulae"
+
+# brew
+
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
-# Play, record, convert, and stream audio and video
-brew "ffmpeg"
+# Bash Automated Testing System
+brew "bats-core"
+# Good-lookin' diffs with diff-highlight and more
+brew "diff-so-fancy"
+# Maintain consistent coding style between multiple editors
+brew "editorconfig"
+# Emacs
+brew "emacs-plus"
+# Command-line tool to interact with exercism.io
+brew "exercism"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # GitHub command-line tool
 brew "gh"
-# GIF image/animation creator/editor
-brew "gifsicle"
 # Distributed revision control system
 brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
-# Manage your Java environment
-brew "jenv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Postgres C API library
-brew "libpq", link: true
 # Mac App Store command-line interface
 brew "mas"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Build tool for Scala projects
-brew "sbt"
+# Python version management
+brew "pyenv"
+# Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Autoformat shell script source code
-brew "shfmt"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Terminal multiplexer
-brew "tmux"
+# Text interface for Git repositories
+brew "tig"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Command-line interface to the WakaTime api
+brew "wakatime-cli"
 # Watch files and take action when they change
 brew "watchman"
-# Launcher for Coursier
-brew "coursier/formulas/coursier"
+
+# Casks
+
+cask "1password"
+cask "adoptopenjdk11"
+cask "alfred"
+cask "appcleaner"
+cask "dash"
+cask "docker"
+cask "evernote"
+cask "firefox-developer-edition"
+cask "google-chrome"
+# Free and open-source media player
+cask "iina"
+cask "rectangle"
+cask "slack"
+cask "spotify"
+cask "xmind-zen"
+cask "zoom"
+
+# App Store
+mas "Drafts", id: 1435957248
+mas "Things", id: 904280696
+
+# Custom per environment/workstation.
+
+tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
+
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Authenticate to REA AWS accounts
 brew "cowbell/stuff/rea-as"
-# Language Server For Lua
-brew "saadparwaiz1/personal/lua-language-server"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
-# AdoptOpenJDK OpenJDK (Java) Development Kit
-cask "adoptopenjdk11"
-# Prebuilt OpenJDK binaries
-cask "adoptopenjdk8"
-# Application launcher and productivity software
-cask "alfred"
-# API documentation browser and code snippet manager
-cask "dash"
-# App to build and share containerized applications and microservices
-cask "docker"
-# Collaborative team software
+# Making SLiPs easy to use
+brew "cowbell/stuff/rea-slip-utils"
+# Build tool for Scala projects
+brew "sbt"
+
+cask "homebrew/cask-versions/adoptopenjdk8"
 cask "figma"
-# Web browser
-cask "firefox-developer-edition"
-# Web browser
-cask "google-chrome"
-# Web browser
-cask "google-chrome-beta"
-# Tool to optimize images to a smaller size
 cask "imageoptim"
-# HTTP and GraphQL Client
-cask "insomnia"
-# JetBrains tools manager
-cask "jetbrains-toolbox"
 # Password manager
 cask "lastpass"
-# App to write, plan, collaborate, and get organized
-cask "notion"
-# Podcast platform
-cask "pocket-casts"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
-# Web browser
-cask "safari-technology-preview"
-# Music streaming service
-cask "spotify"
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Microsoft To Do", id: 1274495053
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Wipr", id: 1320666476
+
+# vim: set syntax=ruby:
