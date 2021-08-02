@@ -1,7 +1,7 @@
 *.local
 node_modules/
 *.log
-Brewfile.lock.json
+Brewfile*.lock.json
 
 vim/.vim/backups/
 vim/.vim/pack/
