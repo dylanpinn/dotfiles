@@ -7,7 +7,9 @@ My dotfiles.
 ## Includes
 
 - bash
+- emacs
 - git
+- sh
 - vim
 
 ## Getting Started
