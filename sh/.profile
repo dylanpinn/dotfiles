@@ -26,4 +26,12 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 # Install pyenv into XDG path.
 export PYENV_ROOT="$XDG_DATA_HOME/pyenv"
 
+# Load all supplementaty scripts in ~/.profile.d
+for sh in "$HOME"/.profile.d/*.sh; do
+  [ -e "$sh" ] || continue
+  # shellcheck source=/dev/null
+  . "$sh"
+done
+unset -v sh
+
 # vim: set syntax=sh:
