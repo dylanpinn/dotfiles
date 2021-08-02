@@ -1,6 +1,6 @@
 *.local
-node_modules/
 *.log
+node_modules/
 Brewfile*.lock.json
 
 vim/.vim/backups/
