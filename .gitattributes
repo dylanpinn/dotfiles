@@ -1,0 +1,3 @@
+# Classify Brewfiles as Ruby:
+Brewfile-personal linguist-language=Ruby
+Brewfile-work linguist-language=Ruby
