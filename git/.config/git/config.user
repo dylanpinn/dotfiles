@@ -27,12 +27,6 @@
 	pf = push --force-with-lease
 [color]
 	ui = auto
-[core]
-	autocrlf = input
-	excludesfile = ignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
-[diff]
-	colorMoved = zebra
 [fetch]
 	prune = true
 [init]
@@ -42,6 +36,8 @@
 	ff = only
 [mergetool]
 	keepBackup = false
+[pull]
+	ff = only	
 [rebase]
 	autosquash = true
 
