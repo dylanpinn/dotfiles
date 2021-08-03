@@ -4,6 +4,9 @@ XDG_DATA_HOME = $(HOME)/.local/share
 
 all: install-shared
 
+brew-dump:
+	brew bundle dump --force --describe
+
 install-shared: install-brew \
 	install-sh \
 	install-bash \
