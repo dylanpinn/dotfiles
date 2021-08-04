@@ -5,6 +5,7 @@
 
 " Because we are using unicode characters in this vimrc file we need to set
 " this option, otherwise vint will yell at us.
+"
 scriptencoding utf-8
 
 " Move the viminfo file out of the $HOME directory.  A logical place would be
@@ -217,6 +218,7 @@ set wildignore+=*/node_modules/* 	" ignore dependency directories.
 set wildignorecase
 
 " Switch syntax highlighting on if it already not enabled.
+"
 if !exists('syntax_on')
   syntax on
 endif
@@ -259,6 +261,7 @@ nnoremap - :Ex<CR>
 " This is taken from VimTricks
 " (https://vimtricks.com/p/reselect-pasted-text/). This allows reselecting
 " pasted text, similar to `gv` (reselect last visual selection).
+"
 nnoremap gp `[v`]
 
 " The following maps use the Leader key.
