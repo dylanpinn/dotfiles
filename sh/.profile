@@ -19,14 +19,6 @@ for sh in "$HOME"/.profile.d/*.sh; do
 done
 unset -v sh
 
-# Load all supplementaty scripts in ~/.profile.d
-for sh in "$HOME"/.profile.d/*.sh; do
-  [ -e "$sh" ] || continue
-  # shellcheck source=/dev/null
-  . "$sh"
-done
-unset -v sh
-
 # If ~/.shinit exists, set ENV to that
 if [ -f "$HOME"/.shinit ]; then
   ENV=$HOME/.shinit
