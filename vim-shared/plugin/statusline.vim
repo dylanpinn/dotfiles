@@ -11,4 +11,3 @@ set statusline+=[%{&ff}]    " Current fileformat wrapped in square brackets.
 set statusline+=%y          " Current filtetype wrapped in square brackets.
 set statusline+=[%p%%]      " Current percentage into file.
 set statusline+=[%04l,%04v] " Current line and column.
-
