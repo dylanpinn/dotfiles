@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Keep around 4K lines of history in memory
+HISTSIZE=4096
+
+# If HOSTNAME isn't set by this shell, we'll do it
+if [ -z "$HOSTNAME" ]; then
+  HOSTNAME=$(uname -n)
+fi
+
+# Load all the POSIX-compatible functions from ~/.shrc.d; more advanced shells
+# like bash will have their own functions in addition to these
+for sh in "$HOME"/.shrc.d/*.sh; do
+  [ -e "$sh" ] || continue
+  # shellcheck source=/dev/null
+  . "$sh"
+done
+unset -v sh
