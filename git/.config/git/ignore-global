@@ -1,0 +1,15 @@
+" Ignore
+
+" ctags
+tags
+tags.lock
+tags.temp
+tags.temp.tmp
+
+" OS specific
+.DS_Store
+
+" Metals for Scala
+.metals/
+.bloop/
+project/metals.sbt
