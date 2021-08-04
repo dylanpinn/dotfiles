@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# If the shell is interactive, and ~/.shrc exists, source it
+case $- in
+*i*)
+  if [ -f "$HOME"/.shrc ]; then
+    # shellcheck source=/dev/null
+    . "$HOME"/.shrc
+  fi
+  ;;
+esac
