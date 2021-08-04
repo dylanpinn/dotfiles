@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-vint vim/.vimrc vim
+vint vim/.vim/vimrc vim
