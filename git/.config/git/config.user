@@ -37,7 +37,7 @@
 [mergetool]
 	keepBackup = false
 [pull]
-	ff = only	
+	ff = only
 [rebase]
 	autosquash = true
 
