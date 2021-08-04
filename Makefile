@@ -11,7 +11,6 @@ install-shared: install-brew \
 	install-sh \
 	install-bash \
 	install-git \
-	install-emacs \
 	install-nvm \
 	install-python-pkgs \
 	install-vim \
@@ -31,10 +30,6 @@ install-brew:
 	@echo "Installing dependencies..."
 	brew update
 	brew bundle --verbose
-
-install-emacs:
-	@echo "Installing emacs..."
-	stow -v -R -t ~ emacs
 
 install-git:
 	@echo "Installing git..."
