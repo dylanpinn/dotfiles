@@ -5,3 +5,7 @@
 " block with `gp=`.
 "
 setlocal formatprg=npx\ prettier\ --parser\ typescript
+
+" Use ESLint as the prefered compiler for JavaScript files.
+"
+compiler eslint
