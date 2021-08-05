@@ -9,6 +9,7 @@ brew-dump:
 
 install-shared: install-brew \
 	install-bash \
+	install-bin \
 	install-git \
 	install-nvm \
 	install-vim \
