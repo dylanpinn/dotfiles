@@ -11,7 +11,7 @@ function! PackInit() abort
 
   " Color (colour) scheme.  Using this one until I get sick of it and end up
   " creating my own or find another.
-  call minpac#add('dracula/vim', {'name': 'dracula'})
+  call minpac#add('nanotech/jellybeans.vim')
 
   " I use Wakatime to roughly track how much actual "development" is happening
   " and what I am working on.  This isn't always accurate as can be doing pair
