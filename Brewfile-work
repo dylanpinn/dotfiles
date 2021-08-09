@@ -84,8 +84,12 @@ cask "insomnia"
 cask "jetbrains-toolbox"
 # Password manager
 cask "lastpass"
+# Privacy-first, open-source platform for knowledge sharing and management
+cask "logseq"
 # App to write, plan, collaborate, and get organized
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Podcast platform
 cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
