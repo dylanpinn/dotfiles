@@ -29,6 +29,8 @@
 	ui = auto
 [fetch]
 	prune = true
+[help]
+	autocorrect = 10
 [init]
 	defaultBranch = main
 [merge]
