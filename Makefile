@@ -10,6 +10,7 @@ brew-dump:
 install-shared: install-brew \
 	install-bash \
 	install-bin \
+	install-emacs \
 	install-git \
 	install-nvm \
 	install-vim \
@@ -31,6 +32,14 @@ install-brew:
 	@echo "Installing dependencies..."
 	brew update
 	brew bundle --verbose
+
+install-docker: install-sh
+	@echo "Installing docker..."
+	stow -v -R -t ~ docker
+
+install-emacs:
+	@echo "Installing emacs..."
+	stow -v -R -t ~ emacs
 
 install-git:
 	@echo "Installing git..."
