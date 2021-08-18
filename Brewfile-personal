@@ -2,20 +2,41 @@ tap "aws/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "railwaycat/emacsmacport"
+# Command-line interface for SQLite
+brew "sqlite"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Mac App Store command-line interface
 brew "mas"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Terminal multiplexer
@@ -26,10 +47,14 @@ brew "vim"
 brew "youtube-dl"
 # AWS SAM CLI 🐿 is a tool for local development and testing of Serverless applications
 brew "aws/tap/aws-sam-cli"
+# YAMAMOTO Mitsuharu's Mac port of GNU Emacs
+brew "railwaycat/emacsmacport/emacs-mac"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+# Voice and text chat software
+cask "discord"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 # Move and resize windows using keyboard shortcuts or snap areas
