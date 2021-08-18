@@ -37,7 +37,7 @@
          "* %?"
          :if-new (file+head "%<%Y-%m-%d>.org"
                             "#+title: %<%Y-%m-%d>\n"))))
-(setq org-agenda-files '("~/notes"))
+(setq org-agenda-files (directory-files-recursively "~/notes/" "\\.org$"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
