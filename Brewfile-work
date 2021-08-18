@@ -5,6 +5,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "railwaycat/emacsmacport"
 tap "saadparwaiz1/personal"
 # Official Amazon AWS command-line interface
 brew "awscli"
@@ -12,6 +13,10 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # GitHub command-line tool
@@ -34,6 +39,8 @@ brew "luarocks"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Build tool for Scala projects
 brew "sbt"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -52,6 +59,8 @@ brew "watchman"
 brew "coursier/formulas/coursier"
 # Authenticate to REA AWS accounts
 brew "cowbell/stuff/rea-as"
+# YAMAMOTO Mitsuharu's Mac port of GNU Emacs
+brew "railwaycat/emacsmacport/emacs-mac"
 # Language Server For Lua
 brew "saadparwaiz1/personal/lua-language-server"
 # Password manager that keeps all passwords secure behind one password
@@ -86,6 +95,8 @@ cask "jetbrains-toolbox"
 cask "lastpass"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
+# Online collaborative whiteboard platform
+cask "miro"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
