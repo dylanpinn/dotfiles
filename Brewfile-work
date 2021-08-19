@@ -25,6 +25,8 @@ brew "gh"
 brew "gifsicle"
 # Distributed revision control system
 brew "git"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # Improved top (interactive process viewer)
 brew "htop"
 # Manage your Java environment
@@ -39,6 +41,8 @@ brew "luarocks"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Build tool for Scala projects
@@ -93,14 +97,10 @@ cask "insomnia"
 cask "jetbrains-toolbox"
 # Password manager
 cask "lastpass"
-# Privacy-first, open-source platform for knowledge sharing and management
-cask "logseq"
 # Online collaborative whiteboard platform
 cask "miro"
 # App to write, plan, collaborate, and get organized
 cask "notion"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Podcast platform
 cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
