@@ -47,20 +47,20 @@ brew "vim"
 brew "youtube-dl"
 # AWS SAM CLI 🐿 is a tool for local development and testing of Serverless applications
 brew "aws/tap/aws-sam-cli"
-# YAMAMOTO Mitsuharu's Mac port of GNU Emacs
-brew "railwaycat/emacsmacport/emacs-mac"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
 # Voice and text chat software
 cask "discord"
+cask "emacs-mac"
 # App to write, plan, collaborate, and get organized
 cask "notion"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Notion Web Clipper", id: 1559269364
 mas "Things", id: 904280696
 mas "Trello", id: 1278508951
 mas "Wipr", id: 1320666476
