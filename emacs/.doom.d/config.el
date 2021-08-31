@@ -52,12 +52,6 @@
         org-agenda-files (directory-files-recursively "~/notes/" "\\.org$")
         ;; Specify status' to match GTD workflow.
         org-todo-keywords '((sequence "TODO(t)" "IN-PROGRESS(i)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)"))
-        ;; Change status' styling to match built-in.
-        ;; org-todo-keyword-faces '(("TODO" . +org-todo-active)
-        ;;                          ("IN-PROGRESS" . +org-todo-active)
-        ;;                          ("WAITING" . +org-todo-onhold)
-        ;;                          ("DONE" . +org-todo-cancel)
-        ;;                          ("CANCELLED" . +org-todo-cancel))
         )
   )
 
