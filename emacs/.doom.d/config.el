@@ -17,10 +17,10 @@
 ;; + `doom-big-font' -- used for `doom-big-font-mode'; use this for
 ;;   presentations or streaming.
 ;;
-;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
+;; They all accept either a font-spec, font string ("Input Mono-11"), or xlfd
 ;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+;; (setq doom-font (font-spec :family "monospace" :size 14 :weight 'semi-light)
+;;       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -30,19 +30,36 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/notes/")
-(setq org-roam-directory "~/notes/")
-(setq org-roam-dailies-directory "daily/")
-(setq org-roam-dailies-capture-templates
-      '(("d" "default" entry
-         "* %?"
-         :if-new (file+head "%<%Y-%m-%d>.org"
-                            "#+title: %<%Y-%m-%d>\n"))))
-(setq org-agenda-files (directory-files-recursively "~/notes/" "\\.org$"))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
+(after! org
+  ;; Use org-directory for org-roam notes.
+  (setq org-roam-directory "~/notes/"
+        ;; Store daily journal entries in daily directory.
+        org-roam-dailies-directory "daily/"
+        ;; Default capture template has YYYY-MM-DD.org format.
+        org-roam-dailies-capture-templates
+        '(("d" "default" entry
+           "* %?"
+           :if-new (file+head "%<%Y-%m-%d>.org"
+                              "#+title: %<%Y-%m-%d>\n")))
+        ;; Use entire org-diretory for org-agenda.
+        ;; NOTE: When this slows down will need to look at options to only
+        ;; include files that include org-todo-keywords.
+        org-agenda-files (directory-files-recursively "~/notes/" "\\.org$")
+        ;; Specify status' to match GTD workflow.
+        org-todo-keywords '((sequence "TODO(t)" "IN-PROGRESS(i)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)"))
+        ;; Change status' styling to match built-in.
+        ;; org-todo-keyword-faces '(("TODO" . +org-todo-active)
+        ;;                          ("IN-PROGRESS" . +org-todo-active)
+        ;;                          ("WAITING" . +org-todo-onhold)
+        ;;                          ("DONE" . +org-todo-cancel)
+        ;;                          ("CANCELLED" . +org-todo-cancel))
+        )
+  )
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
