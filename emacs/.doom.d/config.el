@@ -61,6 +61,10 @@
         )
   )
 
+;; Configure Projectile to automatically search and add projects in ~/dev to
+;; known projects.
+(setq projectile-project-search-path '(("~/dev/" . 1)))
+
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
