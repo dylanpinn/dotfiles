@@ -42,15 +42,6 @@
         org-journal-file-type 'monthly
         org-journal-file-format "%Y-%m.org"
         org-journal-date-format "%d/%m/%Y, %A"
-        org-journal-enable-agenda-integration t
-        ;; Store daily journal entries in daily directory.
-        ;; org-roam-dailies-directory "daily/"
-        ;; Default capture template has YYYY-MM-DD.org format.
-        ;; org-roam-dailies-capture-templates
-        ;; '(("d" "default" entry
-        ;;    "* %?"
-        ;;    :if-new (file+head "%<%Y-%m-%d>.org"
-        ;;                       "#+title: %<%Y-%m-%d>\n")))
         ;; Use entire org-diretory for org-agenda.
         ;; NOTE: When this slows down will need to look at options to only
         ;; include files that include org-todo-keywords.
