@@ -1,0 +1,7 @@
+\encoding unicode
+\pset expanded
+\pset null '[NULL]'
+\set COMP_KEYWORD_CASE upper
+\set HISTSIZE 1000000
+\timing
+
