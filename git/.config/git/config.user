@@ -19,6 +19,9 @@
 	di = diff
 	dc = diff --cached
 
+	# Log
+	glg = log --oneline --graph --all --decorate=short
+
 	# Merge
 	ff = merge --ff-only
 	noff = merge --no-ff
