@@ -21,6 +21,9 @@ install-personal: install-shared
 
 install-work: install-shared \
 	install-neovim \
+	install-postgres \
+	install-sbt \
+	install-scala \
 	install-yarn
 	stow -v -R -t ~ work
 
@@ -58,6 +61,23 @@ install-nvm:
 	@echo "Installing nvm..."
 	stow -v -R -t ~ nvm
 	./install/nvm.sh
+
+install-postgres:
+	@echo "Installing postgres..."
+	stow -v -R -t ~ postgres
+	mkdir -p $(XDG_CONFIG_HOME)/pg && mkdir -p $(XDG_CACHE_HOME)/pg
+
+install-python-pkgs:
+	@echo "Installing Python packages..."
+	pip3 install -r requirements.txt
+
+install-sbt:
+	@echo "Installing sbt..."
+	stow -v -R -t ~ sbt
+
+install-scala: install-bash
+	@echo "Installing Scala..."
+	stow -R -t ~ scala
 
 install-sh:
 	@echo "Installing sh..."
