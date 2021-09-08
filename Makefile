@@ -25,6 +25,7 @@ install-work: install-shared \
 	install-neovim \
 	install-postgres \
 	install-sbt \
+	install-scala \
 	install-yarn
 	stow -v -R -t ~ work
 
@@ -88,6 +89,10 @@ install-python-pkgs:
 install-sbt:
 	@echo "Installing sbt..."
 	stow -v -R -t ~ sbt
+
+install-scala: install-bash
+	@echo "Installing Scala..."
+	stow -R -t ~ scala
 
 install-sh:
 	@echo "Installing sh..."
