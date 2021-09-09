@@ -41,8 +41,6 @@ brew "jq"
 brew "libpq", link: true
 # Package manager for the Lua programming language
 brew "luarocks"
-# Mac App Store command-line interface
-brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Swiss-army knife of markup format conversion
@@ -116,11 +114,3 @@ cask "safari-technology-preview"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Microsoft To Do", id: 1274495053
-mas "Notion Web Clipper", id: 1559269364
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Wipr", id: 1320666476
