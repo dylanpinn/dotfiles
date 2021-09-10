@@ -23,3 +23,4 @@ if [ -f ~/.bashrc.local ]; then
   # shellcheck source=/dev/null
   . ~/.bashrc.local
 fi
+source "$XDG_DATA_HOME/.rea-cli/rea-shell-init.sh"
