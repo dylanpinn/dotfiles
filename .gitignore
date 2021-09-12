@@ -1,0 +1,2 @@
+# Ignore Brewfile lock files
+Brewfile.lock.json
