@@ -49,6 +49,10 @@ set undodir=$XDG_CACHE_HOME/vim/undo//
 "
 filetype plugin indent on
 
+" When checking spelling, use Australian English by default.
+"
+set spelllang=en_au
+
 " Switch syntax highlighting on if it already not enabled.
 "
 if !exists('syntax_on')
