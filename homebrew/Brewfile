@@ -3,9 +3,13 @@ tap "homebrew/cask"
 tap "homebrew/core"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Mac App Store command-line interface
+brew "mas"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+mas "Things", id: 904280696
+mas "Wipr", id: 1320666476
