@@ -2,7 +2,7 @@ install : install-bash \
 	install-brew
 
 brew-dump :
-	brew bundle dump --force --describe
+	(cd homebrew; brew bundle dump --force --describe)
 
 
 install-bash : clean-bash install-sh
@@ -11,7 +11,7 @@ install-bash : clean-bash install-sh
 
 install-brew :
 	brew update
-	brew bundle
+	(cd homebrew; brew bundle)
 
 install-sh : clean-sh
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
