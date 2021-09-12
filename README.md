@@ -6,6 +6,9 @@ operating systems.
 ## Requirements
 
 - `make`
+
+### macOS
+
 - [`brew`](https://brew.sh)
 
 ## Installation
@@ -31,3 +34,8 @@ configuration (`~/.profile`) and bash specific configuration (`~/.bashrc`).
 
 Most applications either CLI or GUI are managed using Homebrew bundle.  The
 `Brewfile` is a manifest of the installed applications.
+
+### Vim
+
+This is my preferred editor.  The aim is to use as close to vanilla vim as
+possible to ensure compatability with as many instances of vim as possible.
