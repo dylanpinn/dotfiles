@@ -53,6 +53,13 @@ filetype plugin indent on
 "
 set spelllang=en_au
 
+" Vim includes defaults for comments and path that date back to its history as
+" a mainly C development environment.  Removing these values allows us to use
+" filetype plugins to set them as needed.
+"
+set comments= commentstring= define= include=
+set path-=/usr/include
+
 " Switch syntax highlighting on if it already not enabled.
 "
 if !exists('syntax_on')
