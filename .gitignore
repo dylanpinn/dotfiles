@@ -1,4 +1,0 @@
-*.local
-*.log
-node_modules/
-Brewfile*.lock.json
