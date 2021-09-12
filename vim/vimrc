@@ -18,6 +18,15 @@ set viminfofile=$XDG_CACHE_HOME/vim/viminfo
 set backup
 set backupdir=$XDG_CACHE_HOME/vim/backup//
 
+" Move swap files to a dedicated directory, rather than the default of the
+" same directory as the source file.  This directory is created during dotfile
+" installation.
+"
+" Add two trailing slashes to the path to tell Vim to use the full escaped
+" path of the file to avoid collisions.
+"
+set directory=$XDG_CACHE_HOME/vim/swap//
+
 " Enable file type detection.
 " Also load indent files, to automatically do language-dependent indenting.
 "
