@@ -7,3 +7,5 @@ brew "bash"
 brew "vim"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Application uninstaller
+cask "appcleaner"
