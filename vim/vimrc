@@ -1,0 +1,10 @@
+" Enable file type detection.
+" Also load indent files, to automatically do language-dependent indenting.
+"
+filetype plugin indent on
+
+" Switch syntax highlighting on if it already not enabled.
+"
+if !exists('syntax_on')
+  syntax on
+endif
