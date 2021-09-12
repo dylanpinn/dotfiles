@@ -2,6 +2,9 @@ XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
 XDG_DATA_HOME ?= $(HOME)/.local/share
 
+NAME ?= 'Dylan Pinn'
+EMAIL ?= 'me@dylanpinn.com'
+
 install : install-bash \
 	install-brew \
 	install-git \
@@ -9,6 +12,12 @@ install : install-bash \
 
 brew-dump :
 	(cd homebrew; brew bundle dump --force --describe)
+
+git/config: git/config.m4
+	m4 \
+		-D NAME=$(NAME) \
+		-D EMAIL=$(EMAIL) \
+		git/config.m4 > $@
 
 install-bash : clean-bash install-sh
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
@@ -18,7 +27,7 @@ install-brew :
 	brew update
 	(cd homebrew; brew bundle)
 
-install-git : clean-git
+install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 
