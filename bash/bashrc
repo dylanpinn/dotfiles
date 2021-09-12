@@ -1,5 +1,8 @@
 # Bash specific configuration.
 
+# Aliases
+alias ls="ls -G"
+
 # If Bash 4.0 is available, trim very long paths in prompt.
 if ((BASH_VERSINFO[0] >= 4)); then
   PROMPT_DIRTRIM=4
