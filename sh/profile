@@ -6,6 +6,13 @@ export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_RUNTIME_DIR=/tmp
 
+# Load all supplementaty scripts in ~/.profile.d
+for sh in "$HOME"/.profile.d/*.sh; do
+  [ -e "$sh" ] || continue
+  . "$sh"
+done
+unset -v sh
+
 # For visual editor use vim (hopefully is available everywhere).
 VISUAL='vim'
 export VISUAL
