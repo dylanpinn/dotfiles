@@ -1,5 +1,10 @@
 # Bash specific configuration.
 
+# If Bash 4.0 is available, trim very long paths in prompt.
+if ((BASH_VERSINFO[0] >= 4)); then
+  PROMPT_DIRTRIM=4
+fi
+
 # Set prompt to be user:~/pwd$
 # - user is bold green
 # - path is bold blue
