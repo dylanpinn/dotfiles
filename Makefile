@@ -4,11 +4,11 @@ XDG_DATA_HOME ?= $(HOME)/.local/share
 
 install : install-bash \
 	install-brew \
+	install-git \
 	install-vim
 
 brew-dump :
 	(cd homebrew; brew bundle dump --force --describe)
-
 
 install-bash : clean-bash install-sh
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
@@ -17,6 +17,10 @@ install-bash : clean-bash install-sh
 install-brew :
 	brew update
 	(cd homebrew; brew bundle)
+
+install-git : clean-git
+	mkdir -p -- $(XDG_CONFIG_HOME)/git
+	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 
 install-sh : clean-sh
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
@@ -30,6 +34,9 @@ install-vim : clean-vim
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
 	rm -f -- $(HOME)/.bash_profile
+
+clean-git :
+	rm -f -- $(XDG_CONFIG_HOME)/git/config
 
 clean-sh :
 	rm -f -- $(HOME)/.profile
