@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-for bcfile in ~/.bash_completion.d/*; do
-  # shellcheck disable=SC1090
-  [ -f "$bcfile" ] && . "$bcfile"
-done
-unset -v bcfile
