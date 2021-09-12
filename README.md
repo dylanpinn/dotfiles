@@ -19,6 +19,11 @@ make install
 
 ## Configuration
 
+### Per host configuration
+
+You can configure extra Makefile targets and variable overrides by placing them
+in `$XDG_CONFIG_HOME/dotfiles/config` and running `make install-conf`.
+
 ### Shell
 
 Bash is my currently my preferred shell, however, most of the configuration

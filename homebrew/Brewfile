@@ -13,5 +13,3 @@ brew "vim"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
-mas "Things", id: 904280696
-mas "Wipr", id: 1320666476
