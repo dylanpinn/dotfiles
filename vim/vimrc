@@ -60,6 +60,11 @@ set spelllang=en_au
 set comments= commentstring= define= include=
 set path-=/usr/include
 
+" Automatically reload a file inside of Vim if it has changed on the disk.
+" A good example of this is updated code from a VCS.
+"
+set autoread
+
 " Switch syntax highlighting on if it already not enabled.
 "
 if !exists('syntax_on')
