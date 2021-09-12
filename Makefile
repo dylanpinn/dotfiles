@@ -23,7 +23,7 @@ install-sh : clean-sh
 
 install-vim : clean-vim
 	mkdir -p -- $(HOME)/.vim
-	mkdir -p -- $(XDG_CACHE_HOME)/vim/backup
+	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap}
 	ln -s -- $(PWD)/vim/filetype.vim $(HOME)/.vim/filetype.vim
 	ln -s -- $(PWD)/vim/vimrc $(HOME)/.vim/vimrc
 
