@@ -23,6 +23,7 @@ install-sh : clean-sh
 
 install-vim : clean-vim
 	mkdir -p -- $(HOME)/.vim
+	ln -s -- $(PWD)/vim/filetype.vim $(HOME)/.vim/filetype.vim
 	ln -s -- $(PWD)/vim/vimrc $(HOME)/.vim/vimrc
 
 clean-bash :
@@ -33,4 +34,5 @@ clean-sh :
 	rm -f -- $(HOME)/.profile
 
 clean-vim :
+	rm -f -- $(HOME)/.vim/filetype.vim
 	rm -f -- $(HOME)/.vim/vimrc
