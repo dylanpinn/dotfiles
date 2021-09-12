@@ -6,7 +6,6 @@ NAME ?= 'Dylan Pinn'
 EMAIL ?= 'me@dylanpinn.com'
 
 install : install-bash \
-	install-brew \
 	install-git \
 	install-vim
 
@@ -26,6 +25,9 @@ install-bash : clean-bash install-sh
 install-brew :
 	brew update
 	(cd homebrew; brew bundle)
+
+install-conf :
+	sh install/conf.sh
 
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
@@ -54,3 +56,4 @@ clean-sh :
 clean-vim :
 	rm -f -- $(HOME)/.vim/filetype.vim
 	rm -f -- $(HOME)/.vim/vimrc
+	rm -r -- $(HOME)/.vim/after
