@@ -88,6 +88,34 @@ set linebreak
 "
 set breakindent
 
+" Automatic text wrapping options using flags in the 'formatoptions' option
+" begin here.
+
+" Don't break a line after a one-letter word like "I" or "a".
+"
+set formatoptions+=1
+
+" When joining lines that contain comments, if possible remove the comment
+" leader.
+"
+set formatoptions+=j
+
+" Use two spaces to end a sentence. This helps improve readability using
+" monospaced fonts.  This also helps vim work with sentence objects for the
+" purpose of the 's' text objects, the '(' and ')' sentence motions, and
+" formatting with the 'gq' command must now be separated by two spaces.
+"
+" See https://stevelosh.com/blog/2012/10/why-i-two-space/
+"
+set cpoptions+=J
+
+" Because we are using two spaces for ending sentences. Vim can determine if
+" the space after an abbreviation such as "Mr. Pinn" is the end of the
+" sentence or not and then determine if it should be split on it. The 'p' flag
+" makes this possible.
+"
+set formatoptions+=p
+
 " Switch syntax highlighting on if it already not enabled.
 "
 if !exists('syntax_on')
