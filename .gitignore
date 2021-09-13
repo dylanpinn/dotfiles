@@ -1,5 +1,5 @@
 # Ignore Brewfile lock files
-Brewfile.lock.json
+Brewfile*.lock.json
 
 # Ignore generated files
 git/config
