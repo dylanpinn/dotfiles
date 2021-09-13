@@ -38,6 +38,7 @@ install-conf :
 
 install-emacs : clean-emacs
 	mkdir -p -- $(XDG_CONFIG_HOME)/emacs
+	touch -- $(XDG_CONFIG_HOME)/emacs/custom.el
 	ln -s -- $(PWD)/emacs/init.el $(XDG_CONFIG_HOME)/emacs/init.el
 
 install-git : git/config clean-git
