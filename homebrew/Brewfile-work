@@ -1,6 +1,7 @@
 tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Official Amazon AWS command-line interface
 brew "awscli"
@@ -18,5 +19,7 @@ brew "cowbell/stuff/rea-as"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+# Web browser
+cask "firefox-developer-edition"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
