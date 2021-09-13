@@ -1,3 +1,4 @@
+tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -9,6 +10,8 @@ brew "bash"
 brew "git"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Authenticate to REA AWS accounts
+brew "cowbell/stuff/rea-as"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application uninstaller
