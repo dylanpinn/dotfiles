@@ -14,6 +14,33 @@ install : install-bash \
 brew-dump :
 	(cd homebrew; brew bundle dump --force --describe)
 
+check-bash :
+	sh check/bash.sh
+
+clean-bash :
+	rm -f -- $(HOME)/.bashrc
+	rm -f -- $(HOME)/.bash_profile
+	rm -rf -- $(HOME)/.bashrc.d
+
+clean-emacs :
+	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
+
+clean-git :
+	rm -f -- $(XDG_CONFIG_HOME)/git/config
+
+clean-postgres :
+	rm -f -- $(XDG_CONFIG_HOME)/pg/psqlrc
+
+clean-sh :
+	rm -f -- $(HOME)/.profile
+	rm -rf -- $(HOME)/.profile.d
+
+clean-vim :
+	rm -f -- $(HOME)/.vim/filetype.vim
+	rm -f -- $(HOME)/.vim/vimrc
+	rm -f -- $(HOME)/.vim/after
+	rm -f -- $(HOME)/.vim/plugin
+
 git/config: git/config.m4
 	m4 \
 		-D NAME=$(NAME) \
@@ -23,7 +50,7 @@ git/config: git/config.m4
 install-aws : install-sh
 	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
 
-install-bash : clean-bash install-sh
+install-bash : check-bash clean-bash install-sh
 	mkdir -p -- $(HOME)/.bashrc.d
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
@@ -71,27 +98,3 @@ install-vim : clean-vim
 install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
-
-clean-bash :
-	rm -f -- $(HOME)/.bashrc
-	rm -f -- $(HOME)/.bash_profile
-	rm -rf -- $(HOME)/.bashrc.d
-
-clean-emacs :
-	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
-
-clean-git :
-	rm -f -- $(XDG_CONFIG_HOME)/git/config
-
-clean-postgres :
-	rm -f -- $(XDG_CONFIG_HOME)/pg/psqlrc
-
-clean-sh :
-	rm -f -- $(HOME)/.profile
-	rm -rf -- $(HOME)/.profile.d
-
-clean-vim :
-	rm -f -- $(HOME)/.vim/filetype.vim
-	rm -f -- $(HOME)/.vim/vimrc
-	rm -f -- $(HOME)/.vim/after
-	rm -f -- $(HOME)/.vim/plugin
