@@ -35,7 +35,8 @@
 (dolist (mode '(org-mode-hook
 		term-mode-hook
 		shell-mode-hook
-		eshell-mode-hook))
+		eshell-mode-hook
+		helpful-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;; Move custom configuration out to specifc file
@@ -75,9 +76,8 @@
 ;; Counsel - Better Ivy integration
 (use-package counsel
   :ensure t
-  :bind (("M-x" . counsel-M-x)
-	 ("C-x b" . counsel-ibuffer)
-	 ("C-x C-f" . counsel-find-file)))
+  :config
+  (counsel-mode))
 
 ;; Rainbow Delimeters - Colourful parens
 (use-package rainbow-delimiters
@@ -95,7 +95,19 @@
   :init
   (ivy-rich-mode 1))
 
-;; Doom Themese - More comprehensive themes
+;; Doom Themes - More comprehensive themes
 (use-package doom-themes
   :ensure t
-  :init (load-theme 'doom-palenight))
+  :init (load-theme 'doom-palenight t))
+
+;; Helpful - Imrpoved Emacs help screens
+(use-package helpful
+  :ensure t
+  :custom
+  (counsel-describe-function-function #'helpful-callable)
+  (counsel-describe-variable-function #'helpful-variable)
+  :bind
+  ([remap describe-function] . counsel-describe-function)
+  ([remap describe-command] . helpful-command)
+  ([remap describe-variable] . counsel-describe-variable)
+  ([remap describe-key] . helpful-key))
