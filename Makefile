@@ -6,6 +6,7 @@ NAME ?= 'Dylan Pinn'
 EMAIL ?= 'me@dylanpinn.com'
 
 install : install-bash \
+	install-emacs \
 	install-git \
 	install-nvm \
 	install-vim
@@ -34,6 +35,10 @@ install-brew :
 
 install-conf :
 	sh install/conf.sh
+
+install-emacs : clean-emacs
+	mkdir -p -- $(XDG_CONFIG_HOME)/emacs
+	ln -s -- $(PWD)/emacs/init.el $(XDG_CONFIG_HOME)/emacs/init.el
 
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
@@ -66,6 +71,9 @@ clean-bash :
 	rm -f -- $(HOME)/.bash_profile
 	rm -rf -- $(HOME)/.bashrc.d
 
+clean-emacs :
+	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
+
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
 
@@ -76,5 +84,5 @@ clean-sh :
 clean-vim :
 	rm -f -- $(HOME)/.vim/filetype.vim
 	rm -f -- $(HOME)/.vim/vimrc
-	rm -rf -- $(HOME)/.vim/after/
-	rm -rf -- $(HOME)/.vim/plugin/
+	rm -f -- $(HOME)/.vim/after
+	rm -f -- $(HOME)/.vim/plugin
