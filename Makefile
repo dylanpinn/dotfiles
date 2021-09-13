@@ -50,6 +50,11 @@ install-nvm : install-bash
 	ln -s -- $(PWD)/nvm/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/nvm/bashrc.d/* $(HOME)/.bashrc.d/
 
+install-postgres : clean-postgres install-sh
+	mkdir -p -- $(XDG_CONFIG_HOME)/pg
+	ln -s -- $(PWD)/postgres/psqlrc $(XDG_CONFIG_HOME)/pg/psqlrc
+	ln -s -- $(PWD)/postgres/profile.d/* $(HOME)/.profile.d/
+
 install-sh : clean-sh
 	mkdir -p -- $(HOME)/.profile.d
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
@@ -77,6 +82,9 @@ clean-emacs :
 
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
+
+clean-postgres :
+	rm -f -- $(XDG_CONFIG_HOME)/pg/psqlrc
 
 clean-sh :
 	rm -f -- $(HOME)/.profile
