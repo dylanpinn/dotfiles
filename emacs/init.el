@@ -24,6 +24,9 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+;; Enable column numbering
+(column-number-mode t)
+
 ;; Move custom configuration out to specifc file
 (setq custom-file "~/.config/emacs/custom.el")
 (load custom-file)
