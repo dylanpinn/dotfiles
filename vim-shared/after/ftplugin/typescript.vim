@@ -1,7 +1,9 @@
-" Use Prettier as the 'formatprg' for TypeScript files.
-" The only issue is that Prettier usually works best when formatting a whole
-" file and not a section of it, so there could be inconsistencies with
-" indentation. A fix for this is to use 'equalprg' to re-indent the formatted
-" block with `gp=`.
+" Use ESLint as the prefered compiler for JavaScript files.
 "
-setlocal formatprg=npx\ prettier\ --parser\ typescript
+compiler eslint
+
+" Format whole file using Prettier.
+" There are issues using formatprg, so running this as a separate command
+" seems the best solution that doesn't involve a new plugin.
+"
+nnoremap <LocalLeader>f :silent %!npx prettier --stdin-filepath %<CR>
