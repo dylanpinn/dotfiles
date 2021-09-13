@@ -6,6 +6,8 @@ tap "homebrew/core"
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
 # Distributed revision control system
 brew "git"
 # Vi 'workalike' with many additional features
