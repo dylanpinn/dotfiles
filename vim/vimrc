@@ -128,3 +128,5 @@ nohlsearch
 if !exists('syntax_on')
   syntax on
 endif
+
+colorscheme desert
