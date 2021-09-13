@@ -123,6 +123,90 @@ set formatoptions+=p
 set hlsearch
 nohlsearch
 
+" Start searching and highlighting as soon as something is typed.
+"
+set incsearch
+
+" Ignore case when searching, unless the search contains upper-case characters.
+"
+set ignorecase
+set smartcase
+
+" Always show the statusline.
+"
+set laststatus=2
+
+" Don't redraw the screen when executing macros, registers and other commands
+" that have not been typed.
+"
+set lazyredraw
+
+" Set some default characters to show when the 'list' option is set. Most of
+" these will help define invisible or indistinguishable characters. We will
+" leave the default eol:$ to show newlines.
+"
+set listchars+=tab:>- 	" Tab characters, preserve width with hyphens.
+set listchars+=trail:-	" Trailing spaces.
+set listchars+=nbsp:+ 	" Non-breaking spaces.
+
+" These two options define what is shown when text is not wrapped and
+" continues off the screen.
+"
+" set listchars+=extends:>,precedes:<
+
+" Disable modeline, editor options should not be set in the source code of the
+" file.  It is better to use filetype plugins, automatic command hooks, or
+" EditorConfig to set these values.
+"
+set nomodeline
+
+" Numbers that start with a zero should be treated as decimal and not octal.
+" This allows Vim to increment and decrement these numbers.
+"
+set nrformats-=octal
+
+" I prefer when Vim opens new splits to the right and below the current,
+" rather than the default of to the left and above.  This just makes more
+" sense.
+"
+set splitbelow splitright
+
+" Show (partial) command in the last line of the screen.
+"
+set showcmd
+
+" When using virtual block mode, allow me to navigate to to any column even if
+" there is no contents there.
+"
+set virtualedit+=block
+
+" Stop Vim from emitting sounds, rather use a visual bell. Also disables any
+" efforts by Vim that would trigger any visual queues such as flashing or
+" blinking.
+"
+set visualbell t_vb=
+
+" When completing commands with <Tab>, list valid completions and complete the
+" command line using the longest common substring with a single key press.
+"
+set wildmenu
+set wildmode=list:longest,full
+
+" Configure the wildmenu to ignore a list of patterns for file and directory
+" command line completion.  Files and directories matching any of these
+" patterns won't be presented as candidates for tab completion on the command
+" line.
+"
+" The list combines a mixture of binary files that would not contain text and
+" therefore would not want to edit, and directories that contain generated
+" files that won't want to be edited either.
+"
+set wildignore+=*/node_modules/* 	" ignore dependency directories.
+
+" Ignore case when matching wildmenu options.
+"
+set wildignorecase
+
 " Switch syntax highlighting on if it already not enabled.
 "
 if !exists('syntax_on')
