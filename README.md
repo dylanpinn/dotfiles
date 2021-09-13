@@ -30,10 +30,16 @@ Bash is my currently my preferred shell, however, most of the configuration
 should be able to work in other shells with minimal work.  The `~/.profile`
 contains most shell agnostic configuration.
 
+Extra configuration is loaded from the `~/.profile.d` directory, this allows
+setting application or host specific config.
+
 #### Bash
 
 Bash loads the `~/.bash_profile`, which is responsible for loading the generic
 configuration (`~/.profile`) and bash specific configuration (`~/.bashrc`).
+
+Extra configuration is loaded from the `~/.bashrc.d` directory, this allows
+setting application or host specific config.
 
 ### Homebrew
 
