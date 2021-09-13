@@ -152,7 +152,7 @@ set listchars+=nbsp:+ 	" Non-breaking spaces.
 " These two options define what is shown when text is not wrapped and
 " continues off the screen.
 "
-" set listchars+=extends:>,precedes:<
+set listchars+=extends:>,precedes:<
 
 " Disable modeline, editor options should not be set in the source code of the
 " file.  It is better to use filetype plugins, automatic command hooks, or
