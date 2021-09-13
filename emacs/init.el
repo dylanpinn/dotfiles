@@ -68,6 +68,7 @@
 ;; Ivy - completion engine
 (use-package ivy
   :ensure t
+  :bind (("C-s" . swiper))
   :config
   (ivy-mode 1))
 
