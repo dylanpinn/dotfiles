@@ -22,6 +22,7 @@ install-bash : clean-bash install-sh
 	mkdir -p -- $(HOME)/.bashrc.d
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
+	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
 
 install-brew :
 	brew update
