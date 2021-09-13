@@ -68,3 +68,7 @@
   :ensure t
   :config
   (ivy-mode 1))
+
+;; Rainbow Delimeters - Colourful parens
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
