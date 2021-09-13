@@ -46,3 +46,7 @@
   (setq evil-want-C-u-scroll t) ; enable C-u & C-d scrolling.
   :config
   (evil-mode))
+
+;; Org Mode - outliner and organiser
+(use-package org
+  :ensure t)
