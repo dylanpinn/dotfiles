@@ -34,6 +34,7 @@ install-git : git/config clean-git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 
 install-sh : clean-sh
+	mkdir -p -- $(HOME)/.profile.d
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
 
 install-vim : clean-vim
@@ -42,6 +43,9 @@ install-vim : clean-vim
 	ln -s -- $(PWD)/vim/filetype.vim $(HOME)/.vim/filetype.vim
 	ln -s -- $(PWD)/vim/vimrc $(HOME)/.vim/vimrc
 	ln -s -- $(PWD)/vim/after $(HOME)/.vim/after
+
+install-work : install-sh
+	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
@@ -52,6 +56,7 @@ clean-git :
 
 clean-sh :
 	rm -f -- $(HOME)/.profile
+	rm -rf -- $(HOME)/.profile.d
 
 clean-vim :
 	rm -f -- $(HOME)/.vim/filetype.vim
