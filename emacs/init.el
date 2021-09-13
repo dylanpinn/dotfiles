@@ -24,6 +24,10 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+;; Move custom configuration out to specifc file
+(setq custom-file "~/.config/emacs/custom.el")
+(load custom-file)
+
 ;; Load built-in package manager, add community sources.
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
