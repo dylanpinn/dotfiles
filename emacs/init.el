@@ -27,6 +27,15 @@
 ;; Enable column numbering
 (column-number-mode t)
 
+;; Show line numbering.
+(global-display-line-numbers-mode t)
+;; Disable fo some modes
+(dolist (mode '(org-mode-hook
+		term-mode-hook
+		shell-mode-hook
+		eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
 ;; Move custom configuration out to specifc file
 (setq custom-file "~/.config/emacs/custom.el")
 (load custom-file)
