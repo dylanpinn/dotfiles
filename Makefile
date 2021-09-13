@@ -19,6 +19,9 @@ git/config: git/config.m4
 		-D EMAIL=$(EMAIL) \
 		git/config.m4 > $@
 
+install-aws : install-sh
+	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
+
 install-bash : clean-bash install-sh
 	mkdir -p -- $(HOME)/.bashrc.d
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
