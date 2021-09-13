@@ -7,6 +7,7 @@ EMAIL ?= 'me@dylanpinn.com'
 
 install : install-bash \
 	install-git \
+	install-nvm \
 	install-vim
 
 brew-dump :
@@ -34,6 +35,11 @@ install-conf :
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
+
+install-nvm : install-bash
+	sh install/nvm.sh
+	ln -s -- $(PWD)/nvm/profile.d/* $(HOME)/.profile.d/
+	ln -s -- $(PWD)/nvm/bashrc.d/* $(HOME)/.bashrc.d/
 
 install-sh : clean-sh
 	mkdir -p -- $(HOME)/.profile.d
