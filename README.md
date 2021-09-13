@@ -41,6 +41,15 @@ configuration (`~/.profile`) and bash specific configuration (`~/.bashrc`).
 Extra configuration is loaded from the `~/.bashrc.d` directory, this allows
 setting application or host specific config.
 
+### AWS
+
+This just moves the `awscli` configuration out of the `$HOME` directory.
+
+### Git
+
+This sets some sensible defaults. The configuration is generated using a `m4`
+template and the name and email are added via the `Makefile`.
+
 ### Homebrew
 
 Most applications either CLI or GUI are managed using Homebrew bundle.  The
