@@ -12,3 +12,6 @@
 
 ; Give some breathing room
 (set-fringe-mode 10)
+
+; Disable the menu bar
+(menu-bar-mode -1)
