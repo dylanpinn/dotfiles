@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Distributed revision control system
