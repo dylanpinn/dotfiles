@@ -55,6 +55,7 @@ install-vim : clean-vim
 	ln -s -- $(PWD)/vim/filetype.vim $(HOME)/.vim/filetype.vim
 	ln -s -- $(PWD)/vim/vimrc $(HOME)/.vim/vimrc
 	ln -s -- $(PWD)/vim/after $(HOME)/.vim/after
+	ln -s -- $(PWD)/vim/plugin $(HOME)/.vim/plugin
 
 install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
@@ -75,4 +76,5 @@ clean-sh :
 clean-vim :
 	rm -f -- $(HOME)/.vim/filetype.vim
 	rm -f -- $(HOME)/.vim/vimrc
-	rm -r -- $(HOME)/.vim/after
+	rm -rf -- $(HOME)/.vim/after/
+	rm -rf -- $(HOME)/.vim/plugin/
