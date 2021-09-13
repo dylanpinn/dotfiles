@@ -9,3 +9,6 @@
 
 ; Disable the toolbar
 (tool-bar-mode -1)
+
+; Give some breathing room
+(set-fringe-mode 10)
