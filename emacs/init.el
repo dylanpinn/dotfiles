@@ -1,3 +1,5 @@
+; UI - Clean up
+
 ; Remove startup message
 (setq inhibit-startup-message t)
 
@@ -18,3 +20,6 @@
 
 ; Set up the visible bell
 (setq visible-bell t)
+
+; Make ESC quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
