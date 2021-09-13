@@ -6,3 +6,6 @@
 
 ; Disable tooltips
 (tooltip-mode -1)
+
+; Disable the toolbar
+(tool-bar-mode -1)
