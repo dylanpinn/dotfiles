@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "railwaycat/emacsmacport"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -21,6 +22,7 @@ cask "1password"
 cask "appcleaner"
 # App to build and share containerized applications and microservices
 cask "docker"
+cask "emacs-mac"
 # Web browser
 cask "firefox-developer-edition"
 # Move and resize windows using keyboard shortcuts or snap areas
