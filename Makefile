@@ -19,6 +19,7 @@ git/config: git/config.m4
 		git/config.m4 > $@
 
 install-bash : clean-bash install-sh
+	mkdir -p -- $(HOME)/.bashrc.d
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 
@@ -50,6 +51,7 @@ install-work : install-sh
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
 	rm -f -- $(HOME)/.bash_profile
+	rm -rf -- $(HOME)/.bashrc.d
 
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
