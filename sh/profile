@@ -18,6 +18,3 @@ for sh in "$HOME"/.profile.d/*.sh; do
 done
 unset -v sh
 
-# For visual editor use vim (hopefully is available everywhere).
-VISUAL='vim'
-export VISUAL
