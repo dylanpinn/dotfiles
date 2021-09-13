@@ -71,6 +71,13 @@
   :config
   (ivy-mode 1))
 
+;; Counsel - Better Ivy integration
+(use-package counsel
+  :ensure t
+  :bind (("M-x" . counsel-M-x)
+	 ("C-x b" . counsel-ibuffer)
+	 ("C-x C-f" . counsel-find-file)))
+
 ;; Rainbow Delimeters - Colourful parens
 (use-package rainbow-delimiters
   :ensure t
