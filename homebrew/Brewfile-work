@@ -1,0 +1,15 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Distributed revision control system
+brew "git"
+# Mac App Store command-line interface
+brew "mas"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Application uninstaller
+cask "appcleaner"
