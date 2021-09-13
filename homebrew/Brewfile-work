@@ -12,6 +12,8 @@ brew "bash"
 brew "bash-completion@2"
 # Distributed revision control system
 brew "git"
+# Postgres C API library
+brew "libpq", link: true
 # Vi 'workalike' with many additional features
 brew "vim"
 # Authenticate to REA AWS accounts

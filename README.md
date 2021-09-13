@@ -55,6 +55,11 @@ template and the name and email are added via the `Makefile`.
 Most applications either CLI or GUI are managed using Homebrew bundle.  The
 `Brewfile` is a manifest of the installed applications.
 
+### PostgresSQL
+
+Sets some sensible defaults for the `psql` CLI.  This moves the CLI
+configuration out of `$HOME`.
+
 ### Vim
 
 This is my preferred editor.  The aim is to use as close to vanilla vim as
