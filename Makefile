@@ -47,6 +47,7 @@ install-nvm : install-bash
 install-sh : clean-sh
 	mkdir -p -- $(HOME)/.profile.d
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
+	ln -s -- $(PWD)/sh/profile.d/* $(HOME)/.profile.d/
 
 install-vim : clean-vim
 	mkdir -p -- $(HOME)/.vim
