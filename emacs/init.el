@@ -93,3 +93,8 @@
   :ensure t
   :init
   (ivy-rich-mode 1))
+
+;; Doom Themese - More comprehensive themes
+(use-package doom-themes
+  :ensure t
+  :init (load-theme 'doom-palenight))
