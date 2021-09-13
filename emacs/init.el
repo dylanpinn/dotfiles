@@ -1,3 +1,5 @@
+;;; Emacs
+
 ;; UI - Clean up
 
 ;; Remove startup message
@@ -71,4 +73,10 @@
 
 ;; Rainbow Delimeters - Colourful parens
 (use-package rainbow-delimiters
+  :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
+
+;; Which Key - Useful help prompts
+(use-package which-key
+  :ensure t
+  :init (which-key-mode))
