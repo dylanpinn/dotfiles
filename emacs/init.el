@@ -87,3 +87,9 @@
 (use-package which-key
   :ensure t
   :init (which-key-mode))
+
+;; Ivy-Rich - Better Ivy formatter
+(use-package ivy-rich
+  :ensure t
+  :init
+  (ivy-rich-mode 1))
