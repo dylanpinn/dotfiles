@@ -50,3 +50,9 @@
 ;; Org Mode - outliner and organiser
 (use-package org
   :ensure t)
+
+;; Ivy - completion engine
+(use-package ivy
+  :ensure t
+  :config
+  (ivy-mode 1))
