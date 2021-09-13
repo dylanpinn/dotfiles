@@ -15,3 +15,6 @@
 
 ; Disable the menu bar
 (menu-bar-mode -1)
+
+; Set up the visible bell
+(setq visible-bell t)
