@@ -38,3 +38,9 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
+
+;; Load evil-mode
+(use-package evil
+  :ensure t ; install the package if not installed
+  :config
+  (evil-mode))
