@@ -39,8 +39,10 @@
   (package-install 'use-package))
 (require 'use-package)
 
-;; Load evil-mode
+;; Evil - vim keybindings
 (use-package evil
   :ensure t ; install the package if not installed
+  :init ; tweak evil's configuration before loading it
+  (setq evil-want-C-u-scroll t) ; enable C-u & C-d scrolling.
   :config
   (evil-mode))
