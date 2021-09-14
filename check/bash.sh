@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-
+#
 # Check syntax for bash files.
+
 for bash in bash/* */bashrc.d/* ; do
   [ -f "$bash" ] || continue
   bash -n "$bash" || exit
