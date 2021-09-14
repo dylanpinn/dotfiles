@@ -9,7 +9,8 @@ install : install-bash \
 	install-emacs \
 	install-git \
 	install-nvm \
-	install-vim
+	install-vim \
+	install-wakatime
 
 brew-dump :
 	(cd homebrew; brew bundle dump --force --describe)
@@ -101,6 +102,9 @@ install-vim : clean-vim
 	ln -s -- $(PWD)/vim/after $(HOME)/.vim/after
 	ln -s -- $(PWD)/vim/compiler $(HOME)/.vim/compiler
 	ln -s -- $(PWD)/vim/plugin $(HOME)/.vim/plugin
+
+install-wakatime :
+	ln -s -- $(PWD)/wakatime/profile.d/* $(HOME)/.profile.d/
 
 install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/

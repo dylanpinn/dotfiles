@@ -65,6 +65,10 @@ configuration out of `$HOME`.
 This is my preferred editor.  The aim is to use as close to vanilla vim as
 possible to ensure compatability with as many instances of vim as possible.
 
+### Wakatime
+
+This moves the configuration out of `$HOME`.
+
 ## Linting and checking
 
 Checks are run on some of the files before installing and linting can be run
