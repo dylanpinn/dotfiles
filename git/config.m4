@@ -19,6 +19,9 @@
 	changelog = log origin..HEAD --format='* %s%n%w(,4,4)%+b'
 	glg = log --oneline --decorate --all --graph
 
+	# Pull
+	refresh = "!f(){ git fetch && git stash && git rebase $(git symbolic-ref refs/remotes/origin/HEAD | sed \"s@^refs/remotes/@@\") && git stash pop; };f"
+
 	# Push
 	pf = push --force-with-lease
 
