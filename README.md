@@ -64,3 +64,8 @@ configuration out of `$HOME`.
 
 This is my preferred editor.  The aim is to use as close to vanilla vim as
 possible to ensure compatability with as many instances of vim as possible.
+
+## Linting and checking
+
+Checks are run on some of the files before installing and linting can be run
+manually with `make lint`.  This is also run in CI using GitHub Actions.
