@@ -1,4 +1,4 @@
 " Indicate if line is longer than 80 characters.
 "
-set textwidth=80
-set colorcolumn=+0
+setlocal textwidth=80
+setlocal colorcolumn=+0

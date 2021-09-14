@@ -99,3 +99,8 @@ install-vim : clean-vim
 install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
+
+lint : lint-bash
+
+lint-bash :
+	sh lint/bash.sh
