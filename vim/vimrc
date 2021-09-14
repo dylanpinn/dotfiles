@@ -213,7 +213,7 @@ if !exists('syntax_on')
   syntax on
 endif
 
-colorscheme desert
+colorscheme jellybeans
 
 " Mapping defnitions are defined here.  Here are some rules I have tried to
 " follow as much as possible.
