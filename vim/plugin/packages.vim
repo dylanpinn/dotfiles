@@ -22,6 +22,9 @@ function! PackInit() abort
   " Improve JavaScript syntax highlighting to include modern (ES5+) features.
   call minpac#add('yuezk/vim-js')
   call minpac#add('maxmellon/vim-jsx-pretty')
+
+  " Semi basic colour scheme.  Haven't found anything else that I like more.
+  call minpac#add('nanotech/jellybeans.vim')
 endfunction
 
 " Load minpac and then manage it.
