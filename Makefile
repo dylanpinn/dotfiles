@@ -17,6 +17,9 @@ brew-dump :
 check-bash :
 	sh check/bash.sh
 
+check-sh :
+	sh check/sh.sh
+
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
 	rm -f -- $(HOME)/.bash_profile
@@ -83,7 +86,7 @@ install-postgres : clean-postgres install-sh
 	ln -s -- $(PWD)/postgres/psqlrc $(XDG_CONFIG_HOME)/pg/psqlrc
 	ln -s -- $(PWD)/postgres/profile.d/* $(HOME)/.profile.d/
 
-install-sh : clean-sh
+install-sh : check-sh clean-sh
 	mkdir -p -- $(HOME)/.profile.d
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
 	ln -s -- $(PWD)/sh/profile.d/* $(HOME)/.profile.d/
@@ -100,7 +103,11 @@ install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
 
-lint : lint-bash
+lint : lint-bash \
+	lint-sh
 
-lint-bash :
+lint-bash : check-bash
 	sh lint/bash.sh
+
+lint-sh : check-sh
+	sh lint/sh.sh
