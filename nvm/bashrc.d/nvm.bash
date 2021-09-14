@@ -6,7 +6,7 @@
 # Arguments:
 #   None
 #######################################
-nvm() {
+function nvm() {
   # This loads nvm
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   # This loads nvm bash_completion
