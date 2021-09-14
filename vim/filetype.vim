@@ -5,6 +5,13 @@ if exists("did_load_filetypes")
 endif
 
 augroup filetypedetect
-  autocmd! BufRead,BufNewFile */git/config      setfiletype gitconfig
-  autocmd! BufRead,BufNewFile .profile,profile  setfiletype sh
+  autocmd! BufRead,BufNewFile
+        \ */git/config
+        \ setfiletype gitconfig
+  autocmd! BufRead,BufNewFile
+        \ .bash_profile
+        \,.profile
+        \,bash_profile
+        \,profile
+        \ setfiletype sh
 augroup END
