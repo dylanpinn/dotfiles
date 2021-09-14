@@ -14,6 +14,9 @@
 	di = diff
 	dc = diff --cached
 
+	# Log
+	glg = log --oneline --decorate --all --graph
+
 	# Push
 	pf = push --force-with-lease
 
