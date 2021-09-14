@@ -95,6 +95,7 @@ install-sh : check-sh clean-sh
 install-vim : clean-vim
 	mkdir -p -- $(HOME)/.vim
 	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
+	sh install/vim.sh
 	ln -s -- $(PWD)/vim/filetype.vim $(HOME)/.vim/filetype.vim
 	ln -s -- $(PWD)/vim/vimrc $(HOME)/.vim/vimrc
 	ln -s -- $(PWD)/vim/after $(HOME)/.vim/after
