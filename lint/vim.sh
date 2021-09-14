@@ -4,8 +4,8 @@
 
 set -e
 
-for v in vim/* ; do
-  printf '%s\n' "$v"
-  vint -s -- "$v"
+find vim -type f | while IFS='' read -r line
+do
+  printf '%s\n' "$line"
+  vint -s -- "$line"
 done
-
