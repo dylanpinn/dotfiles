@@ -2,6 +2,8 @@
 #
 # Lint bash files.
 
+set -e
+
 set \
   bash/bashrc \
   bash/bash_profile \
