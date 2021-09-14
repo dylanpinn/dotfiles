@@ -71,6 +71,7 @@ install-emacs : clean-emacs
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
+	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
 install-nvm : install-bash
 	sh install/nvm.sh
