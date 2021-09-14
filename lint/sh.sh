@@ -2,6 +2,8 @@
 #
 # Lint shell files.
 
+set -e
+
 set \
   sh/profile \
   */profile.d/*.sh

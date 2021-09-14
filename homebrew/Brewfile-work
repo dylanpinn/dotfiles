@@ -20,6 +20,8 @@ brew "libpq", link: true
 brew "shellcheck"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Vim script Language Lint
+brew "vint"
 # Authenticate to REA AWS accounts
 brew "cowbell/stuff/rea-as"
 # Password manager that keeps all passwords secure behind one password

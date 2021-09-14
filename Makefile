@@ -104,10 +104,14 @@ install-work : install-sh
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
 
 lint : lint-bash \
-	lint-sh
+	lint-sh \
+	lint-vim
 
 lint-bash : check-bash
 	sh lint/bash.sh
 
 lint-sh : check-sh
 	sh lint/sh.sh
+
+lint-vim :
+	sh lint/vim.sh
