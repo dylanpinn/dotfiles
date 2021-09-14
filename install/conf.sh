@@ -7,6 +7,6 @@ if [ -e "$conf" ] ; then
             '#'*|'') ;;
             *) set -- "$@" "$line" ;;
         esac
-    done < $conf
+    done < "$conf"
 fi
 make install "$@"
