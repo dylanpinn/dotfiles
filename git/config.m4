@@ -15,6 +15,7 @@
 	dc = diff --cached
 
 	# Log
+	changelog = log origin..HEAD --format='* %s%n%w(,4,4)%+b'
 	glg = log --oneline --decorate --all --graph
 
 	# Push
