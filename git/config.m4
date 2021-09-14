@@ -5,6 +5,7 @@
 
 	# Checkout
 	co = checkout
+	workon = "!f(){ git fetch && git checkout -b \"$1\" $(git symbolic-ref refs/remotes/origin/HEAD | sed \"s@^refs/remotes/@@\"); };f"
 
 	# Commit
 	amend = commit --amend
