@@ -42,6 +42,7 @@ clean-vim :
 	rm -f -- $(HOME)/.vim/filetype.vim
 	rm -f -- $(HOME)/.vim/vimrc
 	rm -f -- $(HOME)/.vim/after
+	rm -f -- $(HOME)/.vim/compiler
 	rm -f -- $(HOME)/.vim/plugin
 
 git/config: git/config.m4
@@ -97,6 +98,7 @@ install-vim : clean-vim
 	ln -s -- $(PWD)/vim/filetype.vim $(HOME)/.vim/filetype.vim
 	ln -s -- $(PWD)/vim/vimrc $(HOME)/.vim/vimrc
 	ln -s -- $(PWD)/vim/after $(HOME)/.vim/after
+	ln -s -- $(PWD)/vim/compiler $(HOME)/.vim/compiler
 	ln -s -- $(PWD)/vim/plugin $(HOME)/.vim/plugin
 
 install-work : install-sh
