@@ -122,3 +122,20 @@
   ([remap describe-command] . helpful-command)
   ([remap describe-variable] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
+
+;; Projectile - Project management
+(use-package projectile
+  :diminish projectile-mode
+  :ensure t
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  (when (file-directory-p "~/dev")
+    (setq projectile-project-search-path '("~/dev")))
+  (setq projectile-switch-project-action #'projectile-dired))
+(use-package counsel-projectile
+  :ensure t
+  :after projectile
+  :config (counsel-projectile-mode))
