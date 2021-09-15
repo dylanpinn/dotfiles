@@ -46,6 +46,7 @@
 ;; Load built-in package manager, add community sources.
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 (package-initialize)
 
 ;; bootstrap use-package
@@ -70,7 +71,18 @@
 
 ;; Org Mode - outliner and organiser
 (use-package org
-  :ensure t)
+  :ensure t
+  :config
+  (setq org-agenda-files '("~/notes/work.org"))
+  (setq org-todo-keywords
+	`((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+	  (sequence "BACKLOG(b)" "ACTIVE(a)" "|" "COMPLETED(c)")))
+  (setq org-refile-targets
+	'(("archive/work-archive.org" :maxlevel . 1)
+	  ("work.org" :maxlevel . 1)))
+  ;; Save org buffers after refiling.
+  (advice-add 'org-refile :after 'org-save-all-org-buffers)
+)
 
 ;; Ivy - completion engine
 (use-package ivy
