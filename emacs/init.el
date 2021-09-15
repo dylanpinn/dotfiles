@@ -95,6 +95,11 @@
   :init
   (ivy-rich-mode 1))
 
+;; Doom Modeline - Improved statusline.
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
+
 ;; Doom Themes - More comprehensive themes
 (use-package doom-themes
   :ensure t
