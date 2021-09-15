@@ -85,6 +85,9 @@ install-nvm : install-bash
 	ln -s -- $(PWD)/nvm/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/nvm/bashrc.d/* $(HOME)/.bashrc.d/
 
+install-personal : install-sh
+	ln -s -- $(PWD)/personal/profile.d/* $(HOME)/.profile.d/
+
 install-postgres : clean-postgres install-sh
 	mkdir -p -- $(XDG_CONFIG_HOME)/pg
 	ln -s -- $(PWD)/postgres/psqlrc $(XDG_CONFIG_HOME)/pg/psqlrc
