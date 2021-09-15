@@ -58,9 +58,15 @@
 (use-package evil
   :ensure t ; install the package if not installed
   :init ; tweak evil's configuration before loading it
+  (setq evil-want-keybinding nil) ; evil-collection requires this.
   (setq evil-want-C-u-scroll t) ; enable C-u & C-d scrolling.
   :config
   (evil-mode))
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
 
 ;; Org Mode - outliner and organiser
 (use-package org
