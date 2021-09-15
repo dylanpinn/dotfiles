@@ -139,3 +139,7 @@
   :ensure t
   :after projectile
   :config (counsel-projectile-mode))
+
+;; Magit - Git client
+(use-package magit
+  :ensure t)
