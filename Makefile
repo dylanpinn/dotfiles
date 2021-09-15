@@ -1,6 +1,7 @@
 XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
 XDG_DATA_HOME ?= $(HOME)/.local/share
+XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
 EMAIL ?= 'me@dylanpinn.com'
@@ -57,6 +58,7 @@ install-aws : install-sh
 
 install-bash : check-bash clean-bash install-sh
 	mkdir -p -- $(HOME)/.bashrc.d
+	mkdir -p -- $(XDG_STATE_HOME)/bash
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
