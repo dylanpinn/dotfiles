@@ -70,8 +70,12 @@
   (evil-collection-init))
 
 ;; Org Mode - outliner and organiser
+(defun my/org-mode-setup ()
+  (org-indent-mode))
+
 (use-package org
   :ensure t
+  :hook (org-mode . my/org-mode-setup)
   :config
   (setq org-agenda-files '("~/notes/work.org"))
   (setq org-todo-keywords
