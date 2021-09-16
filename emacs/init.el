@@ -82,6 +82,9 @@
 	  ("work.org" :maxlevel . 1)))
   ;; Save org buffers after refiling.
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
+  (setq org-agenda-start-with-log-mode t)
+  (setq org-log-done 'time)
+  (setq org-log-into-drawer t)
 )
 
 ;; Ivy - completion engine
