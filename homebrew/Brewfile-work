@@ -18,6 +18,8 @@ brew "git"
 brew "libpq", link: true
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Maintained ctags implementation
+brew "universal-ctags"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Vim script Language Lint
