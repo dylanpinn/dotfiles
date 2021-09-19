@@ -1,9 +1,8 @@
-#
-# ~/.bashrc
-#
+# Bash specific configuration.
 
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+# Load Bash-specific startup files
+for bash in "$HOME"/.bashrc.d/*.bash; do
+  [[ -e $bash ]] || continue
+  source "$bash"
+done
+unset -v bash

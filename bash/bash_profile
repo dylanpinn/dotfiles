@@ -1,5 +1,9 @@
-#
-# ~/.bash_profile
-#
+# Load ~/.profile regardless of shell.
+if [ -e "$HOME"/.profile ]; then
+  . "$HOME"/.profile
+fi
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+# If ~/.bashrc exists, source that too.
+if [ -f "$HOME"/.bashrc ]; then
+  . "$HOME"/.bashrc
+fi
