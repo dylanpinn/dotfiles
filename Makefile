@@ -60,6 +60,7 @@ install-bash : check-bash clean-bash install-sh
 	mkdir -p -- $(HOME)/.bashrc.d
 	mkdir -p -- $(XDG_STATE_HOME)/bash
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
+	ln -s -- $(PWD)/bash/bash_logout $(HOME)/.bash_logout
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
 
