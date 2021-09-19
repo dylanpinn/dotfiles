@@ -24,6 +24,7 @@ check-sh :
 
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
+	rm -f -- $(HOME)/.bash_logout
 	rm -f -- $(HOME)/.bash_profile
 	rm -rf -- $(HOME)/.bashrc.d
 
