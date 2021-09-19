@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Read X resources
+xrdb -merge "$HOME"/.Xresources
+
+exec i3
