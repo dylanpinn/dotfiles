@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "railwaycat/emacsmacport"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Distributed revision control system
@@ -13,5 +14,6 @@ brew "vim"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+cask "emacs-mac"
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
