@@ -70,6 +70,11 @@
   (evil-collection-init))
 
 ;; Org Mode - outliner and organiser
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c b") 'org-switchb)
+
 (defun my/org-mode-setup ()
   (org-indent-mode))
 
@@ -77,13 +82,21 @@
   :ensure t
   :hook (org-mode . my/org-mode-setup)
   :config
-  (setq org-agenda-files '("~/notes/work.org"))
+  (setq org-agenda-files '("~/notes/inbox.org"
+			   "~/notes/projects.org"
+			   "~/notes/scheduled.org"))
   (setq org-todo-keywords
-	`((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-	  (sequence "BACKLOG(b)" "ACTIVE(a)" "|" "COMPLETED(c)")))
-  (setq org-refile-targets
-	'(("archive/work-archive.org" :maxlevel . 1)
-	  ("work.org" :maxlevel . 1)))
+	`((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+
+  (setq org-capture-templates '(("t" "Todo [inbox]" entry
+                               (file+headline "~/notes/inbox.org" "Tasks")
+                               "* TODO %i%?")
+                              ("S" "Scheduled" entry
+                               (file+headline "~/notes/scheduled.org" "Scheduled")
+                               "* %i%? \n %U")))
+  (setq org-refile-targets '(("~/notes/projects.org" :maxlevel . 3)
+                           ("~/notes/someday.org" :level . 1)
+                           ("~/notes/scheduled.org" :maxlevel . 2)))
   ;; Save org buffers after refiling.
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
   (setq org-agenda-start-with-log-mode t)
