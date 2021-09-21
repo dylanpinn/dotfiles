@@ -33,10 +33,10 @@
 (global-display-line-numbers-mode t)
 ;; Disable fo some modes
 (dolist (mode '(org-mode-hook
-                 term-mode-hook
-                 shell-mode-hook
-                 eshell-mode-hook
-                 helpful-mode-hook))
+		term-mode-hook
+		shell-mode-hook
+		eshell-mode-hook
+		helpful-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;; Move custom configuration out to specifc file
@@ -105,8 +105,9 @@
 
 (use-package org-roam
   :ensure t
-  :config
+  :init
   (setq org-roam-v2-ack t)
+  :config
   (setq org-roam-directory (file-truename "~/notes/vault"))
   )
 
@@ -190,5 +191,7 @@
 
 ;; Wakatime
 (use-package wakatime-mode
-  :ensure t)
+  :ensure t
+  :config
+  (setq wakatime-cli-path (shell-command-to-string "echo $(which wakatime)")))
 ;;(global-wakatime-mode)
