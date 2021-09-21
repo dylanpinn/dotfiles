@@ -24,6 +24,8 @@ brew "universal-ctags"
 brew "vim"
 # Vim script Language Lint
 brew "vint"
+# Command-line interface to the WakaTime api
+brew "wakatime-cli"
 # Authenticate to REA AWS accounts
 brew "cowbell/stuff/rea-as"
 # Password manager that keeps all passwords secure behind one password

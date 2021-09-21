@@ -168,3 +168,10 @@
   :ensure t
   :config
   (editorconfig-mode 1))
+
+;; Wakatime
+(use-package wakatime-mode
+  :ensure t
+  :config
+  (setq wakatime-cli-path "/opt/homebrew/bin/wakatime"))
+(global-wakatime-mode)
