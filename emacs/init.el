@@ -162,3 +162,9 @@
 ;; Magit - Git client
 (use-package magit
   :ensure t)
+
+;; EditorConfig
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
