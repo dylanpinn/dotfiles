@@ -85,18 +85,19 @@
   (setq org-agenda-files '("~/notes/inbox.org"
 			   "~/notes/projects.org"
 			   "~/notes/scheduled.org"))
+
   (setq org-todo-keywords
-	`((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+        (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)")))
 
   (setq org-capture-templates '(("t" "Todo [inbox]" entry
-                               (file+headline "~/notes/inbox.org" "Tasks")
-                               "* TODO %i%?")
-                              ("S" "Scheduled" entry
-                               (file+headline "~/notes/scheduled.org" "Scheduled")
-                               "* %i%? \n %U")))
+                                  (file+headline "~/notes/inbox.org" "Tasks")
+                                  "* TODO %i%?")
+                                 ("j" "Journal" entry (file+datetree "~/notes/journal.org")
+                                   "* %?\n%U\n" :clock-in t :clock-resume t)))
   (setq org-refile-targets '(("~/notes/projects.org" :maxlevel . 3)
                            ("~/notes/someday.org" :level . 1)
-                           ("~/notes/scheduled.org" :maxlevel . 2)))
+                           ("~/notes/journal.org" :maxlevel . 3)))
   ;; Save org buffers after refiling.
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
   (setq org-agenda-start-with-log-mode t)
