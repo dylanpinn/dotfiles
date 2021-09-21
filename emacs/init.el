@@ -33,10 +33,10 @@
 (global-display-line-numbers-mode t)
 ;; Disable fo some modes
 (dolist (mode '(org-mode-hook
-		term-mode-hook
-		shell-mode-hook
-		eshell-mode-hook
-		helpful-mode-hook))
+                 term-mode-hook
+                 shell-mode-hook
+                 eshell-mode-hook
+                 helpful-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;; Move custom configuration out to specifc file
@@ -70,6 +70,11 @@
   (evil-collection-init))
 
 ;; Org Mode - outliner and organiser
+(global-set-key (kbd "C-c l") 'org-store-link)
+(global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c b") 'org-switchb)
+
 (defun my/org-mode-setup ()
   (org-indent-mode))
 
@@ -77,19 +82,33 @@
   :ensure t
   :hook (org-mode . my/org-mode-setup)
   :config
-  (setq org-agenda-files '("~/notes/work.org"))
+  (setq org-agenda-files '("~/notes/projects.org" "~/notes/areas.org" "~/notes/journal.org"))
   (setq org-todo-keywords
-	`((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
-	  (sequence "BACKLOG(b)" "ACTIVE(a)" "|" "COMPLETED(c)")))
+    `((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d)")
+       (sequence "BACKLOG(b)" "ACTIVE(a)" "|" "COMPLETED(c)")))
+  (setq org-capture-templates '(("t" "Todo [inbox]" entry
+                                  (file+headline "~/notes/inbox.org" "Tasks")
+                                  "* TODO %i%?")
+                                 ("j" "Journal" entry (file+datetree "~/notes/journal.org")
+                                   "* %?\n%U\n" :clock-in t :clock-resume t)))
+
   (setq org-refile-targets
-	'(("archive/work-archive.org" :maxlevel . 1)
-	  ("work.org" :maxlevel . 1)))
+    '(("projects.org" :maxlevel . 1)
+       ("areas.org" :maxlevel . 2)
+       ("journal.org" :maxlevel . 3)))
   ;; Save org buffers after refiling.
   (advice-add 'org-refile :after 'org-save-all-org-buffers)
   (setq org-agenda-start-with-log-mode t)
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
-)
+  )
+
+(use-package org-roam
+  :ensure t
+  :config
+  (setq org-roam-v2-ack t)
+  (setq org-roam-directory (file-truename "~/notes/vault"))
+  )
 
 ;; Ivy - completion engine
 (use-package ivy
@@ -171,7 +190,5 @@
 
 ;; Wakatime
 (use-package wakatime-mode
-  :ensure t
-  :config
-  (setq wakatime-cli-path "/opt/homebrew/bin/wakatime"))
-(global-wakatime-mode)
+  :ensure t)
+;;(global-wakatime-mode)
