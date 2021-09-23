@@ -28,7 +28,9 @@ clean-bash :
 	rm -rf -- $(HOME)/.bashrc.d
 
 clean-emacs :
-	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
+	rm -f -- $(XDG_CONFIG_HOME)/doom/init.el
+	rm -f -- $(XDG_CONFIG_HOME)/doom/config.el
+	rm -f -- $(XDG_CONFIG_HOME)/doom/packages.el
 
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
@@ -71,9 +73,10 @@ install-conf :
 	sh install/conf.sh
 
 install-emacs : clean-emacs
-	mkdir -p -- $(XDG_CONFIG_HOME)/emacs
-	touch -- $(XDG_CONFIG_HOME)/emacs/custom.el
-	ln -s -- $(PWD)/emacs/init.el $(XDG_CONFIG_HOME)/emacs/init.el
+	mkdir -p -- $(XDG_CONFIG_HOME)/doom
+	ln -s -- $(PWD)/doom/init.el $(XDG_CONFIG_HOME)/doom/init.el
+	ln -s -- $(PWD)/doom/config.el $(XDG_CONFIG_HOME)/doom/config.el
+	ln -s -- $(PWD)/doom/packages.el $(XDG_CONFIG_HOME)/doom/packages.el
 
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
