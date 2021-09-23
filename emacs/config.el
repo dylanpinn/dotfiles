@@ -39,6 +39,13 @@
 ;; Projects can be manually added outside of this path.
 (setq projectile-project-search-path `(("~/dev/" . 2)))
 
+(use-package! nodejs-repl
+  :config
+  (defun nvm-which ()
+    (let* ((shell (concat (getenv "SHELL") " -l -c 'nvm which'"))
+            (output (shell-command-to-string shell)))
+      (cadr (split-string output "[\n]+" t))))
+  (setq nodejs-repl-command #'nvm-which))
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
 ;; - `load!' for loading external *.el files relative to this one
