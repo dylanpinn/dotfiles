@@ -74,9 +74,9 @@ install-conf :
 
 install-emacs : clean-emacs
 	mkdir -p -- $(XDG_CONFIG_HOME)/doom
-	ln -s -- $(PWD)/doom/init.el $(XDG_CONFIG_HOME)/doom/init.el
-	ln -s -- $(PWD)/doom/config.el $(XDG_CONFIG_HOME)/doom/config.el
-	ln -s -- $(PWD)/doom/packages.el $(XDG_CONFIG_HOME)/doom/packages.el
+	ln -s -- $(PWD)/emacs/init.el $(XDG_CONFIG_HOME)/doom/init.el
+	ln -s -- $(PWD)/emacs/config.el $(XDG_CONFIG_HOME)/doom/config.el
+	ln -s -- $(PWD)/emacs/packages.el $(XDG_CONFIG_HOME)/doom/packages.el
 
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git

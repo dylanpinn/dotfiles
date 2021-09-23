@@ -35,12 +35,9 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type t)
 
-;;(use-package! projectile
-;;  :init
-  ;; This tells Projectile to automatically include projects in this path.
-  ;; Projects can be manually added outside of this path.
- ;; (setq projectile-project-search-path `("~/dev/")))
-;; (setq projectile-project-search-path `("~/dev/"))
+;; This tells Projectile to automatically include projects in this path.
+;; Projects can be manually added outside of this path.
+(setq projectile-project-search-path `(("~/dev/" . 2)))
 
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
