@@ -30,6 +30,9 @@ clean-bash :
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
 
+clean-kitty :
+	rm -r -- $(XDG_CONFIG_HOME)/kitty
+
 clean-neovim :
 	rm -rf -- $(XDG_CONFIG_HOME)/nvim
 
@@ -82,6 +85,9 @@ install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
+
+install-kitty : clean-kitty
+	ln -s -- $(PWD)/kitty $(XDG_CONFIG_HOME)/kitty
 
 install-neovim : clean-neovim
 	sh install/nvim.sh
