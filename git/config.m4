@@ -18,13 +18,17 @@
 
 	# Log
 	changelog = log origin..HEAD --format='* %s%n%w(,4,4)%+b'
-	glg = log --oneline --decorate --all --graph
+	glg = log --oneline --decorate --all --graph --abbrev-commit
 
 	# Pull
 	refresh = "!f(){ git fetch && git stash && git rebase $(git symbolic-ref refs/remotes/origin/HEAD | sed \"s@^refs/remotes/@@\") && git stash pop; };f"
 
 	# Push
 	pf = push --force-with-lease
+
+	# Review
+	files = !git diff --name-only $(git merge-base HEAD $(git symbolic-ref refs/remotes/origin/HEAD))
+	stats = !git diff --stat $(git merge-base HEAD $(git symbolic-ref refs/remotes/origin/HEAD))
 
 	# Status
 	st = status
