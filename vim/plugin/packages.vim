@@ -25,6 +25,10 @@ function! PackInit() abort
 
   " Semi basic colour scheme.  Haven't found anything else that I like more.
   call minpac#add('nanotech/jellybeans.vim')
+
+  " Optionally load LSP plugin.
+  call minpac#add('prabirshrestha/vim-lsp') ", {'type': 'opt'})
+  call minpac#add('mattn/vim-lsp-settings') ", {'type': 'opt'})
 endfunction
 
 " Load minpac and then manage it.
