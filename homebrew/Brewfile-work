@@ -10,14 +10,30 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Postgres C API library
 brew "libpq", link: true
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Maintained ctags implementation
 brew "universal-ctags"
 # Vi 'workalike' with many additional features
@@ -41,5 +57,11 @@ cask "emacs-mac"
 cask "firefox-developer-edition"
 # Web browser
 cask "google-chrome-beta"
+# GPU-based terminal emulator
+cask "kitty"
+# Password manager
+cask "lastpass"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
