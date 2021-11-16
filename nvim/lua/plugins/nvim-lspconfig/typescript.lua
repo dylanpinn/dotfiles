@@ -1,4 +1,4 @@
-local keybindings = require('lsp-config/keybindings')
+local keybindings = require('plugins/nvim-lspconfig/keybindings')
 
 return require'lspconfig'.tsserver.setup{
   on_attach = keybindings.on_attach,

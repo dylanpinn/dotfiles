@@ -1,4 +1,4 @@
+require('colour')
+require('keymaps')
 require('plugins')
-require('lsp-config')
-
-vim.cmd [[colorscheme tokyonight]]
+require('plugins/nvim-lspconfig')
