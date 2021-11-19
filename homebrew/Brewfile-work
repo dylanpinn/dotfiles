@@ -45,5 +45,7 @@ cask "firefox-developer-edition"
 cask "google-chrome-beta"
 # Password manager
 cask "lastpass"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
