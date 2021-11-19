@@ -14,6 +14,8 @@ brew "bash-completion@2"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Postgres C API library
 brew "libpq", link: true
 # Static analysis and lint tool, for (ba)sh scripts
