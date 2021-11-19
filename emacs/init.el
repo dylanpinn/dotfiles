@@ -20,6 +20,9 @@
 ;; Basic theme
 (load-theme 'wombat)
 
+;; Make ESC quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
 ;;; Setup use-package
 
 ;; Initialise package sources
@@ -34,3 +37,27 @@
 (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure t)
+
+;; Move custom configuration out to specifc file
+(setq custom-file "~/.config/emacs/custom.el")
+(load custom-file)
+
+;;; Ivy Completion
+(use-package counsel
+  :after ivy
+  :config (counsel-mode 1))
+(use-package ivy
+  :diminish
+  :custom
+  (setq ivy-use-virtual-buffers t)
+  (setq ivy-count-format "(%d/%d) ")
+  :config
+  (ivy-mode 1))
+(use-package swiper
+  :after ivy
+  :bind (("C-s" . swiper)))
+
+;;; Doom Modeline
+(use-package doom-modeline
+  :init
+  (doom-modeline-mode 1))
