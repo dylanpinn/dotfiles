@@ -43,5 +43,7 @@ cask "emacs-mac"
 cask "firefox-developer-edition"
 # Web browser
 cask "google-chrome-beta"
+# Password manager
+cask "lastpass"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
