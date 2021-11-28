@@ -72,11 +72,12 @@
 (use-package doom-modeline
   :config
   (doom-modeline-mode 1))
+(use-package all-the-icons)
 
 ;;; Doom Themes
 (use-package doom-themes
   :config
-  (load-theme 'doom-palenight)
+  (load-theme 'doom-palenight t)
   (doom-themes-visual-bell-config)
   (doom-themes-org-config))
 
@@ -103,3 +104,40 @@
 	 ("C-c C-d" . helpful-at-point)
 	 ([remap describe-function] . helpful-function)
 	 ([remap describe-command] . helpful-command)))
+
+;;; General
+(use-package general
+  :config
+  (general-create-definer dcp/leader-key
+    :keymaps 'normal
+    :prefix "SPC")
+  (general-create-definer dcp/local-leader-key
+    :keymaps 'normal
+    :prefix "SPC m")
+
+  (dcp/leader-key
+    "t"  '(:ignore t :which-key "toggles")
+    "tt" '(counsel-load-theme :which-key "choose theme")))
+
+;;; Evil
+(use-package evil
+  :init
+  ;; Required for evil-collection.
+  (setq evil-want-integration t)
+  (setq evil-want-keybinding nil)
+  ;; Set same as vim defaults/config.
+  (setq evil-want-C-u-scroll t)
+  (setq evil-want-C-u-delete t)
+  (setq evil-move-beyond-eol t)
+  :config
+  (evil-mode 1)
+  ;; Use C-g to escape to NORMAL mode.
+  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
+  ;; Use C-h to have default Emacs key when in INSERT mode.
+  (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join))
+
+(use-package evil-collection
+  :after evil
+  :ensure t
+  :config
+  (evil-collection-init))
