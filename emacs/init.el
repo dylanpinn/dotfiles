@@ -149,4 +149,7 @@
   :bind-keymap
   ("C-c p" . projectile-command-map)
   :init
-  (setq projectile-project-search-path '(("~/dev/". 2))))
+  (setq projectile-project-search-path '(("~/dev/". 3))))
+
+;;; Magit
+(use-package magit)
