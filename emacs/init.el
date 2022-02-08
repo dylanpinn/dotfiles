@@ -153,3 +153,4 @@
 
 ;;; Magit
 (use-package magit)
+(use-package forge)
