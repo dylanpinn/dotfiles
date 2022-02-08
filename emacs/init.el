@@ -154,3 +154,6 @@
 ;;; Magit
 (use-package magit)
 (use-package forge)
+
+;; Org Mode
+(use-package org)
