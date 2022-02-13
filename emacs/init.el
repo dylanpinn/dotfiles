@@ -156,4 +156,17 @@
 (use-package forge)
 
 ;; Org Mode
-(use-package org)
+(use-package org
+  :config
+
+  (setq org-agenda-start-with-log-mode t)
+  (setq org-log-done 'time)
+  (setq org-log-into-drawer t)
+
+  (setq org-agenda-files
+	'("~/dev/git.realestate.com.au/dylan-pinn/notes/tasks.org"
+	  "~/dev/git.realestate.com.au/dylan-pinn/notes/journal.org"))
+
+  (setq org-todo-keywords
+	'((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")
+	  (sequence "BACKLOG(b)" "ACTIVE(a)" "|" "COMPLETED(c)"))))
