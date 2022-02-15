@@ -157,16 +157,36 @@
 
 ;; Org Mode
 (use-package org
+  :bind
+  ("C-c a" . 'org-agenda)
+  ("C-c c" . 'org-capture)
   :config
-
   (setq org-agenda-start-with-log-mode t)
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
 
-  (setq org-agenda-files
-	'("~/dev/git.realestate.com.au/dylan-pinn/notes/tasks.org"
-	  "~/dev/git.realestate.com.au/dylan-pinn/notes/journal.org"))
+  ;; Display headings when opening org files.
+  (setq org-startup-folded 'content)
 
+  ;; Setup included files in org-agenda.
+  (setq org-agenda-files
+	'("~/dev/git.realestate.com.au/dylan-pinn/notes"))
+
+  ;; Setup TODO keywords.
+  ;; First is for tasks; Second is for projects.
   (setq org-todo-keywords
 	'((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!)")
-	  (sequence "BACKLOG(b)" "ACTIVE(a)" "|" "COMPLETED(c)"))))
+	  (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "MEETING")))
+
+  ;; Show the daily agenda by default.
+  (setq org-agenda-span 'day)
+
+  ;; Hide tasks that are scheduled in the future.
+  (setq org-agenda-todo-ignore-scheduled 'future)
+
+  ;; Customised Agenda view for daily workflow.
+  (setq org-agenda-custom-commands
+	'(("n" "Agenda / NEXT"
+	   ((agenda "" nil)
+	    (todo "NEXT" nil))
+	   nil))))
