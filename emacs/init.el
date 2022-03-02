@@ -1,7 +1,3 @@
-;;; Emacs configuration
-
-;;; UI Settings
-
 ;; Remove startup message
 (setq inhibit-startup-message t)
 ;; Disable visible scrollbar
@@ -29,7 +25,9 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-;;; Setup use-package
+;; Move custom configuration out to specifc file
+(setq custom-file "~/.config/emacs/custom.el")
+(load custom-file)
 
 ;; Initialise package sources
 (require 'package)
@@ -40,13 +38,9 @@
 
 ;; Initialize use-package
 (unless (package-installed-p 'use-package)
-(package-install 'use-package))
+  (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure t)
-
-;; Move custom configuration out to specifc file
-(setq custom-file "~/.config/emacs/custom.el")
-(load custom-file)
 
 ;;; Ivy Completion
 (use-package counsel
@@ -151,11 +145,9 @@
   :init
   (setq projectile-project-search-path '(("~/dev/". 3))))
 
-;;; Magit
 (use-package magit)
 (use-package forge)
 
-;; Org Mode
 (use-package org
   :bind
   ("C-c a" . 'org-agenda)
@@ -190,3 +182,17 @@
 	   ((agenda "" nil)
 	    (todo "NEXT" nil))
 	   nil))))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)))
+
+;; Automatically tangle our Emacs.org config file when we save it
+(defun dcp/org-babel-tangle-config ()
+  (when (string-equal (buffer-file-name)
+		      (expand-file-name "~/.dotfiles/emacs/emacs.org"))
+    ;; Dynamic scoping to the rescue
+    (let ((org-confirm-babel-evaluate nil))
+      (org-babel-tangle))))
+
+(add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'dcp/org-babel-tangle-config)))
