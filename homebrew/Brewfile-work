@@ -10,6 +10,10 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# Docker Credential Helper for Amazon ECR
+brew "docker-credential-helper-ecr"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -18,8 +22,14 @@ brew "git"
 brew "jq"
 # Postgres C API library
 brew "libpq", link: true
+# Mac App Store command-line interface
+brew "mas"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Terminal multiplexer
+brew "tmux"
 # Maintained ctags implementation
 brew "universal-ctags"
 # Vi 'workalike' with many additional features
@@ -36,18 +46,63 @@ cask "1password"
 cask "alfred"
 # Application uninstaller
 cask "appcleaner"
+# API documentation browser and code snippet manager
+cask "dash"
+# Voice and text chat software
+cask "discord"
 # App to build and share containerized applications and microservices
 cask "docker"
+# YAMAMOTO Mitsuharu's Mac port of GNU Emacs
 cask "emacs-mac"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox-developer-edition"
 # Web browser
+cask "google-chrome"
+# Web browser
 cask "google-chrome-beta"
+# Light, Electron-based Wrapper around GraphiQL
+cask "graphiql"
+# Tool to optimize images to a smaller size
+cask "imageoptim"
+# HTTP and GraphQL Client
+cask "insomnia"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # Password manager
 cask "lastpass"
+# Native desktop app for Messenger (formerly Facebook Messenger)
+cask "messenger"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Web browser
+cask "microsoft-edge"
+# Multi-platform web browser
+cask "microsoft-edge-dev"
+# Online collaborative whiteboard platform
+cask "miro"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Music streaming service
 cask "spotify"
+# Open-source code editor
+cask "visual-studio-code"
+# Desktop client for WhatsApp
+cask "whatsapp"
+mas "Amphetamine", id: 937984704
+mas "Craft", id: 1487937127
+mas "GarageBand", id: 682658836
+mas "Keynote", id: 409183694
+mas "Microsoft To Do", id: 1274495053
+mas "MusicHarbor", id: 1440405750
+mas "NotePlan 3", id: 1505432629
+mas "Session", id: 1521432881
+mas "Streaks", id: 963034692
+mas "Trello", id: 1278508951
+mas "Twitter", id: 1482454543
+mas "Wipr", id: 1320666476
