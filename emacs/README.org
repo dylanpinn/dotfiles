@@ -1,3 +1,8 @@
 * Emacs Configuration
 
-  This sets up a basic Emacs configuration using Evil (Vim) keybindings.
+  This sets up a basic Emacs configuration using Evil (Vim)
+  keybindings.
+
+  The configuration is written in a literate org file
+  (=emacs/emacs.org=) and then on save =init.el= is generated and
+  loaded by Emacs.
