@@ -229,6 +229,3 @@
       (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'dcp/org-babel-tangle-config)))
 
     #+end_src
-
-    
-    
