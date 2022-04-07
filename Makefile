@@ -7,7 +7,6 @@ NAME ?= 'Dylan Pinn'
 EMAIL ?= 'me@dylanpinn.com'
 
 install : install-bash \
-	install-emacs \
 	install-git \
 	install-nvm \
 	install-vim \
