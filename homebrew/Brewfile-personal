@@ -16,6 +16,8 @@ brew "vim"
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 mas "1Password 7", id: 1333542190
 mas "1Password for Safari", id: 1569813296
 mas "Keynote", id: 409183694
