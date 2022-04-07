@@ -1,7 +1,9 @@
+tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "railwaycat/emacsmacport"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Distributed revision control system
@@ -10,10 +12,15 @@ brew "git"
 brew "mas"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Password manager that keeps all passwords secure behind one password
-cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
-cask "emacs-mac"
-mas "Things", id: 904280696
+mas "1Password 7", id: 1333542190
+mas "1Password for Safari", id: 1569813296
+mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Twitter", id: 1482454543
 mas "Wipr", id: 1320666476
