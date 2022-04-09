@@ -1,6 +1,7 @@
 tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Official Amazon AWS command-line interface
 brew "awscli"
@@ -12,13 +13,14 @@ brew "git"
 brew "mas"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Password manager that keeps all passwords secure behind one password
+cask "1password-beta"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-mas "1Password 7", id: 1333542190
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
