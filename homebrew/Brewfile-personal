@@ -19,6 +19,10 @@ cask "1password-beta"
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+# Native desktop app for Messenger (formerly Facebook Messenger)
+cask "messenger"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
@@ -27,5 +31,6 @@ mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Reeder", id: 1529448980
 mas "Twitter", id: 1482454543
 mas "Wipr", id: 1320666476
