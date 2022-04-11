@@ -19,6 +19,8 @@ cask "1password-beta"
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+# Free and open-source media player
+cask "iina"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
 # Knowledge base that works on top of a local folder of plain text Markdown files
