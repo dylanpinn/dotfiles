@@ -8,6 +8,8 @@ tap "homebrew/core"
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # Mac App Store command-line interface
@@ -36,6 +38,7 @@ mas "Keynote", id: 409183694
 mas "Kindle", id: 405399194
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Reeder", id: 1529448980
 mas "Twitter", id: 1482454543
 mas "Wipr", id: 1320666476
