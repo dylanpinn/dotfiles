@@ -1,6 +1,7 @@
 tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 # Official Amazon AWS command-line interface
@@ -21,6 +22,8 @@ cask "1password-cli"
 cask "appcleaner"
 # Free and open-source media player
 cask "iina"
+# Software for Logitech devices
+cask "logitech-options"
 # Native desktop app for Messenger (formerly Facebook Messenger)
 cask "messenger"
 # Knowledge base that works on top of a local folder of plain text Markdown files
