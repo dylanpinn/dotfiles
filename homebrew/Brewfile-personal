@@ -36,6 +36,8 @@ brew "vint"
 cask "1password-beta"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
 # E-books management software
