@@ -1,6 +1,7 @@
 tap "cowbell/stuff", "git@git.realestate.com.au:cowbell/homebrew-stuff.git"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "railwaycat/emacsmacport"
@@ -76,6 +77,8 @@ cask "insomnia"
 cask "jetbrains-toolbox"
 # Password manager
 cask "lastpass"
+# Software for Logitech devices
+cask "logi-options-plus"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Native desktop app for Messenger (formerly Facebook Messenger)
