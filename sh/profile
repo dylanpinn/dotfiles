@@ -19,3 +19,7 @@ for sh in "$HOME"/.profile.d/*.sh; do
 done
 unset -v sh
 
+
+# >>> coursier install directory >>>
+export PATH="$PATH:/Users/dylan.pinn/Library/Application Support/Coursier/bin"
+# <<< coursier install directory <<<
