@@ -3,3 +3,6 @@ Brewfile*.lock.json
 
 # Ignore generated files
 git/config
+
+# Ignore compiled files
+nvim/plugin/packer_compiled.lua
