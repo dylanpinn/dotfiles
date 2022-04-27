@@ -131,3 +131,8 @@ lint-sh : check-sh
 
 lint-vim :
 	sh lint/vim.sh
+
+.PHONY: nvim
+nvim: ## Install Neovim configuration.
+	@mkdir -p -- $(XDG_CONFIG_HOME)/nvim
+	@install -- nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
