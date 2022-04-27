@@ -25,10 +25,14 @@ brew "jq"
 brew "libpq", link: true
 # Mac App Store command-line interface
 brew "mas"
+# Like sed, awk, cut, join & sort for name-indexed data such as CSV
+brew "miller"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Build tool for Scala projects
+brew "sbt"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Terminal multiplexer
@@ -99,21 +103,20 @@ cask "raycast"
 cask "rectangle"
 # Music streaming service
 cask "spotify"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin17"
 # Open-source code editor
 cask "visual-studio-code"
 # Desktop client for WhatsApp
 cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
-mas "Craft", id: 1487937127
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Microsoft OneNote", id: 784801555
 mas "Microsoft To Do", id: 1274495053
 mas "MusicHarbor", id: 1440405750
-mas "NotePlan 3", id: 1505432629
 mas "Reeder", id: 1529448980
-mas "Session", id: 1521432881
 mas "Streaks", id: 963034692
 mas "Trello", id: 1278508951
 mas "Twitter", id: 1482454543
