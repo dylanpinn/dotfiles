@@ -16,6 +16,8 @@ brew "gh"
 brew "git"
 # Mac App Store command-line interface
 brew "mas"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Password manager that keeps all passwords secure behind one password
