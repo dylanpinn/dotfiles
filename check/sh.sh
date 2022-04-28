@@ -2,7 +2,7 @@
 #
 # Check syntax for sh files.
 
-for sh in sh/* */profile.d/* ; do
+for sh in sh/* */profile.d/*; do
   [ -f "$sh" ] || continue
   sh -n -- "$sh"
 done
