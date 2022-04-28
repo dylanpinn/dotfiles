@@ -18,4 +18,3 @@ for sh in "$HOME"/.profile.d/*.sh; do
   . "$sh"
 done
 unset -v sh
-
