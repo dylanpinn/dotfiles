@@ -46,6 +46,11 @@ clean-vim :
 	rm -f -- $(HOME)/.vim/compiler
 	rm -f -- $(HOME)/.vim/plugin
 
+format: format-sh
+
+format-sh:
+	@sh format/sh.sh
+
 git/config: git/config.m4
 	m4 \
 		-D NAME=$(NAME) \
