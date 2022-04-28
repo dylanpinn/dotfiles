@@ -7,6 +7,7 @@ NAME ?= 'Dylan Pinn'
 EMAIL ?= 'me@dylanpinn.com'
 
 install : install-bash \
+	install-bin \
 	install-git \
 	install-nvm \
 	install-vim \
@@ -25,6 +26,9 @@ clean-bash :
 	rm -f -- $(HOME)/.bashrc
 	rm -f -- $(HOME)/.bash_profile
 	rm -rf -- $(HOME)/.bashrc.d
+
+clean-bin:
+	rm -r -- $(HOME)/.local/bin
 
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
@@ -66,6 +70,10 @@ install-bash : check-bash clean-bash install-sh
 	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
+
+install-bin: clean-bin
+	mkdir -p -- $(HOME)/.local/bin
+	ln -s -- $(PWD)/bin/* $(HOME)/.local/bin/
 
 install-brew :
 	brew update
