@@ -84,6 +84,12 @@ install-git : git/config clean-git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
+install-nvim:
+	sh install/nvim.sh
+	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
+	ln -s -- $(PWD)/nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
+	ln -s -- $(PWD)/nvim/after $(XDG_CONFIG_HOME)/nvim/after
+
 install-nvm : install-bash
 	sh install/nvm.sh
 	ln -s -- $(PWD)/nvm/profile.d/* $(HOME)/.profile.d/
@@ -131,10 +137,3 @@ lint-sh : check-sh
 
 lint-vim :
 	sh lint/vim.sh
-
-.PHONY: nvim
-nvim: ## Install Neovim configuration.
-	sh install/nvim.sh
-	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
-	ln -s -- $(PWD)/nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
-	ln -s -- $(PWD)/nvim/after $(XDG_CONFIG_HOME)/nvim/after
