@@ -3,3 +3,7 @@
 
 -- Use the built in desert color scheme until I find something I like more.
 vim.cmd("colorscheme desert")
+
+require "paq" {
+	"savq/paq-nvim";                  -- Let Paq manage itself
+}
