@@ -18,6 +18,8 @@ brew "git"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Autoformat shell script source code
+brew "shfmt"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Password manager that keeps all passwords secure behind one password
