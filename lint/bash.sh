@@ -10,7 +10,6 @@ set \
 
 shellcheck -e SC1090 -e SC1091 -s bash -- "$@"
 
-find . -type f -name "*.bash" | while IFS='' read -r line
-do
+find . -type f -name "*.bash" | while IFS='' read -r line; do
   shellcheck -e SC1090 -e SC1091 -s bash -- "$line"
 done
