@@ -50,10 +50,14 @@ clean-vim :
 	rm -f -- $(HOME)/.vim/compiler
 	rm -f -- $(HOME)/.vim/plugin
 
-format: format-sh
+format: format-lua \
+	format-sh
+
+format-lua:
+	sh format/lua.sh
 
 format-sh:
-	@sh format/sh.sh
+	sh format/sh.sh
 
 git/config: git/config.m4
 	m4 \
