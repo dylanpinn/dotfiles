@@ -134,11 +134,15 @@ install-work : install-sh
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
 
 lint : lint-bash \
+	lint-lua \
 	lint-sh \
 	lint-vim
 
 lint-bash : check-bash
 	sh lint/bash.sh
+
+lint-lua:
+	sh lint/lua.sh
 
 lint-sh : check-sh
 	sh lint/sh.sh
