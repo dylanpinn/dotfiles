@@ -4,5 +4,4 @@
 
 set -e
 
-luacheck .luacheckrc
-luacheck nvim
+luacheck .luacheckrc nvim
