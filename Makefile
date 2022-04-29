@@ -5,14 +5,12 @@ XDG_DATA_HOME ?= $(HOME)/.local/share
 XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
-EMAIL ?= 'me@dylanpinn.com'
 
 all: git/config
 
 git/config: git/config.m4
 	m4 \
 		-D NAME=$(NAME) \
-		-D EMAIL=$(EMAIL) \
 		git/config.m4 > $@
 
 install : install-bash \

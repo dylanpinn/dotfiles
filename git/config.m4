@@ -51,4 +51,3 @@
 	autosquash = true
 [user]
 	name = NAME
-	email = EMAIL
