@@ -6,6 +6,14 @@ XDG_STATE_HOME ?= $(HOME)/.local/state
 NAME ?= 'Dylan Pinn'
 EMAIL ?= 'me@dylanpinn.com'
 
+all: git/config
+
+git/config: git/config.m4
+	m4 \
+		-D NAME=$(NAME) \
+		-D EMAIL=$(EMAIL) \
+		git/config.m4 > $@
+
 install : install-bash \
 	install-bin \
 	install-git \
@@ -61,12 +69,6 @@ format-lua:
 
 format-sh:
 	sh format/sh.sh
-
-git/config: git/config.m4
-	m4 \
-		-D NAME=$(NAME) \
-		-D EMAIL=$(EMAIL) \
-		git/config.m4 > $@
 
 install-aws : install-sh
 	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
