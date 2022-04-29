@@ -6,7 +6,10 @@ XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
 
-all: git/config
+BINS = bin/git-stats-loc
+
+all: $(BINS) \
+	git/config
 
 git/config: git/config.m4
 	m4 \
@@ -29,13 +32,15 @@ check-bash :
 check-sh :
 	sh check/sh.sh
 
+clean:
+	rm -r -- \
+		$(BINS) \
+		git/config
+
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
 	rm -f -- $(HOME)/.bash_profile
 	rm -rf -- $(HOME)/.bashrc.d
-
-clean-bin:
-	rm -rf -- $(HOME)/.local/bin
 
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
@@ -79,9 +84,9 @@ install-bash : check-bash clean-bash install-sh
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
 
-install-bin: clean-bin
+install-bin: $(BINS)
 	mkdir -p -- $(HOME)/.local/bin
-	ln -s -- $(PWD)/bin/* $(HOME)/.local/bin/
+	install -- $(BINS) $(HOME)/.local/bin/
 
 install-brew :
 	brew update
