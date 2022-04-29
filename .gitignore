@@ -2,4 +2,5 @@
 Brewfile*.lock.json
 
 # Ignore generated files
+bin/git-stats-loc
 git/config
