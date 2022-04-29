@@ -5,4 +5,25 @@
 
 set -eou pipefail
 
-git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D "$branch"; done
+main() {
+  update_repo
+  for branch in $(branches); do
+    delete_branch
+  done
+}
+
+update_repo() {
+  git fetch --prune
+}
+
+branches() {
+  git branch -vv \
+    | grep ': gone]' \
+    | awk '{print $1}'
+}
+
+delete_branch() {
+  git branch -D "$branch"
+}
+
+main
