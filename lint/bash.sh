@@ -10,6 +10,6 @@ set \
 
 shellcheck -e SC1090 -e SC1091 -s bash -- "$@"
 
-find . -type f -name "*.bash" | while IFS='' read -r line; do
-  shellcheck -e SC1090 -e SC1091 -s bash -- "$line"
-done
+# TODO: Find a way to remove this.
+# shellcheck disable=SC2046
+shellcheck -e SC1090 -e SC1091 -s bash -- $(find . -type f -name "*.bash")
