@@ -28,13 +28,16 @@ clean-bash :
 	rm -rf -- $(HOME)/.bashrc.d
 
 clean-bin:
-	rm -r -- $(HOME)/.local/bin
+	rm -rf -- $(HOME)/.local/bin
 
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
 
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
+
+clean-nvim:
+	rm -rf -- $(XDG_CONFIG_HOME)/nvim
 
 clean-postgres :
 	rm -f -- $(XDG_CONFIG_HOME)/pg/psqlrc
@@ -96,7 +99,7 @@ install-git : git/config clean-git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
-install-nvim:
+install-nvim: clean-nvim
 	sh install/nvim.sh
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
 	ln -s -- $(PWD)/nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
