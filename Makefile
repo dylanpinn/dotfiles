@@ -6,7 +6,8 @@ XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
 
-BINS = bin/git-stats-loc
+BINS = bin/git-remove-merged-local \
+       bin/git-stats-loc
 
 all: $(BINS) \
 	git/config
