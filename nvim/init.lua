@@ -4,11 +4,9 @@
 -- Use the built in desert color scheme until I find something I like more.
 vim.cmd("colorscheme desert")
 
--- Use Paq to manage plugins for Neovim, it is light weight so fingers crossed
--- I won't need any of the missing features from Packer.
-require("paq")({
-  "savq/paq-nvim", -- Let Paq manage itself
-})
+-- Load all external plugins via a module.  This allows keeping this file to be
+-- a tad smaller and keeps the plugin declaration in a separate file.
+require("dcp.packages")
 
 -- Mapping defnitions are defined here.  Here are some rules I have tried to
 -- follow as much as possible.

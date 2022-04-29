@@ -104,6 +104,7 @@ install-nvim: clean-nvim
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
 	ln -s -- $(PWD)/nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
 	ln -s -- $(PWD)/nvim/after $(XDG_CONFIG_HOME)/nvim/after
+	ln -s -- $(PWD)/nvim/lua $(XDG_CONFIG_HOME)/nvim/lua
 
 install-nvm : install-bash
 	sh install/nvm.sh
