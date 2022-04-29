@@ -43,6 +43,9 @@ clean-bash :
 	rm -f -- $(HOME)/.bash_profile
 	rm -rf -- $(HOME)/.bashrc.d
 
+clean-bin:
+	rm -r -- $(HOME)/.local/bin
+
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
 
@@ -85,7 +88,7 @@ install-bash : check-bash clean-bash install-sh
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
 
-install-bin: $(BINS)
+install-bin: $(BINS) clean-bin
 	mkdir -p -- $(HOME)/.local/bin
 	install -- $(BINS) $(HOME)/.local/bin/
 
