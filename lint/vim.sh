@@ -4,7 +4,6 @@
 
 set -e
 
-find vim -type f | while IFS='' read -r line; do
-  printf '%s\n' "$line"
-  vint -s -- "$line"
-done
+# TODO: Find a way to remove this.
+# shellcheck disable=SC2046
+vint -s -- $(find vim -type f)
