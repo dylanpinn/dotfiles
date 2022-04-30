@@ -24,6 +24,8 @@ brew "neovim"
 brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
+# Opinionated Lua code formatter
+brew "stylua"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Vim script Language Lint
@@ -32,8 +34,6 @@ brew "vint"
 cask "1password-beta"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
-# Privacy-focused app for managing your finances
-cask "actual"
 # Application uninstaller
 cask "appcleaner"
 # E-books management software
@@ -50,10 +50,11 @@ cask "obsidian"
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
+mas "Craft", id: 1487937127
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Reeder", id: 1529448980
-mas "Twitter", id: 1482454543
+mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
