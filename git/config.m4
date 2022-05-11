@@ -15,6 +15,9 @@
 	di = diff
 	dc = diff --cached
 
+	# GitHub - PR
+	pr-changelog-body = "!f(){ gh pr edit -b \"$(git changelog)\"; };f"
+
 	# Log
 	changelog = log origin..HEAD --format='* %s%n%w(,4,4)%+b'
 	glg = log --oneline --decorate --all --graph --abbrev-commit
