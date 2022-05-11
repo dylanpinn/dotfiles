@@ -57,6 +57,8 @@ brew "cowbell/stuff/rea-as"
 cask "1password-beta"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
