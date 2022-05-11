@@ -2,7 +2,7 @@
 -- I can get native LSP support for TypeScript and Scala projects.
 
 -- Use the built in desert color scheme until I find something I like more.
-vim.cmd("colorscheme desert")
+vim.cmd("colorscheme tokyonight")
 
 -- Load all external plugins via a module.  This allows keeping this file to be
 -- a tad smaller and keeps the plugin declaration in a separate file.
