@@ -5,3 +5,6 @@ Brewfile*.lock.json
 bin/git-remove-merged-local
 bin/git-stats-loc
 git/config
+
+# Ignore package management
+node_modules
