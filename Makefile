@@ -77,6 +77,9 @@ format-lua:
 format-sh:
 	sh format/sh.sh
 
+install-asdf: install-bash
+	install -- $(PWD)/asdf/bashrc.d/* $(HOME)/.bashrc.d/
+
 install-aws : install-sh
 	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
 
