@@ -79,6 +79,8 @@ format-sh:
 
 install-asdf: install-bash
 	install -- $(PWD)/asdf/bashrc.d/* $(HOME)/.bashrc.d/
+	install -- $(PWD)/asdf/profile.d/* $(HOME)/.profile.d/
+	install -- $(PWD)/asdf/asdfrc $(XDG_CONFIG_HOME)/asdfrc
 
 install-aws : install-sh
 	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
