@@ -20,7 +20,6 @@ git/config: git/config.m4
 install : install-bash \
 	install-bin \
 	install-git \
-	install-nvm \
 	install-vim \
 	install-wakatime
 
@@ -115,11 +114,6 @@ install-nvim: clean-nvim
 	ln -s -- $(PWD)/nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
 	ln -s -- $(PWD)/nvim/after $(XDG_CONFIG_HOME)/nvim/after
 	ln -s -- $(PWD)/nvim/lua $(XDG_CONFIG_HOME)/nvim/lua
-
-install-nvm : install-bash
-	sh install/nvm.sh
-	ln -s -- $(PWD)/nvm/profile.d/* $(HOME)/.profile.d/
-	ln -s -- $(PWD)/nvm/bashrc.d/* $(HOME)/.bashrc.d/
 
 install-personal : install-sh
 	ln -s -- $(PWD)/personal/profile.d/* $(HOME)/.profile.d/
