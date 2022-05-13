@@ -1,7 +1,14 @@
 #+title Emacs Configuration
 #+PROPERTY: header-args:emacs-lisp :tangle ./init.el
 
+This is the configuration file for my Emacs setup.  I typically use
+Vim but am experiementing with using Emacs for certain tasks.  This
+file generates [[file:init.el][init.el]] which is loaded by Emacs at startup.
+
 * Basic UI Configuration
+
+This section configures basic UI settings that remove unneeded
+elements to make Emacs look more minimal and modern.
   
   #+begin_src emacs-lisp
     ;; Remove startup message
@@ -27,16 +34,14 @@
 		    eshell-mode-hook
 		    shell-mode-hook))
       (add-hook mode (lambda () (display-line-numbers-mode 0))))
-
-    ;; Make ESC quit prompts
-    (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
-
-    ;; Move custom configuration out to specifc file
-    (setq custom-file "~/.config/emacs/custom.el")
-    (load custom-file)
   #+end_src
 
 * Setup =use-package=
+
+Emacs has a built in package manager, but it doesn't make it easy to
+setup a new system from a configuration file. [[https://github.com/jwiegley/use-package][use-package]] is a really
+helpful package used in this configuration to make it a lot easier to
+automate the installation and configuration of everything else we use.
 
   #+begin_src emacs-lisp
     ;; Initialise package sources
@@ -53,65 +58,17 @@
     (setq use-package-always-ensure t)
   #+end_src
 
-* Packages
-  
+* Keybinding Configuration
+
+ This configuration uses [[https://evil.readthedocs.io/en/latest/index.html][evil-mode]] for a Vi-like modal editing
+ experience.  [[https://github.com/noctuid/general.el][general.el]] is used for easy keybinding configuration
+ that integrates well with which-key.  [[https://github.com/emacs-evil/evil-collection][evil-collection]] is used to
+ automatically configure various Emacs modes with Vi-like keybindings
+ for evil-mode.
+
   #+begin_src emacs-lisp
-    ;;; Ivy Completion
-    (use-package counsel
-      :after ivy
-      :config (counsel-mode 1))
-    (use-package ivy
-      :diminish
-      :custom
-      (setq ivy-use-virtual-buffers t)
-      (setq ivy-count-format "(%d/%d) ")
-      :config
-      (ivy-mode 1))
-    (use-package swiper
-      :after ivy
-      :bind (("C-s" . swiper)))
-    (use-package ivy-rich
-      :after ivy
-      :config
-      (ivy-rich-mode 1)
-      (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line))
-
-    ;;; Doom Modeline
-    (use-package doom-modeline
-      :config
-      (doom-modeline-mode 1))
-    (use-package all-the-icons)
-
-    ;;; Doom Themes
-    (use-package doom-themes
-      :config
-      (load-theme 'doom-palenight t)
-      (doom-themes-visual-bell-config)
-      (doom-themes-org-config))
-
-    ;;; Rainbow Delimiters
-    (use-package rainbow-delimiters
-      :hook
-      (prog-mode . rainbow-delimiters-mode))
-
-    ;;; which-key
-    (use-package which-key
-      :diminish which-key-mode
-      :config
-      (which-key-mode)
-      (setq which-key-idle-delay 0.3))
-
-    ;;; Helpful
-    (use-package helpful
-      :commands (helpful-callable helpful-variable helpful-key helpful-at-point
-				  helpful-function helpful-command)
-      :custom
-      (counsel-describe-function-function #'helpful-callable)
-      (counsel-describe-variable-function #'helpful-variable)
-      :bind (([remap describe-key] . helpful-key)
-	     ("C-c C-d" . helpful-at-point)
-	     ([remap describe-function] . helpful-function)
-	     ([remap describe-command] . helpful-command)))
+    ;; Make ESC quit prompts
+    (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
     ;;; General
     (use-package general
@@ -149,23 +106,130 @@
       :ensure t
       :config
       (evil-collection-init))
-
-    ;;; Projectile
-    (use-package projectile
-      :diminish projectile-mode
-      :config (projectile-mode)
-      :bind-keymap
-      ("C-c p" . projectile-command-map)
-      :init
-      (setq projectile-project-search-path '(("~/dev/". 3))))
-
   #+end_src
-** Magit
-   #+begin_src emacs-lisp
-     (use-package magit)
-     (use-package forge)
-   #+end_src
-** Org Mode
+
+* UI Configuration
+** Colour Theme
+
+ [[https://github.com/hlissner/emacs-doom-themes][doom-themes]] is a great set of themes with a lot of variety and
+ support for many different Emacs modes.  Taking a look at the
+ [[https://github.com/hlissner/emacs-doom-themes/tree/screenshots][screenshots]] might help you decide which one you like best.  You can
+ also run =M-x counsel-load-theme= to choose between them easily.
+ 
+  #+begin_src emacs-lisp
+    ;;; Doom Themes
+    (use-package doom-themes
+      :config
+      (load-theme 'doom-palenight t)
+      (doom-themes-visual-bell-config)
+      (doom-themes-org-config))
+  #+end_src
+  
+** Better Modeline
+
+ [[https://github.com/seagle0128/doom-modeline][doom-modeline]] is a very attractive and rich (yet still minimal) mode
+ line configuration for Emacs.  The default configuration is quite
+ good but you can check out the [[https://github.com/seagle0128/doom-modeline#customize][configuration options]] for more things
+ you can enable or disable.
+
+  #+begin_src emacs-lisp
+    ;;; Doom Modeline
+    (use-package doom-modeline
+      :config
+      (doom-modeline-mode 1))
+    (use-package all-the-icons)
+  #+end_src
+
+** Which Key
+
+ [[https://github.com/justbur/emacs-which-key][which-key]] is a useful UI panel that appears when you start pressing
+ any key binding in Emacs to offer you all possible completions for
+ the prefix.  For example, if you press =C-c= (hold control and press
+ the letter =c=), a panel will appear at the bottom of the frame
+ displaying all of the bindings under that prefix and which command
+ they run.  This is very useful for learning the possible key bindings
+ in the mode of your current buffer.
+ 
+  #+begin_src emacs-lisp
+    ;;; which-key
+    (use-package which-key
+      :diminish which-key-mode
+      :config
+      (which-key-mode)
+      (setq which-key-idle-delay 0.3))
+  #+end_src
+
+** Ivy and Counsel
+
+ [[https://oremacs.com/swiper/][Ivy]] is an excellent completion framework for Emacs.  It provides a
+ minimal yet powerful selection menu that appears when you open files,
+ switch buffers, and for many other tasks in Emacs.  Counsel is a
+ customized set of commands to replace `find-file` with
+ `counsel-find-file`, etc which provide useful commands for each of
+ the default completion commands.
+
+  [[https://github.com/Yevgnen/ivy-rich][ivy-rich]] adds extra columns to a few of the Counsel commands to
+  provide more information about each item.
+
+  #+begin_src emacs-lisp
+    ;;; Ivy Completion
+    (use-package counsel
+      :after ivy
+      :config (counsel-mode 1))
+
+    (use-package ivy
+      :diminish
+      :custom
+      (setq ivy-use-virtual-buffers t)
+      (setq ivy-count-format "(%d/%d) ")
+      :config
+      (ivy-mode 1))
+
+    (use-package swiper
+      :after ivy
+      :bind (("C-s" . swiper)))
+
+    (use-package ivy-rich
+      :after ivy
+      :config
+      (ivy-rich-mode 1)
+      (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line))
+  #+end_src
+
+** Helpful Help Commands
+
+ [[https://github.com/Wilfred/helpful][Helpful]] adds a lot of very helpful information to Emacs' =describe-=
+ command buffers.  For example, if you use =describe-function=, you
+ will not only get the documentation about the function, you will also
+ see the source code of the function and where it gets used in other
+ places in the Emacs configuration.  It is very useful for figuring
+ out how things work in Emacs.
+
+  #+begin_src emacs-lisp
+    ;;; Helpful
+    (use-package helpful
+      :commands (helpful-callable helpful-variable helpful-key helpful-at-point
+				  helpful-function helpful-command)
+      :custom
+      (counsel-describe-function-function #'helpful-callable)
+      (counsel-describe-variable-function #'helpful-variable)
+      :bind (([remap describe-key] . helpful-key)
+	     ("C-c C-d" . helpful-at-point)
+	     ([remap describe-function] . helpful-function)
+	     ([remap describe-command] . helpful-command)))
+  #+end_src
+
+* Org Mode
+
+ [[https://orgmode.org/][Org Mode]] is one of the hallmark features of Emacs.  It is a rich
+ document editor, project planner, task and time tracker, blogging
+ engine, and literate coding utility all wrapped up in one package.
+ 
+** Basic Config
+
+ This section contains the basic configuration for =org-mode= plus the
+ configuration for Org agendas and capture templates.
+
    #+begin_src emacs-lisp
      (use-package org
        :bind
@@ -202,13 +266,22 @@
 		 (todo "NEXT" nil))
 		nil))))
    #+end_src
-*** Configure Babel Languages
+
+** Configure Babel Languages
+
+ To execute or export code in =org-mode= code blocks, you'll need to
+ set up =org-babel-load-languages= for each language you'd like to
+ use.  [[https://orgmode.org/worg/org-contrib/babel/languages.html][This page]] documents all of the languages that you can use with
+ =org-babel=.
+
     #+begin_src emacs-lisp
       (org-babel-do-load-languages
        'org-babel-load-languages
        '((emacs-lisp . t)))
     #+end_src
-*** Auto-tangle Configuration Files
+
+** Auto-tangle Configuration Files
+
     This snippet adds a hook to =org-mode= buffers so that
     =dcp/org-babel-tangle-config= gets executed each time such a
     buffer gets saved.  This function checks to see if the file being
@@ -229,3 +302,65 @@
       (add-hook 'org-mode-hook (lambda () (add-hook 'after-save-hook #'dcp/org-babel-tangle-config)))
 
     #+end_src
+    
+* Custom Config
+
+This moves any changes to custom variables out of the init.el file and
+into a separate configuation file.
+
+  #+begin_src emacs-lisp
+    ;; Move custom configuration out to specifc file
+    (setq custom-file "~/.config/emacs/custom.el")
+    (load custom-file)
+  #+end_src
+
+* Development
+
+** Projectile
+
+ [[https://projectile.mx/][Projectile]] is a project management library for Emacs which makes it a
+ lot easier to navigate around code projects for various languages.
+ Many packages integrate with Projectile so it's a good idea to have
+ it installed even if you don't use its commands directly.
+
+  #+begin_src emacs-lisp
+
+    ;;; Rainbow Delimiters
+    (use-package rainbow-delimiters
+      :hook
+      (prog-mode . rainbow-delimiters-mode))
+
+    ;;; Projectile
+    (use-package projectile
+      :diminish projectile-mode
+      :config (projectile-mode)
+      :bind-keymap
+      ("C-c p" . projectile-command-map)
+      :init
+      (setq projectile-project-search-path '(("~/dev/". 3))))
+  #+end_src
+
+** Magit
+
+ [[https://magit.vc/][Magit]] is the best Git interface I've ever used.  Common Git
+ operations are easy to execute quickly using Magit's command panel
+ system.
+
+   #+begin_src emacs-lisp
+     (use-package magit)
+     (use-package forge)
+   #+end_src
+
+** Rainbow Delimiters
+
+ [[https://github.com/Fanael/rainbow-delimiters][rainbow-delimiters]] is useful in programming modes because it
+ colorizes nested parentheses and brackets according to their nesting
+ depth.  This makes it a lot easier to visually match parentheses in
+ Emacs Lisp code without having to count them yourself.
+  
+  #+begin_src emacs-lisp
+    ;;; Rainbow Delimiters
+    (use-package rainbow-delimiters
+      :hook
+      (prog-mode . rainbow-delimiters-mode))
+  #+end_src
