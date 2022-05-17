@@ -40,6 +40,8 @@ cask "1password-cli"
 cask "appcleaner"
 # E-books management software
 cask "calibre"
+# Voice and text chat software
+cask "discord"
 # Free and open-source media player
 cask "iina"
 # Software for Logitech devices
