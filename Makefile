@@ -1,4 +1,5 @@
 .POSIX:
+
 XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
 XDG_DATA_HOME ?= $(HOME)/.local/share
@@ -43,7 +44,7 @@ clean-bash :
 	rm -rf -- $(HOME)/.bashrc.d
 
 clean-bin:
-	rm -r -- $(HOME)/.local/bin
+	rm -rf -- $(HOME)/.local/bin
 
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
@@ -96,11 +97,11 @@ install-bin: $(BINS) clean-bin
 	mkdir -p -- $(HOME)/.local/bin
 	install -- $(BINS) $(HOME)/.local/bin/
 
-install-brew :
+install-brew:
 	brew update
 	(cd homebrew; brew bundle)
 
-install-conf :
+install-conf:
 	sh install/conf.sh
 
 install-emacs : clean-emacs
@@ -133,7 +134,7 @@ install-sh : check-sh clean-sh
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
 	ln -s -- $(PWD)/sh/profile.d/* $(HOME)/.profile.d/
 
-install-vim : clean-vim
+install-vim: clean-vim
 	mkdir -p -- $(HOME)/.vim
 	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
 	sh install/vim.sh
@@ -150,7 +151,7 @@ install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
 
-lint : lint-bash \
+lint: lint-bash \
 	lint-lua \
 	lint-sh \
 	lint-vim
