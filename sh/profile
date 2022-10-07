@@ -1,0 +1,5 @@
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Setup ASDF in SHELL.
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
