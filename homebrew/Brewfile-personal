@@ -1,13 +1,6 @@
-tap "1password/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
-# Extendable version manager with support for Ruby, Node.js, Erlang & more
-brew "asdf"
-# Official Amazon AWS command-line interface
-brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -16,51 +9,21 @@ brew "bash-completion@2"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Package manager for the Lua programming language
-brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
-# Autoformat shell script source code
-brew "shfmt"
-# Opinionated Lua code formatter
-brew "stylua"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Vim script Language Lint
-brew "vint"
 # Password manager that keeps all passwords secure behind one password
-cask "1password-beta"
-# Command-line helper for the 1Password password manager
-cask "1password-cli"
+cask "1password"
 # Application uninstaller
 cask "appcleaner"
-# E-books management software
-cask "calibre"
-# Voice and text chat software
-cask "discord"
-# Free and open-source media player
-cask "iina"
-# Software for Logitech devices
-cask "logitech-options"
-# Native desktop app for Messenger (formerly Facebook Messenger)
-cask "messenger"
-# Knowledge base that works on top of a local folder of plain text Markdown files
-cask "obsidian"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
-mas "Amphetamine", id: 937984704
-mas "Craft", id: 1487937127
 mas "Keynote", id: 409183694
-mas "Matter", id: 1548677272
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
-mas "Reeder", id: 1529448980
-mas "Slack", id: 803453959
+mas "Play", id: 1596506190
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
