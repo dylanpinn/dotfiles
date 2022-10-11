@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/core"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
@@ -17,13 +18,18 @@ brew "vim"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+# Software for Logitech devices
+cask "logitech-options"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
+mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Parcel", id: 639968404
 mas "Play", id: 1596506190
 mas "Things", id: 904280696
+mas "WhatsApp", id: 1147396723
 mas "Wipr", id: 1320666476
