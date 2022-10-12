@@ -31,6 +31,8 @@ cask "displaylink"
 cask "displaylink-login-extension"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Tool to optimize images to a smaller size
+cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
 # Software for Logitech devices
