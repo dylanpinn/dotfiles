@@ -6,5 +6,5 @@
 #   Branch to create the PR against.
 #######################################
 create-pr() {
-  gh pr create --assignee @me --draft --base "$1"
+  gh pr create --assignee @me --draft
 }
