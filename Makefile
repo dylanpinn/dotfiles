@@ -18,7 +18,7 @@ git/config: git/config.m4
 		-D NAME=$(NAME) \
 		git/config.m4 > $@
 
-install : install-bash \
+install: install-bash \
 	install-bin \
 	install-git \
 	install-vim \
