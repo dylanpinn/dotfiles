@@ -27,6 +27,7 @@ brew "reainternal/stable/rea-as"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+cask "canon-ijscanner13f"
 # Drivers for DisplayLink docks, adapters and monitors
 cask "displaylink"
 # Enables DisplayLink screens prior to login
