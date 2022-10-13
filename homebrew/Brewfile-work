@@ -11,6 +11,8 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# Docker Credential Helper for Amazon ECR
+brew "docker-credential-helper-ecr"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
