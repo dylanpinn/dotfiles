@@ -7,7 +7,6 @@ vim.cmd("colorscheme desert")
 -- Load all external plugins via a module.  This allows keeping this file to be
 -- a tad smaller and keeps the plugin declaration in a separate file.
 require("dcp.packages")
-require("dcp.lsp")
 
 -- Mapping defnitions are defined here.  Here are some rules I have tried to
 -- follow as much as possible.
