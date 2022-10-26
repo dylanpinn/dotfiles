@@ -17,12 +17,16 @@ brew "docker-credential-helper-ecr"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Internet file retriever
+brew "wget"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
