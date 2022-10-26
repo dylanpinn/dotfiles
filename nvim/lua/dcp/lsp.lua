@@ -39,14 +39,14 @@ local on_attach = function(_, bufnr)
   end, bufopts)
 end
 
-local lsp_flags = {
-  -- This is the default in Nvim 0.7+
-  debounce_text_changes = 150,
-}
-require("lspconfig")["tsserver"].setup({
-  on_attach = on_attach,
-  flags = lsp_flags,
-})
+-- Use a loop to conveniently call 'setup' on multiple servers and
+ -- map buffer local keybindings when the language server attaches
+ local servers = { "tsserver" }
+ for _, lsp in pairs(servers) do
+   require("lspconfig")[lsp].setup({
+     on_attach = on_attach,
+   })
+ end
 
 require("null-ls").setup({
   sources = {
