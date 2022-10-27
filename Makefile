@@ -160,7 +160,8 @@ install-work : install-sh
 lint: lint-bash \
 	lint-lua \
 	lint-sh \
-	lint-vim
+	lint-vim \
+	lint-yaml
 
 lint-bash : check-bash
 	sh lint/bash.sh
@@ -173,3 +174,6 @@ lint-sh : check-sh
 
 lint-vim :
 	sh lint/vim.sh
+
+lint-yaml:
+	sh lint/yaml.sh
