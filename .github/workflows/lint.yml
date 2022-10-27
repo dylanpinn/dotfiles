@@ -17,7 +17,7 @@ jobs:
       - uses: leafo/gh-actions-luarocks@v4
       - name: Setup dependencies
         run: |
-          pip install vim-vint
+          pip install vim-vint yamllint
           luarocks install luacheck
           luarocks install lanes
       - name: Lint files

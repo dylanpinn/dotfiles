@@ -55,6 +55,7 @@ require("null-ls").setup({
     require("null-ls").builtins.code_actions.eslint_d,
     require("null-ls").builtins.diagnostics.eslint_d,
     require("null-ls").builtins.formatting.prettierd,
+    require("null-ls").builtins.diagnostics.yamllint,
   },
   on_attach = on_attach
 })

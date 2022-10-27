@@ -1,3 +1,5 @@
+# yamllint disable rule:line-length
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator.
 
 # Import additional configuration files
