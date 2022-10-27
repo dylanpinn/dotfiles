@@ -18,6 +18,8 @@ brew "vim"
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+# Web browser
+cask "firefox"
 # Software for Logitech devices
 cask "logitech-options"
 # Move and resize windows using keyboard shortcuts or snap areas
