@@ -31,6 +31,8 @@ brew "wget"
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
 cask "canon-ijscanner13f"
