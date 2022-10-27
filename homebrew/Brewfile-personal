@@ -27,11 +27,14 @@ cask "rectangle"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
+mas "Messenger", id: 1480068668
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Parcel", id: 639968404
 mas "Play", id: 1596506190
+mas "Reeder", id: 1529448980
+mas "Save to Upnext", id: 1583423832
 mas "Scrobbles for Last.fm", id: 1344679160
 mas "Things", id: 904280696
 mas "WhatsApp", id: 1147396723
