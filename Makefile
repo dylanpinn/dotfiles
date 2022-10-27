@@ -38,6 +38,9 @@ clean:
 		$(BINS) \
 		git/config
 
+clean-alacritty:
+	rm -f -- $(XDG_CONFIG_HOME)/alacritty
+
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
 	rm -f -- $(HOME)/.bash_profile
@@ -78,6 +81,9 @@ format-lua:
 format-sh:
 	sh format/sh.sh
 
+install-alacritty: clean-alacritty
+	ln -s -- $(PWD)/alacritty $(XDG_CONFIG_HOME)/alacritty
+
 install-asdf: install-bash
 	install -- $(PWD)/asdf/bashrc.d/* $(HOME)/.bashrc.d/
 	install -- $(PWD)/asdf/profile.d/* $(HOME)/.profile.d/
@@ -114,7 +120,7 @@ install-git : git/config clean-git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
-install-nvim: clean-nvim
+install-nvim: clean-nvim install-alacritty
 	sh install/nvim.sh
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
 	ln -s -- $(PWD)/nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
