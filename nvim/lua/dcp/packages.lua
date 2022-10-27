@@ -7,4 +7,5 @@ return require("paq")({
   "neovim/nvim-lspconfig", -- Collection of configurations for the built-in LSP client.
   "nvim-lua/plenary.nvim", -- Lua functions. null-ls requires this.
   "jose-elias-alvarez/null-ls.nvim", -- Allow linters & formatters to connect to LSP client.
+  {"catppuccin/nvim", as="catppuccin"}
 })

@@ -1,13 +1,17 @@
 -- This is my Neovim configuration.  I am trying to replace Vim with Neovim so
 -- I can get native LSP support for TypeScript and Scala projects.
 
--- Use the built in desert color scheme until I find something I like more.
-vim.cmd("colorscheme desert")
 
 -- Load all external plugins via a module.  This allows keeping this file to be
 -- a tad smaller and keeps the plugin declaration in a separate file.
 require("dcp.packages")
 require("dcp.lsp")
+
+require("catppuccin").setup {
+  flavour = "mocha"
+}
+-- Use the built in desert color scheme until I find something I like more.
+vim.cmd("colorscheme catppuccin")
 
 -- Mapping defnitions are defined here.  Here are some rules I have tried to
 -- follow as much as possible.
