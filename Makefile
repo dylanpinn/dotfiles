@@ -65,6 +65,9 @@ clean-sh :
 	rm -f -- $(HOME)/.profile
 	rm -rf -- $(HOME)/.profile.d
 
+clean-tmux:
+	rm -rf -- $(XDG_CONFIG_HOME)/tmux
+
 clean-vim :
 	rm -f -- $(HOME)/.vim/filetype.vim
 	rm -f -- $(HOME)/.vim/vimrc
@@ -139,6 +142,10 @@ install-sh : check-sh clean-sh
 	mkdir -p -- $(HOME)/.profile.d
 	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
 	ln -s -- $(PWD)/sh/profile.d/* $(HOME)/.profile.d/
+
+install-tmux: clean-tmux
+	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
+	ln -s -- $(PWD)/tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
 
 install-vim: clean-vim
 	mkdir -p -- $(HOME)/.vim
