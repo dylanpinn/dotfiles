@@ -14,6 +14,9 @@ return require("paq")({
   -- Automatically download Neovim LSP servers
   "williamboman/mason.nvim";
   "williamboman/mason-lspconfig.nvim";
+  "jose-elias-alvarez/null-ls.nvim";
+  "jayp0521/mason-null-ls.nvim";
+  "nvim-lua/plenary.nvim";
 
   -- Colorscheme
   "folke/tokyonight.nvim";
