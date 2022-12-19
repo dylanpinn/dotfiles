@@ -4,5 +4,6 @@
 -- Use Paq to manage plugins for Neovim, it is lightweight and uses native Vim
 -- built-in packages under the hood.
 return require("paq")({
-  "savq/paq-nvim", -- Let Paq manage itself
+  "savq/paq-nvim"; -- Let Paq manage itself
+  {"nvim-treesitter/nvim-treesitter", run=function() vim.cmd "TSUpdate" end};
 })
