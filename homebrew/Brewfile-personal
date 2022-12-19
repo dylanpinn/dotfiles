@@ -19,14 +19,20 @@ brew "tmux"
 brew "vim"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
 # Web browser
 cask "firefox"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
+# Native desktop app for Messenger (formerly Facebook Messenger)
+cask "messenger"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Desktop client for WhatsApp
+cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
