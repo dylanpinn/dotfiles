@@ -11,4 +11,7 @@ return require("paq")({
 
   -- LSP configuration; this makes configuring LSP servers easier.
   "neovim/nvim-lspconfig";
+  -- Automatically download Neovim LSP servers
+  "williamboman/mason.nvim";
+  "williamboman/mason-lspconfig.nvim";
 })
