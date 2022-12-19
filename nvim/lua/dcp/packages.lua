@@ -5,7 +5,4 @@
 -- built-in packages under the hood.
 return require("paq")({
   "savq/paq-nvim", -- Let Paq manage itself
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
-  "neovim/nvim-lspconfig", -- Collection of configurations for the built-in LSP client.
 })
