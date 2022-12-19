@@ -4,3 +4,4 @@
 require("dcp.keymaps")
 require("dcp.options")
 require("dcp.packages")
+require("dcp.color");
