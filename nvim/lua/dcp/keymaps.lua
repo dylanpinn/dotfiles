@@ -19,11 +19,11 @@
 -- it explicitly here.  Setup space as the local leader (rather than shadowing
 -- an existing binding such as ',').
 --
-vim.g.mapleader = '\\'
-vim.g.maplocalleader = ' '
+vim.g.mapleader = "\\"
+vim.g.maplocalleader = " "
 
 -- Leader,n toggles line number display.
-vim.keymap.set('n', '<Leader>n', "<cmd>set number!<CR>")
+vim.keymap.set("n", "<Leader>n", "<cmd>set number!<CR>")
 
 -- Leader,s toggles spell checking.
-vim.keymap.set('n', '<Leader>s', "<cmd>set spell!<CR>")
+vim.keymap.set("n", "<Leader>s", "<cmd>set spell!<CR>")
