@@ -5,5 +5,10 @@
 -- built-in packages under the hood.
 return require("paq")({
   "savq/paq-nvim"; -- Let Paq manage itself
+
+  -- Treesitter configuration; this is required to integrate Treesitter.
   {"nvim-treesitter/nvim-treesitter", run=function() vim.cmd "TSUpdate" end};
+
+  -- LSP configuration; this makes configuring LSP servers easier.
+  "neovim/nvim-lspconfig";
 })
