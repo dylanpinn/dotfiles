@@ -2,6 +2,3 @@
 -- that these modules are loaded is important.
 
 require("dcp.packages")
-require("dcp.colour")
-require("dcp.lsp")
-require("dcp.keymaps")
