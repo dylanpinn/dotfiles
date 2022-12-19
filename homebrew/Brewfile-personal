@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/core"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
@@ -12,6 +11,10 @@ brew "gh"
 brew "git"
 # Mac App Store command-line interface
 brew "mas"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Terminal multiplexer
+brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Password manager that keeps all passwords secure behind one password
@@ -20,22 +23,18 @@ cask "1password"
 cask "appcleaner"
 # Web browser
 cask "firefox"
-# Software for Logitech devices
-cask "logitech-options"
+# Privacy-first, open-source platform for knowledge sharing and management
+cask "logseq"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
-mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
-mas "Messenger", id: 1480068668
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Parcel", id: 639968404
 mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
-mas "Save to Upnext", id: 1583423832
-mas "Scrobbles for Last.fm", id: 1344679160
+mas "Save to Reader", id: 1640236961
 mas "Things", id: 904280696
-mas "WhatsApp", id: 1147396723
 mas "Wipr", id: 1320666476
