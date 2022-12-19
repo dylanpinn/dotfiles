@@ -1,8 +1,8 @@
-local ok, treesitter_configs = pcall(require, 'nvim-treesitter.configs')
+local ok, treesitter_configs = pcall(require, "nvim-treesitter.configs")
 if not ok then
   return
 end
-treesitter_configs.setup {
+treesitter_configs.setup({
   -- A list of parser names, or "all"
   ensure_installed = { "lua" },
 
@@ -22,4 +22,4 @@ treesitter_configs.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
-}
+})
