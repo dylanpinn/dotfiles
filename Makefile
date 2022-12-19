@@ -126,9 +126,7 @@ install-git : git/config clean-git
 install-nvim: clean-nvim install-alacritty
 	sh install/nvim.sh
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
-	ln -s -- $(PWD)/nvim/init.lua $(XDG_CONFIG_HOME)/nvim/init.lua
-	ln -s -- $(PWD)/nvim/after $(XDG_CONFIG_HOME)/nvim/after
-	ln -s -- $(PWD)/nvim/lua $(XDG_CONFIG_HOME)/nvim/lua
+	ln -s -- $(PWD)/nvim/* $(XDG_CONFIG_HOME)/nvim/
 
 install-personal : install-sh
 	ln -s -- $(PWD)/personal/profile.d/* $(HOME)/.profile.d/
