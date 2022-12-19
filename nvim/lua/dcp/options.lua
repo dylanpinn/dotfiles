@@ -17,4 +17,4 @@ vim.opt.path:remove { "/usr/include" }
 -- therefore would not want to edit, and directories that contain generated
 -- files that won't want to be edited either.
 --
-vim.opt.wildignore:append { "*/node_modules/*" }  " ignore dependency directories.
+vim.opt.wildignore:append { "*/node_modules/*" }  -- ignore dependency directories.
