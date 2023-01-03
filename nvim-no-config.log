@@ -1,0 +1,76 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.003  000.003: --- NVIM STARTING ---
+000.061  000.058: event init
+000.126  000.065: early init
+001.066  000.940: locale set
+001.085  000.018: init first window
+008.626  007.541: inits 1
+008.636  000.010: window checked
+008.779  000.143: parsing arguments
+009.017  000.041  000.041: require('vim.shared')
+009.073  000.019  000.019: require('vim._meta')
+009.075  000.056  000.037: require('vim._editor')
+009.076  000.120  000.022: require('vim._init_packages')
+009.077  000.178: init lua interpreter
+009.189  000.112: expanding arguments
+009.221  000.032: inits 2
+009.385  000.163: init highlight
+009.385  000.001: waiting for UI
+010.758  001.373: done waiting for UI
+010.773  000.015: init screen for UI
+010.848  000.075: init default mappings
+010.853  000.006: init default autocommands
+010.854  000.001: sourcing vimrc file(s)
+010.860  000.006: inits 3
+012.207  001.347: reading ShaDa
+013.209  001.001: opening buffers
+013.210  000.001: BufEnter autocommands
+013.211  000.001: editing files in windows
+013.254  000.043: VimEnter autocommands
+013.256  000.002: UIEnter autocommands
+013.257  000.001: before starting main loop
+013.684  000.427: first screen update
+013.685  000.001: --- NVIM STARTED ---
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.003  000.003: --- NVIM STARTING ---
+000.060  000.057: event init
+000.127  000.067: early init
+001.079  000.952: locale set
+001.107  000.028: init first window
+008.606  007.498: inits 1
+008.616  000.010: window checked
+008.753  000.138: parsing arguments
+008.990  000.041  000.041: require('vim.shared')
+009.045  000.019  000.019: require('vim._meta')
+009.046  000.055  000.036: require('vim._editor')
+009.047  000.117  000.021: require('vim._init_packages')
+009.048  000.177: init lua interpreter
+009.167  000.119: expanding arguments
+009.200  000.033: inits 2
+009.365  000.165: init highlight
+009.366  000.001: waiting for UI
+010.606  001.240: done waiting for UI
+010.621  000.015: init screen for UI
+010.700  000.079: init default mappings
+010.706  000.006: init default autocommands
+010.707  000.001: sourcing vimrc file(s)
+010.713  000.006: inits 3
+012.078  001.365: reading ShaDa
+012.898  000.820: opening buffers
+012.899  000.002: BufEnter autocommands
+012.900  000.001: editing files in windows
+012.940  000.040: VimEnter autocommands
+012.941  000.001: UIEnter autocommands
+012.942  000.001: before starting main loop
+013.352  000.410: first screen update
+013.353  000.001: --- NVIM STARTED ---
