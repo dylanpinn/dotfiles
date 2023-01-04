@@ -1,11 +1,11 @@
--- local ok, mason = pcall(require, "mason")
--- if not ok then
---   return
--- end
--- -- Setup Mason before any LSP configuration.
--- mason.setup()
--- require("mason-lspconfig").setup()
--- local null_ls = require("null-ls")
+local ok, mason = pcall(require, "mason")
+if not ok then
+  return
+end
+-- Setup Mason before any LSP configuration.
+mason.setup()
+require("mason-lspconfig").setup()
+local null_ls = require("null-ls")
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -72,20 +72,20 @@ require("lspconfig").tsserver.setup({
   on_attach = on_attach,
 })
 
---null_ls.setup({
---  sources = {
---    -- Code Actions
---    null_ls.builtins.code_actions.eslint_d,
---    -- Diagnostics
---    null_ls.builtins.diagnostics.eslint_d,
---    null_ls.builtins.diagnostics.luacheck,
---    -- Formatting
---    null_ls.builtins.formatting.prettier,
---    null_ls.builtins.formatting.stylua,
---  },
---})
---require("mason-null-ls").setup({
---  ensure_installed = nil,
---  automatic_installation = true,
---  automatic_setup = false,
---})
+null_ls.setup({
+  sources = {
+    -- Code Actions
+    null_ls.builtins.code_actions.eslint_d,
+    -- Diagnostics
+    null_ls.builtins.diagnostics.eslint_d,
+    null_ls.builtins.diagnostics.luacheck,
+    -- Formatting
+    null_ls.builtins.formatting.prettier,
+    null_ls.builtins.formatting.stylua,
+  },
+})
+require("mason-null-ls").setup({
+  ensure_installed = nil,
+  automatic_installation = true,
+  automatic_setup = false,
+})

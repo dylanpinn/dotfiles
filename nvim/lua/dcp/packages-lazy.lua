@@ -10,9 +10,9 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.runtimepath:prepend(lazypath)
-require("lazy").setup("dcp.plugins", {
+require("lazy").setup("plugins", {
   defaults = {
-    lazy = true,
+    lazy = true
   },
   performance = {
     rtp = {
