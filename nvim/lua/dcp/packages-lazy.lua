@@ -12,7 +12,7 @@ end
 vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup("plugins", {
   defaults = {
-    lazy = true
+    lazy = false
   },
   performance = {
     rtp = {
