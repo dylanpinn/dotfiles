@@ -73,6 +73,7 @@ require("lspconfig").tsserver.setup({
 })
 
 null_ls.setup({
+  on_attach = on_attach,
   sources = {
     -- Code Actions
     null_ls.builtins.code_actions.eslint_d,
