@@ -25,5 +25,8 @@ vim.g.maplocalleader = " "
 -- Leader,n toggles line number display.
 vim.keymap.set("n", "<Leader>n", "<cmd>set number!<CR>")
 
--- Leader,s toggles spell checking.
-vim.keymap.set("n", "<Leader>s", "<cmd>set spell!<CR>")
+-- leader,s toggles spell checking.
+vim.keymap.set("n", "<leader>s", "<cmd>set spell!<cr>")
+
+-- leader,w toggles soft wrapping.
+vim.keymap.set("n", "<leader>w", "<cmd>set wrap!<cr>")
