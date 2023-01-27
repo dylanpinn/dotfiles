@@ -77,9 +77,11 @@ null_ls.setup({
   sources = {
     -- Code Actions
     null_ls.builtins.code_actions.eslint_d,
+    null_ls.builtins.code_actions.proselint,
     -- Diagnostics
     null_ls.builtins.diagnostics.eslint_d,
     null_ls.builtins.diagnostics.luacheck,
+    null_ls.builtins.diagnostics.proselint,
     -- Formatting
     null_ls.builtins.formatting.prettier,
     null_ls.builtins.formatting.stylua,
