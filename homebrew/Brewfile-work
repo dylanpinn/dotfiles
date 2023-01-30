@@ -31,6 +31,8 @@ brew "mas"
 brew "neovim"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Terminal multiplexer
 brew "tmux"
 # Mastodon CLI & TUI
@@ -68,6 +70,8 @@ cask "google-chrome"
 cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # Grammar, spelling and style suggestions in all the writing apps
 cask "languagetool"
 # Software for Logitech devices
