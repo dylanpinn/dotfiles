@@ -29,6 +29,8 @@ brew "luarocks"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Perl-powered file rename script with many helpful built-ins
 brew "rename"
 # Search tool like grep and The Silver Searcher
@@ -98,11 +100,11 @@ mas "Keynote", id: 409183694
 mas "Messenger", id: 1480068668
 mas "Microsoft OneNote", id: 784801555
 mas "Microsoft To Do", id: 1274495053
+mas "NepTunes", id: 1006739057
 mas "Parcel", id: 639968404
 mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
 mas "Save to Reader", id: 1640236961
-mas "Scrobbles for Last.fm", id: 1344679160
 mas "Slack", id: 803453959
 mas "Subscriptions", id: 1577082754
 mas "Things", id: 904280696
