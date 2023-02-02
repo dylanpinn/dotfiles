@@ -2,6 +2,6 @@
 -- that these modules are loaded is important.
 
 require("dcp.keymaps")
+require("dcp.lazy")
 require("dcp.options")
-require("dcp.packages")
 require("dcp.color")
