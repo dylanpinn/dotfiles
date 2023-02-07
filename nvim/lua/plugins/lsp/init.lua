@@ -55,10 +55,14 @@ return {
     event = "BufReadPre",
     dependencies = {
       "mason.nvim",
+      "nvim-lua/plenary.nvim",
       {
         "jay-babu/mason-null-ls.nvim",
         opts = {
-          ensure_installed = nil,
+          ensure_installed = {
+            "luacheck",
+            "stylua",
+          },
           automatic_installation = true,
           automatic_setup = false,
         },
@@ -66,8 +70,8 @@ return {
           -- require("mason-null-ls").setup(opts)
           require("mason-null-ls").setup({
             ensure_installed = nil,
-            automatic_installation = true,
-            automatic_setup = false,
+            automatic_installation = false,
+            automatic_setup = true,
           })
         end,
       },
@@ -76,18 +80,19 @@ return {
     setup = function(plugin, opts)
       local null_ls = require("null-ls")
 
-      null_ls.setup({
-        sources = {
-          -- Code Actions
-          null_ls.builtins.code_actions.eslint_d,
-          -- Diagnostics
-          null_ls.builtins.diagnostics.eslint_d,
-          null_ls.builtins.diagnostics.luacheck,
-          -- Formatting
-          null_ls.builtins.formatting.prettier,
-          null_ls.builtins.formatting.stylua,
-        },
-      })
+      require 'mason-null-ls'.setup_handlers {
+        function(source_name, methods)
+          -- all sources with no handler get passed here
+
+          -- To keep the original functionality of `automatic_setup = true`,
+          -- please add the below.
+          require("mason-null-ls.automatic_setup")(source_name, methods)
+        end,
+        stylua = function(source_name, methods)
+          null_ls.register(null_ls.builtins.formatting.stylua)
+        end,
+      }
+      null_ls.setup()
     end
   },
 
