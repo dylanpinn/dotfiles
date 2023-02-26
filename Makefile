@@ -68,13 +68,6 @@ clean-sh :
 clean-tmux:
 	rm -rf -- $(XDG_CONFIG_HOME)/tmux
 
-clean-vim :
-	rm -f -- $(HOME)/.vim/filetype.vim
-	rm -f -- $(HOME)/.vim/vimrc
-	rm -f -- $(HOME)/.vim/after
-	rm -f -- $(HOME)/.vim/compiler
-	rm -f -- $(HOME)/.vim/plugin
-
 format: format-lua \
 	format-sh
 
@@ -145,15 +138,11 @@ install-tmux: clean-tmux
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
 	ln -s -- $(PWD)/tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
 
-install-vim: clean-vim
+install-vim:
 	mkdir -p -- $(HOME)/.vim
 	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
 	sh install/vim.sh
-	ln -s -- $(PWD)/vim/filetype.vim $(HOME)/.vim/filetype.vim
-	ln -s -- $(PWD)/vim/vimrc $(HOME)/.vim/vimrc
-	ln -s -- $(PWD)/vim/after $(HOME)/.vim/after
-	ln -s -- $(PWD)/vim/compiler $(HOME)/.vim/compiler
-	ln -s -- $(PWD)/vim/plugin $(HOME)/.vim/plugin
+	stow --verbose --target=$$HOME/.vim --restow vim
 
 install-wakatime :
 	ln -s -- $(PWD)/wakatime/profile.d/* $(HOME)/.profile.d/
