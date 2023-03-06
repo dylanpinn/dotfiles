@@ -55,9 +55,6 @@ clean-emacs :
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
 
-clean-nvim:
-	rm -rf -- $(XDG_CONFIG_HOME)/nvim
-
 clean-postgres :
 	rm -f -- $(XDG_CONFIG_HOME)/pg/psqlrc
 
@@ -116,10 +113,10 @@ install-git : git/config clean-git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
-install-nvim: clean-nvim install-alacritty
+install-nvim: install-alacritty
 	sh install/nvim.sh
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
-	ln -s -- $(PWD)/nvim/* $(XDG_CONFIG_HOME)/nvim/
+	stow --verbose --target=$(XDG_CONFIG_HOME)/nvim --restow nvim
 
 install-personal : install-sh
 	ln -s -- $(PWD)/personal/profile.d/* $(HOME)/.profile.d/
