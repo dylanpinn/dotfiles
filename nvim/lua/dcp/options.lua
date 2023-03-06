@@ -10,8 +10,10 @@ vim.opt.path:remove({ "/usr/include" })
 
 -- Use ripgrep for searching files rather than grep(1).
 -- rg is faster and automatically excludes ignored files.
-vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
-vim.opt.grepformat:prepend({ "%f:%l:%c:%m" })
+if vim.fn.executable("rg") == 1 then
+  vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+  vim.opt.grepformat:prepend({ "%f:%l:%c:%m" })
+end
 
 -- Use basic statusline, using this rather than an external plugin to do this as this currently fits my needs and
 -- doesn't add extra complexity.
