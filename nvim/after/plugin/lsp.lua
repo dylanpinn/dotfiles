@@ -1,9 +1,4 @@
-local ok, mason = pcall(require, "mason")
-if not ok then
-  return
-end
--- Setup Mason before any LSP configuration.
-mason.setup()
+require("mason").setup()
 require("mason-lspconfig").setup()
 local null_ls = require("null-ls")
 
@@ -43,49 +38,68 @@ local on_attach = function(_, bufnr)
   end, bufopts)
 end
 
-require("lspconfig").sumneko_lua.setup({
-  on_attach = on_attach,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = "LuaJIT",
+-- Automatically setup LSP servers using mason-lspconfig.
+require("mason-lspconfig").setup_handlers({
+  -- The first entry (without a key) will be the default handler
+  -- and will be called for each installed server that doesn't have
+  -- a dedicated handler.
+  function(server_name) -- default handler (optional)
+    require("lspconfig")[server_name].setup({
+      on_attach = on_attach,
+    })
+  end,
+  -- Lua LS requires additional configuration.
+  ["lua_ls"] = function()
+    require("lspconfig").lua_ls.setup({
+      on_attach = on_attach,
+      settings = {
+        Lua = {
+          runtime = {
+            -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+            version = "LuaJIT",
+          },
+          diagnostics = {
+            -- Get the language server to recognize the `vim` global
+            globals = { "vim" },
+          },
+          workspace = {
+            checkThirdParty = false,
+            -- Make the server aware of Neovim runtime files
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+          -- Do not send telemetry data containing a randomized but unique identifier
+          telemetry = {
+            enable = false,
+          },
+        },
       },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { "vim" },
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false,
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
+    })
+  end,
 })
 
-require("lspconfig").tsserver.setup({
-  on_attach = on_attach,
-})
-
-null_ls.setup({
-  sources = {
-    -- Code Actions
-    null_ls.builtins.code_actions.eslint_d,
-    -- Diagnostics
-    null_ls.builtins.diagnostics.eslint_d,
-    null_ls.builtins.diagnostics.luacheck,
-    -- Formatting
-    null_ls.builtins.formatting.prettier,
-    null_ls.builtins.formatting.stylua,
-  },
-})
 require("mason-null-ls").setup({
-  ensure_installed = nil,
-  automatic_installation = true,
-  automatic_setup = false,
+  ensure_installed = {
+    "luacheck",
+    "stylua",
+  },
+  automatic_installation = false,
+  automatic_setup = true, -- Recommended, but optional
+})
+require("null-ls").setup({
+  sources = {
+    -- Anything not supported by mason.
+  },
+})
+
+require("mason-null-ls").setup_handlers({
+  function(source_name, methods)
+    -- all sources with no handler get passed here
+
+    -- To keep the original functionality of `automatic_setup = true`,
+    -- please add the below.
+    require("mason-null-ls.automatic_setup")(source_name, methods)
+  end,
+  stylua = function(_, _)
+    null_ls.register(null_ls.builtins.formatting.stylua)
+  end,
 })
