@@ -20,7 +20,7 @@
 -- an existing binding such as ',').
 --
 vim.g.mapleader = "\\"
-vim.g.maplocalleader = "<Space>"
+vim.g.maplocalleader = " "
 
 -- Leader,b list all open buffers.
 vim.keymap.set("n", "<Leader>b", ":buffer <C-d>")
