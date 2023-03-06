@@ -22,6 +22,9 @@
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = " "
 
+-- Leader,e populates the :edit command to edit a file.
+vim.keymap.set("n", "<Leader>e", ":edit **/*")
+
 -- Leader,n toggles line number display.
 vim.keymap.set("n", "<Leader>n", "<cmd>set number!<CR>")
 
