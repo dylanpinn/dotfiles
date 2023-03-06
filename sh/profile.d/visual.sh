@@ -1,3 +1,3 @@
-# For visual editor use vim (hopefully is available everywhere).
-VISUAL='vim'
+# For visual editor use nvim (hopefully is available everywhere).
+VISUAL='nvim'
 export VISUAL
