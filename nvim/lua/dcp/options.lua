@@ -8,6 +8,11 @@ vim.opt.define = ""
 vim.opt.include = ""
 vim.opt.path:remove({ "/usr/include" })
 
+-- Use ripgrep for searching files rather than grep(1).
+-- rg is faster and automatically excludes ignored files.
+vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+vim.opt.grepformat:prepend({ "%f:%l:%c:%m" })
+
 -- Configure the wildmenu to ignore a list of patterns for file and directory
 -- command line completion.  Files and directories matching any of these
 -- patterns won't be presented as candidates for tab completion on the command
