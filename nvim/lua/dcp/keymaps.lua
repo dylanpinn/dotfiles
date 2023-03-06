@@ -22,6 +22,9 @@
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = "<Space>"
 
+-- Leader,b list all open buffers.
+vim.keymap.set("n", "<Leader>b", ":buffer <C-d>")
+
 -- Leader,e populates the :edit command to edit a file.
 vim.keymap.set("n", "<Leader>e", ":edit **/*")
 
