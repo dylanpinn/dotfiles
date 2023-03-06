@@ -42,3 +42,6 @@ vim.keymap.set("n", "<Leader>n", "<cmd>set number!<CR>")
 
 -- Leader,s toggles spell checking.
 vim.keymap.set("n", "<Leader>s", "<cmd>set spell!<CR>")
+
+-- Leader,w toggles soft text wrapping.
+vim.keymap.set("n", "<Leader>w", "<cmd>set wrap!<CR>")
