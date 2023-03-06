@@ -34,6 +34,9 @@ vim.keymap.set("n", "<Leader>f", ":find *")
 -- Leader,g search for text using grep.
 vim.keymap.set("n", "<Leader>g", ":grep<space>")
 
+-- Leader,m run :make.
+vim.keymap.set("n", "<Leader>m", "<cmd>make<CR>")
+
 -- Leader,n toggles line number display.
 vim.keymap.set("n", "<Leader>n", "<cmd>set number!<CR>")
 
