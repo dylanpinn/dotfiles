@@ -13,6 +13,24 @@ vim.opt.path:remove({ "/usr/include" })
 vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
 vim.opt.grepformat:prepend({ "%f:%l:%c:%m" })
 
+-- Use basic statusline, using this rather than an external plugin to do this as this currently fits my needs and
+-- doesn't add extra complexity.
+--
+-- Taken from https://www.vi-improved.org/recommendations/
+vim.opt.statusline = "%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]"
+--                   | | | | |  |   |      |  |     |    |
+--                   | | | | |  |   |      |  |     |    +-- current column
+--                   | | | | |  |   |      |  |     +-- current line
+--                   | | | | |  |   |      |  +-- current % into file
+--                   | | | | |  |   |      +-- current syntax
+--                   | | | | |  |   +-- current fileformat
+--                   | | | | |  +-- number of lines
+--                   | | | | +-- preview flag in square brackets
+--                   | | | +-- help flag in square brackets
+--                   | | +-- readonly flag in square brackets
+--                   | +-- rodified flag in square brackets
+--                   +-- full path to file in the buffer
+
 -- Configure the wildmenu to ignore a list of patterns for file and directory
 -- command line completion.  Files and directories matching any of these
 -- patterns won't be presented as candidates for tab completion on the command
