@@ -25,6 +25,9 @@ vim.g.maplocalleader = " "
 -- Leader,e populates the :edit command to edit a file.
 vim.keymap.set("n", "<Leader>e", ":edit **/*")
 
+-- Leader,f populates the :find command to find a file on the path and edit it.
+vim.keymap.set("n", "<Leader>f", ":find *")
+
 -- Leader,n toggles line number display.
 vim.keymap.set("n", "<Leader>n", "<cmd>set number!<CR>")
 
