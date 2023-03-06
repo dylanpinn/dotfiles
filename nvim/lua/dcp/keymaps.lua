@@ -31,6 +31,9 @@ vim.keymap.set("n", "<Leader>e", ":edit **/*")
 -- Leader,f populates the :find command to find a file on the path and edit it.
 vim.keymap.set("n", "<Leader>f", ":find *")
 
+-- Leader,g search for text using grep.
+vim.keymap.set("n", "<Leader>g", ":grep<space>")
+
 -- Leader,n toggles line number display.
 vim.keymap.set("n", "<Leader>n", "<cmd>set number!<CR>")
 
