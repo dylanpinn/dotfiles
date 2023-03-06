@@ -20,7 +20,7 @@
 -- an existing binding such as ',').
 --
 vim.g.mapleader = "\\"
-vim.g.maplocalleader = " "
+vim.g.maplocalleader = "<Space>"
 
 -- Leader,e populates the :edit command to edit a file.
 vim.keymap.set("n", "<Leader>e", ":edit **/*")
