@@ -19,6 +19,31 @@ if vim.fn.executable("rg") == 1 then
   vim.opt.grepformat:prepend({ "%f:%l:%c:%m" })
 end
 
+-- The next set of options relate to blocks/lines of text and how they are
+-- displayed across multiple lines.
+
+-- When soft-wraps are enabled with 'wrap' option, then break the line between
+-- words, rather than within them.
+--
+vim.opt.linebreak = true
+
+-- When wrapping a line using soft-wraps, highlight that it has been wrapped by
+-- inserting a leading string - "> ".
+--
+vim.opt.showbreak = "> "
+
+-- When wrapping a line, if that line is indented then the wrapped line is
+-- also indented the same amount.
+--
+vim.opt.breakindent = true
+
+-- Automatic text wrapping options using flags in the 'formatoptions' option
+-- begin here.
+
+-- Don't break a line after a one-letter word like "I" or "a".
+--
+vim.opt.formatoptions:append({ 1 })
+
 -- Use basic statusline, using this rather than an external plugin to do this as this currently fits my needs and
 -- doesn't add extra complexity.
 --
