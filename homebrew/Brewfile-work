@@ -3,8 +3,20 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
+# GNU multiple precision arithmetic library
+brew "gmp"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# YAML Parser
+brew "libyaml"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Library for command-line editing
+brew "readline"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -17,14 +29,28 @@ brew "docker-credential-helper-ecr"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
+# Perl-powered file rename script with many helpful built-ins
+brew "rename"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Terminal multiplexer
+brew "tmux"
+# Mastodon CLI & TUI
+brew "toot"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Internet file retriever
@@ -38,24 +64,44 @@ cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
 cask "canon-ijscanner13f"
+# API documentation browser and code snippet manager
+cask "dash"
 # Drivers for DisplayLink docks, adapters and monitors
 cask "displaylink"
 # Enables DisplayLink screens prior to login
 cask "displaylink-login-extension"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
+# Desktop client for GitHub repositories
+cask "github"
+# Web browser
+cask "google-chrome"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
+# Grammar, spelling and style suggestions in all the writing apps
+cask "languagetool"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Software for Logitech devices
 cask "logitech-options"
+# Privacy-first, open-source platform for knowledge sharing and management
+cask "logseq"
+# Screen and video recording software
+cask "loom"
 # Web browser
 cask "microsoft-edge"
+# Online collaborative whiteboard platform
+cask "miro"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Open-source code editor
@@ -63,8 +109,17 @@ cask "visual-studio-code"
 mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
+mas "Messenger", id: 1480068668
 mas "Microsoft OneNote", id: 784801555
 mas "Microsoft To Do", id: 1274495053
+mas "NepTunes", id: 1006739057
+mas "Parcel", id: 639968404
+mas "Play", id: 1596506190
 mas "Reeder", id: 1529448980
+mas "Save to Reader", id: 1640236961
 mas "Slack", id: 803453959
+mas "Subscriptions", id: 1577082754
+mas "Things", id: 904280696
+mas "Trello", id: 1278508951
 mas "WhatsApp", id: 1147396723
+mas "Wipr", id: 1320666476
