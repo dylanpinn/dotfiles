@@ -8,6 +8,10 @@ vim.opt.define = ""
 vim.opt.include = ""
 vim.opt.path:remove({ "/usr/include" })
 
+-- Add ** to the path to allow a better default :find experience by searching
+-- sub-directories of the CWD.
+vim.opt.path:append({ "**" })
+
 -- Use ripgrep for searching files rather than grep(1).
 -- rg is faster and automatically excludes ignored files.
 if vim.fn.executable("rg") == 1 then
