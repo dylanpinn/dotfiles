@@ -47,3 +47,6 @@ vim.opt.statusline = "%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]"
 -- files that won't want to be edited either.
 --
 vim.opt.wildignore:append({ "*/node_modules/*" }) -- ignore dependency directories.
+
+-- Configure wildmenu to show the full list of matches while also completing the first full match.
+vim.opt.wildmode = "list:full"
