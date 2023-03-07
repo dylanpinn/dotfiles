@@ -22,6 +22,8 @@ return require("paq")({
   "jose-elias-alvarez/null-ls.nvim",
   "jayp0521/mason-null-ls.nvim",
   "nvim-lua/plenary.nvim",
+  -- LSP config for Scala Metals.
+  "scalameta/nvim-metals",
 
   -- Colorscheme
   "folke/tokyonight.nvim",
