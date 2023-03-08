@@ -3,6 +3,8 @@ tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
 # GNU multiple precision arithmetic library
 brew "gmp"
@@ -56,6 +58,10 @@ brew "toot"
 brew "vim"
 # Internet file retriever
 brew "wget"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
