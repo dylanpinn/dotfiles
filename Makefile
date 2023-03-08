@@ -148,6 +148,10 @@ install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
 
+install-yabai:
+	stow --verbose --target=$(XDG_CONFIG_HOME)/yabai --restow yabai
+	stow --verbose --target=$(XDG_CONFIG_HOME)/skhd --restow skhd
+
 lint: lint-bash \
 	lint-lua \
 	lint-sh \
