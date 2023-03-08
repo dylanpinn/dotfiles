@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
 # GNU multiple precision arithmetic library
@@ -76,6 +77,8 @@ cask "docker"
 cask "figma"
 # Web browser
 cask "firefox"
+# Typeface made for developers
+cask "font-jetbrains-mono"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
