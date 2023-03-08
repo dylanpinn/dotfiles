@@ -1,16 +1,5 @@
 #!/usr/bin/env sh
 
-#
-# for this to work you must configure sudo such that
-# it will be able to run the command without password
-#
-# see this wiki page for information:
-#  - https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)#configure-scripting-addition
-#
-# yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-# sudo yabai --load-sa
-#
-
 # global settings
 yabai -m config                                 \
     mouse_follows_focus          off            \
@@ -35,15 +24,20 @@ yabai -m config                                 \
     split_ratio                  0.50           \
     split_type                   auto           \
     auto_balance                 off            \
-    top_padding                  12             \
-    bottom_padding               12             \
-    left_padding                 12             \
-    right_padding                12             \
-    window_gap                   06             \
+    top_padding                  03             \
+    bottom_padding               03             \
+    left_padding                 03             \
+    right_padding                03             \
+    window_gap                   03             \
     layout                       bsp            \
     mouse_modifier               fn             \
     mouse_action1                move           \
     mouse_action2                resize         \
     mouse_drop_action            swap
+
+
+# disable specific apps
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
 
 echo "yabai configuration loaded.."
