@@ -81,6 +81,9 @@ install-asdf: install-bash
 	install -- $(PWD)/asdf/profile.d/* $(HOME)/.profile.d/
 	install -- $(PWD)/asdf/asdfrc $(XDG_CONFIG_HOME)/asdfrc
 
+install-awesome:
+	stow --verbose --target=$(XDG_CONFIG_HOME)/awesome --restow awesome
+
 install-aws : install-sh
 	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
 
