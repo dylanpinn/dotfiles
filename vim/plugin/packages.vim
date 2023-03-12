@@ -9,11 +9,6 @@ function! PackInit() abort
   " only when required to update plugins.
   call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-  " I use Wakatime to roughly track how much actual "development" is happening
-  " and what I am working on.  This isn't always accurate as can be doing pair
-  " programming on a remote computer.
-  call minpac#add('wakatime/vim-wakatime')
-
   " Attempt to standardise indentation and other styling by reading
   " configuration values from a .editorconfig file if present.  This is loaded
   " on demand only if there is a .editorconfig file present at the :pwd path.

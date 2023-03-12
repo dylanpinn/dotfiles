@@ -21,8 +21,7 @@ git/config: git/config.m4
 install: install-bash \
 	install-bin \
 	install-git \
-	install-vim \
-	install-wakatime
+	install-vim
 
 brew-dump :
 	(cd homebrew; brew bundle dump --force --describe)
