@@ -12,7 +12,7 @@ TODO Install tmux
 
 TODO Install Neovim
 
-TODO Setup git
+DONE Setup git
 
 TODO Setup pcklist for official and aur packages
 TODO Setup scripts to populate and install from these files.
