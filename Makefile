@@ -73,8 +73,8 @@ format-lua:
 format-sh:
 	sh format/sh.sh
 
-install-alacritty: clean-alacritty
-	ln -s -- $(PWD)/alacritty $(XDG_CONFIG_HOME)/alacritty
+install-alacritty:
+	stow --verbose --target=$(XDG_CONFIG_HOME)/alacritty --restow alacritty
 
 install-asdf: install-bash
 	install -- $(PWD)/asdf/bashrc.d/* $(HOME)/.bashrc.d/
