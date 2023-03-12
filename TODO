@@ -9,10 +9,13 @@ TODO Go through Bash in Wiki
 https://wiki.archlinux.org/title/bash
 
 TODO Install tmux
+https://wiki.archlinux.org/title/Tmux
 
 TODO Install Neovim
+https://wiki.archlinux.org/title/Neovim
 
-DONE Setup git
+TODO Setup Clipboard
+https://wiki.archlinux.org/title/Clipboard
 
 TODO Setup pcklist for official and aur packages
 TODO Setup scripts to populate and install from these files.
