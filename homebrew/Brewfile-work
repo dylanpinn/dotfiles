@@ -68,10 +68,6 @@ cask "appcleaner"
 cask "canon-ijscanner13f"
 # API documentation browser and code snippet manager
 cask "dash"
-# Drivers for DisplayLink docks, adapters and monitors
-cask "displaylink"
-# Enables DisplayLink screens prior to login
-cask "displaylink-login-extension"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Collaborative team software
