@@ -86,8 +86,6 @@ cask "imageoptim"
 cask "insomnia"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Grammar, spelling and style suggestions in all the writing apps
-cask "languagetool"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Software for Logitech devices
