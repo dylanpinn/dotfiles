@@ -103,7 +103,6 @@ cask "rectangle"
 # Open-source code editor
 cask "visual-studio-code"
 mas "1Password for Safari", id: 1569813296
-mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Messenger", id: 1480068668
 mas "Microsoft OneNote", id: 784801555
