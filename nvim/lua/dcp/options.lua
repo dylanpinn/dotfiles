@@ -1,3 +1,8 @@
+-- This file contains all of the options that are set using vim.opt.* expressions. Currently the options in this file
+-- are grouped by a loose context, e.g. comments, text wrappign, status line, etc. Unsure if this should be changed to
+-- be alphabetic instead.
+--
+
 -- Vim includes defaults for comments and path that date back to its history as
 -- a mainly C development environment.  Removing these values allows us to use
 -- filetype plugins to set them as needed.
