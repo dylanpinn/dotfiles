@@ -70,8 +70,6 @@ cask "canon-ijscanner13f"
 cask "dash"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Collaborative team software
-cask "figma"
 # Web browser
 cask "firefox"
 # Typeface made for developers
