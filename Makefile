@@ -26,6 +26,9 @@ install: install-bash \
 brew-dump :
 	(cd homebrew; brew bundle dump --force --describe)
 
+check-awesome:
+	awesome -k awesome/rc.lua
+
 check-bash :
 	sh check/bash.sh
 
@@ -81,7 +84,7 @@ install-asdf: install-bash
 	install -- $(PWD)/asdf/profile.d/* $(HOME)/.profile.d/
 	install -- $(PWD)/asdf/asdfrc $(XDG_CONFIG_HOME)/asdfrc
 
-install-awesome:
+install-awesome: check-awesome
 	stow --verbose --target=$(XDG_CONFIG_HOME)/awesome --restow awesome
 
 install-aws : install-sh
