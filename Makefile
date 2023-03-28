@@ -108,6 +108,10 @@ install-brew:
 install-conf:
 	sh install/conf.sh
 
+install-dunst:
+	mkdir -p -- $(XDG_CONFIG_HOME)/dunst
+	stow --verbose --target=$(XDG_CONFIG_HOME)/dunst --restow dunst
+
 install-emacs : clean-emacs
 	mkdir -p -- $(XDG_CONFIG_HOME)/emacs
 	touch -- $(XDG_CONFIG_HOME)/emacs/custom.el
@@ -155,9 +159,9 @@ install-work : install-sh
 
 install-x:
 	mkdir -p $(XDG_CONFIG_HOME)/X11
-	ln -s -- $(PWD)/x/profile.d/* $(HOME)/.profile.d/
-	ln -s -- $(PWD)/x/xinitrc $(XDG_CONFIG_HOME)/X11/xinitrc
-	ln -s -- $(PWD)/x/xserverrc $(XDG_CONFIG_HOME)/X11/xserverrc
+	install -- $(PWD)/x/profile.d/* $(HOME)/.profile.d/
+	install -- $(PWD)/x/xinitrc $(XDG_CONFIG_HOME)/X11/xinitrc
+	install -- $(PWD)/x/xserverrc $(XDG_CONFIG_HOME)/X11/xserverrc
 
 install-yabai:
 	stow --verbose --target=$(XDG_CONFIG_HOME)/yabai --restow yabai
