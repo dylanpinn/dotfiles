@@ -153,6 +153,12 @@ install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
 
+install-x:
+	mkdir -p $(XDG_CONFIG_HOME)/X11
+	ln -s -- $(PWD)/x/profile.d/* $(HOME)/.profile.d/
+	ln -s -- $(PWD)/x/xinitrc $(XDG_CONFIG_HOME)/X11/xinitrc
+	ln -s -- $(PWD)/x/xserverrc $(XDG_CONFIG_HOME)/X11/xserverrc
+
 install-yabai:
 	stow --verbose --target=$(XDG_CONFIG_HOME)/yabai --restow yabai
 	stow --verbose --target=$(XDG_CONFIG_HOME)/skhd --restow skhd
