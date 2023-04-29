@@ -1,8 +1,5 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -13,8 +10,6 @@ brew "bash-completion@2"
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Package manager for the Lua programming language
-brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -25,10 +20,6 @@ brew "stow"
 brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Internet file retriever
-brew "wget"
-# Library to create, extract, and modify Windows Imaging files
-brew "wimlib"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # GPU-accelerated terminal emulator
@@ -39,27 +30,12 @@ cask "appcleaner"
 cask "firefox"
 # Typeface made for developers
 cask "font-jetbrains-mono"
-# Privacy-first, open-source platform for knowledge sharing and management
-cask "logseq"
-# Native desktop app for Messenger (formerly Facebook Messenger)
-cask "messenger"
 # Podcast platform
 cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Control your Sonos system
-cask "sonos"
-# Desktop client for WhatsApp
-cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Paprika Recipe Manager 3", id: 1303222628
-mas "Parcel", id: 639968404
-mas "Play", id: 1596506190
-mas "Reeder", id: 1529448980
-mas "Save to Reader", id: 1640236961
 mas "Things", id: 904280696
-mas "Wipr", id: 1320666476
-mas "Xcode", id: 497799835
