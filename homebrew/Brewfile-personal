@@ -26,6 +26,8 @@ cask "1password"
 cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
+# Text editor
+cask "emacs"
 # Web browser
 cask "firefox"
 # Typeface made for developers
