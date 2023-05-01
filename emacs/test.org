@@ -1,0 +1,7 @@
+* WAITING [#A] Greetings                                         :hello:test:
+DEADLINE: <2023-05-05 Fri> SCHEDULED: <2023-05-02 Tue>
+- State "WAITING"    from "DONE"       [2023-05-02 Tue 01:44] \\
+  Waiting on Bob to get back to be about x.
+How are you today
+
+* TODO Another task to do

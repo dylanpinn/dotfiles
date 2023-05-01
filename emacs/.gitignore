@@ -1,0 +1,5 @@
+# TODO: Find a way to move TEMP files out of this directory.
+.#*
+
+# Generated configuration by Emacs.
+custom-vars.el
