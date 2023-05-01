@@ -18,8 +18,8 @@ function! PackInit() abort
   call minpac#add('yuezk/vim-js')
   call minpac#add('maxmellon/vim-jsx-pretty')
 
-  " Semi basic colour scheme.  Haven't found anything else that I like more.
-  call minpac#add('nanotech/jellybeans.vim')
+  " Colorscheme.
+  call minpac#add('romainl/Apprentice')
 endfunction
 
 " Load minpac and then manage it.
