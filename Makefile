@@ -21,8 +21,7 @@ git/config: git/config.m4
 install: install-bash \
 	install-bin \
 	install-git \
-	install-vim \
-	install-wakatime
+	install-vim
 
 brew-dump :
 	(cd homebrew; brew bundle dump --force --describe)
@@ -140,9 +139,6 @@ install-vim:
 	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
 	sh install/vim.sh
 	stow --verbose --target=$$HOME/.vim --restow vim
-
-install-wakatime :
-	ln -s -- $(PWD)/wakatime/profile.d/* $(HOME)/.profile.d/
 
 install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
