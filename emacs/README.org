@@ -1,0 +1,3 @@
+* Emacs Configuration
+
+This sets up a basic Emacs configuration for note taking and task management using =org-mode=.
