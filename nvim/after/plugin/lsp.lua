@@ -74,6 +74,17 @@ require("mason-lspconfig").setup_handlers({
       },
     })
   end,
+  -- ltex-ls requires additional configuration.
+  ["ltex"] = function()
+    require('lspconfig').ltex.setup({
+      settings = {
+        ltex = {
+          language = "en-AU",
+          languageToolHttpServerUri = "http://localhost:8081/"
+        }
+      },
+    })
+  end,
 })
 
 require("mason-null-ls").setup({
