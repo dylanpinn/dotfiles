@@ -3,4 +3,5 @@ update_machine () {
   brew upgrade
   brew upgrade --cask
   rea --disable-auto-update cli update
+  asdf plugin-update --all
 }
