@@ -20,6 +20,8 @@ brew "git"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Package manager for the Lua programming language
+brew "luacheck"
+# Package manager for the Lua programming language
 brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
@@ -27,16 +29,22 @@ brew "mas"
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Terminal multiplexer
 brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Vim script Language Lint
+brew "vint"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
 brew "wget"
+# Linter for YAML files
+brew "yamllint"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
