@@ -99,6 +99,10 @@ install-brew:
 install-conf:
 	sh install/conf.sh
 
+install-emacs:
+	mkdir -p -- $(XDG_CONFIG_HOME)/emacs
+	stow --verbose --target=$(XDG_CONFIG_HOME)/emacs --restow emacs
+
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
