@@ -48,9 +48,6 @@ clean-bash :
 clean-bin:
 	rm -rf -- $(HOME)/.local/bin
 
-clean-emacs :
-	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
-
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
 
@@ -101,11 +98,6 @@ install-brew:
 
 install-conf:
 	sh install/conf.sh
-
-install-emacs : clean-emacs
-	mkdir -p -- $(XDG_CONFIG_HOME)/emacs
-	touch -- $(XDG_CONFIG_HOME)/emacs/custom.el
-	ln -s -- $(PWD)/emacs/init.el $(XDG_CONFIG_HOME)/emacs/init.el
 
 install-git : git/config clean-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
