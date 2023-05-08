@@ -4,4 +4,6 @@ DEADLINE: <2023-05-05 Fri> SCHEDULED: <2023-05-02 Tue>
   Waiting on Bob to get back to be about x.
 How are you today
 
-* TODO Another task to do
+* HOLD Another task to do                                              :HOLD:
+- State "HOLD"       from "TODO"       [2023-05-02 Tue 01:47] \\
+  Unsure if this project will go ahead.
