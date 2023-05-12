@@ -19,7 +19,7 @@ brew "gh"
 brew "git"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Package manager for the Lua programming language
+# Tool for linting and static analysis of Lua code
 brew "luacheck"
 # Package manager for the Lua programming language
 brew "luarocks"
@@ -53,6 +53,8 @@ cask "1password"
 cask "alacritty"
 # Application uninstaller
 cask "appcleaner"
+# Chromium based browser
+cask "arc"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Text editor
@@ -69,6 +71,8 @@ cask "imageoptim"
 cask "jumpcut"
 # Software for Logitech devices
 cask "logi-options-plus"
+# Software for Logitech devices
+cask "logitech-options"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Screen and video recording software
