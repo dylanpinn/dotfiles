@@ -3,6 +3,19 @@
 -- be alphabetic instead.
 --
 
+
+-- Enable automatic backups before overwriting a file and leave it around after
+-- the file has been written. These files are kept in a cache directory by defualt in Neovim.
+--
+vim.opt.backup = true
+
+-- Keep track of undo history for files between sessions.  This ensures that
+-- undo and redo are available between Vim invocations.  These files are kept
+-- in a cache directory.
+--
+vim.opt.undofile = true
+
+
 -- Vim includes defaults for comments and path that date back to its history as
 -- a mainly C development environment.  Removing these values allows us to use
 -- filetype plugins to set them as needed.
