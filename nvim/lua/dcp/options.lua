@@ -16,6 +16,15 @@ vim.opt.breakindent = true
 --
 vim.opt.comments = ""
 
+-- Use two spaces to end a sentence. This helps improve readability using
+-- monospaced fonts.  This also helps vim work with sentence objects for the
+-- purpose of the 's' text objects, the '(' and ')' sentence motions, and
+-- formatting with the 'gq' command must now be separated by two spaces.
+--
+-- See https://stevelosh.com/blog/2012/10/why-i-two-space/
+--
+vim.opt.cpoptions:prepend({ "J" })
+
 -- Neovim's defaults for macro definitions, which are used for include-search, defaults that also date back to its
 -- history as a mainly C development environment. Removing these values allows ut to use filetype plugins to set them
 -- as needed.
@@ -29,6 +38,12 @@ vim.opt.define = ""
 --
 vim.opt.formatoptions:append({ 1 })
 
+-- Because we are using two spaces for ending sentences. Vim can determine if
+-- the space after an abbreviation such as "Mr. Pinn" is the end of the
+-- sentence or not and then determine if it should be split on it. The 'p' flag
+-- makes this possible.
+--
+vim.opt.formatoptions:append({ "p" })
 
 -- Use ripgrep for searching files rather than grep(1).
 -- rg is faster and automatically excludes ignored files.
@@ -37,6 +52,10 @@ if vim.fn.executable("rg") == 1 then
   vim.opt.grepformat:prepend({ "%f:%l:%c:%m" })
   vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
 end
+
+-- Ignore case when searching.
+--
+vim.opt.ignorecase = true
 
 -- Neovim's defaults for finding include commands, defaults that also date back to its history as a mainly C development
 -- environment. Removing these values allows ut to use filetype plugins to set them as needed.
