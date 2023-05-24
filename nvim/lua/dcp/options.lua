@@ -7,6 +7,11 @@
 --
 vim.opt.backup = true
 
+-- By default Neovim will look to save backup files in the same directory as the file.  It has a fallback to a cache
+-- directory so removing the first option will use that instead.
+--
+vim.opt.backupdir:remove({ "." })
+
 -- When wrapping a line, if that line is indented then the wrapped line is also indented the same amount.
 --
 vim.opt.breakindent = true
@@ -23,7 +28,7 @@ vim.opt.comments = ""
 --
 -- See https://stevelosh.com/blog/2012/10/why-i-two-space/
 --
-vim.opt.cpoptions:prepend({ "J" })
+vim.opt.cpoptions:append("J")
 
 -- Neovim's defaults for macro definitions, which are used for include-search, defaults that also date back to its
 -- history as a mainly C development environment. Removing these values allows ut to use filetype plugins to set them
@@ -80,6 +85,11 @@ vim.opt.path:remove({ "/usr/include" })
 -- inserting a leading string - "> ".
 --
 vim.opt.showbreak = "> "
+
+-- Becuase we are ignoring case when searching, if the search contains upper-case characters then use that rather than
+-- ignoring it.
+--
+vim.opt.smartcase = true
 
 -- Use basic statusline, using this rather than an external plugin to do this as this currently fits my needs and
 -- doesn't add extra complexity.
