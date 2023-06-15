@@ -1,4 +1,6 @@
-update_machine () {
+#!/usr/bin/env sh
+
+update_machine() {
   brew update
   brew upgrade
   brew upgrade --cask

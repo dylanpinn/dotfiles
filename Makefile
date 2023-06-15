@@ -50,6 +50,7 @@ clean-bin:
 
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
+	rm -f -- $(XDG_CONFIG_HOME)/emacs/early-init.el
 
 clean-git :
 	rm -f -- $(XDG_CONFIG_HOME)/git/config
@@ -105,6 +106,7 @@ install-conf:
 install-emacs : clean-emacs
 	mkdir -p -- $(XDG_CONFIG_HOME)/emacs
 	touch -- $(XDG_CONFIG_HOME)/emacs/custom.el
+	ln -s -- $(PWD)/emacs/early-init.el $(XDG_CONFIG_HOME)/emacs/early-init.el
 	ln -s -- $(PWD)/emacs/init.el $(XDG_CONFIG_HOME)/emacs/init.el
 
 install-git : git/config clean-git
