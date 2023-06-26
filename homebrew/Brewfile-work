@@ -1,3 +1,4 @@
+tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
@@ -17,6 +18,8 @@ brew "docker-credential-helper-ecr"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Improved top (interactive process viewer)
+brew "htop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Tool for linting and static analysis of Lua code
@@ -33,6 +36,8 @@ brew "ripgrep"
 brew "shellcheck"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Opinionated Lua code formatter
+brew "stylua"
 # Terminal multiplexer
 brew "tmux"
 # Vi 'workalike' with many additional features
@@ -45,6 +50,7 @@ brew "watch"
 brew "wget"
 # Linter for YAML files
 brew "yamllint"
+brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp"]
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Encrypt and decrypt secrets using AWS KMS
@@ -63,10 +69,10 @@ cask "bartender"
 cask "displaylink"
 # App to build and share containerized applications and microservices
 cask "docker"
-# Text editor
-cask "emacs"
 # Web browser
 cask "firefox"
+# Expressive monospaced font family
+cask "font-intel-one-mono"
 # Typeface made for developers
 cask "font-jetbrains-mono"
 # Web browser
@@ -75,12 +81,16 @@ cask "google-chrome"
 cask "imageoptim"
 # HTTP and GraphQL Client
 cask "insomnia"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # Clipboard manager
 cask "jumpcut"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Software for Logitech devices
 cask "logitech-options"
+# Optimize your webcam, headset, and Logi Dock for video meetings
+cask "logitune"
 # Privacy-first, open-source platform for knowledge sharing and management
 cask "logseq"
 # Screen and video recording software
@@ -91,12 +101,26 @@ cask "microsoft-auto-update"
 cask "microsoft-edge"
 # Office suite
 cask "microsoft-office-businesspro"
+# Media player based on MPlayer and mplayer2
+cask "mpv"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Podcast platform
 cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Collection of apps available by subscription
+cask "setapp"
 # Team communication and collaboration software
 cask "slack"
+# Sound and audio controller
+cask "soundsource"
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "Display Menu", id: 549083868
+mas "Ivory", id: 6444602274
 mas "Keynote", id: 409183694
+mas "MarkEdit", id: 1669953820
 mas "NepTunes", id: 1006739057
+mas "Parcel", id: 639968404
 mas "Things", id: 904280696
