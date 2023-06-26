@@ -73,6 +73,8 @@ cask "font-jetbrains-mono"
 cask "google-chrome"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
+# HTTP and GraphQL Client
+cask "insomnia"
 # Clipboard manager
 cask "jumpcut"
 # Software for Logitech devices
