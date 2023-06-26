@@ -57,6 +57,8 @@ cask "alacritty"
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
+# Menu bar icon organizer
+cask "bartender"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Text editor
