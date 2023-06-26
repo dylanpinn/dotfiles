@@ -47,6 +47,8 @@ brew "wget"
 brew "yamllint"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
+# Encrypt and decrypt secrets using AWS KMS
+brew "reainternal/stable/shush"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # GPU-accelerated terminal emulator
