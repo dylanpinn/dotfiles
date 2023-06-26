@@ -37,9 +37,6 @@ clean:
 		$(BINS) \
 		git/config
 
-clean-alacritty:
-	rm -f -- $(XDG_CONFIG_HOME)/alacritty
-
 clean-bash :
 	rm -f -- $(HOME)/.bashrc
 	rm -f -- $(HOME)/.bash_profile
@@ -73,8 +70,8 @@ format-lua:
 format-sh:
 	sh format/sh.sh
 
-install-alacritty: clean-alacritty
-	ln -s -- $(PWD)/alacritty $(XDG_CONFIG_HOME)/alacritty
+install-alacritty:
+	ln -sf -- $(PWD)/alacritty $(XDG_CONFIG_HOME)/alacritty
 
 install-asdf: install-bash
 	install -- $(PWD)/asdf/bashrc.d/* $(HOME)/.bashrc.d/
