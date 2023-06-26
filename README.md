@@ -63,11 +63,7 @@ configuration out of `$HOME`.
 ### Vim
 
 This is my preferred editor.  The aim is to use as close to vanilla vim as
-possible to ensure compatability with as many instances of vim as possible.
-
-### Wakatime
-
-This moves the configuration out of `$HOME`.
+possible to ensure compatibility with as many instances of vim as possible.
 
 ## Linting and checking
 
