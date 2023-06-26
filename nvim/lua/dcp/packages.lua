@@ -24,5 +24,5 @@ return require("paq")({
   "nvim-lua/plenary.nvim",
 
   -- Colorscheme
-  "folke/tokyonight.nvim",
+  { "catppuccin/nvim", as = "catppuccin" },
 })
