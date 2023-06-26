@@ -59,6 +59,8 @@ cask "appcleaner"
 cask "arc"
 # Menu bar icon organizer
 cask "bartender"
+# Drivers for DisplayLink docks, adapters and monitors
+cask "displaylink"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Text editor
