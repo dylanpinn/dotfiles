@@ -68,7 +68,8 @@ format-sh:
 	sh format/sh.sh
 
 install-alacritty:
-	ln -sf -- $(PWD)/alacritty $(XDG_CONFIG_HOME)/alacritty
+	mkdir -p -- $(XDG_CONFIG_HOME)/alacritty
+	ln -sf -- $(PWD)/alacritty/* $(XDG_CONFIG_HOME)/alacritty/
 
 install-asdf: install-bash
 	install -- $(PWD)/asdf/bashrc.d/* $(HOME)/.bashrc.d/
