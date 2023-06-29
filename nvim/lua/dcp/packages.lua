@@ -22,6 +22,9 @@ return require("paq")({
   "jose-elias-alvarez/null-ls.nvim",
   "jayp0521/mason-null-ls.nvim",
   "nvim-lua/plenary.nvim",
+  -- Git Integration.
+  "tpope/vim-fugitive",
+  "tpope/vim-rhubarb",
 
   -- Colorscheme
   { "catppuccin/nvim", as = "catppuccin" },
