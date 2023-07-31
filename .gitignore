@@ -8,3 +8,6 @@ git/config
 
 # Ignore package management
 node_modules
+
+# Ignore nix Flake lockfile
+flake.lock

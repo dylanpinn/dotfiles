@@ -109,6 +109,12 @@ install-git : git/config clean-git
 	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
+install-nix:
+	mkdir -p -- $(XDG_CONFIG_HOME)/nix
+	mkdir -p -- $(XDG_CONFIG_HOME)/home-manager
+	stow --verbose --target=$(XDG_CONFIG_HOME)/nix --restow nix
+	stow --verbose --target=$(XDG_CONFIG_HOME)/home-manager --restow home-manager
+
 install-nvim: install-alacritty
 	sh install/nvim.sh
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
