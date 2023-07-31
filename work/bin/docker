@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+# Change this to your preference
+ZSCALER_CAFILE=$XDG_DATA_HOME/ca/cert.pem
+CONT_CAFILE=/etc/ca-certificates/cert.pem
+
+env_flags() {
+  echo "--env AWS_CA_BUNDLE=$CONT_CAFILE --env REQUESTS_CA_BUNDLE=$CONT_CAFILE --env SSL_CERT_FILE=$CONT_CAFILE"
+}
+
+mount_flags() {
+  echo "--volume $ZSCALER_CAFILE:$CONT_CAFILE"
+}
+
+docker() {
+  "$(type -pa docker | \
+    grep -v "$(realpath "${BASH_SOURCE[0]}")" | \
+      head -n 1)" "$@"
+}
+
+case "$1" in
+  run)
+    shift
+    docker run \
+      $(mount_flags) \
+      $(env_flags) \
+        "$@"
+    ;;
+  compose)
+    shift
+    case "$1" in
+      run)
+        shift
+        docker compose run \
+          $(mount_flags) \
+          $(env_flags) \
+          "$@"
+        ;;
+      *)
+        docker compose "$@"
+        ;;
+    esac
+    ;;
+  *)
+    docker "$@"
+    ;;
+esac

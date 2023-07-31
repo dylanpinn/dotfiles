@@ -38,6 +38,8 @@ brew "shellcheck"
 brew "stow"
 # Opinionated Lua code formatter
 brew "stylua"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Vi 'workalike' with many additional features
@@ -57,16 +59,18 @@ brew "reainternal/stable/rea-as"
 brew "reainternal/stable/shush"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
 # GPU-accelerated terminal emulator
 cask "alacritty"
+# Application launcher and productivity software
+cask "alfred"
 # Application uninstaller
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
 # Menu bar icon organizer
 cask "bartender"
-# Drivers for DisplayLink docks, adapters and monitors
-cask "displaylink"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Web browser
@@ -87,8 +91,6 @@ cask "jetbrains-toolbox"
 cask "jumpcut"
 # Software for Logitech devices
 cask "logi-options-plus"
-# Software for Logitech devices
-cask "logitech-options"
 # Optimize your webcam, headset, and Logi Dock for video meetings
 cask "logitune"
 # Privacy-first, open-source platform for knowledge sharing and management
@@ -105,6 +107,8 @@ cask "microsoft-office-businesspro"
 cask "mpv"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# WebKit based web browser
+cask "orion"
 # Podcast platform
 cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -113,14 +117,23 @@ cask "rectangle"
 cask "setapp"
 # Team communication and collaboration software
 cask "slack"
+# Control your Sonos system
+cask "sonos"
 # Sound and audio controller
 cask "soundsource"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Bear", id: 1091189122
 mas "Display Menu", id: 549083868
 mas "Ivory", id: 6444602274
+mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
+mas "LanguageTool", id: 1534275760
+mas "LastPass", id: 926036361
 mas "MarkEdit", id: 1669953820
 mas "NepTunes", id: 1006739057
+mas "Numbers", id: 409203825
 mas "Parcel", id: 639968404
+mas "Subscriptions", id: 1577082754
+mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
