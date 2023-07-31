@@ -16,8 +16,6 @@ brew "bash-completion@2"
 brew "docker-credential-helper-ecr"
 # GitHub command-line tool
 brew "gh"
-# Distributed revision control system
-brew "git"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor

@@ -3,4 +3,9 @@
   home.homeDirectory = "/Users/dylan.pinn";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+    includes = [{ path = "~/.dotfiles/git/config"; }];
+  };
 }

@@ -48,9 +48,6 @@ clean-bin:
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
 
-clean-git :
-	rm -f -- $(XDG_CONFIG_HOME)/git/config
-
 clean-postgres :
 	rm -f -- $(XDG_CONFIG_HOME)/pg/psqlrc
 
@@ -104,9 +101,8 @@ install-emacs : clean-emacs
 	touch -- $(XDG_CONFIG_HOME)/emacs/custom.el
 	ln -s -- $(PWD)/emacs/init.el $(XDG_CONFIG_HOME)/emacs/init.el
 
-install-git : git/config clean-git
+install-git : git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
-	ln -s -- $(PWD)/git/config $(XDG_CONFIG_HOME)/git/config
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
 install-nix:
