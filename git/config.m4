@@ -32,10 +32,16 @@
 
 	# Status
 	st = status
+[commit]
+  gpgsign = true
 [color]
 	ui = auto
 [fetch]
 	prune = true
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [help]
 	autocorrect = 10
 [init]
@@ -51,3 +57,4 @@
 	autosquash = true
 [user]
 	name = NAME
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr
