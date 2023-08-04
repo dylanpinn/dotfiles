@@ -42,9 +42,6 @@ clean-bash :
 	rm -f -- $(HOME)/.bash_profile
 	rm -rf -- $(HOME)/.bashrc.d
 
-clean-bin:
-	rm -rf -- $(HOME)/.local/bin
-
 clean-emacs :
 	rm -f -- $(XDG_CONFIG_HOME)/emacs/init.el
 
@@ -88,7 +85,7 @@ install-bash : check-bash clean-bash install-sh
 	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
 
-install-bin: $(BINS) clean-bin
+install-bin: $(BINS)
 	mkdir -p -- $(HOME)/.local/bin
 	install -- $(BINS) $(HOME)/.local/bin/
 
@@ -140,6 +137,7 @@ install-vim:
 install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
 	ln -s -- $(PWD)/work/bashrc.d/* $(HOME)/.bashrc.d/
+	cp -R -- $(PWD)/work/bin/* $(HOME)/.local/bin/
 
 install-yabai:
 	stow --verbose --target=$(XDG_CONFIG_HOME)/yabai --restow yabai
