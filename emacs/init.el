@@ -1,3 +1,7 @@
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
 (defun my/apply-theme (appearance)
   "Load theme, taking current system APPEARANCE into consideration."
   (mapc #'disable-theme custom-enabled-themes)
@@ -14,3 +18,11 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+
+;; Download which-key
+(unless (package-installed-p 'which-key)
+  (package-install 'which-key))
+;; Enable which-key
+(require 'which-key)
+(which-key-mode)
+(setq which-key-idle-delay 0.3)
