@@ -6,3 +6,11 @@
     ('dark (load-theme 'tango-dark t))))
 
 (add-hook 'ns-system-appearance-change-functions #'my/apply-theme)
+
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
