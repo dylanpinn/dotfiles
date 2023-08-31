@@ -1,16 +1,16 @@
 [commit]
 	gpgsign = true
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/local/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/usr/local/bin/gh auth git-credential
 [gpg]
 	format = ssh
 [gpg "ssh"]
 	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
 [user]
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFYhzUMSdWWgLZDKGp1v+ocxenzVqKdY0YoNtOXdlAJn
+	signingkey = {{ .git_signing_key }}
 	name = Dylan Pinn
-	email = me@dylanpinn.com
+	email = {{ .email }}

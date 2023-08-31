@@ -29,4 +29,4 @@
 # More examples can be found here:
 #  https://developer.1password.com/docs/ssh/agent/config
 [[ssh-keys]]
-vault = "Development"
+vault = {{ .op_ssh_vault | quote }}
