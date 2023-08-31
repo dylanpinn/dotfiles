@@ -1,1 +1,2 @@
-source /Users/dylan/.config/op/plugins.sh
+# Integrate 1Password CLI plugins with zsh.
+source ~/.config/op/plugins.sh

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# Install pakages from global ~/.Brewfile
+# Install packages from global ~/.Brewfile
 brew bundle --global --no-lock
