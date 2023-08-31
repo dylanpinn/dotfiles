@@ -1,2 +1,7 @@
+# Load ~/.profile regardless of shell.
+if [ -e "$HOME"/.profile ]; then
+  . "$HOME"/.profile
+fi
 
+# Setup Homebrew with zsh
 eval "$(/usr/local/bin/brew shellenv)"
