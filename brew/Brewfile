@@ -1,4 +1,6 @@
 tap "homebrew/bundle"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
