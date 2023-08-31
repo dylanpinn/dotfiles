@@ -1,0 +1,13 @@
+tap "homebrew/bundle"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Mac App Store command-line interface
+brew "mas"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
+mas "1Password for Safari", id: 1569813296
+mas "Things", id: 904280696
