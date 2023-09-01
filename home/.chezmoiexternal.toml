@@ -1,0 +1,4 @@
+[".vim/pack/minpac/opt/minpac"]
+    type = "git-repo"
+    url = "https://github.com/k-takata/minpac.git"
+    refreshPeriod = "168h"
