@@ -13,18 +13,10 @@ BINS = bin/git-remove-merged-local \
 all: $(BINS) \
 	git/config
 
-git/config: git/config.m4
-	m4 \
-		-D NAME=$(NAME) \
-		git/config.m4 > $@
-
 install: install-bash \
 	install-bin \
 	install-git \
 	install-vim
-
-brew-dump :
-	(cd homebrew; brew bundle dump --force --describe)
 
 check-bash :
 	sh check/bash.sh
@@ -38,8 +30,6 @@ clean:
 		git/config
 
 clean-bash :
-	rm -f -- $(HOME)/.bashrc
-	rm -f -- $(HOME)/.bash_profile
 	rm -rf -- $(HOME)/.bashrc.d
 
 clean-emacs :
@@ -49,7 +39,6 @@ clean-postgres :
 	rm -f -- $(XDG_CONFIG_HOME)/pg/psqlrc
 
 clean-sh :
-	rm -f -- $(HOME)/.profile
 	rm -rf -- $(HOME)/.profile.d
 
 clean-tmux:
@@ -76,19 +65,12 @@ install-aws : install-sh
 	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
 
 install-bash : check-bash clean-bash install-sh
-	mkdir -p -- $(HOME)/.bashrc.d
 	mkdir -p -- $(XDG_STATE_HOME)/bash
-	ln -s -- $(PWD)/bash/bashrc $(HOME)/.bashrc
-	ln -s -- $(PWD)/bash/bash_profile $(HOME)/.bash_profile
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
 
 install-bin: $(BINS)
 	mkdir -p -- $(HOME)/.local/bin
 	install -- $(BINS) $(HOME)/.local/bin/
-
-install-brew:
-	brew update
-	(cd homebrew; brew bundle)
 
 install-conf:
 	sh install/conf.sh
@@ -116,7 +98,6 @@ install-postgres : clean-postgres install-sh
 
 install-sh : check-sh clean-sh
 	mkdir -p -- $(HOME)/.profile.d
-	ln -s -- $(PWD)/sh/profile $(HOME)/.profile
 	ln -s -- $(PWD)/sh/profile.d/* $(HOME)/.profile.d/
 
 install-tmux: clean-tmux
