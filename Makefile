@@ -15,8 +15,7 @@ all: $(BINS) \
 
 install: install-bash \
 	install-bin \
-	install-git \
-	install-vim
+	install-git
 
 check-bash :
 	sh check/bash.sh
@@ -98,11 +97,6 @@ install-sh : check-sh clean-sh
 install-tmux: clean-tmux
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
 	ln -s -- $(PWD)/tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
-
-install-vim:
-	mkdir -p -- $(HOME)/.vim
-	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
-	stow --verbose --target=$$HOME/.vim --restow vim
 
 install-work : install-sh
 	ln -s -- $(PWD)/work/profile.d/* $(HOME)/.profile.d/
