@@ -107,7 +107,6 @@ install-tmux: clean-tmux
 install-vim:
 	mkdir -p -- $(HOME)/.vim
 	mkdir -p -- $(XDG_CACHE_HOME)/vim/{backup,swap,undo}
-	sh install/vim.sh
 	stow --verbose --target=$$HOME/.vim --restow vim
 
 install-work : install-sh

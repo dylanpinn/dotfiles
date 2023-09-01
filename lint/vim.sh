@@ -2,8 +2,9 @@
 #
 # Lint vim files.
 
-set -e
+# set -e
 
 # TODO: Find a way to remove this.
 # shellcheck disable=SC2046
-vint -s -- $(find vim -type f)
+# TODO: Look at re-enabling this for chezmoi.
+# vint -s -- $(find vim -type f)
