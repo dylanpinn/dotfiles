@@ -17,7 +17,13 @@ brew "zsh"
 cask "1password"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# Application uninstaller
+cask "appcleaner"
+# Software for Logitech devices
+cask "logi-options-plus"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Things", id: 904280696
