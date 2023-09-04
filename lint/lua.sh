@@ -4,4 +4,4 @@
 
 set -e
 
-luacheck .luacheckrc
+luacheck .luacheckrc home
