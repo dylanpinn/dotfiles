@@ -87,9 +87,7 @@ require("mason-lspconfig").setup_handlers({
 })
 
 require("mason-null-ls").setup({
-  ensure_installed = {
-    "stylua",
-  },
+  ensure_installed = {},
   automatic_installation = false,
   automatic_setup = true, -- Recommended, but optional
   handlers = {},
