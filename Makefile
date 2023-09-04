@@ -55,9 +55,6 @@ format-sh:
 install-alacritty:
 	ln -sf -- $(PWD)/alacritty $(XDG_CONFIG_HOME)/alacritty
 
-install-aws : install-sh
-	ln -s -- $(PWD)/aws/profile.d/* $(HOME)/.profile.d/
-
 install-bash : check-bash clean-bash install-sh
 	mkdir -p -- $(XDG_STATE_HOME)/bash
 	ln -s -- $(PWD)/bash/bashrc.d/* $(HOME)/.bashrc.d/
