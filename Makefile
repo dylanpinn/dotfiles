@@ -77,11 +77,6 @@ install-emacs : clean-emacs
 install-git:
 	ln -s -- $(PWD)/git/bashrc.d/* $(HOME)/.bashrc.d/
 
-install-nvim: install-alacritty
-	sh install/nvim.sh
-	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
-	stow --verbose --target=$(XDG_CONFIG_HOME)/nvim --restow nvim
-
 install-personal : install-sh
 	ln -s -- $(PWD)/personal/profile.d/* $(HOME)/.profile.d/
 
