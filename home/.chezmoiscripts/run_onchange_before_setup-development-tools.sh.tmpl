@@ -1,0 +1,9 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.hostname "C02FJ1QSQ05P" -}}
+# Required for Lua development or using Neovim.
+# Setup luacheck (lua linter).
+luarocks install luacheck
+luarocks install lanes
+{{- end -}}
+
