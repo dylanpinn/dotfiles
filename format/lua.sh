@@ -4,4 +4,4 @@
 
 set -e
 
-stylua .luacheckrc nvim/
+stylua .luacheckrc home/
