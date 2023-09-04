@@ -116,7 +116,6 @@ vim.opt.statusline = "%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]"
 --
 vim.opt.undofile = true
 
-
 -- Configure the wildmenu to ignore a list of patterns for file and directory
 -- command line completion.  Files and directories matching any of these
 -- patterns won't be presented as candidates for tab completion on the command
