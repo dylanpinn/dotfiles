@@ -17,7 +17,7 @@
 	dc = diff --cached
 
 	# Log
-	changelog = log origin..HEAD --format='* %s%n%w(,4,4)%+b'
+	changelog = log --reverse origin..HEAD --format='* %s%n%w(,4,4)%+b'
 	glg = log --oneline --decorate --all --graph --abbrev-commit
 
 	# Pull
