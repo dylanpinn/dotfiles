@@ -15,8 +15,9 @@ return require("paq")({
   },
 
   -- Enhance (n)vim.
-  "tpope/vim-surround",
+  "tpope/vim-dispatch",
   "tpope/vim-repeat",
+  "tpope/vim-surround",
 
   -- LSP configuration; this makes configuring LSP servers easier.
   "neovim/nvim-lspconfig",
