@@ -88,7 +88,6 @@ require("mason-lspconfig").setup_handlers({
 
 require("mason-null-ls").setup({
   ensure_installed = {
-    "luacheck",
     "stylua",
   },
   automatic_installation = false,

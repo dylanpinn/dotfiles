@@ -40,8 +40,6 @@ brew "htop"
 brew "jq"
 # JIT library for the GNU compiler collection
 brew "libgccjit"
-# Tool for linting and static analysis of Lua code
-brew "luacheck"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Mac App Store command-line interface
