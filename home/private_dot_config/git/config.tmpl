@@ -47,7 +47,7 @@
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [help]
 	autocorrect = 10
 [init]
@@ -62,6 +62,6 @@
 [rebase]
 	autosquash = true
 [user]
-	signingkey = {{ .git_signing_key }}
-	name = Dylan Pinn
 	email = {{ .email }}
+	name = Dylan Pinn
+	signingkey = {{ .git_signing_key }}
