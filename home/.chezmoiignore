@@ -1,1 +1,15 @@
 .Brewfile_work
+
+{{- if ne .profile "work" }}
+# Ignore work files (asdf, aws, nvim, tmux).
+.bashrc.d/asdf.bash
+.config/asdfrc
+.config/nvim
+.config/tmux
+.profile.d/asdf.sh
+.profile.d/aws.sh
+{{- end }}
+
+{{- if ne .profile "personal" }}
+# Ignore personal files
+{{- end }}
