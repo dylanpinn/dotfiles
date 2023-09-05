@@ -6,6 +6,7 @@
 .config/asdfrc
 .config/nvim
 .config/tmux
+.local/share/nvim
 .profile.d/asdf.sh
 .profile.d/aws.sh
 {{- end }}
