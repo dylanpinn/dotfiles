@@ -4,10 +4,6 @@
 
 set -e
 
-set sh/profile
-
-sh -n -- "$@"
-
 find . -type f -name "*.sh" | while IFS='' read -r line; do
   [ -f "$line" ] || continue
   sh -n -- "$line"
