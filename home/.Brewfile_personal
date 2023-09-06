@@ -1,5 +1,9 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # GitHub command-line tool
