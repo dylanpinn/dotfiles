@@ -254,7 +254,7 @@ nnoremap gp `[v`]
 " it explicitly here.
 "
 let mapleader = '\'
-let maplocalleader = <space>
+let maplocalleader = ' '
 
 " Normal mode mappings:
 
