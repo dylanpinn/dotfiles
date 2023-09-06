@@ -24,6 +24,7 @@ cask "font-fira-mono"
 # Corporate typeface for IBM
 cask "font-ibm-plex-mono"
 cask "font-input"
+cask "font-roboto-mono"
 cask "font-source-code-pro"
 # Software for Logitech devices
 cask "logi-options-plus"
