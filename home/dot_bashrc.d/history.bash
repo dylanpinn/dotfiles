@@ -12,6 +12,3 @@ HISTCONTROL=ignoreboth:erasedups
 
 # Ignore certain commands.
 HISTIGNORE='ls:bg:fg:history'
-
-# Append to history file when shell exits, rather than overwriting it.
-shopt -s histappend
