@@ -256,6 +256,8 @@ nnoremap gp `[v`]
 let mapleader = '\'
 let maplocalleader = <space>
 
+" Normal mode mappings:
+
 "" Leader,b list all open buffers.
 nnoremap <Leader>b :<C-U>buffer <C-d>
 "" Leader,c toggles highlighted cursor row.
