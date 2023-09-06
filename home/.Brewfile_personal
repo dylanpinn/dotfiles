@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # GitHub command-line tool
@@ -19,6 +20,11 @@ cask "1password"
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+cask "font-fira-mono"
+# Corporate typeface for IBM
+cask "font-ibm-plex-mono"
+cask "font-input"
+cask "font-source-code-pro"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Move and resize windows using keyboard shortcuts or snap areas
