@@ -16,9 +16,11 @@ function prompt() {
       fi
 
       # Set prompt to be user:~/pwd$
-      # - user is bold green
-      # - path is bold blue
-      PS1='\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+      green=$(tput setaf 2)
+      blue=$(tput setaf 4)
+      bold=$(tput bold)
+      reset=$(tput sgr0)
+      PS1='\[$bold\[$green\]\u\[$reset\]:\[$bold\[$blue\]\w\[$reset\]\$ '
       ;;
     # Simple prompt.
     off)
