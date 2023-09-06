@@ -254,20 +254,25 @@ nnoremap gp `[v`]
 " it explicitly here.
 "
 let mapleader = '\'
-let maplocalleader = ','
+let maplocalleader = <space>
 
+"" Leader,b list all open buffers.
+nnoremap <Leader>b :<C-U>buffer <C-d>
 "" Leader,c toggles highlighted cursor row.
-nnoremap <Leader>c
-      \ :<C-U>set cursorline! cursorline?<CR>
+nnoremap <Leader>c :<C-U>set cursorline! cursorline?<CR>
+"" Leader,e populates the :edit command to edit a file.
+nnoremap <Leader>e :<C-U>edit **/*
+"" Leader,f populates the :find command to find a file on the path and edit it.
+nnoremap <Leader>f :<C-U>find *
+"" Leader,g search for text using grep.
+nnoremap <Leader>g :<C-U>grep<space>
 "" Leader,l toggles showing tab, end-of-line, and trailing white space.
-noremap <Leader>l
-      \ :<C-U>set list! list?<CR>
+nnoremap <Leader>l :<C-U>set list! list?<CR>
 "" Leader,n toggles line number display
-noremap <Leader>n
-      \ :<C-U>set number! number?<CR>
+nnoremap <Leader>n :<C-U>set number! number?<CR>
+"" Leader,m run :make.
+nnoremap <Leader>m :<C-U>make<CR>
 "" Leader,s toggles spell checking.
-nnoremap <Leader>s
-      \ :<C-U>set spell! spell?<CR>
+nnoremap <Leader>s :<C-U>set spell! spell?<CR>
 "" Leader,w toggles soft wrapping
-noremap <Leader>w
-      \ :<C-U>set wrap! wrap?<CR>
+nnoremap <Leader>w :<C-U>set wrap! wrap?<CR>
