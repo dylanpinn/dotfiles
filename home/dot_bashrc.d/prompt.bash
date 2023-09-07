@@ -38,10 +38,6 @@ function prompt() {
 
       # Disregard output and error from these tput(1) calls
       {
-        # Count available colors
-        local -i colors
-        colors=$(tput colors || tput Co)
-
         # Prepare reset code
         reset=$(tput sgr0 || tput me)
 
