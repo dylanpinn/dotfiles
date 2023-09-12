@@ -97,10 +97,16 @@ cask "cleanshot"
 cask "docker"
 # Web browser
 cask "firefox"
+cask "font-fira-mono"
+# Corporate typeface for IBM
+cask "font-ibm-plex-mono"
+cask "font-input"
 # Expressive monospaced font family
 cask "font-intel-one-mono"
 # Typeface made for developers
 cask "font-jetbrains-mono"
+cask "font-roboto-mono"
+cask "font-source-code-pro"
 # Web browser
 cask "google-chrome"
 # Tool to optimize images to a smaller size
