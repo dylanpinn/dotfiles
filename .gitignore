@@ -8,3 +8,6 @@ git/config
 
 # Ignore package management
 node_modules
+
+# Ignore 1Password CLI config
+/.op/
