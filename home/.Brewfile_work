@@ -17,6 +17,8 @@ brew "docker-credential-helper-ecr"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
@@ -29,14 +31,24 @@ brew "mas"
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Autoformat shell script source code
+brew "shfmt"
 # Encrypt and decrypt secrets using the AWS Key Management Service
 brew "shush"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Opinionated Lua code formatter
+brew "stylua"
 # Terminal multiplexer
 brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Vim script Language Lint
+brew "vint"
+# Linter for YAML files
+brew "yamllint"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
