@@ -1,23 +1,8 @@
-tap "ankitpokhrel/jira-cli"
-tap "d12frosted/emacs-plus"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
-tap "homebrew/services"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
-# Mozilla CA certificate store
-brew "ca-certificates"
-# GNU multiple precision arithmetic library
-brew "gmp"
-# YAML Parser
-brew "libyaml"
-# Library for command-line editing
-brew "readline"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -26,59 +11,30 @@ brew "bash"
 brew "bash-completion@2"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
-# Docker Credential Helper for Amazon ECR
-brew "docker-credential-helper-ecr"
-# GNU compiler collection
-brew "gcc"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
 brew "git"
-# Smarter Dockerfile linter to validate best practices
-brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# JIT library for the GNU compiler collection
-brew "libgccjit"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
-# Autoformat shell script source code
-brew "shfmt"
+# Encrypt and decrypt secrets using the AWS Key Management Service
+brew "shush"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Opinionated Lua code formatter
-brew "stylua"
 # Terminal multiplexer
 brew "tmux"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
-# Vim script Language Lint
-brew "vint"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
-# Internet file retriever
-brew "wget"
-# Linter for YAML files
-brew "yamllint"
-# 🔥 Feature-rich interactive Jira command-line
-brew "ankitpokhrel/jira-cli/jira-cli"
-brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-native-comp"]
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
-# Encrypt and decrypt secrets using AWS KMS
-brew "reainternal/stable/shush"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
