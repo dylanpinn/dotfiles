@@ -11,6 +11,8 @@ brew "bash"
 brew "bash-completion@2"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Docker Credential Helper for Amazon ECR
+brew "docker-credential-helper-ecr"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -25,6 +27,8 @@ brew "luarocks"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Encrypt and decrypt secrets using the AWS Key Management Service
 brew "shush"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
