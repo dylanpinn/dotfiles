@@ -93,8 +93,6 @@ cask "jetbrains-toolbox"
 cask "logi-options-plus"
 # Optimize your webcam, headset, and Logi Dock for video meetings
 cask "logitune"
-# Privacy-first, open-source platform for knowledge sharing and management
-cask "logseq"
 # Screen and video recording software
 cask "loom"
 # Provides updates to various Microsoft products
