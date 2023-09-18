@@ -65,6 +65,8 @@ cask "appcleaner"
 cask "arc"
 # Menu bar icon organizer
 cask "bartender"
+# Record and process your ideas
+cask "bike"
 # Screen capturing tool
 cask "cleanshot"
 # App to build and share containerized applications and microservices
