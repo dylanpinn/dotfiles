@@ -11,6 +11,8 @@ brew "bash"
 brew "bash-completion@2"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Diff that understands syntax
+brew "difftastic"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
 # GitHub command-line tool
@@ -65,10 +67,14 @@ cask "appcleaner"
 cask "arc"
 # Menu bar icon organizer
 cask "bartender"
+# Text, code, and markup editor
+cask "bbedit"
 # Record and process your ideas
 cask "bike"
 # Screen capturing tool
 cask "cleanshot"
+# API documentation browser and code snippet manager
+cask "dash"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Web browser
@@ -83,6 +89,8 @@ cask "font-intel-one-mono"
 cask "font-jetbrains-mono"
 cask "font-roboto-mono"
 cask "font-source-code-pro"
+# GIT client
+cask "fork"
 # Web browser
 cask "google-chrome"
 # Tool to optimize images to a smaller size
@@ -91,6 +99,10 @@ cask "imageoptim"
 cask "insomnia"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Spot and merge differences in text and image files or folders
+cask "kaleidoscope"
+# Open-source keystroke visualizer
+cask "keycastr"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Optimize your webcam, headset, and Logi Dock for video meetings
@@ -103,14 +115,24 @@ cask "microsoft-auto-update"
 cask "microsoft-edge"
 # Office suite
 cask "microsoft-office-businesspro"
+# Tool to create text-based art
+cask "monodraw"
 # Media player based on MPlayer and mplayer2
 cask "mpv"
+# Native code editor
+cask "nova"
 # WebKit based web browser
 cask "orion"
 # Podcast platform
 cask "pocket-casts"
+# GUI client for PostgreSQL databases
+cask "postico"
+# HTTP client that helps testing and describing APIs
+cask "rapidapi"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Emoji picker optimized for blind people
+cask "rocket"
 # Team communication and collaboration software
 cask "slack"
 # Sound and audio controller
@@ -119,7 +141,9 @@ cask "soundsource"
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
+mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
+mas "Hush", id: 1544743900
 mas "Ivory", id: 6444602274
 mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
@@ -132,4 +156,5 @@ mas "OpenIn", id: 1643649331
 mas "Parcel", id: 639968404
 mas "Subscriptions", id: 1577082754
 mas "Things", id: 904280696
+mas "Velja", id: 1607635845
 mas "Wipr", id: 1320666476
