@@ -1,2 +1,2 @@
-vim.opt.termguicolors = true
-vim.cmd([[colorscheme catppuccin-mocha]])
+-- vim.opt.termguicolors = true
+-- vim.cmd([[colorscheme catppuccin-mocha]])
