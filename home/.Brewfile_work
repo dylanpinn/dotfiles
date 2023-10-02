@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
+# Mozilla CA certificate store
+brew "ca-certificates"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Official Amazon AWS command-line interface
@@ -25,6 +27,8 @@ brew "hadolint"
 brew "htop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Postgres C API library
+brew "libpq", link: true
 # Package manager for the Lua programming language
 brew "luarocks"
 # Mac App Store command-line interface
@@ -140,6 +144,7 @@ cask "soundsource"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
+mas "Agenda", id: 1287445660
 mas "Bear", id: 1091189122
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
@@ -154,6 +159,7 @@ mas "NepTunes", id: 1006739057
 mas "Numbers", id: 409203825
 mas "OpenIn", id: 1643649331
 mas "Parcel", id: 639968404
+mas "Save to Reader", id: 1640236961
 mas "Subscriptions", id: 1577082754
 mas "Things", id: 904280696
 mas "Velja", id: 1607635845
