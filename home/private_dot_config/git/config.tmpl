@@ -42,6 +42,12 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !/usr/local/bin/gh auth git-credential
+[diff]
+	tool = Kaleidoscope
+[difftool]
+	prompt = false
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [fetch]
 	prune = true
 [gpg]
@@ -55,8 +61,13 @@
 [merge]
 	conflictStyle = diff3
 	ff = only
+	tool = Kaleidoscope
 [mergetool]
 	keepBackup = false
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 [pull]
 	ff = only
 [rebase]
