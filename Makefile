@@ -7,15 +7,7 @@ XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
 
-BINS = bin/git-remove-merged-local \
-       bin/git-stats-loc
-
-all: $(BINS) \
-	git/config
-
-install: install-bash \
-	install-bin \
-	install-git
+install: install-dotfiles
 
 check-bash :
 	sh check/bash.sh

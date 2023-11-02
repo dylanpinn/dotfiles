@@ -17,9 +17,9 @@ update_repo() {
 }
 
 branches() {
-  git branch -vv \
-    | grep ': gone]' \
-    | awk '{print $1}'
+  git branch -vv |
+    grep ': gone]' |
+    awk '{print $1}'
 }
 
 delete_branch() {
