@@ -1,3 +1,4 @@
+tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
@@ -11,6 +12,8 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# Create and view interactive cheat sheets for *nix commands
+brew "cheat"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Diff that understands syntax
@@ -73,10 +76,14 @@ cask "arc"
 cask "bartender"
 # Text, code, and markup editor
 cask "bbedit"
+# Display management tool
+cask "betterdisplay"
 # Record and process your ideas
 cask "bike"
 # Screen capturing tool
 cask "cleanshot"
+# The Homebrew Companion
+cask "cork"
 # API documentation browser and code snippet manager
 cask "dash"
 # App to build and share containerized applications and microservices
@@ -84,6 +91,10 @@ cask "docker"
 # Web browser
 cask "firefox"
 cask "font-fira-mono"
+# Sans-serif typeface
+cask "font-geist"
+# Monospaced typeface designed to be used where code is represented
+cask "font-geist-mono"
 # Corporate typeface for IBM
 cask "font-ibm-plex-mono"
 cask "font-input"
@@ -97,6 +108,8 @@ cask "font-source-code-pro"
 cask "fork"
 # Web browser
 cask "google-chrome"
+# Light, Electron-based Wrapper around GraphiQL
+cask "graphiql"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
 # HTTP and GraphQL Client
@@ -148,6 +161,7 @@ mas "Agenda", id: 1287445660
 mas "Bear", id: 1091189122
 mas "Dato", id: 1470584107
 mas "Display Menu", id: 549083868
+mas "Hand Mirror", id: 1502839586
 mas "Hush", id: 1544743900
 mas "Ivory", id: 6444602274
 mas "Kagi Inc.", id: 1622835804
@@ -159,6 +173,7 @@ mas "NepTunes", id: 1006739057
 mas "Numbers", id: 409203825
 mas "OpenIn", id: 1643649331
 mas "Parcel", id: 639968404
+mas "Play", id: 1596506190
 mas "Save to Reader", id: 1640236961
 mas "Subscriptions", id: 1577082754
 mas "Things", id: 904280696
