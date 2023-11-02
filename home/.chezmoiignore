@@ -14,3 +14,7 @@
 {{- if ne .profile "personal" }}
 # Ignore personal files
 {{- end }}
+
+# Ignore scripts with *.sh extension. This extension will be removed with make.
+.local/bin/*.sh
+Makefile

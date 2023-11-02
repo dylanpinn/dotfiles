@@ -2,9 +2,8 @@
 Brewfile*.lock.json
 
 # Ignore generated files
-bin/git-remove-merged-local
-bin/git-stats-loc
-git/config
+**/bin/git-remove-merged-local
+**/bin/git-stats-loc
 
 # Ignore package management
 node_modules
