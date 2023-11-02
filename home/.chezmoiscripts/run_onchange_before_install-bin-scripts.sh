@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-cd $(chezmoi source-path)
+cd "$(chezmoi source-path)" || exit
 
 make
