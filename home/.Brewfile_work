@@ -64,8 +64,6 @@ brew "reainternal/stable/rea-as"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
