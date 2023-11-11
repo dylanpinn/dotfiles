@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -12,34 +11,17 @@ brew "gh"
 brew "git"
 # Mac App Store command-line interface
 brew "mas"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
-# Autoformat shell script source code
-brew "shfmt"
 # Vi 'workalike' with many additional features
 brew "vim"
-# UNIX shell (command interpreter)
-brew "zsh"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
-# Application uninstaller
-cask "appcleaner"
-cask "font-fira-mono"
-# Corporate typeface for IBM
-cask "font-ibm-plex-mono"
-cask "font-input"
-cask "font-roboto-mono"
-cask "font-source-code-pro"
-# Software for Logitech devices
-cask "logi-options-plus"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
 mas "1Password for Safari", id: 1569813296
+mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
+mas "‎WhatsApp", id: 310633997
