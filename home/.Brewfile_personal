@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -17,6 +18,11 @@ brew "vim"
 cask "1password"
 # Command-line interface for 1Password
 cask "1password-cli"
+# Application uninstaller
+cask "appcleaner"
+cask "font-input"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 mas "1Password for Safari", id: 1569813296
 mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
