@@ -1,0 +1,9 @@
+#!/bin/bash
+
+{{ if eq .chezmoi.hostname "C02FJ1QSQ05P" -}}
+# .Brewfile hash: {{ include ".Brewfile_work" | sha256sum }}
+brew bundle --global --no-lock --verbose
+{{ else if eq .chezmoi.hostname "Dylans-MacBook-Pro" "Dylans-MacBook-Air" -}}
+# .Brewfile hash: {{ include ".Brewfile_personal" | sha256sum }}
+brew bundle --global --no-lock --verbose
+{{- end -}}
