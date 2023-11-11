@@ -1,15 +1,21 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# Create and view interactive cheat sheets for *nix commands
+brew "cheat"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Improved top (interactive process viewer)
+brew "htop"
 # Mac App Store command-line interface
 brew "mas"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -22,10 +28,16 @@ brew "vim"
 brew "zsh"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# Command-line helper for the 1Password password manager
+# Command-line interface for 1Password
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+# Text, code, and markup editor
+cask "bbedit"
+# Record and process your ideas
+cask "bike"
+# API documentation browser and code snippet manager
+cask "dash"
 cask "font-fira-mono"
 # Corporate typeface for IBM
 cask "font-ibm-plex-mono"
@@ -34,12 +46,23 @@ cask "font-roboto-mono"
 cask "font-source-code-pro"
 # Software for Logitech devices
 cask "logi-options-plus"
+# Client-side GUI application for modern database development and operations
+cask "nosql-workbench"
+# WebKit based web browser
+cask "orion"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
+mas "Developer", id: 640199958
+mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Parcel", id: 639968404
+mas "PayPal Honey", id: 1472777122
+mas "Play", id: 1596506190
+mas "Save to Reader", id: 1640236961
+mas "The Unarchiver", id: 425424353
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
