@@ -1,5 +1,8 @@
+tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/core"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -20,6 +23,8 @@ cask "1password"
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+# The Homebrew Companion
+cask "cork"
 cask "font-input"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
