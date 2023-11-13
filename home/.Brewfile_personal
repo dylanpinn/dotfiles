@@ -3,6 +3,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -23,17 +25,62 @@ cask "1password"
 cask "1password-cli"
 # Application uninstaller
 cask "appcleaner"
+# Chromium based browser
+cask "arc"
+# Text, code, and markup editor
+cask "bbedit"
+# Record and process your ideas
+cask "bike"
 # The Homebrew Companion
 cask "cork"
+# Web browser
+cask "firefox"
+cask "font-fira-mono"
+# Sans-serif typeface
+cask "font-geist"
+# Monospaced typeface designed to be used where code is represented
+cask "font-geist-mono"
+# Corporate typeface for IBM
+cask "font-ibm-plex-mono"
 cask "font-input"
+# Expressive monospaced font family
+cask "font-intel-one-mono"
+cask "font-inter"
+# Typeface made for developers
+cask "font-jetbrains-mono"
+# Mona Sans, a variable font from GitHub
+cask "font-mona-sans"
+# Superfamily of fonts for code
+cask "font-monaspace"
+cask "font-nunito"
+cask "font-roboto-mono"
+cask "font-source-code-pro"
+# GIT client
+cask "fork"
+# Web browser
+cask "google-chrome"
+# Tool to create text-based art
+cask "monodraw"
+# Native code editor
+cask "nova"
+# WebKit based web browser
+cask "orion"
+# Workflow application to improve productivity
+cask "pastebot"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
+mas "Flighty", id: 1358823008
+mas "Ivory", id: 6444602274
 mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
+mas "Little Snitch Mini", id: 1629008763
+mas "Messenger", id: 1480068668
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Play", id: 1596506190
+mas "Save to Reader", id: 1640236961
+mas "Sketch", id: 1667260533
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
 mas "‎WhatsApp", id: 310633997
