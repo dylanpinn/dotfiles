@@ -10,7 +10,7 @@ shell_variant      = posix # like -ln=posix
 binary_next_line   = true  # like -bn
 switch_case_indent = true  # like -ci
 
-[git/config*]
+[**/git/config**]
 indent_style = tab
 indent_size = 4
 
@@ -21,4 +21,3 @@ indent_style = tab
 shell_variant      = posix # like -ln=posix
 binary_next_line   = true  # like -bn
 switch_case_indent = true  # like -ci
-
