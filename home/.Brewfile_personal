@@ -2,7 +2,6 @@ tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
 # Bourne-Again SHell, a UNIX command interpreter
