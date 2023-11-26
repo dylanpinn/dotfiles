@@ -8,26 +8,14 @@ return require("paq")({
 
   -- Treesitter configuration; this is required to integrate Treesitter.
   {
-    "nvim-treesitter/nvim-treesitter",
-    run = function()
-      vim.cmd("TSUpdate")
-    end,
+    "nvim-treesitter/nvim-treesitter", build = ':TSUpdate'
   },
 
   -- Enhance (n)vim.
-  "tpope/vim-dispatch",
-  "tpope/vim-repeat",
-  "tpope/vim-surround",
+  -- "tpope/vim-dispatch",
+  -- "tpope/vim-repeat",
+  -- "tpope/vim-surround",
 
   -- LSP configuration; this makes configuring LSP servers easier.
   "neovim/nvim-lspconfig",
-  -- Automatically download Neovim LSP servers
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
-  "jose-elias-alvarez/null-ls.nvim",
-  "jayp0521/mason-null-ls.nvim",
-  "nvim-lua/plenary.nvim",
-
-  -- Colorscheme
-  { "catppuccin/nvim", as = "catppuccin" },
 })
