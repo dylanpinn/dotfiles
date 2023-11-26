@@ -28,6 +28,8 @@ brew "mas"
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Autoformat shell script source code
+brew "shfmt"
 # Opinionated Lua code formatter
 brew "stylua"
 # Terminal multiplexer
