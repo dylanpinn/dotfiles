@@ -2,11 +2,7 @@
 .Brewfile_personal
 
 {{- if ne .profile "work" }}
-# Ignore work files (asdf, aws, nvim, tmux).
-.config/nvim
-.config/tmux
-.local/share/nvim
-.profile.d/aws.sh
+# Ignore work files
 {{- end }}
 
 {{- if ne .profile "personal" }}
