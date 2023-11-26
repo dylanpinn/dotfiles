@@ -5,3 +5,6 @@ vim.opt_local.textwidth = 120
 if vim.fn.executable("stylua") == 1 then
   vim.opt_local.formatprg = "stylua --stdin-filepath % --search-parent-directories -"
 end
+
+-- Use shellcheck as compiler for sh files.
+vim.cmd([[compiler luacheck]])
