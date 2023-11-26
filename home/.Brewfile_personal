@@ -10,6 +10,8 @@ brew "awscli"
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
+# Create and view interactive cheat sheets for *nix commands
+brew "cheat"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # GitHub command-line tool
@@ -22,6 +24,8 @@ brew "luarocks"
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Terminal multiplexer
 brew "tmux"
 # Vi 'workalike' with many additional features
@@ -44,6 +48,8 @@ cask "black-ink"
 cask "calibre"
 # The Homebrew Companion
 cask "cork"
+# API documentation browser and code snippet manager
+cask "dash"
 # Web browser
 cask "firefox"
 cask "font-fira-mono"
