@@ -33,6 +33,8 @@ cask "bbedit"
 cask "bike"
 # Download, solve, and print crossword puzzles
 cask "black-ink"
+# E-books management software
+cask "calibre"
 # The Homebrew Companion
 cask "cork"
 # Web browser
@@ -79,6 +81,7 @@ mas "Flighty", id: 1358823008
 mas "Ivory", id: 6444602274
 mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
+mas "Kindle", id: 302584613
 mas "Little Snitch Mini", id: 1629008763
 mas "Messenger", id: 1480068668
 mas "Microsoft Remote Desktop", id: 1295203466
@@ -91,4 +94,5 @@ mas "Save to Reader", id: 1640236961
 mas "Sketch", id: 1667260533
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
+mas "Yomu", id: 562211012
 mas "‎WhatsApp", id: 310633997
