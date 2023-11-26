@@ -31,6 +31,8 @@ cask "arc"
 cask "bbedit"
 # Record and process your ideas
 cask "bike"
+# Download, solve, and print crossword puzzles
+cask "black-ink"
 # The Homebrew Companion
 cask "cork"
 # Web browser
@@ -45,6 +47,7 @@ cask "font-ibm-plex-mono"
 cask "font-input"
 # Expressive monospaced font family
 cask "font-intel-one-mono"
+# Variable font designed for display
 cask "font-inter"
 # Typeface made for developers
 cask "font-jetbrains-mono"
@@ -59,6 +62,8 @@ cask "font-source-code-pro"
 cask "fork"
 # Web browser
 cask "google-chrome"
+# Software for Logitech devices
+cask "logi-options-plus"
 # Tool to create text-based art
 cask "monodraw"
 # Native code editor
@@ -76,8 +81,11 @@ mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
 mas "Little Snitch Mini", id: 1629008763
 mas "Messenger", id: 1480068668
+mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Photomator", id: 1444636541
+mas "Pixelmator Pro", id: 1289583905
 mas "Play", id: 1596506190
 mas "Save to Reader", id: 1640236961
 mas "Sketch", id: 1667260533
