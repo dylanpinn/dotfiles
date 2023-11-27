@@ -30,6 +30,8 @@ brew "mas"
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
 # Opinionated Lua code formatter
