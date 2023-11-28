@@ -1,8 +1,6 @@
 tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
 # Mozilla CA certificate store
 brew "ca-certificates"
@@ -22,8 +20,6 @@ brew "chezmoi"
 brew "difftastic"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
-# Run arbitrary commands when files change
-brew "entr"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -60,8 +56,6 @@ brew "tmux"
 brew "vim"
 # Vim script Language Lint
 brew "vint"
-# Executes a program periodically, showing output fullscreen
-brew "watch"
 # Linter for YAML files
 brew "yamllint"
 # Authenticate to REA AWS accounts
@@ -169,7 +163,6 @@ mas "Numbers", id: 409203825
 mas "OpenIn", id: 1643649331
 mas "Parcel", id: 639968404
 mas "Play", id: 1596506190
-mas "RegExp", id: 1546140065
 mas "Save to Reader", id: 1640236961
 mas "Subscriptions", id: 1577082754
 mas "Things", id: 904280696
