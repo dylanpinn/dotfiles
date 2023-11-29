@@ -58,6 +58,8 @@ brew "vim"
 brew "vint"
 # Linter for YAML files
 brew "yamllint"
+# Login to REA AWS console by switching roles
+brew "reainternal/stable/aws-switch"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
