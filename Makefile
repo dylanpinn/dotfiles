@@ -10,6 +10,9 @@ install: install-dotfiles
 check-bash:
 	sh check/bash.sh
 
+check-lua:
+	sh check/lua.sh
+
 check-prettier:
 	npm run format:check
 
@@ -41,7 +44,7 @@ lint: check-prettier \
 lint-bash: check-bash
 	sh lint/bash.sh
 
-lint-lua:
+lint-lua: check-lua
 	sh lint/lua.sh
 
 lint-sh: check-sh
