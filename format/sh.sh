@@ -10,7 +10,7 @@
 
 set -e
 
-set sh/profile
+set home/dot_profile
 
 shfmt -l -w -- "$@"
 
