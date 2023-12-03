@@ -8,7 +8,8 @@ return require("paq")({
 
   -- Treesitter configuration; this is required to integrate Treesitter.
   {
-    "nvim-treesitter/nvim-treesitter", build = ':TSUpdate'
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
   },
 
   -- Enhance (n)vim.

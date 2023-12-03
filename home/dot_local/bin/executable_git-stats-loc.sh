@@ -23,11 +23,11 @@ commit_description() {
 }
 
 number_of_lines() {
-  git ls-tree -r "$rev" |
-    grep "$file_pattern" |
-    awk '{ print $3 }' |
-    xargs git show |
-    wc -l
+  git ls-tree -r "$rev" \
+    | grep "$file_pattern" \
+    | awk '{ print $3 }' \
+    | xargs git show \
+    | wc -l
 }
 
 main
