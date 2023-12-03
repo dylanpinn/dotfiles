@@ -1,6 +1,5 @@
 tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
@@ -27,7 +26,7 @@ brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -48,6 +47,8 @@ cask "1password-cli"
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
+# Data backup and storage service
+cask "backblaze"
 # Text, code, and markup editor
 cask "bbedit"
 # Record and process your ideas
@@ -60,6 +61,8 @@ cask "calibre"
 cask "cork"
 # API documentation browser and code snippet manager
 cask "dash"
+# Launcher for *Epic Games* games
+cask "epic-games"
 # Web browser
 cask "firefox"
 cask "font-fira-mono"
@@ -85,22 +88,36 @@ cask "font-roboto-mono"
 cask "font-source-code-pro"
 # GIT client
 cask "fork"
+# Game client
+cask "gog-galaxy"
 # Web browser
 cask "google-chrome"
+# Automated organization
+cask "hazel"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Tool to create text-based art
 cask "monodraw"
 # Native code editor
 cask "nova"
+# Calculator and converter application
+cask "numi"
+# Audiobook manager for Audible users
+cask "openaudible"
 # WebKit based web browser
 cask "orion"
 # Workflow application to improve productivity
 cask "pastebot"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Application to control your PlayStation 4 or PlayStation 5
+cask "sony-ps-remote-play"
+# Video game digital distribution service
+cask "steam"
 mas "1Password for Safari", id: 1569813296
+mas "Dato", id: 1470584107
 mas "Flighty", id: 1358823008
+mas "Hush", id: 1544743900
 mas "Ivory", id: 6444602274
 mas "Kagi Inc.", id: 1622835804
 mas "Keynote", id: 409183694
@@ -110,12 +127,15 @@ mas "Messenger", id: 1480068668
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "Parcel", id: 639968404
 mas "Photomator", id: 1444636541
 mas "Pixelmator Pro", id: 1289583905
 mas "Play", id: 1596506190
 mas "Save to Reader", id: 1640236961
 mas "Sketch", id: 1667260533
+mas "Subscriptions", id: 1577082754
 mas "Things", id: 904280696
 mas "Wipr", id: 1320666476
+mas "Xcode", id: 497799835
 mas "Yomu", id: 562211012
 mas "‎WhatsApp", id: 310633997
