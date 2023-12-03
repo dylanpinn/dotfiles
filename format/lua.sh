@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 #
-# Format shell files.
+# Format Lua files.
 
-set -e
+set -eou pipefail
 
 stylua .luacheckrc home/

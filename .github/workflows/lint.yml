@@ -25,5 +25,9 @@ jobs:
           pip install vim-vint yamllint
           luarocks install luacheck
           luarocks install lanes
+      - name: Install stylua from crates.io
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: stylua
       - name: Lint files
         run: make lint
