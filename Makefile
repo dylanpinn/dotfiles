@@ -5,8 +5,6 @@ XDG_CONFIG_HOME ?= $(HOME)/.config
 XDG_DATA_HOME ?= $(HOME)/.local/share
 XDG_STATE_HOME ?= $(HOME)/.local/state
 
-NAME ?= 'Dylan Pinn'
-
 install: install-dotfiles
 
 check-bash :
@@ -16,10 +14,14 @@ check-sh :
 	sh check/sh.sh
 
 format: format-lua \
+	format-prettier \
 	format-sh
 
 format-lua:
 	sh format/lua.sh
+
+format-prettier:
+	npx prettier --write .
 
 format-sh:
 	sh format/sh.sh
