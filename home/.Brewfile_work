@@ -1,6 +1,8 @@
 tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/core"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
 # Mozilla CA certificate store
 brew "ca-certificates"
@@ -146,6 +148,8 @@ cask "rectangle"
 cask "slack"
 # Sound and audio controller
 cask "soundsource"
+# Mutes your keyboard while you type
+cask "unclack"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
@@ -160,6 +164,7 @@ mas "Keynote", id: 409183694
 mas "LanguageTool", id: 1534275760
 mas "LastPass", id: 926036361
 mas "MarkEdit", id: 1669953820
+mas "Microsoft Outlook", id: 985367838
 mas "NepTunes", id: 1006739057
 mas "Numbers", id: 409203825
 mas "OpenIn", id: 1643649331
@@ -168,4 +173,5 @@ mas "Play", id: 1596506190
 mas "Save to Reader", id: 1640236961
 mas "Subscriptions", id: 1577082754
 mas "Things", id: 904280696
+mas "Trello", id: 1278508951
 mas "Wipr", id: 1320666476
