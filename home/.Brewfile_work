@@ -1,8 +1,6 @@
 tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
 # Mozilla CA certificate store
 brew "ca-certificates"
@@ -36,6 +34,8 @@ brew "htop"
 brew "jq"
 # Postgres C API library
 brew "libpq", link: true
+# Language Server for the Lua language
+brew "lua-language-server"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Mac App Store command-line interface
