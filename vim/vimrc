@@ -7,8 +7,8 @@
 " it.
 "
 
-# Enable and use the built-in EditorConfig plugin. I might look only enabling
-# this if it can find a .editorconfig file in the current directory.
+" Enable and use the built-in EditorConfig plugin. I might look only enabling
+" this if it can find a .editorconfig file in the current directory.
 packadd! editorconfig
 
 
