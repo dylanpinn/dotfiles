@@ -5,6 +5,12 @@
 " It's purpose is to be a light weight as possible and to try to utilise
 " native Vim functionality as much as possible, before looking at extending
 " it.
+"
+
+# Enable and use the built-in EditorConfig plugin. I might look only enabling
+# this if it can find a .editorconfig file in the current directory.
+packadd! editorconfig
+
 
 " The rest of the file has been taken from $VIMRUNTIME/default.vim, with the
 " intention of cleaning up and re-organising it all to give it a bit more
