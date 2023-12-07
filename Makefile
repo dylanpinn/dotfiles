@@ -21,13 +21,22 @@ git/config: git/config.m4
 		   --define=SIGNING_KEY=$(SIGNING_KEY) \
 		   git/config.m4 > $@ # look into what this does
 
-diff: diff-git
+diff: diff-git \
+	diff-vim
 
 diff-git: git/config
 	diff -- git/config $(XDG_CONFIG_HOME)/git/config
 
-install: install-git
+diff-vim:
+	diff -- vim/vimrc $(HOME)/.vim/vimrc
+
+install: install-git \
+	install-vim
 
 install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
+
+install-vim:
+	mkdir -p -- $(HOME)/.vim
+	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
