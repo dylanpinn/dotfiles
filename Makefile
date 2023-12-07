@@ -4,13 +4,13 @@
 		install \
 		install-git
 
-XDG_CACHE_HOME = $(HOME)/.cache
-XDG_CONFIG_HOME = $(HOME)/.config
-XDG_DATA_HOME = $(HOME)/.local/share
+XDG_CACHE_HOME ?= $(HOME)/.cache
+XDG_CONFIG_HOME ?= $(HOME)/.config
+XDG_DATA_HOME ?= $(HOME)/.local/share
 
-NAME = 'Dylan Pinn'
-EMAIL = 'dylan.pinn@rea-group.com'
-SIGNING_KEY = 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr'
+NAME ?= 'Dylan Pinn'
+EMAIL ?= 'dylan.pinn@rea-group.com'
+SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr'
 
 all: git/config
 
