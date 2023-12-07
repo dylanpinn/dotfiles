@@ -21,6 +21,11 @@ git/config: git/config.m4
 		   --define=SIGNING_KEY=$(SIGNING_KEY) \
 		   git/config.m4 > $@ # look into what this does
 
+diff: diff-git
+
+diff-git: git/config
+	diff -- git/config $(XDG_CONFIG_HOME)/git/config
+
 install: install-git
 
 install-git: git/config
