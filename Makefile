@@ -24,11 +24,12 @@ git/config: git/config.m4
 diff: diff-git \
 	diff-vim
 
+# export COLORTERM in sh profile file.
 diff-git: git/config
-	diff -- git/config $(XDG_CONFIG_HOME)/git/config
+	export COLORTERM=256 && diff --color="auto" -- git/config $(XDG_CONFIG_HOME)/git/config
 
 diff-vim:
-	diff -- vim/vimrc $(HOME)/.vim/vimrc
+	export COLORTERM=256 && diff --color="auto" -- vim/vimrc $(HOME)/.vim/vimrc
 
 install: install-git \
 	install-vim
