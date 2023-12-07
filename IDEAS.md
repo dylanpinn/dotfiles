@@ -9,6 +9,14 @@
 - [ ] Homebrew
 - [ ] git
 
+How to use dynamic values in the Makefile for EMAIL?
+- git config user.email will use $EMAIL envar.
+
+Could we generate the Makefile using a m4 template?
+- Initial setup with a ./configure script.
+- Set NAME, EMAIL, SIGNING_KEY
+- Could we dynamically include targets into install?
+
 ## NOTES:
 
 How do I want to manage these files?

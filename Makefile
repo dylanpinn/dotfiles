@@ -12,9 +12,6 @@ NAME = 'Dylan Pinn'
 EMAIL = 'dylan.pinn@rea-group.com'
 SIGNING_KEY = 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr'
 
-.SUFFIXES:
-.SUFFIXES: .awk .bash .m4 .mi5 .pl .sed .sh
-
 all: git/config
 
 git/config: git/config.m4
