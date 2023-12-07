@@ -61,3 +61,7 @@ all
 
 Useful information about Make help (https://docs.cloudposse.com/reference/best-practices/make-best-practices/)
 
+
+Is it worth adding this as an opttional package (https://github.com/yegappan/lsp) and testing it out?
+
+Do I want to configure lots of stuff in vimscript???
