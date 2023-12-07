@@ -4,7 +4,7 @@
   "description": "My configuration files.",
   "main": "Makefile",
   "scripts": {
-    "test": "make",
+    "test": "make lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky install"

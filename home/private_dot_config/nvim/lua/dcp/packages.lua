@@ -16,6 +16,7 @@ return require("paq")({
   "tpope/vim-dispatch",
   "tpope/vim-repeat",
   "tpope/vim-surround",
+  "tpope/vim-unimpaired",
 
   -- LSP configuration; this makes configuring LSP servers easier.
   "neovim/nvim-lspconfig",

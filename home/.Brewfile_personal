@@ -13,6 +13,8 @@ brew "bash-completion@2"
 brew "cheat"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # GitHub command-line tool
@@ -49,6 +51,8 @@ cask "appcleaner"
 cask "arc"
 # Data backup and storage service
 cask "backblaze"
+# Menu bar icon organizer
+cask "bartender"
 # Text, code, and markup editor
 cask "bbedit"
 # Record and process your ideas
@@ -114,6 +118,8 @@ cask "rectangle"
 cask "sony-ps-remote-play"
 # Video game digital distribution service
 cask "steam"
+# Inserts pre-made snippets of text anywhere
+cask "textexpander"
 mas "1Password for Safari", id: 1569813296
 mas "Dato", id: 1470584107
 mas "Flighty", id: 1358823008
