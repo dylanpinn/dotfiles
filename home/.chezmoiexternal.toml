@@ -1,9 +1,0 @@
-[".vim/pack/minpac/opt/minpac"]
-    type = "git-repo"
-    url = "https://github.com/k-takata/minpac.git"
-    refreshPeriod = "168h"
-
-[".local/share/nvim/site/pack/paqs/start/paq-nvim"]
-    type = "git-repo"
-    url = "https://github.com/savq/paq-nvim.git"
-    refreshPeriod = "168h"
