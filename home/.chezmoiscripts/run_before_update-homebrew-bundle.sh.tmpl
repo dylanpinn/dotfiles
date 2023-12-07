@@ -1,7 +1,0 @@
-#!/bin/bash
-
-{{ if eq .chezmoi.hostname "C02FJ1QSQ05P" -}}
-brew bundle dump --force --describe --file=~/.local/share/chezmoi/home/.Brewfile_work
-{{ else if eq .chezmoi.hostname "Dylans-MacBook-Pro" "Dylans-MacBook-Air" -}}
-brew bundle dump --force --describe --file=~/.local/share/chezmoi/home/.Brewfile_personal
-{{- end -}}
