@@ -22,21 +22,30 @@ git/config: git/config.m4
 		   git/config.m4 > $@ # look into what this does
 
 diff: diff-git \
+	diff-tmux \
 	diff-vim
 
 # export COLORTERM in sh profile file.
 diff-git: git/config
 	export COLORTERM=256 && diff --color="auto" -- git/config $(XDG_CONFIG_HOME)/git/config
 
+diff-tmux:
+	export COLORTERM=256 && diff --color="auto" -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
+
 diff-vim:
 	export COLORTERM=256 && diff --color="auto" -- vim/vimrc $(HOME)/.vim/vimrc
 
 install: install-git \
+	install-tmux \
 	install-vim
 
 install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
+
+install-tmux:
+	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
+	cp -p -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
 
 install-vim:
 	mkdir -p -- $(HOME)/.vim
