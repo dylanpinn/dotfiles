@@ -14,8 +14,12 @@ To setup this on a new machine, the following tools are required:
 
 ## Installation / Apply Updates
 
-First step to get this setup on new machine is to clone the repo down into a,
-directory such as `~/.dotfiles`.
+First step to get this setup on new machine is to clone the repo down into a
+directory such as `~/.dotfiles`, using the following command:
+
+```sh
+git clone git@github.com:dylanpinn/dotfiles.git ~/.dotfiles
+```
 
 To install the dotfiles or apply changes run `make` with no arguments from the
 project root. This will linters of the files and then run `chezmoi apply -v` to
