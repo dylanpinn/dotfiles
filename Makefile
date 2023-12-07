@@ -2,7 +2,9 @@
 
 .PHONY: all \
 		install \
-		install-git
+		install-git \
+		install-tmux \
+		install-vim
 
 XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
