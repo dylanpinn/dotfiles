@@ -37,6 +37,10 @@ diff-tmux:
 diff-vim:
 	export COLORTERM=256 && diff --color="auto" -- vim/vimrc $(HOME)/.vim/vimrc
 
+# not 100% sold on this target name.
+dump-brew:
+	brew bundle dump --force --describe --file=homebrew/personal.Brewfile
+
 install: install-git \
 	install-tmux \
 	install-vim
@@ -53,9 +57,7 @@ install-vim:
 	mkdir -p -- $(HOME)/.vim
 	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
 
+# add this to the install target when it runs only when files have changed.
 install-brew:
-	# check if Brewfile has changed
-	# Need to work out the logic of what to do here when the files change and how to update/keep in sync.
-	shasum homebrew/personal.Brewfile | diff -u homebrew/.personal.Brewfile.shasum -
 	cp -R -- homebrew/personal.Brewfile $(HOME)/.Brewfile
 	brew bundle --global --no-lock --verbose
