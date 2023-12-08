@@ -1,10 +1,10 @@
 .POSIX:
 
 .PHONY: all \
-		install \
-		install-git \
-		install-tmux \
-		install-vim
+	install \
+	install-git \
+	install-tmux \
+	install-vim
 
 XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
@@ -18,10 +18,10 @@ all: git/config
 
 git/config: git/config.m4
 	m4 \
-		   --define=NAME=$(NAME) \
-		   --define=EMAIL=$(EMAIL) \
-		   --define=SIGNING_KEY=$(SIGNING_KEY) \
-		   git/config.m4 > $@ # look into what this does
+		--define=NAME=$(NAME) \
+		--define=EMAIL=$(EMAIL) \
+		--define=SIGNING_KEY=$(SIGNING_KEY) \
+		git/config.m4 > $@ # look into what this does
 
 diff: diff-git \
 	diff-tmux \
