@@ -65,3 +65,6 @@ Useful information about Make help (https://docs.cloudposse.com/reference/best-p
 Is it worth adding this as an opttional package (https://github.com/yegappan/lsp) and testing it out?
 
 Do I want to configure lots of stuff in vimscript???
+
+Homebrew
+- run shasum on the files and only apply updtes if the shasum has changed?

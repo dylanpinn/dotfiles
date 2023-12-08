@@ -52,3 +52,10 @@ install-tmux:
 install-vim:
 	mkdir -p -- $(HOME)/.vim
 	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
+
+install-brew:
+	# check if Brewfile has changed
+	# Need to work out the logic of what to do here when the files change and how to update/keep in sync.
+	shasum homebrew/personal.Brewfile | diff -u homebrew/.personal.Brewfile.shasum -
+	cp -R -- homebrew/personal.Brewfile $(HOME)/.Brewfile
+	brew bundle --global --no-lock --verbose
