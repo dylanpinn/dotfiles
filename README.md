@@ -14,3 +14,8 @@ Clone dotfiles repo into a location such as `~/.dotfiles`.
 git clone git@github.com:dylanpinn/dotfiles.git ~/.dotfiles
 ```
 
+Set initial email address by using EMAIL="email@domain.com" make.
+
+Check output of `make -n install` and `make diff`.
+
+Run `make install` to install.`
