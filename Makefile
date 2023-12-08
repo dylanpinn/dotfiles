@@ -27,7 +27,7 @@ diff: diff-git \
 	diff-tmux \
 	diff-vim
 
-# export COLORTERM in sh profile file.
+# TODO: export COLORTERM in sh profile file.
 diff-git: git/config
 	export COLORTERM=256 && diff --color="auto" -- git/config $(XDG_CONFIG_HOME)/git/config
 
@@ -37,7 +37,7 @@ diff-tmux:
 diff-vim:
 	export COLORTERM=256 && diff --color="auto" -- vim/vimrc $(HOME)/.vim/vimrc
 
-# not 100% sold on this target name.
+# TODO: not 100% sold on this target name.
 dump-brew:
 	brew bundle dump --force --describe --file=homebrew/personal.Brewfile
 
@@ -57,7 +57,7 @@ install-vim:
 	mkdir -p -- $(HOME)/.vim
 	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
 
-# add this to the install target when it runs only when files have changed.
+# TODO: add this to the install target when it runs only when files have changed.
 install-brew:
 	cp -R -- homebrew/personal.Brewfile $(HOME)/.Brewfile
 	brew bundle --global --no-lock --verbose
