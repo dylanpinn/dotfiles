@@ -1,3 +1,7 @@
 # shellcheck shell=bash
 
+# bash completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+# rtx
+eval "$(rtx activate bash)"
