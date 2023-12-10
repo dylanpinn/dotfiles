@@ -1,7 +1,8 @@
 # shellcheck shell=bash
 
-# bash completion
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
-
-# rtx
-eval "$(rtx activate bash)"
+# Load Bash-specific startup files
+for bash in "$HOME"/.bashrc.d/*.bash; do
+  [[ -e $bash ]] || continue
+  source "$bash"
+done
+unset -v bash
