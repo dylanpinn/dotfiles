@@ -77,3 +77,5 @@ install-brew:
 	cp -R -- homebrew/personal.Brewfile $(HOME)/.Brewfile
 	brew bundle --global --no-lock --verbose
 ```
+
+https://github.com/jdx/rtx - replace ASDF
