@@ -24,12 +24,17 @@ git/config: git/config.m4
 		git/config.m4 > $@ # look into what this does
 
 diff: diff-git \
+	diff-sh \
 	diff-tmux \
 	diff-vim
 
 # TODO: export COLORTERM in sh profile file.
 diff-git: git/config
 	export COLORTERM=256 && diff --color="auto" -- git/config $(XDG_CONFIG_HOME)/git/config
+
+diff-sh:
+	export COLORTERM=256 && diff --color="auto" -- sh/profile $(HOME)/.profile
+	# TODO: How to diff ~/.profile.d/* directory.
 
 diff-tmux:
 	export COLORTERM=256 && diff --color="auto" -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
@@ -42,12 +47,18 @@ dump-brew:
 	brew bundle dump --force --describe --file=homebrew/personal.Brewfile
 
 install: install-git \
+	install-sh \
 	install-tmux \
 	install-vim
 
 install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
+
+install-sh: lint-sh
+	cp -p -- sh/profile $(HOME)/.profile
+	mkdir -p -- $(HOME)/.profile.d/
+	cp -p -- sh/profile.d/* $(HOME)/.profile.d/
 
 install-tmux:
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
@@ -61,3 +72,9 @@ install-vim:
 install-brew:
 	cp -R -- homebrew/personal.Brewfile $(HOME)/.Brewfile
 	brew bundle --global --no-lock --verbose
+	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
+
+lint: lint-sh
+
+lint-sh:
+	sh lint/sh.sh

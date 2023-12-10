@@ -11,6 +11,9 @@
 " this if it can find a .editorconfig file in the current directory.
 packadd! editorconfig
 
+" TODO: Have this change to sorbet or elflord when using dark background.
+colorscheme morning
+
 " The rest of the file has been taken from $VIMRUNTIME/default.vim, with the
 " intention of cleaning up and re-organising it all to give it a bit more
 " logical ordering to it.
