@@ -1,0 +1,12 @@
+# shellcheck shell=bash
+
+# Load ~/.profile regardless of shell.
+if [ -e "$HOME"/.profile ]; then
+  # shellcheck source=/dev/null
+  . "$HOME"/.profile
+fi
+
+# If ~/.bashrc exists, source that too.
+if [ -f "$HOME"/.bashrc ]; then
+  . "$HOME"/.bashrc
+fi
