@@ -2,7 +2,9 @@
 
 .PHONY: all \
 	install \
+	install-brew \
 	install-git \
+	install-sh \
 	install-tmux \
 	install-vim
 
@@ -46,10 +48,14 @@ diff-vim:
 dump-brew:
 	brew bundle dump --force --describe --file=homebrew/personal.Brewfile
 
-install: install-git \
-	install-sh \
+install: install-bash \
+	install-git \
 	install-tmux \
 	install-vim
+
+install-bash: install-sh
+	cp -p -- bash/bash_profile $(HOME)/.bash_profile
+	cp -p -- bash/bashrc $(HOME)/.bashrc
 
 install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
@@ -70,6 +76,7 @@ install-vim:
 
 # TODO: add this to the install target when it runs only when files have changed.
 install-brew:
+	# TODO: Make this work across profiles.
 	cp -R -- homebrew/personal.Brewfile $(HOME)/.Brewfile
 	brew bundle --global --no-lock --verbose
 	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
