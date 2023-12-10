@@ -14,6 +14,7 @@ XDG_DATA_HOME ?= $(HOME)/.local/share
 
 NAME ?= 'Dylan Pinn'
 EMAIL ?= 'dylan.pinn@rea-group.com'
+PROFILE ?= personal
 SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr'
 
 all: git/config
@@ -46,7 +47,7 @@ diff-vim:
 
 # TODO: not 100% sold on this target name.
 dump-brew:
-	brew bundle dump --force --describe --file=homebrew/personal.Brewfile
+	brew bundle dump --force --describe --file=homebrew/$(PROFILE).Brewfile
 
 install: install-bash \
 	install-git \
@@ -76,8 +77,7 @@ install-vim:
 
 # TODO: add this to the install target when it runs only when files have changed.
 install-brew:
-	# TODO: Make this work across profiles.
-	cp -R -- homebrew/personal.Brewfile $(HOME)/.Brewfile
+	cp -R -- homebrew/$(PROFILE).Brewfile $(HOME)/.Brewfile
 	brew bundle --global --no-lock --verbose
 	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
 
