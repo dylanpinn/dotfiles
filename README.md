@@ -20,6 +20,8 @@ Check output of `make -n install` and `make diff`.
 
 Run `make install` to install.`
 
+Need to setup `.rtx.local.toml` to include the correct `PROFILE`.
+
 ## Components
 
 ## shell configuration
