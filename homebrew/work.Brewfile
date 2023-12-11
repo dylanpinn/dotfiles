@@ -19,6 +19,18 @@ brew "tmux"
 brew "vim"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Application launcher and productivity software
+cask "alfred"
+# Application uninstaller
+cask "appcleaner"
+# Text, code, and markup editor
+cask "bbedit"
+# Record and process your ideas
+cask "bike"
+# Native code editor
+cask "nova"
+# Workflow application to improve productivity
+cask "pastebot"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
