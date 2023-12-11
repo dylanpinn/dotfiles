@@ -7,6 +7,26 @@
 " it.
 "
 
+" I have taken inspiration from Tom Ryder (terj)'s literate vimrc
+" (https://dev.sanctum.geek.nz/cgit/dotfiles.git/tree/vim/vimrc), mainly
+" around liberal use of comments to describe the purpose of each change.
+"
+
+" These first set of changes are to cleanup vim's presence in the $HOME
+" directory, try to utilise some sensible defaults based on XDG base
+" directories:
+"
+" > https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+"
+
+" Moving viminfo out of $HOME, has a dual purpose of tidying the top-level
+" directory and moving it rightfully into the XDG_STATE_HOME directory for
+" peristant generated state.
+"
+" This directory should be created during the initial setup of the dotfiles.
+"
+set viminfofile=$XDG_STATE_HOME/vim/viminfo
+
 " Enable and use the built-in EditorConfig plugin. I might look only enabling
 " this if it can find a .editorconfig file in the current directory.
 packadd! editorconfig

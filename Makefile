@@ -11,6 +11,7 @@
 XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
 XDG_DATA_HOME ?= $(HOME)/.local/share
+XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
 EMAIL ?= 'dylan.pinn@rea-group.com'
@@ -76,6 +77,7 @@ install-tmux:
 install-vim:
 	mkdir -p -- $(HOME)/.vim
 	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
+	mkdir -p -- $(XDG_STATE_HOME)/vim
 
 # TODO: add this to the install target when it runs only when files have changed.
 install-brew:
