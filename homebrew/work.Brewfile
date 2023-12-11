@@ -1,12 +1,17 @@
 tap "homebrew/bundle"
+tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
 brew "bash-completion@2"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+# GitHub command-line tool
+brew "gh"
 # Command-line benchmarking tool
 brew "hyperfine"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Mac App Store command-line interface
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
@@ -17,6 +22,8 @@ brew "shellcheck"
 brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Authenticate to REA AWS accounts
+brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application launcher and productivity software
@@ -27,6 +34,8 @@ cask "appcleaner"
 cask "bbedit"
 # Record and process your ideas
 cask "bike"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Native code editor
 cask "nova"
 # Workflow application to improve productivity
@@ -34,5 +43,6 @@ cask "pastebot"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
+mas "Bear", id: 1091189122
+mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
-mas "Things", id: 904280696
