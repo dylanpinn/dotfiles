@@ -27,6 +27,38 @@
 "
 set viminfofile=$XDG_STATE_HOME/vim/viminfo
 
+" Enable automatic backups before overwriting a file and leave it around after
+" the file has been written.
+"
+" We will also want to move these backup files to the $XDG_CACHE_HOME
+" directory.  This directory is created during dotfile installation.
+"
+" The double trailing slashes will tell Vim to use the full escaped path of
+" the file to avoid collisions.
+"
+set backup
+set backupdir=$XDG_STATE_HOME/vim/backup//
+
+" Move swap files to a dedicated directory, rather than the default of the
+" same directory as the source file.  This directory is created during dotfile
+" installation.
+"
+" Add two trailing slashes to the path to tell Vim to use the full escaped
+" path of the file to avoid collisions.
+"
+set directory=$XDG_STATE_HOME/vim/swap//
+
+" Keep track of undo history for files between sessions.  This ensures that
+" undo and redo are available between Vim invocations.  These files are kept
+" in a cache directory.  This directory is created during dotfile
+" installation.
+"
+" Add two trailing slashes to the path to tell Vim to use the full escaped
+" path of the file to avoid collisions.
+"
+set undofile
+set undodir=$XDG_STATE_HOME/vim/undo//
+
 " Enable and use the built-in EditorConfig plugin. I might look only enabling
 " this if it can find a .editorconfig file in the current directory.
 packadd! editorconfig
