@@ -77,7 +77,7 @@ install-tmux:
 install-vim:
 	mkdir -p -- $(HOME)/.vim
 	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
-	mkdir -p -- $(XDG_STATE_HOME)/vim
+	mkdir -p -- $(XDG_STATE_HOME)/vim/{backup,swap,undo}
 
 # TODO: add this to the install target when it runs only when files have changed.
 install-brew:
