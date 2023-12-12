@@ -75,10 +75,15 @@ install-tmux:
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
 	cp -p -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
 
+VIMDIR = $(HOME)/.vim
+
 install-vim:
-	mkdir -p -- $(HOME)/.vim
-	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
+	mkdir -p -- $(VIMDIR)
 	mkdir -p -- $(XDG_STATE_HOME)/vim/{backup,swap,undo}
+	cp -p -- vim/vimrc $(VIMDIR)/vimrc
+	cp -pR -- vim/after \
+		vim/plugin \
+		$(VIMDIR)
 
 install-work:
 	cp -p -- work/bashrc.d/* $(HOME)/.bashrc.d/
