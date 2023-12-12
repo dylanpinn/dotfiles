@@ -1,10 +1,5 @@
 # shellcheck shell=sh
 
-# TODO: Setup BROWSER
-# TODO: Make vim see this as sh file.
-# NOTE: Vim will override this if installed.
-# TODO: Setup PAGER.
-
 # Set XDG defaults.
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_CONFIG_HOME="$HOME"/.config
@@ -20,7 +15,6 @@ fi
 # Load all supplementaty scripts in ~/.profile.d
 for sh in "$HOME"/.profile.d/*.sh; do
   [ -e "$sh" ] || continue
-  # shellcheck source=/dev/null
   . "$sh"
 done
 unset -v sh
