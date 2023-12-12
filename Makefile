@@ -6,7 +6,8 @@
 	install-git \
 	install-sh \
 	install-tmux \
-	install-vim
+	install-vim \
+	install-work
 
 XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
@@ -55,7 +56,7 @@ install: install-bash \
 	install-tmux \
 	install-vim
 
-install-bash: install-sh
+install-bash: lint-bash install-sh
 	cp -p -- bash/bash_profile $(HOME)/.bash_profile
 	cp -p -- bash/bashrc $(HOME)/.bashrc
 	mkdir -p -- $(HOME)/.bashrc.d
@@ -88,7 +89,11 @@ install-brew:
 	brew bundle --global --no-lock --verbose
 	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
 
-lint: lint-sh
+lint: lint-bash \
+	lint-sh
+
+lint-bash:
+	sh lint/bash.sh
 
 lint-sh:
 	sh lint/sh.sh
