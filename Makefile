@@ -79,6 +79,9 @@ install-vim:
 	cp -p -- vim/vimrc $(HOME)/.vim/vimrc
 	mkdir -p -- $(XDG_STATE_HOME)/vim/{backup,swap,undo}
 
+install-work:
+	cp -p -- work/bashrc.d/* $(HOME)/.bashrc.d/
+
 # TODO: add this to the install target when it runs only when files have changed.
 install-brew:
 	cp -R -- homebrew/$(PROFILE).Brewfile $(HOME)/.Brewfile
