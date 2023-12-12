@@ -87,6 +87,7 @@ install-vim:
 
 install-work:
 	cp -p -- work/bashrc.d/* $(HOME)/.bashrc.d/
+	cp -p -- work/profile.d/* $(HOME)/.profile.d/
 
 # TODO: add this to the install target when it runs only when files have changed.
 install-brew:
