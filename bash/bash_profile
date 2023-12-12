@@ -2,7 +2,6 @@
 
 # Load ~/.profile regardless of shell.
 if [ -e "$HOME"/.profile ]; then
-  # shellcheck source=/dev/null
   . "$HOME"/.profile
 fi
 
