@@ -9,5 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup dependencies
+        run: |
+          pip install vim-vint yamllint
       - name: Lint files
         run: make lint
