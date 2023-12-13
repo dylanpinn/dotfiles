@@ -18,20 +18,18 @@
 "
 " > https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
 "
+" $XDG_STATE_HOME/vim
+" This directory needs to be present for this to work and has been created as
+" part of my dotfile installation.
 
 " Moving viminfo out of $HOME, has a dual purpose of tidying the top-level
 " directory and moving it rightfully into the XDG_STATE_HOME directory for
 " peristant generated state.
 "
-" This directory should be created during the initial setup of the dotfiles.
-"
 set viminfofile=$XDG_STATE_HOME/vim/viminfo
 
 " Enable automatic backups before overwriting a file and leave it around after
 " the file has been written.
-"
-" We will also want to move these backup files to the $XDG_CACHE_HOME
-" directory.  This directory is created during dotfile installation.
 "
 " The double trailing slashes will tell Vim to use the full escaped path of
 " the file to avoid collisions.
@@ -40,8 +38,7 @@ set backup
 set backupdir=$XDG_STATE_HOME/vim/backup//
 
 " Move swap files to a dedicated directory, rather than the default of the
-" same directory as the source file.  This directory is created during dotfile
-" installation.
+" same directory as the source file.
 "
 " Add two trailing slashes to the path to tell Vim to use the full escaped
 " path of the file to avoid collisions.
@@ -50,8 +47,7 @@ set directory=$XDG_STATE_HOME/vim/swap//
 
 " Keep track of undo history for files between sessions.  This ensures that
 " undo and redo are available between Vim invocations.  These files are kept
-" in a cache directory.  This directory is created during dotfile
-" installation.
+" in a user state directory.
 "
 " Add two trailing slashes to the path to tell Vim to use the full escaped
 " path of the file to avoid collisions.
@@ -59,10 +55,9 @@ set directory=$XDG_STATE_HOME/vim/swap//
 set undofile
 set undodir=$XDG_STATE_HOME/vim/undo//
 
-
-" Vim by default only keeps the last 50 `:` commands and search history. 200
-" is a better value to ensure that we are not losing any useful commands or
-" history.
+" Vim saves a history of `:` commands and search history in the viminfo file.
+" By default this is set to 50. 200 is a better value to ensure that we are
+" not losing any useful commands or search history.
 "
 set history=200
 
@@ -224,7 +219,6 @@ set wildmode=list:longest,full
 " files that won't want to be edited either.
 "
 set wildignore+=*/node_modules/* 	" ignore dependency directories.
-set wildignore+=*/.git/* 		" ignore vcs directories..
 
 " Ignore case when matching wildmenu options.
 "
@@ -259,6 +253,7 @@ colorscheme sorbet
 " a good fit to stop highlighting search results.
 "
 nnoremap <C-L> :<C-U>nohlsearch<CR><C-L>
+
 " The idea for this is taken from tpop/vim-vinegar.  Being able to hit "-" and
 " be taken automatically the files directory in netrw is very helpful and much
 " easier than typing ":Ex".  Only stealing this keybinding at the moment
@@ -272,6 +267,7 @@ nnoremap - :Ex<CR>
 " pasted text, similar to `gv` (reselect last visual selection).
 "
 nnoremap gp `[v`]
+
 " The following maps use the Leader key.
 "
 " Let us set the leader keys; backslash happens to be the default but setting
@@ -279,29 +275,36 @@ nnoremap gp `[v`]
 "
 let mapleader = '\'
 let maplocalleader = ' '
+
 " Normal mode mappings:
+"
+
 "" Leader,b list all open buffers.
 nnoremap <Leader>b :<C-U>buffer <C-d>
+
 "" Leader,c toggles highlighted cursor row.
 nnoremap <Leader>c :<C-U>set cursorline! cursorline?<CR>
+
 "" Leader,e populates the :edit command to edit a file.
 nnoremap <Leader>e :<C-U>edit **/*
+
 "" Leader,f populates the :find command to find a file on the path and edit it.
 nnoremap <Leader>f :<C-U>find *
+
 "" Leader,g search for text using grep.
 nnoremap <Leader>g :<C-U>grep<space>
+
 "" Leader,l toggles showing tab, end-of-line, and trailing white space.
 nnoremap <Leader>l :<C-U>set list! list?<CR>
+
 "" Leader,n toggles line number display
 nnoremap <Leader>n :<C-U>set number! number?<CR>
+
 "" Leader,m run :make.
 nnoremap <Leader>m :<C-U>make<CR>
+
 "" Leader,s toggles spell checking.
 nnoremap <Leader>s :<C-U>set spell! spell?<CR>
+
 "" Leader,w toggles soft wrapping
 nnoremap <Leader>w :<C-U>set wrap! wrap?<CR>
-
-" Enable and use the built-in EditorConfig plugin. I might look only enabling
-" this if it can find a .editorconfig file in the current directory.
-"
-packadd! editorconfig
