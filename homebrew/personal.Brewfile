@@ -7,8 +7,8 @@ brew "bash-completion@2"
 brew "git"
 # Command-line benchmarking tool
 brew "hyperfine"
-# Text-based web browser
-brew "lynx"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Mac App Store command-line interface
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
@@ -21,10 +21,14 @@ brew "shfmt"
 brew "tmux"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Vim script Language Lint
+brew "vint"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application uninstaller
 cask "appcleaner"
+# Web browser
+cask "firefox"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 mas "1Password for Safari", id: 1569813296
