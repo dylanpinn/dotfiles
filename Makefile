@@ -25,6 +25,9 @@ SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQr
 
 all: git/config
 
+check-prettier:
+	npm run format:check
+
 format: format-prettier
 
 format-prettier:
@@ -91,7 +94,8 @@ install-brew:
 	brew bundle --global --no-lock --verbose
 	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
 
-lint: lint-bash \
+lint: check-prettier \
+	lint-bash \
 	lint-sh \
 	lint-vim
 
