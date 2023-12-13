@@ -7,7 +7,11 @@
 	install-sh \
 	install-tmux \
 	install-vim \
-	install-work
+	install-work \
+	lint \
+	lint-bash \
+	lint-sh \
+	lint-vim
 
 XDG_CACHE_HOME ?= $(HOME)/.cache
 XDG_CONFIG_HOME ?= $(HOME)/.config
@@ -26,26 +30,7 @@ git/config: git/config.m4
 		--define=NAME=$(NAME) \
 		--define=EMAIL=$(EMAIL) \
 		--define=SIGNING_KEY=$(SIGNING_KEY) \
-		git/config.m4 > $@ # look into what this does
-
-diff: diff-git \
-	diff-sh \
-	diff-tmux \
-	diff-vim
-
-# TODO: export COLORTERM in sh profile file.
-diff-git: git/config
-	export COLORTERM=256 && diff --color="auto" -- git/config $(XDG_CONFIG_HOME)/git/config
-
-diff-sh:
-	export COLORTERM=256 && diff --color="auto" -- sh/profile $(HOME)/.profile
-	# TODO: How to diff ~/.profile.d/* directory.
-
-diff-tmux:
-	export COLORTERM=256 && diff --color="auto" -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
-
-diff-vim:
-	export COLORTERM=256 && diff --color="auto" -- vim/vimrc $(HOME)/.vim/vimrc
+		git/config.m4 > $@
 
 # TODO: not 100% sold on this target name.
 dump-brew:
@@ -77,11 +62,12 @@ install-tmux:
 
 VIMDIR = $(HOME)/.vim
 
-install-vim:
+install-vim: lint-vim
 	mkdir -p -- $(VIMDIR)
 	mkdir -p -- $(XDG_STATE_HOME)/vim/{backup,swap,undo}
 	cp -p -- vim/vimrc $(VIMDIR)/vimrc
 	cp -pR -- vim/after \
+		vim/compiler \
 		vim/plugin \
 		$(VIMDIR)
 
@@ -96,10 +82,14 @@ install-brew:
 	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
 
 lint: lint-bash \
-	lint-sh
+	lint-sh \
+	lint-vim
 
 lint-bash:
 	sh lint/bash.sh
 
 lint-sh:
 	sh lint/sh.sh
+
+lint-vim:
+	sh lint/vim.sh
