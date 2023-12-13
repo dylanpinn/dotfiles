@@ -60,6 +60,10 @@ install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
 
+install-nvim:
+	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
+	cp -pR -- nvim/ $(XDG_CONFIG_HOME)/nvim/
+
 install-sh: lint-sh
 	cp -p -- sh/profile $(HOME)/.profile
 	mkdir -p -- $(HOME)/.profile.d/
