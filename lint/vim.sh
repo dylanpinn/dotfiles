@@ -2,6 +2,6 @@
 #
 # Lint vim files using vint.
 
-set -eou pipefail
+set -eu
 
 find vim -type f -exec vint {} +
