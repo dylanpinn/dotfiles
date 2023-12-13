@@ -1,5 +1,6 @@
 # Ignore generated files.
 git/config
+node_modules/
 
 # Ignore local configuration files.
 .rtx.local.toml
