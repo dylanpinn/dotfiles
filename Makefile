@@ -25,6 +25,11 @@ SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQr
 
 all: git/config
 
+format: format-prettier
+
+format-prettier:
+	npm run format
+
 git/config: git/config.m4
 	m4 \
 		--define=NAME=$(NAME) \
@@ -38,6 +43,7 @@ dump-brew:
 
 install: install-bash \
 	install-git \
+	install-rtx \
 	install-tmux \
 	install-vim
 
@@ -56,6 +62,9 @@ install-sh: lint-sh
 	mkdir -p -- $(HOME)/.profile.d/
 	cp -p -- sh/profile.d/* $(HOME)/.profile.d/
 
+install-rtx: install-bash
+	cp -p -- rtx/bashrc.d/* $(HOME)/.bashrc.d/
+
 install-tmux:
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
 	cp -p -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
@@ -72,7 +81,7 @@ install-vim: lint-vim
 		vim/plugin \
 		$(VIMDIR)
 
-install-work:
+install-work: install-bash install-sh
 	cp -p -- work/bashrc.d/* $(HOME)/.bashrc.d/
 	cp -p -- work/profile.d/* $(HOME)/.profile.d/
 
