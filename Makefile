@@ -67,6 +67,7 @@ install-vim: lint-vim
 	mkdir -p -- $(XDG_STATE_HOME)/vim/{backup,swap,undo}
 	cp -p -- vim/vimrc $(VIMDIR)/vimrc
 	cp -pR -- vim/after \
+		vim/autoload \
 		vim/compiler \
 		vim/plugin \
 		$(VIMDIR)
