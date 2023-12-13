@@ -2,7 +2,7 @@
 #
 # Lint bash files with shellcheck.
 
-set -eou pipefail
+set -eu
 
 shellcheck --shell=bash bash/bash_profile
 shellcheck --shell=bash bash/bashrc

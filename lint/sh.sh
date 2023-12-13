@@ -2,7 +2,7 @@
 #
 # Lint shell files with shellcheck.
 
-set -eou pipefail
+set -eu
 
 shellcheck --shell=sh sh/profile
 
