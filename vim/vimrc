@@ -59,137 +59,249 @@ set directory=$XDG_STATE_HOME/vim/swap//
 set undofile
 set undodir=$XDG_STATE_HOME/vim/undo//
 
-" Enable and use the built-in EditorConfig plugin. I might look only enabling
-" this if it can find a .editorconfig file in the current directory.
-packadd! editorconfig
 
-" TODO: Have this change to sorbet or elflord when using dark background.
+" Vim by default only keeps the last 50 `:` commands and search history. 200
+" is a better value to ensure that we are not losing any useful commands or
+" history.
+"
+set history=200
+
+" Enable file type detection.
+" Also load indent files, to automatically do language-dependent indenting.
+"
+filetype plugin indent on
+
+" When checking spelling, use Australian English by default.
+"
+set spelllang=en_au
+
+" Vim includes defaults for comments and path that date back to its history as
+" a mainly C development environment.  Removing these values allows us to use
+" filetype plugins to set them as needed.
+"
+set comments= commentstring= define= include=
+set path-=/usr/include
+
+" Automatically reload a file inside of Vim if it has changed on the disk.
+" A good example of this is updated code from a VCS.
+"
+set autoread
+
+" Allow Vim's backspace to behave a bit more as you would expect it to.
+"
+set backspace+=indent	" Leading whitespace created by autoindent.
+set backspace+=eol	" Line breaks.
+set backspace+=start 	" Text before the start of the current insertion.
+
+" When soft-wraps are enabled with 'wrap' option, then break the line between
+" words, rather than within them.
+"
+set linebreak
+
+" When wrapping a line using soft-wraps, highlight that it has been wrapped by
+" inserting a leading string - "> ".
+"
+" Using the following syntax so we don't have to escape the trailing space and
+" have git yell at us for trailing whitespace.
+:let &showbreak = '> '
+
+" When wrapping a line, if that line is indented then the wrapped line is
+" also indented the same amount.
+"
+set breakindent
+
+" Automatic text wrapping options using flags in the 'formatoptions' option
+" begin here.
+
+" Don't break a line after a one-letter word like "I" or "a".
+"
+set formatoptions+=1
+
+" When joining lines that contain comments, if possible remove the comment
+" leader.
+"
+set formatoptions+=j
+
+" Use two spaces to end a sentence. This helps improve readability using
+" monospaced fonts.  This also helps vim work with sentence objects for the
+" purpose of the 's' text objects, the '(' and ')' sentence motions, and
+" formatting with the 'gq' command must now be separated by two spaces.
+"
+" See https://stevelosh.com/blog/2012/10/why-i-two-space/
+"
+set cpoptions+=J
+
+" Because we are using two spaces for ending sentences. Vim can determine if
+" the space after an abbreviation such as "Mr. Pinn" is the end of the
+" sentence or not and then determine if it should be split on it. The 'p' flag
+" makes this possible.
+"
+set formatoptions+=p
+
+" Highlight search matches in the text.  Highlights then can be turned off by
+" using :nohlsearch.  When this file is sourced, turn off any highlights that
+" are set and would have been resurfaced.
+"
+set hlsearch
+nohlsearch
+
+" Start searching and highlighting as soon as something is typed.
+"
+set incsearch
+
+" Ignore case when searching, unless the search contains upper-case characters.
+"
+set ignorecase
+set smartcase
+
+" Always show the statusline.
+"
+set laststatus=2
+
+" Don't redraw the screen when executing macros, registers and other commands
+" that have not been typed.
+"
+set lazyredraw
+
+" Set some default characters to show when the 'list' option is set. Most of
+" these will help define invisible or indistinguishable characters. We will
+" leave the default eol:$ to show newlines.
+"
+set listchars+=tab:>- 	" Tab characters, preserve width with hyphens.
+set listchars+=trail:-	" Trailing spaces.
+set listchars+=nbsp:+ 	" Non-breaking spaces.
+
+" These two options define what is shown when text is not wrapped and
+" continues off the screen.
+"
+set listchars+=extends:>,precedes:<
+
+" Disable modeline, editor options should not be set in the source code of the
+" file.  It is better to use filetype plugins, automatic command hooks, or
+" EditorConfig to set these values.
+"
+set nomodeline
+
+" Numbers that start with a zero should be treated as decimal and not octal.
+" This allows Vim to increment and decrement these numbers.
+"
+set nrformats-=octal
+
+" I prefer when Vim opens new splits to the right and below the current,
+" rather than the default of to the left and above.  This just makes more
+" sense.
+"
+set splitbelow splitright
+
+" Show (partial) command in the last line of the screen.
+"
+set showcmd
+
+" When using virtual block mode, allow me to navigate to to any column even if
+" there is no contents there.
+"
+set virtualedit+=block
+
+" Stop Vim from emitting sounds, rather use a visual bell. Also disables any
+" efforts by Vim that would trigger any visual queues such as flashing or
+" blinking.
+"
+set visualbell t_vb=
+
+" When completing commands with <Tab>, list valid completions and complete the
+" command line using the longest common substring with a single key press.
+"
+set wildmenu
+set wildmode=list:longest,full
+
+" Configure the wildmenu to ignore a list of patterns for file and directory
+" command line completion.  Files and directories matching any of these
+" patterns won't be presented as candidates for tab completion on the command
+" line.
+"
+" The list combines a mixture of binary files that would not contain text and
+" therefore would not want to edit, and directories that contain generated
+" files that won't want to be edited either.
+"
+set wildignore+=*/node_modules/* 	" ignore dependency directories.
+set wildignore+=*/.git/* 		" ignore vcs directories..
+
+" Ignore case when matching wildmenu options.
+"
+set wildignorecase
+
+" Switch syntax highlighting on if it already not enabled.
+"
+if !exists('syntax_on')
+  syntax on
+endif
+
+" TODO: Pull this out into plugin that will check environment variable and use
+" light or dark scheme.
 " colorscheme morning
 colorscheme sorbet
 
-" The rest of the file has been taken from $VIMRUNTIME/default.vim, with the
-" intention of cleaning up and re-organising it all to give it a bit more
-" logical ordering to it.
+" Mapping defnitions are defined here.  Here are some rules I have tried to
+" follow as much as possible.
 "
-" TODO: Clean up and fleshout comments.
+" * Use Leader key as a prefix for mappings as much as possible.
 "
+" * Only use the LocalLeader key as a prefix for mappings that are defined as
+"   local to a buffer, which should always be based on filetype and be setup
+"   in ftplugin files.
+"
+" * Avoid shadowing any of Vim's existing functionality.  If possible, extend
+"   or supplement what Vim does, rather than replacing it.
+"
+" The following are mappings that do not use the Leader key.
 
-" Allow backspacing over everything in insert mode.
-set backspace=indent,eol,start
+" CTRL-L by default in Vim redraws the screen.  Tacking on :nohlsearch is
+" a good fit to stop highlighting search results.
+"
+nnoremap <C-L> :<C-U>nohlsearch<CR><C-L>
+" The idea for this is taken from tpop/vim-vinegar.  Being able to hit "-" and
+" be taken automatically the files directory in netrw is very helpful and much
+" easier than typing ":Ex".  Only stealing this keybinding at the moment
+" (definitely not as powerful as the original) as don't require the rest of
+" the plugin (currently).
+"
+nnoremap - :Ex<CR>
 
-set history=200		" keep 200 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set wildmenu		" display completion matches in a status line
+" This is taken from VimTricks
+" (https://vimtricks.com/p/reselect-pasted-text/). This allows reselecting
+" pasted text, similar to `gv` (reselect last visual selection).
+"
+nnoremap gp `[v`]
+" The following maps use the Leader key.
+"
+" Let us set the leader keys; backslash happens to be the default but setting
+" it explicitly here.
+"
+let mapleader = '\'
+let maplocalleader = ' '
+" Normal mode mappings:
+"" Leader,b list all open buffers.
+nnoremap <Leader>b :<C-U>buffer <C-d>
+"" Leader,c toggles highlighted cursor row.
+nnoremap <Leader>c :<C-U>set cursorline! cursorline?<CR>
+"" Leader,e populates the :edit command to edit a file.
+nnoremap <Leader>e :<C-U>edit **/*
+"" Leader,f populates the :find command to find a file on the path and edit it.
+nnoremap <Leader>f :<C-U>find *
+"" Leader,g search for text using grep.
+nnoremap <Leader>g :<C-U>grep<space>
+"" Leader,l toggles showing tab, end-of-line, and trailing white space.
+nnoremap <Leader>l :<C-U>set list! list?<CR>
+"" Leader,n toggles line number display
+nnoremap <Leader>n :<C-U>set number! number?<CR>
+"" Leader,m run :make.
+nnoremap <Leader>m :<C-U>make<CR>
+"" Leader,s toggles spell checking.
+nnoremap <Leader>s :<C-U>set spell! spell?<CR>
+"" Leader,w toggles soft wrapping
+nnoremap <Leader>w :<C-U>set wrap! wrap?<CR>
 
-set ttimeout		" time out for key codes
-set ttimeoutlen=100	" wait up to 100ms after Esc for special key
-
-" Show @@@ in the last line if it is truncated.
-set display=truncate
-
-" Show a few lines of context around the cursor.  Note that this makes the
-" text scroll if you mouse-click near the start or end of the window.
-set scrolloff=5
-
-" Do incremental searching when it's possible to timeout.
-if has('reltime')
-  set incsearch
-endif
-
-" Do not recognize octal numbers for Ctrl-A and Ctrl-X, most users find it
-" confusing.
-set nrformats-=octal
-
-" Don't use Q for Ex mode, use it for formatting.  Except for Select mode.
-" Revert with ":unmap Q".
-map Q gq
-sunmap Q
-
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-" Revert with ":iunmap <C-U>".
-inoremap <C-U> <C-G>u<C-U>
-
-" In many terminal emulators the mouse works just fine.  By enabling it you
-" can position the cursor, Visually select and scroll with the mouse.
-" Only xterm can grab the mouse events when using the shift key, for other
-" terminals use ":", select text and press Esc.
-if has('mouse')
-  if &term =~ 'xterm'
-    set mouse=a
-  else
-    set mouse=nvi
-  endif
-endif
-
-" Only do this part when Vim was compiled with the +eval feature.
-if 1
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  " Revert with ":filetype off".
-  filetype plugin indent on
-
-  " Put these in an autocmd group, so that you can revert them with:
-  " ":autocmd! vimStartup"
-  augroup vimStartup
-    autocmd!
-
-    " When editing a file, always jump to the last known cursor position.
-    " Don't do it when the position is invalid, when inside an event handler
-    " (happens when dropping a file on gvim), for a commit or rebase message
-    " (likely a different one than last time), and when using xxd(1) to filter
-    " and edit binary files (it transforms input files back and forth, causing
-    " them to have dual nature, so to speak)
-    autocmd BufReadPost *
-      \ let line = line("'\"")
-      \ | if line >= 1 && line <= line("$") && &filetype !~# 'commit'
-      \      && index(['xxd', 'gitrebase'], &filetype) == -1
-      \ |   execute "normal! g`\""
-      \ | endif
-
-  augroup END
-
-  " Quite a few people accidentally type "q:" instead of ":q" and get confused
-  " by the command line window.  Give a hint about how to get out.
-  " If you don't like this you can put this in your vimrc:
-  " ":autocmd! vimHints"
-  augroup vimHints
-    au!
-    autocmd CmdwinEnter *
-	  \ echohl Todo |
-	  \ echo gettext('You discovered the command-line window! You can close it with ":q".') |
-	  \ echohl None
-  augroup END
-
-endif
-
-" Switch syntax highlighting on when the terminal has colors or when using the
-" GUI (which always has colors).
-if &t_Co > 2 || has("gui_running")
-  " Revert with ":syntax off".
-  syntax on
-
-  " I like highlighting strings inside C comments.
-  " Revert with ":unlet c_comment_strings".
-  let c_comment_strings=1
-endif
-
-" Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
-" Only define it when not defined already.
-" Revert with: ":delcommand DiffOrig".
-if !exists(":DiffOrig")
-  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
-endif
-
-if has('langmap') && exists('+langremap')
-  " Prevent that the langmap option applies to characters that result from a
-  " mapping.  If set (default), this may break plugins (but it's backward
-  " compatible).
-  set nolangremap
-endif
+" Enable and use the built-in EditorConfig plugin. I might look only enabling
+" this if it can find a .editorconfig file in the current directory.
+"
+packadd! editorconfig
