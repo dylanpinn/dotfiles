@@ -1,8 +1,5 @@
 # Ignore generated files.
 git/config
 
-# until I move these out.
-*.swp
-
 # Ignore local configuration files.
 .rtx.local.toml
