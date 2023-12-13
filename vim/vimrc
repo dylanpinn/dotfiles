@@ -64,7 +64,8 @@ set undodir=$XDG_STATE_HOME/vim/undo//
 packadd! editorconfig
 
 " TODO: Have this change to sorbet or elflord when using dark background.
-colorscheme morning
+" colorscheme morning
+colorscheme sorbet
 
 " The rest of the file has been taken from $VIMRUNTIME/default.vim, with the
 " intention of cleaning up and re-organising it all to give it a bit more
