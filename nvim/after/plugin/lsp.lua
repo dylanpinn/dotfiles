@@ -30,6 +30,7 @@ lspconfig.lua_ls.setup({
     return true
   end,
 })
+lspconfig.tsserver.setup{}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
