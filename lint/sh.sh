@@ -6,4 +6,7 @@ set -eu
 
 shellcheck --shell=sh sh/profile
 
-find . -name "*.sh" -exec shellcheck --shell=sh {} +
+find . \
+    -name "*.sh" \
+    -not -path "./nvim/pack/bundle/*" \
+    -exec shellcheck --shell=sh {} +
