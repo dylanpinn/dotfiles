@@ -18,6 +18,8 @@ brew "hyperfine"
 brew "jq"
 # Mac App Store command-line interface
 brew "mas"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Polyglot runtime manager (asdf rust clone)
 brew "rtx"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -44,8 +46,12 @@ cask "bbedit"
 cask "bike"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Web browser
+cask "firefox"
 # Native code editor
 cask "nova"
+# WebKit based web browser
+cask "orion"
 # Workflow application to improve productivity
 cask "pastebot"
 # Move and resize windows using keyboard shortcuts or snap areas
