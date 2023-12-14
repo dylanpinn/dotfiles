@@ -2,8 +2,8 @@
 -- important.
 
 --require("dcp.set-background")
---require("dcp.keymaps")
---require("dcp.options")
+require("dcp.keymaps")
+require("dcp.options")
 --require("dcp.packages")
 
 vim.cmd('colorscheme morning')
