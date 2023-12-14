@@ -1,0 +1,2 @@
+# ignore Neovim plugins.
+nvim/pack/bundle
