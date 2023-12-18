@@ -46,6 +46,7 @@ dump-brew:
 
 install: install-bash \
 	install-git \
+	install-nvim \
 	install-rtx \
 	install-tmux \
 	install-vim
