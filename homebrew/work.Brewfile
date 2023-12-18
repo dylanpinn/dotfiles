@@ -8,8 +8,6 @@ brew "bash"
 brew "bash-completion@2"
 # Create and view interactive cheat sheets for *nix commands
 brew "cheat"
-# Manage your dotfiles across multiple diverse machines, securely
-brew "chezmoi"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
 # GitHub command-line tool
@@ -72,8 +70,12 @@ cask "fork"
 cask "google-chrome"
 # Tool to optimize images to a smaller size
 cask "imageoptim"
+# Automation software
+cask "keyboard-maestro"
 # Web browser
 cask "microsoft-edge"
+# Tool to create text-based art
+cask "monodraw"
 # Native code editor
 cask "nova"
 # WebKit based web browser
@@ -86,8 +88,12 @@ cask "postico"
 cask "rapidapi"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Inserts pre-made snippets of text anywhere
+cask "textexpander"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
+mas "Dato", id: 1470584107
 mas "LastPass", id: 926036361
 mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
+mas "TestFlight", id: 899247664
