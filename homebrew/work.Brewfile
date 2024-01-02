@@ -22,6 +22,8 @@ brew "hyperfine"
 brew "jq"
 # Language Server for the Lua language
 brew "lua-language-server"
+# Tool for linting and static analysis of Lua code
+brew "luacheck"
 # Mac App Store command-line interface
 brew "mas"
 # Ambitious Vim-fork focused on extensibility and agility
