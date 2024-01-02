@@ -14,8 +14,12 @@ jobs:
           node-version: "lts/Iron"
           cache: "npm"
       - run: npm ci
+      - uses: leafo/gh-actions-lua@v10
+      - uses: leafo/gh-actions-luarocks@v4
       - name: Setup dependencies
         run: |
           pip install vim-vint yamllint
+          luarocks install luacheck
+          luarocks install lanes
       - name: Lint files
         run: make lint
