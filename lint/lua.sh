@@ -4,4 +4,4 @@
 
 set -eu
 
-luacheck .
+luacheck .luacheckrc .
