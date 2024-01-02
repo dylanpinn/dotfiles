@@ -69,6 +69,7 @@ install-bash: lint-bash install-sh
 	cp -p -- bash/bashrc $(HOME)/.bashrc
 	mkdir -p -- $(HOME)/.bashrc.d
 	cp -p -- bash/bashrc.d/* $(HOME)/.bashrc.d/
+	mkdir -p -- $(XDG_STATE_HOME)/bash
 
 install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
