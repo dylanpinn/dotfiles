@@ -52,6 +52,8 @@ cask "alfred"
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
+# Menu bar icon organizer
+cask "bartender"
 # Text, code, and markup editor
 cask "bbedit"
 # Record and process your ideas
@@ -88,6 +90,8 @@ cask "postico"
 cask "rapidapi"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Sound and audio controller
+cask "soundsource"
 # Inserts pre-made snippets of text anywhere
 cask "textexpander"
 mas "1Password for Safari", id: 1569813296
