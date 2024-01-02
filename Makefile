@@ -75,7 +75,7 @@ install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
 
-install-nvim:
+install-nvim: lint-lua
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
 	cp -pR -- nvim/ $(XDG_CONFIG_HOME)/nvim/
 
@@ -122,7 +122,7 @@ lint: check\
 lint-bash:
 	sh lint/bash.sh
 
-lint-lua:
+lint-lua: check-lua
 	sh lint/lua.sh
 
 lint-sh:
