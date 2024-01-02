@@ -1,2 +1,5 @@
 # ignore Neovim plugins.
 nvim/pack/bundle
+
+# ignore paths created during CI setup.
+/.luarocks
