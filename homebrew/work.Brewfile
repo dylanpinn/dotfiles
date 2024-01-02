@@ -1,4 +1,6 @@
+tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
 # Official Amazon AWS command-line interface
 brew "awscli"
@@ -62,12 +64,30 @@ cask "bbedit"
 cask "bike"
 # Screen capturing tool
 cask "cleanshot"
+# The Homebrew Companion
+cask "cork"
 # API documentation browser and code snippet manager
 cask "dash"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Web browser
 cask "firefox"
+cask "font-fira-mono"
+# Sans-serif typeface
+cask "font-geist"
+# Monospaced typeface designed to be used where code is represented
+cask "font-geist-mono"
+# Corporate typeface for IBM
+cask "font-ibm-plex-mono"
+cask "font-input"
+# Expressive monospaced font family
+cask "font-intel-one-mono"
+# Typeface made for developers
+cask "font-jetbrains-mono"
+# Superfamily of fonts for code
+cask "font-monaspace"
+cask "font-roboto-mono"
+cask "font-source-code-pro"
 # GIT client
 cask "fork"
 # Web browser
@@ -76,6 +96,8 @@ cask "google-chrome"
 cask "imageoptim"
 # Automation software
 cask "keyboard-maestro"
+# Software for Logitech devices
+cask "logi-options-plus"
 # Web browser
 cask "microsoft-edge"
 # Tool to create text-based art
