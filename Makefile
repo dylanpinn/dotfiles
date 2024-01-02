@@ -101,11 +101,15 @@ install-brew:
 
 lint: check-prettier \
 	lint-bash \
+	lint-lua \
 	lint-sh \
 	lint-vim
 
 lint-bash:
 	sh lint/bash.sh
+
+lint-lua:
+	sh lint/lua.sh
 
 lint-sh:
 	sh lint/sh.sh
