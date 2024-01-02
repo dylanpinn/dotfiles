@@ -1,6 +1,9 @@
 .POSIX:
 
 .PHONY: all \
+	check \
+	check-lua \
+	check-prettier \
 	install \
 	install-brew \
 	install-git \
@@ -25,10 +28,20 @@ SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQr
 
 all: git/config
 
+check: check-lua \
+	check-prettier
+
+check-lua:
+	sh check/lua.sh
+
 check-prettier:
 	npm run format:check
 
-format: format-prettier
+format: format-lua \
+	format-prettier
+
+format-lua:
+	sh format/lua.sh
 
 format-prettier:
 	npm run format
@@ -99,7 +112,7 @@ install-brew:
 	brew bundle --global --no-lock --verbose
 	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
 
-lint: check-prettier \
+lint: check\
 	lint-bash \
 	lint-lua \
 	lint-sh \
