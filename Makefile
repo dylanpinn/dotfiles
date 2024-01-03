@@ -59,8 +59,8 @@ dump-brew:
 
 install: install-bash \
 	install-git \
+	install-mise \
 	install-nvim \
-	install-rtx \
 	install-tmux \
 	install-vim
 
@@ -75,6 +75,9 @@ install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
 
+install-mise: install-bash
+	cp -p -- mise/bashrc.d/* $(HOME)/.bashrc.d/
+
 install-nvim: lint-lua
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
 	cp -pR -- nvim/ $(XDG_CONFIG_HOME)/nvim/
@@ -83,9 +86,6 @@ install-sh: lint-sh
 	cp -p -- sh/profile $(HOME)/.profile
 	mkdir -p -- $(HOME)/.profile.d/
 	cp -p -- sh/profile.d/* $(HOME)/.profile.d/
-
-install-rtx: install-bash
-	cp -p -- rtx/bashrc.d/* $(HOME)/.bashrc.d/
 
 install-tmux:
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
