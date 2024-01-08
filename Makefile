@@ -58,6 +58,7 @@ dump-brew:
 	brew bundle dump --force --describe --file=homebrew/$(PROFILE).Brewfile
 
 install: install-bash \
+	install-espanso \
 	install-git \
 	install-mise \
 	install-nvim \
@@ -70,6 +71,10 @@ install-bash: lint-bash install-sh
 	mkdir -p -- $(HOME)/.bashrc.d
 	cp -p -- bash/bashrc.d/* $(HOME)/.bashrc.d/
 	mkdir -p -- $(XDG_STATE_HOME)/bash
+
+install-espanso:
+	mkdir -p "$(HOME)/Library/Application Support/espanso"
+	cp -pR -- espanso/* "$(HOME)/Library/Application Support/espanso/"
 
 install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
