@@ -1,4 +1,5 @@
 tap "enigmaticdb/super-secret-tap"
+tap "espanso/espanso"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
@@ -28,20 +29,24 @@ brew "lua-language-server"
 brew "luacheck"
 # Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Polyglot runtime manager (asdf rust clone)
-brew "rtx"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Autoformat shell script source code
 brew "shfmt"
 # Encrypt and decrypt secrets using the AWS Key Management Service
 brew "shush"
+# Opinionated Lua code formatter
+brew "stylua"
 # Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Vim script Language Lint
@@ -70,6 +75,8 @@ cask "cork"
 cask "dash"
 # App to build and share containerized applications and microservices
 cask "docker"
+# Cross-platform Text Expander written in Rust
+cask "espanso"
 # Web browser
 cask "firefox"
 cask "font-fira-mono"
@@ -116,8 +123,6 @@ cask "rapidapi"
 cask "rectangle"
 # Sound and audio controller
 cask "soundsource"
-# Inserts pre-made snippets of text anywhere
-cask "textexpander"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
 mas "Dato", id: 1470584107
