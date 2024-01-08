@@ -1,5 +1,4 @@
 tap "enigmaticdb/super-secret-tap"
-tap "espanso/espanso"
 tap "homebrew/bundle"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
@@ -31,6 +30,8 @@ brew "shfmt"
 brew "stylua"
 # Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Vim script Language Lint
