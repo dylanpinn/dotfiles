@@ -32,7 +32,3 @@ language_dialect = posix
 [Makefile]
 indent_style = tab
 indent_size = 4
-
-# Ignore vendor files (shfmt)
-[nvim/pack/opt/bundle/**]
-ignore = true

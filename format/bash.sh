@@ -13,6 +13,5 @@ shfmt --list --write --simplify -- "$@"
 
 shfmt --list --write --simplify -- bash
 
-find . -type f -name "*.bash" | while IFS='' read -r line; do
-    shfmt --list --write --simplify -- "$line"
-done
+find . -type f -name "*.bash" \
+    -exec shfmt --list --write --simplify {} +

@@ -12,6 +12,6 @@ shfmt --list --write --simplify -- "$@"
 
 shfmt --list --write --simplify -- sh
 
-find . -type f -name "*.sh" | while IFS='' read -r line; do
-    shfmt --list --write --simplify -- "$line"
-done
+find . -type f -name "*.sh" \
+    -not -path "./nvim/pack/bundle/*" \
+    -exec shfmt --list --write --simplify {} +

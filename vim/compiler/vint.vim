@@ -5,5 +5,5 @@ if exists('current_compiler')
 endif
 let current_compiler = 'vint'
 
-CompilerSet makeprg=vint\ --\ %:S
+CompilerSet makeprg=vint\ --no-color\ --\ %:S
 CompilerSet errorformat=%f:%l:%c:\ %m
