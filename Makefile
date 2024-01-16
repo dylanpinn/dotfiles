@@ -37,8 +37,12 @@ check-lua:
 check-prettier:
 	npm run format:check
 
-format: format-lua \
+format: format-bash \
+	format-lua \
 	format-prettier
+
+format-bash:
+	sh format/bash.sh
 
 format-lua:
 	sh format/lua.sh
