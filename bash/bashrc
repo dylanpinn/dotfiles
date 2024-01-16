@@ -2,7 +2,7 @@
 
 # Load Bash-specific startup files
 for bash in "$HOME"/.bashrc.d/*.bash; do
-  [[ -e $bash ]] || continue
-  source "$bash"
+	[[ -e $bash ]] || continue
+	source "$bash"
 done
 unset -v bash
