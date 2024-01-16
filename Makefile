@@ -122,6 +122,7 @@ install-vim: lint-vim
 	cp -pR -- vim/after \
 		vim/autoload \
 		vim/compiler \
+		vim/ftdetect \
 		vim/plugin \
 		$(VIMDIR)
 

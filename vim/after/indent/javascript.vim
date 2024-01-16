@@ -1,2 +1,2 @@
-" Use four spaces for indentation
-call indent#Spaces(4)
+" Use two spaces for indentation (matches Prettier)
+call indent#Spaces(2)
