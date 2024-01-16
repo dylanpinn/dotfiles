@@ -10,3 +10,6 @@
 [submodule "nvim/pack/bundle/start/projectionist"]
 	path = nvim/pack/bundle/start/projectionist
 	url = https://tpope.io/vim/projectionist.git
+[submodule "nvim/pack/bundle/start/dispatch"]
+	path = nvim/pack/bundle/start/dispatch
+	url = https://tpope.io/vim/dispatch.git
