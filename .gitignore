@@ -1,6 +1,8 @@
 # Ignore generated files.
 git/config
 node_modules/
+bin/*
+!bin/*.*
 
 # Ignore local configuration files.
 .rtx.local.toml
