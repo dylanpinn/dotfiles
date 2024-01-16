@@ -3,7 +3,7 @@
 
 function! CheckForEditorconfig()
   if filereadable('.editorconfig')
-    packadd! editorconfig
+    packadd editorconfig
   endif
 endfunction
 
