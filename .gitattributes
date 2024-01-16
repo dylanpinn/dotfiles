@@ -1,0 +1,2 @@
+# Classify Brewfiles as Ruby:
+*.Brewfile linguist-language=Ruby
