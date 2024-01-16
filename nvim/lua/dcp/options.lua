@@ -67,10 +67,6 @@ vim.opt.include = ""
 --
 vim.opt.linebreak = true
 
--- Add ** to the path to allow a better default :find experience by searching sub-directories of the CWD.
---
-vim.opt.path:append({ "**" })
-
 -- Neovim includes defaults for path that date back to its history as a mainly C development environment.  Removing
 -- these values allows us to use filetype plugins to set them as needed.
 --
