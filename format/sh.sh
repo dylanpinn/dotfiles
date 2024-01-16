@@ -1,18 +1,17 @@
 #!/usr/bin/env sh
 #
-# Format Bash files using shfmt.
+# Format shell files using shfmt.
 #
 # This uses .editorconfig to detect parser and printer flags.
 
 set -eu
 
-set bash/bashrc
-set bash/bash_profile
+set sh/profile
 
 shfmt --list --write --simplify -- "$@"
 
-shfmt --list --write --simplify -- bash
+shfmt --list --write --simplify -- sh
 
-find . -type f -name "*.bash" | while IFS='' read -r line; do
+find . -type f -name "*.sh" | while IFS='' read -r line; do
     shfmt --list --write --simplify -- "$line"
 done
