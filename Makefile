@@ -39,7 +39,8 @@ check-prettier:
 
 format: format-bash \
 	format-lua \
-	format-prettier
+	format-prettier \
+	format-sh
 
 format-bash:
 	sh format/bash.sh
@@ -49,6 +50,9 @@ format-lua:
 
 format-prettier:
 	npm run format
+
+format-sh:
+	sh format/sh.sh
 
 git/config: git/config.m4
 	m4 \

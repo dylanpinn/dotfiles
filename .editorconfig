@@ -18,7 +18,21 @@ indent_style = space
 indent_size = 4
 language_dialect = bash
 
+[[shell]]
+indent_style = space
+indent_size = 4
+language_dialect = posix
+
+[*.sh]
+indent_style = space
+indent_size = 4
+language_dialect = posix
+
 # Makefile requires tabs.
 [Makefile]
 indent_style = tab
 indent_size = 4
+
+# Ignore vendor files (shfmt)
+[nvim/pack/opt/bundle/**]
+ignore = true
