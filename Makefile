@@ -26,7 +26,11 @@ EMAIL ?= 'dylan.pinn@rea-group.com'
 PROFILE ?= personal
 SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr'
 
-all: git/config
+BINS = bin/git-remove-merged-local \
+       bin/git-stats-loc
+
+all: git/config \
+	$(BINS)
 
 check: check-lua \
 	check-prettier
@@ -66,6 +70,7 @@ dump-brew:
 	brew bundle dump --force --describe --file=homebrew/$(PROFILE).Brewfile
 
 install: install-bash \
+	install-bin \
 	install-espanso \
 	install-git \
 	install-mise \
@@ -79,6 +84,10 @@ install-bash: lint-bash install-sh
 	mkdir -p -- $(HOME)/.bashrc.d
 	cp -p -- bash/bashrc.d/* $(HOME)/.bashrc.d/
 	mkdir -p -- $(XDG_STATE_HOME)/bash
+
+install-bin:
+	mkdir -p $(HOME)/.local/bin
+	cp -p -- $(BINS) $(HOME)/.local/bin/
 
 install-espanso:
 	mkdir -p "$(HOME)/Library/Application Support/espanso"
