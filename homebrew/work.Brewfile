@@ -43,6 +43,8 @@ brew "shfmt"
 brew "shush"
 # Opinionated Lua code formatter
 brew "stylua"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -105,6 +107,8 @@ cask "imageoptim"
 cask "keyboard-maestro"
 # Software for Logitech devices
 cask "logi-options-plus"
+# Optimize your webcam, headset, and Logi Dock for video meetings
+cask "logitune"
 # Web browser
 cask "microsoft-edge"
 # Tool to create text-based art
