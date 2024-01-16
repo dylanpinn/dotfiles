@@ -28,6 +28,8 @@ brew "shellcheck"
 brew "shfmt"
 # Opinionated Lua code formatter
 brew "stylua"
+# Simplified and community-driven man pages
+brew "tldr"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -36,6 +38,8 @@ brew "tree"
 brew "vim"
 # Vim script Language Lint
 brew "vint"
+# Library to create, extract, and modify Windows Imaging files
+brew "wimlib"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Application uninstaller
@@ -68,6 +72,8 @@ cask "espanso"
 cask "firefox"
 # GIT client
 cask "fork"
+# Game client
+cask "gog-galaxy"
 # Web browser
 cask "google-chrome"
 # Automated organization
@@ -80,16 +86,26 @@ cask "monodraw"
 cask "nova"
 # Calculator and converter application
 cask "numi"
+# Replacement for Docker Desktop
+cask "orbstack"
+# Play PC games and connect with your friends
+cask "origin"
 # WebKit based web browser
 cask "orion"
 # Workflow application to improve productivity
 cask "pastebot"
+# Podcast platform
+cask "pocket-casts"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Sound and audio controller
 cask "soundsource"
 # Video game digital distribution service
 cask "steam"
+# Application for inspecting installer packages
+cask "suspicious-package"
+# File transfer application
+cask "transmit"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Bear", id: 1091189122
