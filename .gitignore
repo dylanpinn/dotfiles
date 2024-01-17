@@ -5,4 +5,4 @@ bin/*
 !bin/*.*
 
 # Ignore local configuration files.
-.rtx.local.toml
+.mise.local.toml
