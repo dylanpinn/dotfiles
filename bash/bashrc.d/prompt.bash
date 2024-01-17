@@ -15,7 +15,7 @@ function prompt() {
     # Full featured prompt.
     on)
         # Save each command into history.
-        PROMPT_COMMAND='PROMPT_RETURN=$?;history -a'
+        PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
         # If Bash 4.0 is available, trim very long paths in prompt.
         if ((BASH_VERSINFO[0] >= 4)); then
@@ -75,7 +75,6 @@ function prompt() {
 
     # Simple prompt.
     off)
-        unset -v PROMPT_COMMAND PROMPT_DIRTRIM
         PS1='$ '
         PS2='> '
         PS3='? '
