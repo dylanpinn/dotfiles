@@ -1,6 +1,6 @@
 # .dotfiles
 
-My dotfiles, managed with ???.
+My dotfiles, managed with `make`.
 
 ## Setup
 
