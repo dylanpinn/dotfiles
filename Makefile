@@ -74,6 +74,7 @@ install: install-bash \
 	install-espanso \
 	install-git \
 	install-mise \
+	install-npm \
 	install-nvim \
 	install-tmux \
 	install-vim
@@ -100,6 +101,11 @@ install-git: git/config
 
 install-mise: install-bash
 	cp -p -- mise/bashrc.d/* $(HOME)/.bashrc.d/
+
+install-npm:
+	mkdir -p -- $(XDG_CONFIG_HOME)/npm
+	cp -pR -- npm/npmrc $(XDG_CONFIG_HOME)/npm/npmrc
+	cp -p -- npm/profile.d/* $(HOME)/.profile.d/
 
 install-nvim: lint-lua
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
