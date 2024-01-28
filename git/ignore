@@ -1,0 +1,4 @@
+# System-wide ignore file
+
+# Project specific configuration
+.projections.json
