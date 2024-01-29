@@ -129,8 +129,10 @@ cask "rectangle"
 cask "soundsource"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
+mas "Boop", id: 1518425043
 mas "Dato", id: 1470584107
 mas "LastPass", id: 926036361
 mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
 mas "TestFlight", id: 899247664
+mas "Velja", id: 1607635845
