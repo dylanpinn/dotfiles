@@ -13,3 +13,6 @@
 [submodule "nvim/pack/bundle/start/dispatch"]
 	path = nvim/pack/bundle/start/dispatch
 	url = https://tpope.io/vim/dispatch.git
+[submodule "nvim/pack/bundle/start/copilot.vim"]
+	path = nvim/pack/bundle/start/copilot.vim
+	url = https://github.com/github/copilot.vim.git
