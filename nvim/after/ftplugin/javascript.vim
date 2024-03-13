@@ -3,3 +3,4 @@
 " seems the best solution that doesn't involve a new plugin.
 "
 nnoremap <LocalLeader>f :silent %!npx prettier --stdin-filepath %<CR>
+setlocal formatprg=npx\ prettier\ --parser\ typescript
