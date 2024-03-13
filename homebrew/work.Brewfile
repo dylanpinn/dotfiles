@@ -3,6 +3,8 @@ tap "espanso/espanso"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "reainternal/stable", "git@git.realestate.com.au:cowbell/homebrew-stuff"
+# CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
+brew "aws-sam-cli"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
@@ -63,19 +65,21 @@ cask "alfred"
 cask "appcleaner"
 # Chromium based browser
 cask "arc"
-# Menu bar icon organizer
+# Menu bar icon organiser
 cask "bartender"
 # Text, code, and markup editor
 cask "bbedit"
 # Record and process your ideas
 cask "bike"
+# Free and open-source web browser
+cask "chromium"
 # Screen capturing tool
 cask "cleanshot"
 # The Homebrew Companion
 cask "cork"
 # API documentation browser and code snippet manager
 cask "dash"
-# App to build and share containerized applications and microservices
+# App to build and share containerised applications and microservices
 cask "docker"
 # Cross-platform Text Expander written in Rust
 cask "espanso"
@@ -101,13 +105,13 @@ cask "font-source-code-pro"
 cask "fork"
 # Web browser
 cask "google-chrome"
-# Tool to optimize images to a smaller size
+# Tool to optimise images to a smaller size
 cask "imageoptim"
 # Automation software
 cask "keyboard-maestro"
 # Software for Logitech devices
 cask "logi-options-plus"
-# Optimize your webcam, headset, and Logi Dock for video meetings
+# Optimise your webcam, headset, and Logi Dock for video meetings
 cask "logitune"
 # Web browser
 cask "microsoft-edge"
@@ -127,6 +131,8 @@ cask "rapidapi"
 cask "rectangle"
 # Sound and audio controller
 cask "soundsource"
+# Open-source code editor
+cask "visual-studio-code"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
 mas "Boop", id: 1518425043
@@ -136,3 +142,9 @@ mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
 mas "TestFlight", id: 899247664
 mas "Velja", id: 1607635845
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-vscode-remote.remote-containers"
+vscode "redhat.vscode-yaml"
+vscode "tamasfe.even-better-toml"
