@@ -22,7 +22,7 @@ XDG_DATA_HOME ?= $(HOME)/.local/share
 XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
-EMAIL ?= 'dylan.pinn@rea-group.com'
+EMAIL ?= 'me@dylanpinn.com'
 PROFILE ?= personal
 SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr'
 
