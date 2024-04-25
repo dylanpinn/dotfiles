@@ -20,6 +20,8 @@ brew "jq"
 brew "lua-language-server"
 # Tool for linting and static analysis of Lua code
 brew "luacheck"
+# Macro processing language
+brew "m4", link: true
 # Mac App Store command-line interface
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
