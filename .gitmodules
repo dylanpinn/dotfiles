@@ -16,3 +16,6 @@
 [submodule "nvim/pack/bundle/start/copilot.vim"]
 	path = nvim/pack/bundle/start/copilot.vim
 	url = https://github.com/github/copilot.vim.git
+[submodule "nvim/pack/bundle/start/conform.nvim"]
+	path = nvim/pack/bundle/start/conform.nvim
+	url = https://github.com/stevearc/conform.nvim.git
