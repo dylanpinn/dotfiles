@@ -1,5 +1,6 @@
 tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
 tap "rconroy293/seventeenlands"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
@@ -15,6 +16,8 @@ brew "git"
 brew "hyperfine"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Language Server for the Lua language
+brew "lua-language-server"
 # Tool for linting and static analysis of Lua code
 brew "luacheck"
 # Mac App Store command-line interface
@@ -75,6 +78,27 @@ cask "epic-games"
 cask "espanso"
 # Web browser
 cask "firefox"
+cask "font-fira-mono"
+# Sans-serif typeface
+cask "font-geist"
+# Monospaced typeface designed to be used where code is represented
+cask "font-geist-mono"
+# Corporate typeface for IBM
+cask "font-ibm-plex-mono"
+cask "font-input"
+# Expressive monospaced font family
+cask "font-intel-one-mono"
+# Variable font designed for display
+cask "font-inter"
+# Typeface made for developers
+cask "font-jetbrains-mono"
+# Mona Sans, a variable font from GitHub
+cask "font-mona-sans"
+# Superfamily of fonts for code
+cask "font-monaspace"
+cask "font-nunito"
+cask "font-roboto-mono"
+cask "font-source-code-pro"
 # GIT client
 cask "fork"
 # Game client
