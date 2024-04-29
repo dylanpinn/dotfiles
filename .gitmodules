@@ -16,3 +16,6 @@
 [submodule "nvim/pack/bundle/start/conform.nvim"]
 	path = nvim/pack/bundle/start/conform.nvim
 	url = https://github.com/stevearc/conform.nvim.git
+[submodule "nvim/pack/bundle/start/nvim-lint"]
+	path = nvim/pack/bundle/start/nvim-lint
+	url = https://github.com/mfussenegger/nvim-lint.git
