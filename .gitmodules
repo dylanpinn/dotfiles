@@ -4,9 +4,6 @@
 [submodule "nvim/pack/bundle/start/nvim-lspconfig"]
 	path = nvim/pack/bundle/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
-[submodule "nvim/pack/bundle/start/commentary"]
-	path = nvim/pack/bundle/start/commentary
-	url = https://tpope.io/vim/commentary.git
 [submodule "nvim/pack/bundle/start/projectionist"]
 	path = nvim/pack/bundle/start/projectionist
 	url = https://tpope.io/vim/projectionist.git
