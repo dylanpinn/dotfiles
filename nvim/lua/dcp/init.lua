@@ -5,8 +5,6 @@ require("dcp.set-background")
 require("dcp.keymaps")
 require("dcp.options")
 
-vim.cmd.colorscheme("morning")
-
 -- Use ripgrep as built-in search tool, this is quicker than grep, has better
 -- interface and automatically ignores correct files/directories.
 if vim.fn.executable("ag") then
