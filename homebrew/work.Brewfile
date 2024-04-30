@@ -13,6 +13,8 @@ brew "bash"
 brew "bash-completion@2"
 # Create and view interactive cheat sheets for *nix commands
 brew "cheat"
+# Statistics utility to count lines of code
+brew "cloc"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
 # GitHub command-line tool
@@ -29,12 +31,14 @@ brew "jq"
 brew "lua-language-server"
 # Tool for linting and static analysis of Lua code
 brew "luacheck"
+# Macro processing language
+brew "m4", link: true
 # Mac App Store command-line interface
 brew "mas"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -107,6 +111,8 @@ cask "fork"
 cask "google-chrome"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # Automation software
 cask "keyboard-maestro"
 # Software for Logitech devices
@@ -136,12 +142,17 @@ cask "visual-studio-code"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
 mas "Boop", id: 1518425043
+mas "com.kagimacOS.Kagi-Search", id: 1622835804
 mas "Dato", id: 1470584107
 mas "LastPass", id: 926036361
 mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
+mas "Play", id: 1596506190
 mas "TestFlight", id: 899247664
+mas "Things", id: 904280696
+mas "Trello", id: 1278508951
 mas "Velja", id: 1607635845
+mas "Wipr", id: 1320666476
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "ms-azuretools.vscode-docker"
