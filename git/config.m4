@@ -24,12 +24,12 @@
 
 	# Status
 	st = status
+[commit]
+	gpgsign = true
 [gpg]
 	format = ssh
 [gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-[commit]
-	gpgsign = true
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [user]
 	signingkey = SIGNING_KEY
 	email = EMAIL
