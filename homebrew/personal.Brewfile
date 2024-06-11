@@ -2,6 +2,8 @@ tap "enigmaticdb/super-secret-tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "rconroy293/seventeenlands"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 4.2+
@@ -28,6 +30,8 @@ brew "mas"
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim", args: ["HEAD"]
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Autoformat shell script source code
@@ -50,6 +54,12 @@ brew "wimlib"
 brew "rconroy293/seventeenlands/seventeenlands"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Professional graphic design software
+cask "affinity-designer"
+# Professional image editing software
+cask "affinity-photo"
+# Professional desktop publishing software
+cask "affinity-publisher"
 # Application uninstaller
 cask "appcleaner"
 # Chromium based browser
@@ -131,6 +141,8 @@ cask "orion"
 cask "pastebot"
 # Podcast platform
 cask "pocket-casts"
+# HTTP client that helps testing and describing APIs
+cask "rapidapi"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Sound and audio controller
@@ -141,6 +153,8 @@ cask "steam"
 cask "suspicious-package"
 # File transfer application
 cask "transmit"
+# Application for configuring any YubiKey
+cask "yubico-yubikey-manager"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Bear", id: 1091189122
@@ -161,12 +175,12 @@ mas "NepTunes", id: 1006739057
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
-mas "PayPal Honey", id: 1472777122
 mas "Photomator", id: 1444636541
 mas "Pins", id: 1547106997
 mas "Pixelmator Pro", id: 1289583905
 mas "Play", id: 1596506190
 mas "Save to Reader", id: 1640236961
+mas "Soulver 3", id: 1508732804
 mas "Streaks", id: 963034692
 mas "Subscriptions", id: 1577082754
 mas "TestFlight", id: 899247664
