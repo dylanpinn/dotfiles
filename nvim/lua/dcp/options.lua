@@ -47,13 +47,6 @@ vim.opt.formatoptions:append({ 1 })
 --
 vim.opt.formatoptions:append({ "p" })
 
--- Use ripgrep for searching files rather than grep(1). rg is faster and automatically excludes ignored files.
---
-if vim.fn.executable("rg") == 1 then
-	vim.opt.grepformat:prepend({ "%f:%l:%c:%m" })
-	vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
-end
-
 -- Ignore case when searching.
 --
 vim.opt.ignorecase = true
