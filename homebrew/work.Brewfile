@@ -23,6 +23,8 @@ brew "gh"
 brew "git"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Improved top (interactive process viewer)
+brew "htop"
 # Command-line benchmarking tool
 brew "hyperfine"
 # Lightweight and flexible command-line JSON processor
@@ -63,6 +65,12 @@ brew "vint"
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Professional graphic design software
+cask "affinity-designer"
+# Professional image editing software
+cask "affinity-photo"
+# Professional desktop publishing software
+cask "affinity-publisher"
 # Application launcher and productivity software
 cask "alfred"
 # Application uninstaller
@@ -73,13 +81,15 @@ cask "arc"
 cask "bartender"
 # Text, code, and markup editor
 cask "bbedit"
+# Display management tool
+cask "betterdisplay"
 # Record and process your ideas
 cask "bike"
 # Free and open-source web browser
 cask "chromium"
 # Screen capturing tool
 cask "cleanshot"
-# The Homebrew Companion
+# The Ultimate Homebrew Companion
 cask "cork"
 # API documentation browser and code snippet manager
 cask "dash"
@@ -90,18 +100,12 @@ cask "espanso"
 # Web browser
 cask "firefox"
 cask "font-fira-mono"
-# Sans-serif typeface
 cask "font-geist"
-# Monospaced typeface designed to be used where code is represented
 cask "font-geist-mono"
-# Corporate typeface for IBM
 cask "font-ibm-plex-mono"
 cask "font-input"
-# Expressive monospaced font family
 cask "font-intel-one-mono"
-# Typeface made for developers
 cask "font-jetbrains-mono"
-# Superfamily of fonts for code
 cask "font-monaspace"
 cask "font-roboto-mono"
 cask "font-source-code-pro"
@@ -109,10 +113,14 @@ cask "font-source-code-pro"
 cask "fork"
 # Web browser
 cask "google-chrome"
+# Create presentation slides from a Markdown document
+cask "ia-presenter"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Automation software
 cask "keyboard-maestro"
 # Software for Logitech devices
@@ -139,20 +147,25 @@ cask "rectangle"
 cask "soundsource"
 # Open-source code editor
 cask "visual-studio-code"
+# Application for configuring any YubiKey
+cask "yubico-yubikey-manager"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
 mas "Boop", id: 1518425043
 mas "com.kagimacOS.Kagi-Search", id: 1622835804
 mas "Dato", id: 1470584107
-mas "LastPass", id: 926036361
+mas "Hush", id: 1544743900
 mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
+mas "Pixelmator Pro", id: 1289583905
 mas "Play", id: 1596506190
+mas "Save to Reader", id: 1640236961
 mas "TestFlight", id: 899247664
 mas "Things", id: 904280696
 mas "Trello", id: 1278508951
 mas "Velja", id: 1607635845
 mas "Wipr", id: 1320666476
+mas "Xcode", id: 497799835
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "ms-azuretools.vscode-docker"
