@@ -23,6 +23,8 @@ brew "gh"
 brew "git"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Post-modern modal text editor
+brew "helix"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -61,6 +63,8 @@ brew "tree"
 brew "vim"
 # Vim script Language Lint
 brew "vint"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
@@ -149,12 +153,15 @@ cask "soundsource"
 cask "visual-studio-code"
 # Application for configuring any YubiKey
 cask "yubico-yubikey-manager"
+# Multiplayer code editor
+cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Bear", id: 1091189122
 mas "Boop", id: 1518425043
 mas "com.kagimacOS.Kagi-Search", id: 1622835804
 mas "Dato", id: 1470584107
 mas "Hush", id: 1544743900
+mas "iA Writer", id: 775737590
 mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
 mas "Pixelmator Pro", id: 1289583905
