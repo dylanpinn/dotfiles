@@ -22,9 +22,6 @@ XDG_DATA_HOME ?= $(HOME)/.local/share
 XDG_STATE_HOME ?= $(HOME)/.local/state
 
 NAME ?= 'Dylan Pinn'
-EMAIL ?= 'me@dylanpinn.com'
-PROFILE ?= personal
-SIGNING_KEY ?= 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMZnYed6OpvU4mkOvBu2V0wyxRQro4B2BPPYYUDq0CHr'
 
 BINS = bin/git-remove-merged-local \
        bin/git-stats-loc
@@ -61,8 +58,8 @@ format-sh:
 git/config: git/config.m4
 	m4 \
 		--define=NAME=$(NAME) \
-		--define=EMAIL=$(EMAIL) \
-		--define=SIGNING_KEY=$(SIGNING_KEY) \
+		--define=EMAIL="$(EMAIL)" \
+		--define=SIGNING_KEY="$(SIGNING_KEY)" \
 		git/config.m4 > $@
 
 # TODO: not 100% sold on this target name.
