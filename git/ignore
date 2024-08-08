@@ -2,3 +2,6 @@
 
 # Project specific configuration
 .projections.json
+
+# Editor specific configuration
+.nova/
