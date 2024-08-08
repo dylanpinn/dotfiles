@@ -31,6 +31,8 @@ brew "htop"
 brew "hyperfine"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Postgres C API library
+brew "libpq", link: true
 # Language Server for the Lua language
 brew "lua-language-server"
 # Tool for linting and static analysis of Lua code
@@ -65,6 +67,8 @@ brew "vim"
 brew "vint"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Login to REA AWS console by switching roles
+brew "reainternal/stable/aws-switch"
 # Authenticate to REA AWS accounts
 brew "reainternal/stable/rea-as"
 # Password manager that keeps all passwords secure behind one password
@@ -119,6 +123,8 @@ cask "fork"
 cask "google-chrome"
 # Create presentation slides from a Markdown document
 cask "ia-presenter"
+# Free and open-source media player
+cask "iina"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
 # JetBrains tools manager
