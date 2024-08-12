@@ -4,3 +4,4 @@
 require("dcp.set-background")
 require("dcp.keymaps")
 require("dcp.options")
+require("dcp.lsp")
