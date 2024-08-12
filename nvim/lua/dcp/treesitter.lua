@@ -9,6 +9,8 @@ vim.opt.runtimepath:append(
 		"*"
 	)
 )
+
+-- Move this to ftplugin file and maybe setup helper function to enable TS for syntax and folding.
 vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		pcall(vim.treesitter.start)
