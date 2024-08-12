@@ -169,11 +169,12 @@ mas "Foodnoms", id: 1479461686
 mas "GameTrack", id: 1136800740
 mas "Hush", id: 1544743900
 mas "Hyperduck", id: 6444667067
+mas "iA Writer", id: 775737590
+mas "Instapaper", id: 288545208
 mas "Ivory", id: 6444602274
 mas "Keynote", id: 409183694
 mas "Kindle Classic", id: 405399194
 mas "Little Snitch Mini", id: 1629008763
-mas "Mela", id: 1568924476
 mas "Messenger", id: 1480068668
 mas "MusicHarbor", id: 1440405750
 mas "NepTunes", id: 1006739057
@@ -187,7 +188,6 @@ mas "Play", id: 1596506190
 mas "Playgrounds", id: 1496833156
 mas "Reeder", id: 1529448980
 mas "Rippple", id: 1309894528
-mas "Save to Reader", id: 1640236961
 mas "Soulver 3", id: 1508732804
 mas "Streaks", id: 963034692
 mas "Subscriptions", id: 1577082754
@@ -198,4 +198,5 @@ mas "Timery", id: 1425368544
 mas "Velja", id: 1607635845
 mas "Wipr", id: 1320666476
 mas "Xcode", id: 497799835
+mas "Yomu", id: 562211012
 mas "‎WhatsApp", id: 310633997
