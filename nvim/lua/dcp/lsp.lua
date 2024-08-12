@@ -1,6 +1,6 @@
 -- Create an event handler for the FileType autocommand
 vim.api.nvim_create_autocmd("FileType", {
-	-- This handler will fire when the buffer's 'filetype' is "python"
+	-- This handler will fire when the buffer's 'filetype' is "lua"
 	pattern = "lua",
 	callback = function(_args)
 		vim.lsp.start({
@@ -86,10 +86,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		if client.supports_method("textDocument/formatting") then
 			vim.lsp.handlers["textDocument/publishDiagnostics"] =
-			    vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-				    -- Enable signs
-				    signs = true,
-			    })
+				vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+					-- Enable signs
+					signs = true,
+				})
 		end
 	end,
 })
