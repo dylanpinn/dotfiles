@@ -24,6 +24,8 @@ brew "jq"
 brew "lua-language-server"
 # Tool for linting and static analysis of Lua code
 brew "luacheck"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Macro processing language
 brew "m4", link: true
 # Mac App Store command-line interface
@@ -31,7 +33,7 @@ brew "mas"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
