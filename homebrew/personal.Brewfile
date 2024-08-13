@@ -24,6 +24,8 @@ brew "jq"
 brew "lua-language-server"
 # Tool for linting and static analysis of Lua code
 brew "luacheck"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Macro processing language
 brew "m4", link: true
 # Mac App Store command-line interface
