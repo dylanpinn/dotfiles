@@ -7,6 +7,8 @@
 	install \
 	install-brew \
 	install-git \
+	install-nvim \
+	install-nvim-tree-sitter \
 	install-sh \
 	install-tmux \
 	install-vim \
@@ -104,9 +106,15 @@ install-npm:
 	cp -pR -- npm/npmrc $(XDG_CONFIG_HOME)/npm/npmrc
 	cp -p -- npm/profile.d/* $(HOME)/.profile.d/
 
-install-nvim: lint-lua
+install-nvim: lint-lua install-nvim-tree-sitter
 	mkdir -p -- $(XDG_CONFIG_HOME)/nvim
 	cp -pR -- nvim/ $(XDG_CONFIG_HOME)/nvim/
+
+# NOTE: Requires luarocks to be installed.
+install-nvim-tree-sitter:
+	luarocks --force-lock --lua-version=5.1 --tree=$(XDG_DATA_HOME)/nvim/rocks --dev install tree-sitter-lua
+	luarocks --force-lock --lua-version=5.1 --tree=$(XDG_DATA_HOME)/nvim/rocks --dev install tree-sitter-vimdoc
+	luarocks --force-lock --lua-version=5.1 --tree=$(XDG_DATA_HOME)/nvim/rocks --dev install tree-sitter-markdown
 
 install-sh: lint-sh
 	cp -p -- sh/profile $(HOME)/.profile
