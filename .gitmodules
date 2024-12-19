@@ -1,21 +1,21 @@
 [submodule "nvim/pack/bundle/start/nvim-treesitter"]
-	path = nvim/pack/bundle/start/nvim-treesitter
+	path = nvim.bak/pack/bundle/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
 [submodule "nvim/pack/bundle/start/nvim-lspconfig"]
-	path = nvim/pack/bundle/start/nvim-lspconfig
+	path = nvim.bak/pack/bundle/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
 [submodule "nvim/pack/bundle/start/projectionist"]
-	path = nvim/pack/bundle/start/projectionist
+	path = nvim.bak/pack/bundle/start/projectionist
 	url = https://tpope.io/vim/projectionist.git
 [submodule "nvim/pack/bundle/start/dispatch"]
-	path = nvim/pack/bundle/start/dispatch
+	path = nvim.bak/pack/bundle/start/dispatch
 	url = https://tpope.io/vim/dispatch.git
 [submodule "nvim/pack/bundle/start/copilot.vim"]
-	path = nvim/pack/bundle/start/copilot.vim
+	path = nvim.bak/pack/bundle/start/copilot.vim
 	url = https://github.com/github/copilot.vim.git
 [submodule "nvim/pack/bundle/start/conform.nvim"]
-	path = nvim/pack/bundle/start/conform.nvim
+	path = nvim.bak/pack/bundle/start/conform.nvim
 	url = https://github.com/stevearc/conform.nvim.git
 [submodule "nvim/pack/bundle/start/nvim-lint"]
-	path = nvim/pack/bundle/start/nvim-lint
+	path = nvim.bak/pack/bundle/start/nvim-lint
 	url = https://github.com/mfussenegger/nvim-lint.git
