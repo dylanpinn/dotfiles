@@ -1,7 +1,7 @@
 local options = {
 	formatters_by_ft = {
 		lua = { "stylua" },
-		typescript = { { "prettierd", "prettier" }, "eslint_d" },
+		typescript = { { "prettierd", "prettier", stop_after_first = true }, "eslint_d" },
 	},
 }
 
