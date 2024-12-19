@@ -1,4 +1,5 @@
 require("lint").linters_by_ft = {
+	dockerfile = { "hadolint" },
 	lua = { "luacheck" },
 	typescript = { "eslint" },
 }

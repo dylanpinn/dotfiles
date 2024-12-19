@@ -68,7 +68,6 @@ dump-brew:
 
 install: install-bash \
 	install-bin \
-	install-espanso \
 	install-git \
 	install-mise \
 	install-npm \
@@ -86,10 +85,6 @@ install-bash: lint-bash install-sh
 install-bin:
 	mkdir -p $(HOME)/.local/bin
 	cp -p -- $(BINS) $(HOME)/.local/bin/
-
-install-espanso:
-	mkdir -p "$(HOME)/Library/Application Support/espanso"
-	cp -pR -- espanso/* "$(HOME)/Library/Application Support/espanso/"
 
 install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git

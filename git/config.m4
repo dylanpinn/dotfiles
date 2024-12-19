@@ -15,6 +15,11 @@
 	di = diff
 	dc = diff --cached
 
+	# Difftastic aliases, so `git dlog` is `git log` with difftastic and so on.
+	dlog = -c diff.external=difft log --ext-diff
+	dshow = -c diff.external=difft show --ext-diff
+	ddiff = -c diff.external=difft diff
+
 	# Log
 	changelog = log --reverse origin..HEAD --format='* %s%n%w(,4,4)%+b'
 	glg = log --oneline --decorate --all --graph --abbrev-commit
