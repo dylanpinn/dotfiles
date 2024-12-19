@@ -9,7 +9,6 @@
 	install-git \
 	install-sh \
 	install-tmux \
-	install-vim \
 	install-work \
 	lint \
 	lint-bash \
@@ -73,8 +72,7 @@ install: install-bash \
 	install-mise \
 	install-npm \
 	install-nvim \
-	install-tmux \
-	install-vim
+	install-tmux
 
 install-bash: lint-bash install-sh
 	cp -p -- bash/bash_profile $(HOME)/.bash_profile
