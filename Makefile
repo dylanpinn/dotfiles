@@ -37,6 +37,11 @@ check-lua:
 check-prettier:
 	npm run format:check
 
+clean: clean-nvim
+
+clean-nvim:
+	rm -r -- $(XDG_CONFIG_HOME)/nvim
+
 format: format-bash \
 	format-lua \
 	format-prettier \
@@ -67,8 +72,8 @@ dump-brew:
 
 install: install-bash \
 	install-bin \
-	install-espanso \
 	install-git \
+	install-ghostty \
 	install-mise \
 	install-npm \
 	install-nvim \
@@ -93,6 +98,10 @@ install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
 	cp -p -- git/ignore $(XDG_CONFIG_HOME)/git/ignore
+
+install-ghostty:
+	mkdir -p -- $(XDG_CONFIG_HOME)/ghostty
+	cp -p -- ghostty/config $(XDG_CONFIG_HOME)/ghostty/config
 
 install-mise: install-bash
 	cp -p -- mise/bashrc.d/* $(HOME)/.bashrc.d/

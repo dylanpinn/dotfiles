@@ -74,7 +74,7 @@ brew "mas"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -154,6 +154,8 @@ cask "font-roboto-mono"
 cask "font-source-code-pro"
 # GIT client
 cask "fork"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Web browser
 cask "google-chrome"
 # Create presentation slides from a Markdown document
@@ -196,6 +198,8 @@ cask "pastebot"
 cask "postico"
 # HTTP client that helps testing and describing APIs
 cask "rapidapi"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
 # Drag-and-drop Git history editor
 cask "retcon"
 # Sound and audio controller
@@ -220,13 +224,13 @@ mas "Aiko", id: 1672085276
 mas "Bear", id: 1091189122
 mas "Boop", id: 1518425043
 mas "Color Picker", id: 1545870783
-mas "com.kagimacOS.Kagi-Search", id: 1622835804
 mas "Dato", id: 1470584107
 mas "GoodLinks", id: 1474335294
 mas "Hand Mirror", id: 1502839586
 mas "HEIC Converter", id: 1294126402
 mas "Hush", id: 1544743900
 mas "iA Writer", id: 775737590
+mas "Kagi for Safari", id: 1622835804
 mas "Microsoft To Do", id: 1274495053
 mas "NepTunes", id: 1006739057
 mas "NotePlan", id: 1505432629
