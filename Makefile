@@ -113,7 +113,7 @@ install-tmux:
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
 	cp -p -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
 
-VIMDIR = $(HOME)/.vim
+VIMDIR = $(XDG_CONFIG_HOME)/vim
 
 install-vim: lint-vim
 	mkdir -p -- $(VIMDIR)
