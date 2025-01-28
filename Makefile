@@ -90,6 +90,7 @@ install-git: git/config
 	mkdir -p -- $(XDG_CONFIG_HOME)/git
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
 	cp -p -- git/ignore $(XDG_CONFIG_HOME)/git/ignore
+	cp -pR -- git/hooks/ $(XDG_CONFIG_HOME)/git/hooks/
 
 install-mise: install-bash
 	cp -p -- mise/bashrc.d/* $(HOME)/.bashrc.d/
