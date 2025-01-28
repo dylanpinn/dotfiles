@@ -232,7 +232,7 @@ endif
 
 " TODO: Pull this out into plugin that will check environment variable and use
 " light or dark scheme.
-colorscheme morning
+" colorscheme morning
 " colorscheme sorbet
 
 " Mapping defnitions are defined here.  Here are some rules I have tried to
