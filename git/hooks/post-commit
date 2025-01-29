@@ -5,9 +5,7 @@ set -o errexit
 set -o pipefail
 IFS=$'\n\t'
 
-if ! command -v git-lint > /dev/null; then
-   printf "%s\n" "[git]: Git Lint not found. To install, run: gem install git-lint."
-   exit 1
-fi
+source "$HOME/.config/git/hooks/extensions/support.sh"
+source "$HOME/.config/git/hooks/extensions/git.sh"
 
-git-lint analyze --commit $(git log --pretty=format:%H -1)
+git_lint_analyze_commit
