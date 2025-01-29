@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Analyses the commit message using git-lint.
+
 set -o nounset
 set -o errexit
 set -o pipefail
