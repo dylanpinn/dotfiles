@@ -99,9 +99,11 @@ install-git: git/config
 install-ghostty:
 	mkdir -p -- $(XDG_CONFIG_HOME)/ghostty
 	cp -p -- ghostty/config $(XDG_CONFIG_HOME)/ghostty/config
-	git clone https://github.com/catppuccin/ghostty.git /tmp/ghostty
-	mv -f /tmp/ghostty/themes $(XDG_CONFIG_HOME)/ghostty/
-	rm -rf /tmp/ghostty
+	if [ ! -d "$(XDG_CONFIG_HOME)/ghostty/themes" ]; then \
+		git clone https://github.com/catppuccin/ghostty.git /tmp/ghostty; \
+		mv -f /tmp/ghostty/themes $(XDG_CONFIG_HOME)/ghostty/; \
+		rm -rf /tmp/ghostty; \
+	fi
 
 install-jj: install-git
 	mkdir -p -- $(XDG_CONFIG_HOME)/jj
