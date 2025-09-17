@@ -8,6 +8,7 @@
 	install-brew \
 	install-git \
 	install-ghostty \
+	install-jj \
 	install-sh \
 	install-tmux \
 	install-vim \
@@ -71,6 +72,7 @@ install: install-bash \
 	install-bin \
 	install-git \
 	install-ghostty \
+	intsall-jj \
 	install-mise \
 	install-npm \
 	install-nvim \
@@ -100,6 +102,10 @@ install-ghostty:
 	git clone https://github.com/catppuccin/ghostty.git /tmp/ghostty
 	mv -f /tmp/ghostty/themes $(XDG_CONFIG_HOME)/ghostty/
 	rm -rf /tmp/ghostty
+
+install-jj: install-git
+	mkdir -p -- $(XDG_CONFIG_HOME)/jj
+	cp -p -- jj/config.toml $(XDG_CONFIG_HOME)/jj/config.toml
 
 install-mise: install-bash
 	cp -p -- mise/bashrc.d/* $(HOME)/.bashrc.d/
