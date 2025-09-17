@@ -1,3 +1,3 @@
 # Use less as system pager.
-PAGER=less
+PAGER="less -RFX"
 export PAGER
