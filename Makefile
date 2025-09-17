@@ -7,6 +7,7 @@
 	install \
 	install-brew \
 	install-git \
+	install-ghostty \
 	install-sh \
 	install-tmux \
 	install-vim \
@@ -69,6 +70,7 @@ dump-brew:
 install: install-bash \
 	install-bin \
 	install-git \
+	install-ghostty \
 	install-mise \
 	install-npm \
 	install-nvim \
@@ -91,6 +93,13 @@ install-git: git/config
 	cp -p -- git/config $(XDG_CONFIG_HOME)/git/config
 	cp -p -- git/ignore $(XDG_CONFIG_HOME)/git/ignore
 	cp -pR -- git/hooks/ $(XDG_CONFIG_HOME)/git/hooks/
+
+install-ghostty:
+	mkdir -p -- $(XDG_CONFIG_HOME)/ghostty
+	cp -p -- ghostty/config $(XDG_CONFIG_HOME)/ghostty/config
+	git clone https://github.com/catppuccin/ghostty.git /tmp/ghostty
+	mv -f /tmp/ghostty/themes $(XDG_CONFIG_HOME)/ghostty/
+	rm -rf /tmp/ghostty
 
 install-mise: install-bash
 	cp -p -- mise/bashrc.d/* $(HOME)/.bashrc.d/
