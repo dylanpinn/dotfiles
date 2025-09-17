@@ -142,7 +142,7 @@ install-work: install-bash install-sh
 # TODO: add this to the install target when it runs only when files have changed.
 install-brew:
 	cp -R -- homebrew/$(PROFILE).Brewfile $(HOME)/.Brewfile
-	brew bundle --global --no-lock --verbose
+	brew bundle --global --verbose
 	cp -p -- homebrew/profile.d/* $(HOME)/.profile.d/
 
 lint: check\
