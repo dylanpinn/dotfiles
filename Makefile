@@ -57,7 +57,7 @@ format-sh:
 
 git/config: git/config.m4
 	m4 \
-		--define=NAME=$(NAME) \
+		--define=NAME="$(NAME)" \
 		--define=EMAIL="$(EMAIL)" \
 		--define=SIGNING_KEY="$(SIGNING_KEY)" \
 		git/config.m4 > $@
