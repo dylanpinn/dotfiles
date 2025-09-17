@@ -72,7 +72,7 @@ install: install-bash \
 	install-bin \
 	install-git \
 	install-ghostty \
-	intsall-jj \
+	install-jj \
 	install-mise \
 	install-npm \
 	install-nvim \
