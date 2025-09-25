@@ -15,7 +15,7 @@ jobs:
           cache: "npm"
       - run: npm ci
       - uses: leafo/gh-actions-lua@v11
-      - uses: leafo/gh-actions-luarocks@v5
+      - uses: leafo/gh-actions-luarocks@v6
       - name: Setup dependencies
         run: |
           pip install vim-vint yamllint
