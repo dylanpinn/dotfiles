@@ -111,6 +111,8 @@ install-jj: install-git
 
 install-mise: install-bash
 	cp -p -- mise/bashrc.d/* $(HOME)/.bashrc.d/
+	cp -p -- mise/profile.d/* $(HOME)/.profile.d/
+	cp -p -- mise/npm-default-packages $(XDG_CONFIG_HOME)/mise/npm-default-packages
 
 install-npm:
 	mkdir -p -- $(XDG_CONFIG_HOME)/npm
