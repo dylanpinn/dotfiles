@@ -29,12 +29,6 @@ vim.opt.comments = ""
 --
 vim.opt.cpoptions:append("J")
 
--- Neovim's defaults for macro definitions, which are used for include-search, defaults that also date back to its
--- history as a mainly C development environment. Removing these values allows ut to use filetype plugins to set them as
--- needed.
---
-vim.opt.define = ""
---
 -- Automatic text wrapping options using flags in the 'formatoptions' option begin here.
 
 -- Don't break a line after a one-letter word like "I" or "a".
@@ -51,19 +45,9 @@ vim.opt.formatoptions:append({ "p" })
 --
 vim.opt.ignorecase = true
 
--- Neovim's defaults for finding include commands, defaults that also date back to its history as a mainly C development
--- environment. Removing these values allows ut to use filetype plugins to set them as needed.
---
-vim.opt.include = ""
---
 -- When soft-wraps are enabled with 'wrap' option, then break the line between words, rather than within them.
 --
 vim.opt.linebreak = true
-
--- Neovim includes defaults for path that date back to its history as a mainly C development environment.  Removing
--- these values allows us to use filetype plugins to set them as needed.
---
-vim.opt.path:remove({ "/usr/include" })
 
 -- When wrapping a line using soft-wraps, highlight that it has been wrapped by inserting a leading string - "> ".
 --

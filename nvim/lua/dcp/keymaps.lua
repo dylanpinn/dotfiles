@@ -23,7 +23,7 @@ vim.g.mapleader = "\\"
 vim.g.maplocalleader = " "
 
 -- Leader,a series acts on the whole file.
---
+-- ---------------------------------------
 -- Leader,ai indents the whole file.
 vim.keymap.set("n", "<Leader>ai", "mzgg=G`z")
 -- Leader,af formats the whole file.
