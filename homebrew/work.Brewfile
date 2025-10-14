@@ -20,8 +20,14 @@ brew "fzf"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# High-velocity, monorepo-scale workflow for Git
+brew "git-branchless"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Git-compatible distributed version control system
+brew "jj"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Simple terminal UI for git commands
@@ -38,6 +44,8 @@ brew "mas"
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -48,6 +56,8 @@ brew "shfmt"
 brew "shush"
 # Opinionated Lua code formatter
 brew "stylua"
+# TOML toolkit written in Rust
+brew "taplo"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -72,8 +82,6 @@ cask "alfred"
 cask "app-buddy"
 # Application uninstaller
 cask "appcleaner"
-# Menu bar icon organiser
-cask "bartender"
 # Text, code, and markup editor
 cask "bbedit"
 # OpenAI's official ChatGPT desktop app
@@ -104,6 +112,8 @@ cask "font-roboto-mono"
 cask "font-source-code-pro"
 # GIT client
 cask "fork"
+# GUI for Jujutsu
+cask "gg"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
@@ -134,12 +144,12 @@ cask "moom"
 cask "orion"
 # Workflow application to improve productivity
 cask "pastebot"
-# Podcast platform
-cask "pocket-casts"
 # GUI client for PostgreSQL databases
 cask "postico"
 # HTTP client that helps testing and describing APIs
 cask "rapidapi"
+# Team communication and collaboration software
+cask "slack"
 # Sound and audio controller
 cask "soundsource"
 # Tool to automate the insertion of frequently used text and graphics
@@ -151,9 +161,11 @@ cask "zed"
 # Gecko based web browser
 cask "zen"
 mas "1Password for Safari", id: 1569813296
+mas "Agenda", id: 1287445660
 mas "Albums", id: 0
 mas "Dato", id: 1470584107
 mas "Glean for Safari", id: 6444195239
+mas "GoodLinks", id: 1474335294
 mas "HEIC Converter", id: 1294126402
 mas "Hush", id: 1544743900
 mas "iA Writer", id: 775737590
