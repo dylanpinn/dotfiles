@@ -84,6 +84,8 @@ cask "app-buddy"
 cask "appcleaner"
 # Text, code, and markup editor
 cask "bbedit"
+# Display management tool
+cask "betterdisplay"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
@@ -169,6 +171,7 @@ mas "GoodLinks", id: 1474335294
 mas "HEIC Converter", id: 1294126402
 mas "Hush", id: 1544743900
 mas "iA Writer", id: 775737590
+mas "iMovie", id: 408981434
 mas "Ivory", id: 6444602274
 mas "Kagi for Safari", id: 1622835804
 mas "Keynote", id: 409183694
