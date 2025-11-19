@@ -86,8 +86,6 @@ cask "curseforge"
 cask "dash"
 # Launcher for *Epic Games* games
 cask "epic-games"
-# Cross-platform Text Expander written in Rust
-cask "espanso"
 # Web browser
 cask "firefox"
 cask "font-fira-mono"
