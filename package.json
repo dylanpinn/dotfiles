@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/dylanpinn/dotfiles#readme",
   "devDependencies": {
-    "prettier": "3.8.0"
+    "prettier": "3.8.1"
   }
 }
