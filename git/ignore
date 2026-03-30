@@ -5,3 +5,6 @@
 
 # Editor specific configuration
 .nova/
+
+# Mise local config
+.mise.local.toml
