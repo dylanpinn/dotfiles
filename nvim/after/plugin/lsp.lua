@@ -1,4 +1,4 @@
--- -- Setup language servers.
+-- Setup language servers.
 vim.lsp.config("lua_ls", {
 	on_init = function(client)
 		if client.workspace_folders then
@@ -30,16 +30,14 @@ vim.lsp.config("lua_ls", {
 					vim.env.VIMRUNTIME,
 					-- Depending on the usage, you might want to add additional paths
 					-- here.
-					-- '${3rd}/luv/library'
-					-- '${3rd}/busted/library'
+					-- '${3rd}/luv/library',
+					-- '${3rd}/busted/library',
 				},
 				-- Or pull in all of 'runtimepath'.
 				-- NOTE: this is a lot slower and will cause issues when working on
 				-- your own configuration.
 				-- See https://github.com/neovim/nvim-lspconfig/issues/3189
-				-- library = {
-				--   vim.api.nvim_get_runtime_file('', true),
-				-- }
+				-- library = vim.api.nvim_get_runtime_file('', true),
 			},
 		})
 	end,
@@ -56,10 +54,12 @@ vim.lsp.enable("lua_ls")
 -- "grn" is mapped in Normal mode to vim.lsp.buf.rename()
 -- "grr" is mapped in Normal mode to vim.lsp.buf.references()
 -- "grt" is mapped in Normal mode to vim.lsp.buf.type_definition()
+-- "grx" is mapped in Normal mode to vim.lsp.codelens.run()
 -- "gO" is mapped in Normal mode to vim.lsp.buf.document_symbol()
 -- CTRL-S is mapped in Insert mode to vim.lsp.buf.signature_help()
 -- "an" and "in" are mapped in Visual mode to outer and inner incremental selections, respectively,
--- 		using vim.lsp.buf.selection_range()
+-- 		using vim.lsp.buf.selection_range() if treesitter not active
+-- gx handles textDocuent/documentLink
 
 -- Buffer-local defaults
 -- 'omnifunc' is set to vim.lsp.omnifunc(), use i_CTRL-X_CTRL-O to trigger completion.
@@ -69,7 +69,7 @@ vim.lsp.enable("lua_ls")
 -- To opt out of this use gw instead of gq, or clear 'formatexpr' on LspAttach.
 -- K is mapped to vim.lsp.buf.hover() unless 'keywordprg' is customized or a custom keymap for K exists.
 -- Document colors are enabled for highlighting color references in a document.
--- To opt out call vim.lsp.document_color.enable(false, args.buf) on LspAttach.
+-- To opt out call `vim.lsp.document_color.enable(false, { bufnr = ev.buf })` on |LspAttach|.
 
 -- Diagnistic Defaults
 -- These diagnostic keymaps are created unconditionally when Nvim starts:
@@ -79,35 +79,5 @@ vim.lsp.enable("lua_ls")
 -- [D jumps to the first diagnostic in the buffer. [D-default
 -- <C-w>d shows diagnostic at cursor in a floating window. CTRL-W_d-default
 
-vim.lsp.enable("ts_ls")
-
 -- -- Global mappings.
--- -- See `:help vim.diagnostic.*` for documentation on any of the below functions
--- vim.keymap.set("n", "<localleader>e", vim.diagnostic.open_float)
--- vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
--- vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 vim.keymap.set("n", "<localleader>q", vim.diagnostic.setloclist)
---
--- -- Use LspAttach autocommand to only map the following keys
--- -- after the language server attaches to the current buffer
--- vim.api.nvim_create_autocmd("LspAttach", {
--- 	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
--- 	callback = function(ev)
--- 		-- Buffer local mappings.
--- 		-- See `:help vim.lsp.*` for documentation on any of the below functions
--- 		local opts = { buffer = ev.buf }
--- 		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
--- 		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
--- 		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
--- 		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
--- 		vim.keymap.set("n", "<localleader>wa", vim.lsp.buf.add_workspace_folder, opts)
--- 		vim.keymap.set("n", "<localleader>wr", vim.lsp.buf.remove_workspace_folder, opts)
--- 		vim.keymap.set("n", "<localleader>wl", function()
--- 			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
--- 		end, opts)
--- 		vim.keymap.set("n", "<localleader>D", vim.lsp.buf.type_definition, opts)
--- 		vim.keymap.set("n", "<localleader>rn", vim.lsp.buf.rename, opts)
--- 		vim.keymap.set({ "n", "v" }, "<localleader>ca", vim.lsp.buf.code_action, opts)
--- 		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
--- 	end,
--- })
