@@ -12,18 +12,21 @@ local function first(bufnr, ...)
 	return select(1, ...)
 end
 
-local options = {
+require("conform").setup({
 	formatters_by_ft = {
 		bash = { "shfmt" },
+		javascript = function(bufnr)
+			return { first(bufnr, "prettierd", "prettier"), "eslint_d" }
+		end,
 		lua = { "stylua" },
+		markdown = { "prettierd", "prettier", stop_after_first = true },
 		typescript = function(bufnr)
 			return { first(bufnr, "prettierd", "prettier"), "eslint_d" }
 		end,
 		sh = { "shfmt" },
 	},
-}
+})
 
-require("conform").setup(options)
 require("conform").formatters.shfmt = {
 	append_args = { "--simplify" },
 }

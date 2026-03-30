@@ -1,8 +1,8 @@
--- This file contains all of the options that are set using vim.opt.* expressions. The options in this file are sorted
+-- This file contains all of the options that are set using vim.opt.* expressions.  The options in this file are sorted
 -- alphabetically.
 --
 
--- Enable automatic backups before overwriting a file and leave it around after the file has been written. These files
+-- Enable automatic backups before overwriting a file and leave it around after the file has been written.  These files
 -- are kept in a cache directory by defualt in Neovim.
 --
 vim.opt.backup = true
@@ -16,12 +16,17 @@ vim.opt.backupdir:remove({ "." })
 --
 vim.opt.breakindent = true
 
--- Neovim includes defaults for comments that date back to its history as a mainly C development environment. Removing
+-- Neovim includes defaults for comments that date back to its history as a mainly C development environment.  Removing
 -- these values allows us to use filetype plugins to set them as needed.
 --
 vim.opt.comments = ""
 
--- Use two spaces to end a sentence. This helps improve readability using monospaced fonts.  This also helps vim work
+-- If performing an operation that would fail due to unsaved changes in the buffer (like `:q`), instead raise a dialog
+-- asking if you wish to save the current file(s).
+--
+vim.opt.confirm = true
+
+-- Use two spaces to end a sentence.  This helps improve readability using monospaced fonts.  This also helps vim work
 -- with sentence objects for the purpose of the 's' text objects, the '(' and ')' sentence motions, and formatting with
 -- the 'gq' command must now be separated by two spaces.
 --
@@ -35,7 +40,7 @@ vim.opt.cpoptions:append("J")
 --
 vim.opt.formatoptions:append({ 1 })
 
--- Because we are using two spaces for ending sentences. Vim can determine if the space after an abbreviation such as
+-- Because we are using two spaces for ending sentences.  Vim can determine if the space after an abbreviation such as
 -- "Mr. Pinn" is the end of the sentence or not and then determine if it should be split on it. The 'p' flag makes this
 -- possible.
 --
@@ -63,19 +68,19 @@ vim.opt.smartcase = true
 --
 -- Taken from https://www.vi-improved.org/recommendations/
 --
-vim.opt.statusline = "%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]"
---                   | | | | |  |   |      |  |     |    |
---                   | | | | |  |   |      |  |     |    +-- current column
---                   | | | | |  |   |      |  |     +-- current line
---                   | | | | |  |   |      |  +-- current % into file
---                   | | | | |  |   |      +-- current syntax
---                   | | | | |  |   +-- current fileformat
---                   | | | | |  +-- number of lines
---                   | | | | +-- preview flag in square brackets
---                   | | | +-- help flag in square brackets
---                   | | +-- readonly flag in square brackets
---                   | +-- rodified flag in square brackets
---                   +-- full path to file in the buffer
+-- vim.opt.statusline = "%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]"
+-- --                   | | | | |  |   |      |  |     |    |
+-- --                   | | | | |  |   |      |  |     |    +-- current column
+-- --                   | | | | |  |   |      |  |     +-- current line
+-- --                   | | | | |  |   |      |  +-- current % into file
+-- --                   | | | | |  |   |      +-- current syntax
+-- --                   | | | | |  |   +-- current fileformat
+-- --                   | | | | |  +-- number of lines
+-- --                   | | | | +-- preview flag in square brackets
+-- --                   | | | +-- help flag in square brackets
+-- --                   | | +-- readonly flag in square brackets
+-- --                   | +-- rodified flag in square brackets
+-- --                   +-- full path to file in the buffer
 
 -- Keep track of undo history for files between sessions.  This ensures that undo and redo are available between Vim
 -- invocations.  These files are kept in a cache directory.
