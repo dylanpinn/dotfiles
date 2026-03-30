@@ -31,8 +31,6 @@
 	st = status
 [commit]
 	gpgsign = true
-[core]
-	hooksPath = ~/.config/git/hooks
 [gpg]
 	format = ssh
 [gpg "ssh"]
