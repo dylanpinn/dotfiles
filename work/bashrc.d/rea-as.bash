@@ -1,2 +1,2 @@
 # Enable completion
-source <(rea-as completion)
+source <(rea-as completion bash)
