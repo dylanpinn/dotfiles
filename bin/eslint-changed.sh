@@ -18,7 +18,10 @@ changed_files() {
 }
 
 main() {
-    npx eslint "$(changed_files)"
+    # Word splitting is intentional here: changed_files returns a list of filenames
+    # that need to be passed as separate arguments to eslint, not as a single string.
+    # shellcheck disable=SC2046
+    npx eslint --no-warn-ignored $(changed_files)
 }
 
 main
