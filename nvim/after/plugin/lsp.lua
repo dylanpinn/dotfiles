@@ -47,6 +47,8 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.enable("lua_ls")
+-- vim.lsp.enable("ts_ls")
+vim.lsp.enable("tsgo")
 
 -- Global default keymaps for LSP
 -- "gra" is mapped in Normal and Visual mode to vim.lsp.buf.code_action()
