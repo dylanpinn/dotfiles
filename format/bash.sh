@@ -14,4 +14,4 @@ shfmt --list --write --simplify -- "$@"
 shfmt --list --write --simplify -- bash
 
 find . -type f -name "*.bash" \
-    -exec shfmt --list --write --simplify {} +
+	-exec shfmt --list --write --simplify {} +

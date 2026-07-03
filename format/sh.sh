@@ -13,5 +13,5 @@ shfmt --list --write --simplify -- "$@"
 shfmt --list --write --simplify -- sh
 
 find . -type f -name "*.sh" \
-    -not -path "./nvim/pack/bundle/*" \
-    -exec shfmt --list --write --simplify {} +
+	-not -path "./nvim/pack/bundle/*" \
+	-exec shfmt --list --write --simplify {} +

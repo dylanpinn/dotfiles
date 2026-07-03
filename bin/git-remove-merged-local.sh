@@ -6,24 +6,24 @@
 set -eou pipefail
 
 main() {
-    update_repo
-    for branch in $(branches); do
-        delete_branch
-    done
+	update_repo
+	for branch in $(branches); do
+		delete_branch
+	done
 }
 
 update_repo() {
-    git fetch --prune
+	git fetch --prune
 }
 
 branches() {
-    git branch -vv |
-        grep ': gone]' |
-        awk '{print $1}'
+	git branch -vv |
+		grep ': gone]' |
+		awk '{print $1}'
 }
 
 delete_branch() {
-    git branch -D "$branch"
+	git branch -D "$branch"
 }
 
 main
