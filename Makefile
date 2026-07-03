@@ -68,7 +68,7 @@ git/config: git/config.m4
 
 # TODO: not 100% sold on this target name.
 dump-brew:
-	brew bundle dump --force --describe --file=homebrew/$(PROFILE).Brewfile
+	brew bundle dump --force --file=homebrew/$(PROFILE).Brewfile
 
 install: install-bash \
 	install-bin \
