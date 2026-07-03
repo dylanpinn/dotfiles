@@ -68,7 +68,7 @@ vim.opt.smartcase = true
 --
 -- Taken from https://www.vi-improved.org/recommendations/
 --
--- vim.opt.statusline = "%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]"
+vim.opt.statusline = "%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]"
 -- --                   | | | | |  |   |      |  |     |    |
 -- --                   | | | | |  |   |      |  |     |    +-- current column
 -- --                   | | | | |  |   |      |  |     +-- current line

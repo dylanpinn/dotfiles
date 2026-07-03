@@ -11,4 +11,4 @@ vim.keymap.set("n", "<LocalLeader>f", ":silent %!npx prettier --stdin-filepath %
 
 -- Use system word list for completion with CTRL-P or CTRL-N.
 -- setlocal complete+=k/usr/share/dict/words
-vim.opt_local.complete.append({ "k/usr/share/dict/words" })
+-- vim.opt_local.complete.append({ "k/usr/share/dict/words" })
