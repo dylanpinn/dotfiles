@@ -11,6 +11,7 @@
 	install-jj \
 	install-sh \
 	install-tmux \
+	install-vale \
 	install-vim \
 	install-work \
 	lint \
@@ -131,6 +132,10 @@ install-sh: lint-sh
 install-tmux:
 	mkdir -p -- $(XDG_CONFIG_HOME)/tmux
 	cp -p -- tmux/tmux.conf $(XDG_CONFIG_HOME)/tmux/tmux.conf
+
+install-vale:
+	mkdir -p -- $(XDG_CONFIG_HOME)/vale
+	cp -p -- vale/vale.ini $(XDG_CONFIG_HOME)/vale/.vale.ini
 
 VIMDIR = $(XDG_CONFIG_HOME)/vim
 
