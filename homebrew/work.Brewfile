@@ -28,10 +28,16 @@ brew "git"
 brew "gnupg"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Kubernetes package manager
+brew "helm"
 # Git-compatible distributed version control system
 brew "jj"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# OpenID Connect authentication plugin for kubectl
+brew "kubelogin"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Count lines of code quickly
@@ -48,10 +54,16 @@ brew "mas"
 brew "mise"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
+# Create, run, and share large language models (LLMs)
+brew "ollama", restart_service: :changed
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# CLI proxy to minimize LLM token consumption
+brew "rtk"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # Autoformat shell script source code
@@ -106,6 +118,10 @@ cask "betterdisplay"
 cask "chatgpt"
 # Screen capturing tool
 cask "cleanshot"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+# Claude code parallelisation
+cask "conductor"
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
 # GUI companion app for Homebrew
@@ -144,6 +160,8 @@ cask "ghostty"
 cask "google-chrome"
 # Automated organisation
 cask "hazel"
+# Chromium-based web browser
+cask "helium-browser"
 # Convert your caps lock key or any of your modifier keys to the hyper key
 cask "hyperkey"
 # Create presentation slides from a Markdown document
@@ -170,6 +188,10 @@ cask "miro"
 cask "monodraw"
 # Utility to move and zoom windows—on one display
 cask "moom"
+# Native code editor
+cask "nova"
+# AI coding agent desktop client
+cask "opencode-desktop"
 # WebKit based web browser
 cask "orion"
 # Workflow application to improve productivity
@@ -190,6 +212,7 @@ cask "yaak"
 cask "zed"
 # Gecko based web browser
 cask "zen"
+mas "1Password for Safari", id: 1569813296
 mas "Agenda", id: 1287445660
 mas "Albums", id: 0
 mas "Boop", id: 1518425043
@@ -197,6 +220,7 @@ mas "Craft", id: 1487937127
 mas "Craft Web Clipper", id: 6748613311
 mas "Dato", id: 1470584107
 mas "Developer", id: 640199958
+mas "Foodnoms", id: 1479461686
 mas "GoodLinks", id: 1474335294
 mas "HEIC Converter", id: 1294126402
 mas "Hush", id: 1544743900
@@ -216,6 +240,7 @@ mas "Photomator", id: 1444636541
 mas "Pixelmator Pro", id: 1289583905
 mas "Play", id: 1596506190
 mas "Quick Subtitles", id: 6747410609
+mas "Reeder", id: 1529448980
 mas "Shareful", id: 1522267256
 mas "Slack", id: 803453959
 mas "Sofa", id: 1276554886
@@ -227,8 +252,8 @@ mas "Velja", id: 1607635845
 mas "Wipr", id: 1662217862
 mas "Xcode", id: 497799835
 npm "@fsouza/prettierd"
-npm "@typescript/native-preview"
 npm "corepack"
 npm "eslint_d"
 npm "typescript-language-server"
 npm "typescript"
+npm "yarn"
