@@ -5,5 +5,4 @@ get_key_from_keychain() {
 }
 
 export PORTKEY_API_KEY="$(get_key_from_keychain PORTKEY_API_KEY)"
-export ANTHROPIC_AUTH_TOKEN="$PORTKEY_API_KEY"
 # --- end rea ai-coding ---
